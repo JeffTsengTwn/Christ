@@ -1,6 +1,36 @@
 /* ------------------------------ chapters ------------------------------ */
 
-const VERSES = {
+import {
+  LOOKS,
+  appearSound,
+  asJesus,
+  asRole,
+  chime,
+  clamp,
+  completeChapter,
+  createMap,
+  dist,
+  findEnt,
+  jesus,
+  noise,
+  openEnding,
+  person,
+  prop,
+  puff,
+  say,
+  scatter,
+  spawnFloat,
+  state,
+  stepToward,
+  stroke,
+  tileAt,
+  tone,
+  tp,
+  tryMove,
+  walkPlayer,
+} from "./game.js";
+
+export const VERSES = {
   call: "來跟從我，我要叫你們得人如得魚一樣。",
   nets: "他們就立刻捨了網，跟從了他。",
   b3: "虛心的人有福了！因為天國是他們的。",
@@ -121,14 +151,14 @@ const VERSES = {
   commission: "天上地下所有的權柄都賜給我了。所以，你們要去，使萬民作我的門徒。",
 };
 
-const INTERLUDE = [
+export const INTERLUDE = [
   { text: "此後，他被交在人手裡。", ref: "" },
   { text: "他們把他帶到各各他。園子外的天亮了，又暗了。", ref: "" },
   { text: VERSES.finished, ref: "約翰福音 19:30", verse: true },
   { text: "第三日，天還黑的時候。", ref: "" },
 ];
 
-const CHAPTERS = [
+export const CHAPTERS = [
   {
     key: "shore",
     title: "海邊的呼召",
@@ -2937,12 +2967,3 @@ function kickerOf(i) {
   });
 }
 
-try {
-  if (localStorage.getItem("follow-mute") === "1") setMuted(true);
-} catch (err) {
-  /* ignore */
-}
-
-resize();
-showTitle();
-requestAnimationFrame(loop);
