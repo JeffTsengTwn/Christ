@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>跟隨 — 福音書裡的一段路</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect fill='%231a140f' width='16' height='16'/%3E%3Cpath fill='%23f0c84b' d='M7 2h2v4h4v2H9v6H7V8H3V6h4z'/%3E%3C/svg%3E" />
+  <style>
+    :root {
+      --ink: #241910;
+      --paper: #f4ead4;
+      --paper-2: #e7d7b4;
+      --red: #8c2f2f;
+      --gold: #a67c2d;
+      --sea: #16384f;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      height: 100%;
+    }
+
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 50% 30%, #3a2c22 0%, #140f0c 62%, #0b0908 100%);
+      color: var(--paper);
+      font-family: "PingFang TC", "Heiti TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      user-select: none;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    #frame {
+      position: relative;
+      background: #1a140f;
+      box-shadow:
+        0 0 0 4px #1a120c,
+        0 0 0 8px #8d6a38,
+        0 0 0 10px #241910,
+        0 24px 60px rgba(0, 0, 0, 0.55);
+    }
+
+    canvas {
+      display: block;
+      width: 320px;
+      height: 192px;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+      background: #87b6d8;
+    }
+
+    #tag, #floats, #hud, #dialogue, #screen {
+      position: absolute;
+      pointer-events: none;
+    }
+
+    #tag {
+      left: 0;
+      top: 0;
+      z-index: 3;
+      padding: 0.15em 0.45em;
+      background: rgba(28, 20, 14, 0.88);
+      color: var(--paper);
+      border: 2px solid #f0c84b;
+      white-space: nowrap;
+      font-size: 0.72em;
+      letter-spacing: 0.04em;
+    }
+
+    #floats { inset: 0; z-index: 3; overflow: hidden; }
+
+    .float {
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #fff8e8;
+      text-shadow: 0 1px 0 #000, 0 0 4px #000;
+      white-space: nowrap;
+      font-size: 0.78em;
+    }
+
+    #hud {
+      inset: 0;
+      z-index: 4;
+    }
+
+    #topbar {
+      position: absolute;
+      top: 0.35em;
+      left: 0.4em;
+      right: 0.4em;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.4em;
+    }
+
+    #ch-name {
+      display: inline-block;
+      font-family: "Songti TC", "PMingLiU", "Noto Serif TC", serif;
+      font-size: 0.95em;
+      letter-spacing: 0.12em;
+      background: rgba(20, 14, 10, 0.82);
+      padding: 0.12em 0.42em;
+      text-shadow: 0 1px 0 #000;
+    }
+
+    #held, #progress, #wind {
+      display: inline-block;
+      margin-top: 0.25em;
+      padding: 0.12em 0.4em;
+      background: rgba(28, 20, 14, 0.78);
+      border: 2px solid rgba(244, 234, 212, 0.7);
+      font-size: 0.72em;
+    }
+
+    #top-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.28em;
+    }
+
+    #hud-btns { display: flex; gap: 0.3em; pointer-events: auto; }
+
+    #hud-btns button, .btn {
+      font: inherit;
+      cursor: pointer;
+      border: 2px solid var(--ink);
+      background: var(--paper);
+      color: var(--ink);
+      padding: 0.18em 0.45em;
+      box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.45);
+    }
+
+    #hud-btns button { font-size: 0.72em; pointer-events: auto; }
+
+    #hud-btns button.pulse {
+      animation: pulse 0.8s ease 2;
+      border-color: #f0c84b;
+    }
+
+    @keyframes pulse {
+      50% { transform: translateY(-1px); background: #fff4cf; }
+    }
+
+    #faith {
+      display: flex;
+      align-items: center;
+      gap: 0.3em;
+      font-size: 0.7em;
+      text-shadow: 0 1px 0 #000;
+    }
+
+    #faith-track {
+      width: 6.2em;
+      height: 0.7em;
+      border: 2px solid #f6edd8;
+      background: rgba(0, 0, 0, 0.45);
+    }
+
+    #faith-fill {
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg, #8c2f2f, #f0c84b);
+    }
+
+    #objective, #hint {
+      position: absolute;
+      left: 0.45em;
+      right: 0.45em;
+      text-shadow: 0 1px 0 #000, 0 0 5px rgba(0, 0, 0, 0.85);
+      font-size: 0.75em;
+      line-height: 1.35;
+    }
+
+    #objective {
+      bottom: 0.4em;
+      width: fit-content;
+      max-width: 78%;
+      background: rgba(20, 14, 10, 0.82);
+      padding: 0.22em 0.45em;
+    }
+    #hint { bottom: 1.7em; opacity: 0.85; font-size: 0.68em; }
+
+    #dialogue {
+      left: 2.5%;
+      right: 2.5%;
+      bottom: 0.45em;
+      z-index: 5;
+      background: var(--paper);
+      color: var(--ink);
+      border: 3px solid var(--ink);
+      box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.45);
+      padding: 0.45em 0.6em 0.5em;
+      max-height: 48%;
+      overflow: auto;
+      pointer-events: auto;
+      user-select: text;
+    }
+
+    #d-name {
+      font-size: 0.78em;
+      letter-spacing: 0.14em;
+      color: var(--gold);
+      margin-bottom: 0.2em;
+    }
+
+    #d-name.who-you { color: #2d5878; }
+    #d-name.who-jesus { color: #8c2f2f; }
+    #d-name.who-narr { color: transparent; height: 0; margin: 0; }
+
+    #d-text {
+      font-size: 0.92em;
+      line-height: 1.45;
+      min-height: 1.45em;
+    }
+
+    #d-text.verse {
+      font-family: "Songti TC", "PMingLiU", "Noto Serif TC", serif;
+    }
+
+    #d-ref {
+      margin-top: 0.25em;
+      color: var(--gold);
+      font-size: 0.72em;
+    }
+
+    #d-next {
+      text-align: right;
+      font-size: 0.68em;
+      letter-spacing: 0.08em;
+      opacity: 0.7;
+    }
+
+    #screen {
+      inset: 0;
+      z-index: 6;
+      display: grid;
+      place-items: center;
+      padding: 0.6em;
+      pointer-events: auto;
+    }
+
+    #screen .card {
+      width: min(100%, 28em);
+      max-height: 100%;
+      overflow: auto;
+      background: linear-gradient(180deg, var(--paper), var(--paper-2));
+      color: var(--ink);
+      border: 3px solid var(--ink);
+      box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.5);
+      padding: 0.85em 0.9em 0.75em;
+      user-select: text;
+    }
+
+    .card h1 {
+      font-family: "Songti TC", "PMingLiU", "Noto Serif TC", serif;
+      font-weight: 600;
+      letter-spacing: 0.28em;
+      text-align: center;
+      font-size: 1.7em;
+      margin: 0.1em 0 0.15em;
+    }
+
+    .card h2 {
+      font-family: "Songti TC", "PMingLiU", serif;
+      font-size: 1.05em;
+      font-weight: 600;
+      text-align: center;
+      letter-spacing: 0.12em;
+      margin: 0 0 0.2em;
+    }
+
+    .sub, .ref {
+      text-align: center;
+      color: #6d542c;
+      font-size: 0.78em;
+      letter-spacing: 0.08em;
+      margin: 0 0 0.35em;
+    }
+
+    .card p { margin: 0.35em 0; line-height: 1.55; font-size: 0.86em; }
+
+    .verse {
+      font-family: "Songti TC", "PMingLiU", "Noto Serif TC", serif;
+      line-height: 1.6;
+    }
+
+    .rule {
+      height: 2px;
+      background: var(--ink);
+      margin: 0.55em 0;
+      box-shadow: 0 3px 0 #e0c48a;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4em;
+      justify-content: center;
+      margin-top: 0.7em;
+    }
+
+    .btn.primary {
+      background: var(--red);
+      color: #f6edd8;
+    }
+
+    .btn.primary:hover { background: #a33b38; }
+    .btn.ghost { background: transparent; box-shadow: none; }
+
+    .chapters { display: grid; gap: 0.35em; margin-top: 0.4em; }
+    .chapters button { width: 100%; text-align: left; }
+
+    .note {
+      margin-top: 0.7em;
+      font-size: 0.68em;
+      line-height: 1.45;
+      color: #5c4a32;
+      text-align: center;
+    }
+
+    .journal-item { margin: 0.45em 0 0.6em; }
+    .journal-item .ref { text-align: left; margin-bottom: 0.15em; }
+
+    #touch {
+      display: none;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 10px 14px 16px;
+      z-index: 30;
+      pointer-events: none;
+    }
+
+    @media (pointer: coarse) {
+      #touch { display: flex; }
+    }
+
+    .pad {
+      display: grid;
+      grid-template-columns: 52px 52px 52px;
+      grid-template-rows: 52px 52px 52px;
+      gap: 4px;
+      pointer-events: auto;
+    }
+
+    .pad button, #btn-talk {
+      pointer-events: auto;
+      touch-action: none;
+      font: inherit;
+      border: 3px solid #241910;
+      background: rgba(244, 234, 212, 0.92);
+      color: #241910;
+      box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.4);
+    }
+
+    .pad button { font-size: 18px; }
+    .pad .up { grid-column: 2; grid-row: 1; }
+    .pad .left { grid-column: 1; grid-row: 2; }
+    .pad .right { grid-column: 3; grid-row: 2; }
+    .pad .down { grid-column: 2; grid-row: 3; }
+
+    #btn-talk {
+      width: 74px;
+      height: 74px;
+      border-radius: 50%;
+      font-size: 16px;
+      letter-spacing: 0.1em;
+    }
+
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+  <div id="frame">
+    <canvas id="game" width="320" height="192"></canvas>
+    <div id="tag" class="hidden"></div>
+    <div id="floats"></div>
+    <div id="hud" class="hidden">
+      <div id="topbar">
+        <div>
+          <div id="ch-name"></div>
+          <div id="held" class="hidden"></div>
+        </div>
+        <div id="top-right">
+          <div id="hud-btns">
+            <button type="button" id="btn-journal" tabindex="-1">經文</button>
+            <button type="button" id="btn-mute" tabindex="-1">靜音</button>
+          </div>
+          <div id="progress" class="hidden"></div>
+          <div id="faith" class="hidden">
+            <div id="faith-track"><div id="faith-fill"></div></div>
+            <span>信心</span>
+          </div>
+          <div id="wind" class="hidden">風向 ↓</div>
+        </div>
+      </div>
+      <div id="hint">方向鍵或 WASD 移動 · 空白鍵或 E 交談</div>
+      <div id="objective"></div>
+    </div>
+    <div id="dialogue" class="hidden">
+      <div id="d-name"></div>
+      <div id="d-text"></div>
+      <div id="d-ref"></div>
+      <div id="d-next">空白鍵繼續</div>
+    </div>
+    <div id="screen" class="hidden"></div>
+  </div>
+
+  <div id="touch">
+    <div class="pad">
+      <button type="button" class="up" data-dir="up" aria-label="上">↑</button>
+      <button type="button" class="left" data-dir="left" aria-label="左">←</button>
+      <button type="button" class="right" data-dir="right" aria-label="右">→</button>
+      <button type="button" class="down" data-dir="down" aria-label="下">↓</button>
+    </div>
+    <button type="button" id="btn-talk" aria-label="交談">交談</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
