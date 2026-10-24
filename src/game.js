@@ -635,6 +635,7 @@ function drawPerson(e, time) {
   pen.globalAlpha = e.alpha == null ? 1 : e.alpha;
   pen.translate(Math.round(e.x), Math.round(e.y + bob));
   pen.scale((e.dir === "left" ? -1 : 1) * sc, sc);
+  if (e.chair) drawChair(e.dir === "left" ? "right" : e.dir);
   if (!e.noShadow) drawShadow(0);
   if (L.wings) {
     px(-14, -18, 7, 10, "#f7f4ee");
@@ -1013,20 +1014,71 @@ function drawJar(e) {
   px(x - 6, y - 4, 12, 3, "#5e584e");
 }
 
+function drawChair(dir) {
+  const wood = "#6b4224";
+  const seat = "#8a5a32";
+  const dark = "#5a3820";
+  if (dir === "down") {
+    px(-8, -28, 16, 3, wood);
+    px(-8, -28, 2, 14, dark);
+    px(6, -28, 2, 14, dark);
+    px(-7, -8, 14, 3, seat);
+    px(-7, -5, 2, 5, dark);
+    px(5, -5, 2, 5, dark);
+  } else if (dir === "up") {
+    px(-8, -2, 16, 3, wood);
+    px(-8, -12, 2, 13, dark);
+    px(6, -12, 2, 13, dark);
+    px(-7, -11, 14, 3, seat);
+    px(-7, 0, 2, 4, dark);
+    px(5, 0, 2, 4, dark);
+  } else {
+    px(-12, -22, 3, 16, wood);
+    px(-12, -22, 6, 3, dark);
+    px(-7, -8, 14, 3, seat);
+    px(-5, -5, 2, 5, dark);
+    px(5, -5, 2, 5, dark);
+  }
+}
+
 function drawTable(e) {
   const x = Math.round(e.x);
   const y = Math.round(e.y);
-  px(x - 56, y - 24, 112, 28, "#6e4122");
-  px(x - 52, y - 22, 104, 22, "#a56b38");
-  px(x - 52, y - 22, 104, 2, "#c48a52");
-  px(x - 50, y + 2, 4, 6, "#5a381c");
-  px(x + 46, y + 2, 4, 6, "#5a381c");
+  px(x - 76, y - 26, 152, 38, "#6e4122");
+  px(x - 72, y - 24, 144, 32, "#a56b38");
+  px(x - 72, y - 24, 144, 2, "#c48a52");
+  px(x - 70, y + 10, 4, 6, "#5a381c");
+  px(x - 24, y + 10, 4, 6, "#5a381c");
+  px(x + 20, y + 10, 4, 6, "#5a381c");
+  px(x + 66, y + 10, 4, 6, "#5a381c");
+  px(x - 52, y - 18, 24, 10, "#c4a574");
+  px(x - 50, y - 20, 20, 4, "#e6d3a4");
+  px(x - 46, y - 22, 12, 6, "#8d4a32");
+  px(x - 38, y - 14, 4, 3, "#6a8a3a");
+  px(x - 48, y - 13, 3, 2, "#5e7a32");
   if (state.flags.meal) {
-    px(x - 10, y - 16, 10, 6, "#e6c56a");
-    px(x - 8, y - 18, 6, 2, "#f4dd9a");
-    px(x + 12, y - 18, 7, 8, "#7a2430");
-    px(x + 13, y - 20, 5, 2, "#e6d3a4");
+    px(x - 22, y - 18, 8, 6, "#e2b85a");
+    px(x - 20, y - 20, 5, 3, "#f0d48a");
+    px(x - 10, y - 15, 8, 5, "#f0d48a");
+    px(x - 8, y - 17, 4, 2, "#fff0c4");
+  } else {
+    px(x - 20, y - 18, 16, 7, "#e2b85a");
+    px(x - 18, y - 21, 12, 4, "#f0d48a");
+    px(x - 14, y - 22, 6, 2, "#fff0c4");
   }
+  px(x + 4, y - 14, 14, 6, "#e2b85a");
+  px(x + 6, y - 16, 10, 3, "#f0d48a");
+  px(x + 8, y - 17, 6, 2, "#fff0c4");
+  px(x + 26, y - 22, 8, 3, "#e6d3a4");
+  px(x + 27, y - 20, 6, 5, "#7a2430");
+  px(x + 29, y - 15, 2, 3, "#c4a574");
+  px(x + 26, y - 12, 8, 2, "#e6d3a4");
+  px(x + 42, y - 26, 12, 14, "#6e4122");
+  px(x + 44, y - 24, 8, 7, "#7a2430");
+  px(x + 52, y - 20, 4, 3, "#5a381c");
+  px(x + 43, y - 28, 10, 3, "#8a5a32");
+  px(x + 8, y - 24, 12, 6, "#8d6a38");
+  px(x + 10, y - 23, 8, 3, "#a33b34");
 }
 
 function drawStall(e) {
@@ -1650,6 +1702,8 @@ function render() {
       carry: state.player.carry,
       riding: state.player.riding,
       mountMoving: state.player.moving,
+      seated: state.player.seated,
+      chair: state.player.chair,
     });
   }
   drawables.sort((a, b) => a.y - b.y);

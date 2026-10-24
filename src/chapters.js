@@ -1379,165 +1379,185 @@ export const CHAPTERS = [
     music: "solemn",
     light: "room",
     people: [
-      { id: "peter", name: "彼得", look: "simon", tx: 9, ty: 8, before: "主啊，你洗我的腳嗎？", after: "主，是我嗎？" },
-      { id: "james", name: "雅各", look: "james", tx: 9, ty: 10, before: "席已經擺上了。他還沒有坐下。", after: "主，是我嗎？" },
-      { id: "andrew", name: "安得烈", look: "andrew", tx: 9, ty: 12, before: "我們都在這樓裡。一個也不少。", after: "主，是我嗎？" },
-      { id: "john", name: "約翰", look: "john", tx: 21, ty: 8, before: "我靠近他。這一夜，他的話特別輕，也特別重。", after: "主，是誰？" },
-      { id: "philip", name: "腓力", look: "philip", tx: 21, ty: 10, before: "餅在桌上。杯也在。他還沒有擘開。", after: "主，是我嗎？" },
-      { id: "bart", name: "巴多羅買", look: "bart", tx: 21, ty: 12, before: "逾越節的羊羔已經預備好了。", after: "主，是我嗎？" },
-      { id: "matthew", name: "馬太", look: "tax", tx: 12, ty: 7, before: "我曾算過很多人的帳。今夜他算的是另一件事。", after: "主，是我嗎？" },
-      { id: "thomas", name: "多馬", look: "thomas", tx: 18, ty: 7, before: "我看著他的手。他還沒有把餅遞出來。", after: "主，是我嗎？" },
-      { id: "james2", name: "亞勒腓的雅各", look: "james2", tx: 12, ty: 13, before: "亞勒腓的兒子也在這席上。", after: "主，是我嗎？" },
-      { id: "thad", name: "達太", look: "thad", tx: 15, ty: 13, before: "我不是加略人。我就坐在這裡。", after: "主，是我嗎？" },
-      { id: "simonZ", name: "奮銳黨的西門", look: "zealot", tx: 18, ty: 13, before: "刀留在門外了。今夜只剩下席。", after: "主，是我嗎？" },
+      { id: "matthew", name: "馬太", look: "tax", tx: 12, ty: 8, dir: "down" },
+      { id: "thomas", name: "多馬", look: "thomas", tx: 18, ty: 8, dir: "down" },
+      { id: "peter", name: "彼得", look: "simon", tx: 10, ty: 9, dir: "right" },
+      { id: "james", name: "雅各", look: "james", tx: 9, ty: 10, dir: "right" },
+      { id: "andrew", name: "安得烈", look: "andrew", tx: 10, ty: 11, dir: "right" },
+      { id: "john", name: "約翰", look: "john", tx: 20, ty: 9, dir: "left" },
+      { id: "philip", name: "腓力", look: "philip", tx: 21, ty: 10, dir: "left" },
+      { id: "bart", name: "巴多羅買", look: "bart", tx: 20, ty: 11, dir: "left" },
+      { id: "james2", name: "亞勒腓的雅各", look: "james2", tx: 12, ty: 12, dir: "up" },
+      { id: "thad", name: "達太", look: "thad", tx: 14, ty: 12, dir: "up" },
+      { id: "simonZ", name: "奮銳黨的西門", look: "zealot", tx: 18, ty: 12, dir: "up" },
     ],
     build() {
       const m = createMap(30, 18, "f");
       m.frame("#");
       m.rect(1, 1, 28, 2, "#");
       state.map = m;
-      state.player = asJesus(15, 6, "down");
+      state.player = asJesus(15, 8, "down");
+      state.player.seated = true;
+      state.player.chair = true;
       state.entities = [
-        prop({ kind: "table", tx: 15, ty: 10, solid: true, box: { x: -54, y: -30, w: 108, h: 22 } }),
-        prop({ kind: "lamp", tx: 10, ty: 9 }),
-        prop({ kind: "lamp", tx: 20, ty: 9 }),
-        person({ id: "judas", name: "加略人猶大", tx: 24, ty: 14, look: "judas", dir: "left" }),
+        prop({ kind: "table", tx: 15, ty: 10, solid: true, box: { x: -76, y: -26, w: 152, h: 36 } }),
+        prop({ kind: "lamp", tx: 8, ty: 8 }),
+        prop({ kind: "lamp", tx: 22, ty: 8 }),
+        person({
+          id: "judas",
+          name: "加略人猶大",
+          tx: 16,
+          ty: 12,
+          look: "judas",
+          dir: "up",
+          seated: true,
+          chair: true,
+          talk: false,
+        }),
       ];
       this.people.forEach((p) => {
-        state.entities.push(person({ id: p.id, name: p.name, tx: p.tx, ty: p.ty, look: p.look, role: "seat" }));
+        state.entities.push(
+          person({
+            id: p.id,
+            name: p.name,
+            tx: p.tx,
+            ty: p.ty,
+            look: p.look,
+            dir: p.dir,
+            role: "seat",
+            seated: true,
+            chair: true,
+            talk: false,
+          })
+        );
       });
-      state.objective = "先到彼得面前。你要起來洗他的腳。";
+      this.guided = true;
+      state.objective = "他們坐席。";
     },
     onEnter() {
-      say([
-        { name: "", text: "到了晚上，耶穌和十二個門徒坐席。" },
-        { name: "耶穌", text: "我很願意在受害以先和你們吃這逾越節的筵席。", ref: "路加福音 22:15", verse: true },
-      ]);
-      state.objective = "先到彼得面前。你要起來洗他的腳。";
+      this.guided = true;
+      state.player.seated = true;
+      state.player.chair = true;
+      state.player.dir = "down";
+      state.objective = "他們坐席。";
+      say(
+        [
+          { name: "", text: "到了晚上，耶穌和十二個門徒坐席。", ref: "馬太福音 26:20", verse: true },
+          {
+            name: "耶穌",
+            text: "我很願意在受害以先和你們吃這逾越節的筵席。",
+            ref: "路加福音 22:15",
+            verse: true,
+          },
+        ],
+        () => this.rise()
+      );
     },
-    goal() {
-      const flags = state.flags;
-      if (!flags.washed) return findEnt("peter");
-      if (!flags.judasGone && flags.leaving) return findEnt("judas");
-      return findEnt("john");
+    sit(on) {
+      state.player.seated = on;
+      state.player.chair = on;
     },
-    update(dt) {
-      const judas = findEnt("judas");
-      if (!judas || !state.flags.leaving || state.flags.judasGone) return;
-      const door = tp(15, 16);
-      const dx = door.x - judas.x;
-      const dy = door.y - judas.y;
-      if (Math.hypot(dx, dy) > 6) {
-        judas.x += dx * Math.min(1, dt * 1.6);
-        judas.y += dy * Math.min(1, dt * 1.6);
-        judas.moving = true;
-        judas.dir = "down";
-      } else {
-        judas.moving = false;
-        judas.alpha = Math.max(0, judas.alpha - dt * 0.7);
-        if (judas.alpha <= 0) {
-          judas.talk = false;
-          state.flags.judasGone = true;
-          state.objective = "他出去了。到約翰面前，把那條新命令留下。";
-        }
-      }
-    },
-    talk(e) {
-      const flags = state.flags;
-      if (e.id === "judas") {
-        if (flags.leaving) {
-          say([{ name: "加略人猶大", text: VERSES.rabbi, ref: "馬太福音 26:25" }]);
-          return;
-        }
-        say([
-          { name: "加略人猶大", text: "錢囊在我這裡。席若還長，需要的我去辦。" },
-          { name: "加略人猶大", text: "他也給我留了位子。" },
-        ]);
-        return;
-      }
-      if (e.role === "seat") {
-        const info = this.people.find((p) => p.id === e.id);
-        if (!info) return;
-        if (e.id === "peter" && !flags.washed) {
+    rise() {
+      this.sit(false);
+      state.objective = "他離席，到彼得面前。";
+      walkPlayer(8, 7, 48, () => {
+        walkPlayer(8, 9, 48, () => {
+          state.player.dir = "right";
           this.wash();
-          return;
-        }
-        if (e.id === "john" && flags.washed) {
-          this.atTable();
-          return;
-        }
-        if (!flags.betrayal) say([{ name: e.name, text: info.before }]);
-        else say([{ name: e.name, text: info.after, ref: e.id === "john" ? "" : "馬太福音 26:22", verse: e.id === "john" ? undefined : VERSES.isItI }]);
-        return;
-      }
+        });
+      });
     },
     wash() {
-      const flags = state.flags;
-      if (!flags.washed) {
-        say(
-          [
-            { name: "", text: "你離席站起來，把水倒在盆裡，就洗門徒的腳。" },
-            { name: "彼得", text: "主啊，你洗我的腳嗎？" },
-            { name: "彼得", text: "你永不可洗我的腳！" },
-            { name: "耶穌", text: "我若不洗你，你就與我無分了。", ref: "約翰福音 13:8" },
-            { name: "彼得", text: "主啊，不但我的腳，連手和頭也要洗。" },
-            { name: "耶穌", text: VERSES.wash, ref: "約翰福音 13:14-15", verse: true },
-          ],
-          () => {
-            flags.washed = true;
-            puff(findEnt("peter").x, findEnt("peter").y, "#9ad4ea", 10, 14);
-            state.objective = "到約翰面前。把餅和杯拿起來。";
-          }
-        );
-      }
+      say(
+        [
+          { name: "", text: "他把水倒在盆裡，就洗門徒的腳。" },
+          { name: "彼得", text: "主啊，你洗我的腳嗎？" },
+          { name: "彼得", text: "你永不可洗我的腳！" },
+          { name: "耶穌", text: "我若不洗你，你就與我無分了。", ref: "約翰福音 13:8" },
+          { name: "彼得", text: "主啊，不但我的腳，連手和頭也要洗。" },
+          { name: "耶穌", text: VERSES.wash, ref: "約翰福音 13:14-15", verse: true },
+        ],
+        () => {
+          state.flags.washed = true;
+          puff(findEnt("peter").x, findEnt("peter").y, "#9ad4ea", 10, 14);
+          state.objective = "他回到自己的位子。";
+          walkPlayer(8, 7, 48, () => {
+            walkPlayer(15, 8, 48, () => {
+              state.player.dir = "down";
+              this.sit(true);
+              this.bless();
+            });
+          });
+        }
+      );
     },
-    atTable() {
-      const flags = state.flags;
-      if (!flags.meal) {
-        say(
-          [
-            { name: "耶穌", text: VERSES.body, ref: "馬太福音 26:26", verse: true },
-            { name: "耶穌", text: VERSES.cup, ref: "馬太福音 26:27-28", verse: true },
-            { name: "", text: "餅遞到他們手裡。杯也遞過去。席上的人都領受了。" },
-          ],
-          () => {
-            flags.meal = true;
-            puff(tp(15, 10).x, tp(15, 10).y - 10, "#f0c84b", 14, 18);
-            chime();
-            state.objective = "還有話要說。再對約翰說。";
-          }
-        );
-        return;
-      }
-      if (!flags.betrayal) {
-        say(
-          [
-            { name: "耶穌", text: VERSES.betray, ref: "馬太福音 26:21", verse: true },
-            { name: "", text: "他們就甚憂愁，一個一個地問他說：「主，是我嗎？」", ref: "馬太福音 26:22" },
-            { name: "加略人猶大", text: VERSES.rabbi, ref: "馬太福音 26:25" },
-            { name: "", text: VERSES.night, ref: "約翰福音 13:30", verse: true },
-          ],
-          () => {
-            flags.betrayal = true;
-            flags.leaving = true;
-            state.objective = "他起來，往夜裡走了。";
-          }
-        );
-        return;
-      }
-      if (!flags.judasGone) {
-        say([{ name: "耶穌", text: "讓他去。已經是夜間了。" }]);
-        return;
-      }
+    bless() {
+      say(
+        [
+          { name: "耶穌", text: VERSES.body, ref: "馬太福音 26:26", verse: true },
+          { name: "耶穌", text: VERSES.cup, ref: "馬太福音 26:27-28", verse: true },
+          { name: "", text: "餅遞到他們手裡。杯也遞過去。" },
+        ],
+        () => {
+          state.flags.meal = true;
+          puff(tp(15, 10).x, tp(15, 10).y - 12, "#f0c84b", 14, 18);
+          chime();
+          this.betray();
+        }
+      );
+    },
+    betray() {
+      say(
+        [
+          { name: "耶穌", text: VERSES.betray, ref: "馬太福音 26:21", verse: true },
+          { name: "門徒", text: "主，是我嗎？", ref: "馬太福音 26:22", verse: VERSES.isItI },
+          { name: "加略人猶大", text: VERSES.rabbi, ref: "馬太福音 26:25", verse: true },
+          { name: "", text: VERSES.night, ref: "約翰福音 13:30", verse: true },
+        ],
+        () => {
+          const judas = findEnt("judas");
+          judas.seated = false;
+          judas.chair = false;
+          state.flags.leaving = true;
+          state.objective = "他起來，往夜裡走了。";
+        }
+      );
+    },
+    command() {
       say(
         [
           { name: "耶穌", text: VERSES.newCmd, ref: "約翰福音 13:34", verse: true },
-          { name: "耶穌", text: "你們若有彼此相愛的心，眾人因此就認出你們是我的門徒了。", ref: "約翰福音 13:35", verse: true },
-          { name: "", text: "他們唱了詩，就出來，往橄欖山去。", ref: "馬太福音 26:30" },
+          {
+            name: "耶穌",
+            text: "你們若有彼此相愛的心，眾人因此就認出你們是我的門徒了。",
+            ref: "約翰福音 13:35",
+            verse: true,
+          },
+          { name: "", text: "他們唱了詩，就出來，往橄欖山去。", ref: "馬太福音 26:30", verse: true },
         ],
         () => completeChapter()
       );
     },
+    goal() {
+      return null;
+    },
+    update(dt) {
+      const judas = findEnt("judas");
+      if (judas && state.flags.leaving && !state.flags.judasGone) {
+        if (stepToward(judas, tp(15, 16), dt, 42)) {
+          judas.alpha = Math.max(0, judas.alpha - dt * 0.8);
+          if (judas.alpha <= 0) {
+            judas.talk = false;
+            state.flags.judasGone = true;
+          }
+        }
+      }
+      if (state.flags.judasGone && !state.flags.command) {
+        state.flags.command = true;
+        this.command();
+      }
+    },
+    talk() {},
   },
   {
     key: "garden",
