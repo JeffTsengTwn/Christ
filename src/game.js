@@ -295,6 +295,7 @@ export function asRole(tx, ty, dir, role) {
     joseph: { look: LOOKS.elder, name: "約瑟" },
     servant: { look: LOOKS.worker, name: "用人" },
     peter: { look: LOOKS.simon, name: "彼得" },
+    simon: { look: LOOKS.simon, name: "西門" },
     john: { look: LOOKS.john, name: "約翰" },
     mary: { look: LOOKS.mary, name: "抹大拉的馬利亞" },
     mother: { look: LOOKS.mother, name: "馬利亞" },
@@ -634,7 +635,7 @@ function drawPerson(e, time) {
   pen.globalAlpha = e.alpha == null ? 1 : e.alpha;
   pen.translate(Math.round(e.x), Math.round(e.y + bob));
   pen.scale((e.dir === "left" ? -1 : 1) * sc, sc);
-  drawShadow(0);
+  if (!e.noShadow) drawShadow(0);
   if (L.wings) {
     px(-14, -18, 7, 10, "#f7f4ee");
     px(-16, -15, 4, 6, "#e4ddd0");
@@ -644,11 +645,16 @@ function drawPerson(e, time) {
     px(7, -22, 5, 4, "#fffdf8");
   }
 
-  const leg = step ? 1 : 0;
-  px(-4, -7, 3, 6, L.robeD);
-  px(1, -7 + leg, 3, 6 - leg, L.robeD);
-  px(-3, -6, 2, 4, L.robeS);
-  px(2, -6 + leg, 2, 4, L.robeS);
+  if (e.seated) {
+    px(-6, -8, 12, 5, L.robeD);
+    px(-5, -7, 10, 3, L.robe);
+  } else {
+    const leg = step ? 1 : 0;
+    px(-4, -7, 3, 6, L.robeD);
+    px(1, -7 + leg, 3, 6 - leg, L.robeD);
+    px(-3, -6, 2, 4, L.robeS);
+    px(2, -6 + leg, 2, 4, L.robeS);
+  }
 
   px(-6, -16, 12, 11, L.robeD);
   px(-5, -15, 10, 8, L.robe);
@@ -725,6 +731,10 @@ function drawPerson(e, time) {
     px(-2, hy - 6, 2, 2, "#9aa4b0");
     px(1, hy - 8, 2, 2, "#c5ced6");
     px(3, hy - 5, 1, 1, "#9aa4b0");
+  } else if (e.mark === "anger") {
+    px(-3, hy - 7, 2, 2, "#a33b34");
+    px(1, hy - 8, 2, 2, "#8c2f2f");
+    px(3, hy - 5, 1, 1, "#a33b34");
   } else if (e.mark === "hungry") {
     px(-3, hy - 6, 6, 2, "#6e5438");
     px(-2, hy - 7, 4, 1, "#c4a574");
@@ -1065,7 +1075,10 @@ function drawLamp(x, y, time) {
 
 function drawEntity(e, time) {
   if (e.alpha === 0) return;
-  if (e.kind === "person") drawPerson(e, time);
+  if (e.kind === "person") {
+    if (e.riding) drawRider(e, time);
+    else drawPerson(e, time);
+  }
   else if (e.kind === "tree") drawTree(e);
   else if (e.kind === "house") drawHouse(e);
   else if (e.kind === "well") drawWell(e.x, e.y);
@@ -1079,6 +1092,8 @@ function drawEntity(e, time) {
   else if (e.kind === "stall") drawStall(e);
   else if (e.kind === "dove") drawDove(e, time);
   else if (e.kind === "colt") drawColt(e);
+  else if (e.kind === "cloak") drawCloak(e);
+  else if (e.kind === "branch") drawBranch(e);
   else if (e.kind === "manger") drawManger(e);
   else if (e.kind === "stable") drawStable(e);
   else if (e.kind === "sheep") drawSheep(e);
@@ -1087,6 +1102,54 @@ function drawEntity(e, time) {
   else if (e.kind === "loaf") drawLoaf(e);
   else if (e.kind === "pinnacle") drawPinnacle(e);
   else if (e.kind === "realm") drawRealm(e);
+  else if (e.kind === "scroll") drawScroll(e);
+  else if (e.kind === "boat") drawBoat(e);
+  else if (e.kind === "fish") drawFish(e);
+}
+
+function drawBoat(e) {
+  const x = Math.round(e.x);
+  const y = Math.round(e.y + (e.sink || 0));
+  pen.save();
+  pen.globalAlpha = e.alpha == null ? 1 : e.alpha;
+  px(x - 18, y - 6, 36, 8, "#8d5a30");
+  px(x - 14, y - 8, 28, 3, "#c48a52");
+  px(x - 24, y - 4, 8, 5, "#6e4122");
+  px(x + 16, y - 4, 8, 5, "#6e4122");
+  px(x - 28, y - 2, 6, 3, "#5a3820");
+  px(x + 22, y - 2, 6, 3, "#5a3820");
+  px(x - 16, y - 1, 32, 1, "#5a3820");
+  px(x - 2, y - 22, 2, 16, "#5a3820");
+  px(x, y - 20, 10, 8, "#f4efe4");
+  px(x, y - 20, 10, 1, "#d9cbb6");
+  pen.restore();
+}
+
+function drawFish(e) {
+  const x = Math.round(e.x);
+  const y = Math.round(e.y);
+  const wag = Math.sin(state.time * 8 + x) > 0 ? 0 : 1;
+  pen.save();
+  pen.globalAlpha = e.alpha == null ? 1 : e.alpha;
+  px(x - 4, y - 2, 7, 3, "#e09a42");
+  px(x - 3, y - 3, 4, 1, "#f0c070");
+  px(x + 3, y - 3 - wag, 3, 2, "#c46a28");
+  px(x + 3, y + wag, 3, 2, "#c46a28");
+  px(x - 1, y - 1, 1, 1, "#2a2118");
+  pen.restore();
+}
+
+function drawScroll(e) {
+  const x = Math.round(e.x);
+  const y = Math.round(e.y);
+  pen.save();
+  pen.globalAlpha = e.alpha == null ? 1 : e.alpha;
+  px(x - 8, y - 4, 3, 8, "#8d5a30");
+  px(x + 5, y - 4, 3, 8, "#6e4122");
+  px(x - 6, y - 3, 12, 6, "#f3e6c4");
+  px(x - 4, y - 1, 8, 1, "#c4a574");
+  px(x - 3, y + 1, 6, 1, "#a68455");
+  pen.restore();
 }
 
 function drawRock(e) {
@@ -1152,12 +1215,75 @@ function drawRealm(e) {
 function drawColt(e) {
   const x = Math.round(e.x);
   const y = Math.round(e.y);
-  px(x - 8, y - 8, 14, 7, "#8a6844");
-  px(x + 4, y - 12, 6, 6, "#a07850");
-  px(x + 8, y - 14, 2, 3, "#6a5034");
-  px(x - 6, y - 1, 2, 5, "#5a4030");
-  px(x + 2, y - 1, 2, 5, "#5a4030");
-  px(x - 8, y - 6, 3, 2, "#6a5034");
+  const step = e.moving ? Math.floor(state.time * 8) % 2 : 0;
+  const dir = e.dir || "right";
+  if (dir === "up" || dir === "down") {
+    const head = dir === "up" ? -10 : 6;
+    px(x - 6, y - 7, 12, 8, "#8a6844");
+    px(x - 5, y - 9, 10, 3, "#a07850");
+    px(x - 3, y + head, 6, 5, "#a07850");
+    px(x - 4, y + head + (dir === "up" ? 0 : 3), 2, 2, "#6a5034");
+    px(x + 2, y + head + (dir === "up" ? 0 : 3), 2, 2, "#6a5034");
+    px(x - 5, y + 1 + step, 2, 4, "#5a4030");
+    px(x + 3, y + 1 + (step ? 0 : 1), 2, 4, "#5a4030");
+    return;
+  }
+  const face = dir === "left" ? -1 : 1;
+  pen.save();
+  pen.translate(x, y);
+  pen.scale(face, 1);
+  px(-8, -8, 14, 7, "#8a6844");
+  px(4, -12, 6, 6, "#a07850");
+  px(8, -14, 2, 3, "#6a5034");
+  px(-6, -1 + step, 2, 5, "#5a4030");
+  px(2, -1 + (step ? 0 : 1), 2, 5, "#5a4030");
+  px(-8, -6, 3, 2, "#6a5034");
+  pen.restore();
+}
+
+function drawRider(e, time) {
+  const x = Math.round(e.x);
+  const y = Math.round(e.y);
+  const step = e.mountMoving ? Math.floor(state.time * 8) % 2 : 0;
+  px(x - 16, y - 2, 28, 4, "rgba(24,18,12,0.28)");
+  px(x - 16, y - 10, 24, 8, "#8a6844");
+  px(x - 14, y - 12, 18, 3, "#a07850");
+  px(x + 6, y - 18, 9, 8, "#a07850");
+  px(x + 12, y - 20, 3, 3, "#6a5034");
+  px(x + 8, y - 16, 2, 2, "#6a5034");
+  px(x + 10, y - 14, 1, 1, "#2a2118");
+  px(x - 18, y - 8, 4, 2, "#6a5034");
+  px(x - 12, y + step, 3, 6, "#5a4030");
+  px(x + 1, y + (step ? 0 : 1), 3, 6, "#5a4030");
+  drawPerson(
+    Object.assign({}, e, {
+      x: x - 2,
+      y: y - 16,
+      dir: "right",
+      moving: false,
+      noShadow: true,
+      seated: true,
+      riding: false,
+    }),
+    time
+  );
+}
+
+function drawCloak(e) {
+  const x = Math.round(e.x);
+  const y = Math.round(e.y);
+  px(x - 7, y - 2, 14, 4, e.color || "#7a342c");
+  px(x - 5, y - 3, 8, 2, e.trim || "#c46a4a");
+  px(x + 2, y - 1, 4, 2, "#5a3820");
+}
+
+function drawBranch(e) {
+  const x = Math.round(e.x);
+  const y = Math.round(e.y);
+  px(x - 6, y - 1, 12, 2, "#6a8a3a");
+  px(x - 4, y - 3, 3, 2, "#7ea34a");
+  px(x + 1, y - 4, 3, 3, "#8fb456");
+  px(x + 3, y - 1, 2, 2, "#5e7a32");
 }
 
 export function tileAt(x, y) {
@@ -1522,6 +1648,8 @@ function render() {
       wounds: state.player.wounds,
       crown: state.player.crown,
       carry: state.player.carry,
+      riding: state.player.riding,
+      mountMoving: state.player.moving,
     });
   }
   drawables.sort((a, b) => a.y - b.y);
@@ -1917,11 +2045,14 @@ function syncUI() {
   }
 
   const near = showHud && !state.screen && !d.open ? nearestTalkable() : null;
-  if (near) {
+  const chNow = CHAPTERS[state.chapter];
+  const act = !near && showHud && !state.screen && !d.open && chNow && chNow.actLabel ? chNow.actLabel() : "";
+  if (near || act) {
     tagEl.classList.remove("hidden");
-    tagEl.textContent = near.name + " · 交談";
-    const x = (near.x - state.cam.x) * state.scale;
-    const y = (near.y - 36 - state.cam.y) * state.scale;
+    tagEl.textContent = near ? near.name + " · 交談" : act;
+    const anchor = near || state.player;
+    const x = (anchor.x - state.cam.x) * state.scale;
+    const y = (anchor.y - 36 - state.cam.y) * state.scale;
     tagEl.style.transform = `translate(${x}px, ${y}px) translate(-50%, -100%)`;
   } else tagEl.classList.add("hidden");
 
@@ -2247,8 +2378,10 @@ function loop() {
         const ch = CHAPTERS[state.chapter];
         if (ch.onCross) ch.onCross();
       }       else if (state.mode === "play" && !CHAPTERS[state.chapter].guided && !state.walk && !state.flags.watch) {
+        const ch = CHAPTERS[state.chapter];
         const near = nearestTalkable();
-        if (near) CHAPTERS[state.chapter].talk(near);
+        if (near) ch.talk(near);
+        else if (ch.onAct) ch.onAct();
       }
     }
   }

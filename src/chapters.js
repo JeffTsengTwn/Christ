@@ -99,6 +99,21 @@ export const VERSES = {
   today: "今天這經應驗在你們耳中了。",
   hometown: "我實在告訴你們，沒有先知在自己家鄉被人悅納的。",
   passed: "他卻從他們中間直行，過去了。",
+  sabbath: "耶穌來到拿撒勒，就是他長大的地方。在安息日，照他平常的規矩進了會堂，站起來要念聖經。",
+  opened: "有人把先知以賽亞的書交給他，他就打開，找到一處寫著說：",
+  year: "報告神悅納人的禧年。",
+  eyes: "於是把書捲起來，交還執事，就坐下。會堂裡的人都定睛看他。",
+  josephSon: "眾人都稱讚他，並希奇他口中所出的恩言；又說：「這不是約瑟的兒子嗎？」",
+  wrath: "會堂裡的人聽見這話，都怒氣滿胸，",
+  cliff: "就起來攆他出城（他們的城造在山上）；他們帶他到山崖，要把他推下去。",
+  gennesaret: "耶穌站在革尼撒勒湖邊，眾人擁擠他，要聽神的道。",
+  putOut: "講完了，對西門說：「把船開到水深之處，下網打魚。」",
+  atYourWord: "西門說：「夫子，我們整夜勞力，並沒有打著甚麼。但依從你的話，我就下網。」",
+  netBreaking: "他們下了網，就圈住許多魚，網險些裂開，",
+  bothBoats: "便招呼那隻船上的同伴來幫助。他們就來，把魚裝滿了兩隻船，甚至船要沉下去。",
+  sinfulMan: "西門彼得看見，就俯伏在耶穌膝前，說：「主啊！離開我，我是個罪人！」",
+  catchMen: "他的夥伴西庇太的兒子雅各、約翰，也是這樣。耶穌對西門說：「不要怕！從今以後，你要得人了。」",
+  leftAll: "他們把兩隻船攏了岸，就撇下所有的，跟從了耶穌。",
   ifWilling: "主若肯，必能叫我潔淨了。",
   willing: "我肯，你潔淨了吧！",
   sins: "小子，你的罪赦了。",
@@ -161,142 +176,310 @@ export const INTERLUDE = [
 export const CHAPTERS = [
   {
     key: "shore",
-    title: "海邊的呼召",
-    ref: "馬可福音 1:16–20",
-    kicker: "第一章",
+    title: "水深之處",
+    ref: "路加福音 5:1–11",
+    who: "西門",
+    kicker: "第六章",
     intro:
-      "加利利的海邊，有人在補網。你沿著岸走過去。對他們說：來跟從我。網可以留在船上。",
-    closing: "他們就立刻捨了網，跟從了他。",
-    closingRef: "馬可福音 1:18",
+      "你是西門。船停在水上。耶穌和眾人在岸邊，他講道，他們聽。依從他的話，把船開到水深之處下網。魚滿了兩隻船，你在他面前認出自己是個罪人，然後跟他走。",
+    closing: "他們把兩隻船攏了岸，就撇下所有的，跟從了耶穌。",
+    closingRef: "路加福音 5:11",
     music: "peace",
     build() {
-      const m = createMap(34, 22, ".");
-      m.rect(0, 1, 34, 3, "d");
-      m.rect(0, 4, 34, 1, "w");
-      m.rect(0, 5, 34, 4, "s");
-      m.rect(4, 6, 7, 3, "b");
-      m.rect(22, 6, 7, 3, "b");
-      stroke(m, [
-        [16, 20],
-        [16, 9],
-      ], "p", 0);
-      stroke(m, [
-        [17, 20],
-        [17, 9],
-      ], "p", 0);
-      m.rect(8, 9, 18, 1, "p");
-      scatter(m, ",", 0.14, (ch) => ch === ".");
-      [[4, 16], [30, 14], [7, 12], [28, 18], [21, 15]].forEach(([x, y]) => m.set(x, y, "r"));
+      this.waterSolid = true;
+      const m = createMap(36, 16, ".");
+      m.rect(0, 1, 36, 4, "d");
+      m.rect(0, 5, 36, 2, "w");
+      m.rect(0, 7, 36, 2, "s");
+      scatter(m, ",", 0.1, (ch) => ch === ".");
+      [[2, 3], [33, 2], [5, 13], [31, 13]].forEach(([x, y]) => m.set(x, y, "r"));
       m.frame("#");
       state.map = m;
-      state.player = asJesus(16, 16, "up");
+      state.player = asRole(13, 8, "right", "simon");
       state.entities = [
-        prop({ kind: "house", tx: 4, ty: 14, solid: true, box: { x: -14, y: -16, w: 28, h: 16 } }),
-        prop({ kind: "house", tx: 29, ty: 16, solid: true, box: { x: -14, y: -16, w: 28, h: 16 } }),
-        prop({ kind: "tree", tx: 8, ty: 13, solid: true, radius: 4 }),
-        prop({ kind: "tree", tx: 24, ty: 13, solid: true, radius: 4 }),
-        prop({ kind: "tree", tx: 6, ty: 18, solid: true, radius: 4 }),
-        prop({ kind: "tree", tx: 27, ty: 19, solid: true, radius: 4 }),
-        prop({ kind: "tree", tx: 12, ty: 20, solid: true, radius: 4 }),
-        prop({ kind: "mast", tx: 6, ty: 6 }),
-        prop({ kind: "mast", tx: 26, ty: 6 }),
-        prop({ kind: "net", tx: 13, ty: 8 }),
-        person({ id: "villager", name: "村人", tx: 11, ty: 15, look: "elder", dir: "right" }),
-        person({ id: "simon", name: "西門", tx: 7, ty: 7, look: "simon", dir: "down", role: "fisher" }),
-        person({ id: "andrew", name: "安得烈", tx: 13, ty: 8, look: "andrew", dir: "left", role: "fisher" }),
-        person({ id: "james", name: "雅各", tx: 25, ty: 7, look: "james", dir: "down", role: "fisher" }),
-        person({ id: "john", name: "約翰", tx: 20, ty: 8, look: "john", dir: "right", role: "fisher" }),
+        prop({ kind: "house", tx: 4, ty: 13, solid: true, box: { x: -14, y: -16, w: 28, h: 16 } }),
+        prop({ kind: "house", tx: 32, ty: 13, solid: true, box: { x: -14, y: -16, w: 28, h: 16 } }),
+        prop({ kind: "tree", tx: 7, ty: 12, solid: true, radius: 4 }),
+        prop({ kind: "tree", tx: 8, ty: 14, solid: true, radius: 4 }),
+        prop({ kind: "boat", id: "boat", tx: 11, ty: 5 }),
+        prop({ kind: "boat", id: "boat2", tx: 20, ty: 3 }),
+        prop({ kind: "net", id: "netL", tx: 11, ty: 5, alpha: 0 }),
+        prop({ kind: "net", id: "netR", tx: 23, ty: 3, alpha: 0 }),
+        person({ id: "andrew", name: "安得烈", tx: 10, ty: 5, look: "andrew", dir: "down", talk: false }),
+        person({ id: "james", name: "雅各", tx: 19, ty: 3, look: "james", dir: "left", talk: false }),
+        person({ id: "john", name: "約翰", tx: 21, ty: 3, look: "john", dir: "left", talk: false }),
+        person({ id: "jesus", name: "耶穌", tx: 21, ty: 8, look: "jesus", dir: "left" }),
+        person({ id: "elder", name: "老人", tx: 16, ty: 8, look: "elder", dir: "right", role: "crowd" }),
+        person({ id: "mother", name: "婦人", tx: 17, ty: 9, look: "mother", dir: "right", role: "crowd" }),
+        person({ id: "farmer", name: "村人", tx: 15, ty: 9, look: "farmer", dir: "right", role: "crowd" }),
+        person({ id: "worker", name: "會眾", tx: 18, ty: 9, look: "worker", dir: "up", role: "crowd" }),
+        person({ id: "traveler", name: "過路的", tx: 19, ty: 8, look: "traveler", dir: "right", role: "crowd" }),
+        person({ id: "youth", name: "青年", tx: 18, ty: 10, look: "boy", dir: "up", role: "crowd" }),
       ];
-      state.objective = "沿著海邊走，呼召西門、安得烈、雅各、約翰。";
-      state.flags.called = {};
+      for (let i = 0; i < 12; i++) {
+        state.entities.push(
+          prop({
+            kind: "fish",
+            id: "fish" + i,
+            x: -40,
+            y: -40,
+            alpha: 0,
+            ang: (i / 12) * Math.PI * 2,
+          })
+        );
+      }
+      this.guided = true;
+      state.objective = "耶穌在岸邊講道。";
+      state.progress = "在岸上";
     },
     onEnter() {
-      state.objective = "沿著海邊走，呼召西門、安得烈、雅各、約翰。";
-      this.refresh();
+      this.guided = true;
+      state.objective = "耶穌在岸邊講道。";
+      state.progress = "在岸上";
+      walkPlayer(20, 10, 56, () => this.hear());
     },
-    refresh() {
-      const n = Object.keys(state.flags.called).length;
-      state.progress = `漁夫 ${n}／4`;
+    hear() {
+      const j = findEnt("jesus");
+      state.player.dir = "up";
+      if (j) j.dir = "left";
+      say(
+        [
+          { name: "", text: VERSES.gennesaret, ref: "路加福音 5:1", verse: true },
+          { name: "耶穌", text: "你們要聽神的道。" },
+          { name: "", text: VERSES.putOut, ref: "路加福音 5:4", verse: true },
+          {
+            name: "西門",
+            text: "夫子，我們整夜勞力，並沒有打著甚麼。但依從你的話，我就下網。",
+            ref: "路加福音 5:5",
+            verse: VERSES.atYourWord,
+          },
+        ],
+        () => {
+          state.flags.sent = true;
+          this.guided = false;
+          for (const e of state.entities) {
+            if (e.role === "crowd" || e.id === "jesus") e.talk = false;
+          }
+          state.objective = "走到船邊上船，開到水深之處下網。";
+        }
+      );
     },
     goal() {
-      return state.entities.find((e) => e.role === "fisher" && !state.flags.called[e.id]) || null;
+      const f = state.flags;
+      if (this.guided) return null;
+      if (!f.aboard) return findEnt("boat");
+      if (!f.caught) return tp(11, 2);
+      return tp(16, 8);
+    },
+    actLabel() {
+      const f = state.flags;
+      if (this.guided || f.hauling || f.caught || f.watch || state.dialogue.open) return "";
+      const boat = findEnt("boat");
+      if (!f.aboard && boat && dist(state.player, boat) < 40) return "上船";
+      if (f.aboard && tileAt(state.player.x, state.player.y) === "d") return "下網";
+      return "";
+    },
+    onAct() {
+      const f = state.flags;
+      if (f.hauling || f.caught || f.follow) return;
+      const boat = findEnt("boat");
+      if (!f.aboard) {
+        if (boat && dist(state.player, boat) < 40) {
+          this.waterSolid = false;
+          f.aboard = true;
+          state.player.x = boat.x;
+          state.player.y = boat.y + 2;
+        }
+        return;
+      }
+      if (tileAt(state.player.x, state.player.y) !== "d") return;
+      this.cast(!!f.sent);
+    },
+    cast(full) {
+      const f = state.flags;
+      if (f.hauling || f.caught) return;
+      f.hauling = true;
+      f.haulT = 0;
+      f.full = !!full;
+      f.haulSaid = false;
+      f.watch = true;
+      if (full) {
+        f.help = true;
+        chime();
+        state.shake = 0.35;
+      } else tone(180, 0.28, "sine", 0.04);
+      const boat = findEnt("boat");
+      for (const e of state.entities) {
+        if (e.kind !== "fish") continue;
+        e.x = boat.x + Math.cos(e.ang) * 50;
+        e.y = boat.y + Math.sin(e.ang) * 28;
+        e.alpha = 0;
+      }
     },
     update(dt) {
-      const slots = [
-        [-14, 18],
-        [14, 18],
-        [-16, 30],
-        [16, 30],
-      ];
-      let i = 0;
-      for (const e of state.entities) {
-        if (!e.following) continue;
-        const slot = slots[i++] || slots[0];
-        const tx = state.player.x + slot[0];
-        const ty = state.player.y + slot[1];
-        const dx = tx - e.x;
-        const dy = ty - e.y;
-        e.x += dx * Math.min(1, dt * 2.2);
-        e.y += dy * Math.min(1, dt * 2.2);
-        e.moving = Math.hypot(dx, dy) > 2;
-        if (Math.abs(dx) > Math.abs(dy)) e.dir = dx > 0 ? "right" : "left";
-        else if (Math.abs(dy) > 1) e.dir = dy > 0 ? "down" : "up";
+      const f = state.flags;
+      const boat = findEnt("boat");
+      const boat2 = findEnt("boat2");
+      if (!boat || !boat2) return;
+      const onLand = (tile) => tile !== "w" && tile !== "d" && tile !== "n" && tile !== "l";
+      if (f.aboard) {
+        this.waterSolid = false;
+        if (!f.watch && onLand(tileAt(state.player.x, state.player.y))) {
+          f.aboard = false;
+          this.waterSolid = true;
+          const ty = Math.floor(state.player.y / 16);
+          state.player.y = (ty + 1) * 16 + 8;
+          if (f.caught && !f.ashore) this.comeAshore();
+        } else {
+          boat.x = state.player.x;
+          boat.y = state.player.y - 2;
+        }
+      } else this.waterSolid = true;
+      boat.sink = f.caught ? 3 : 0;
+      boat2.sink = f.caught ? 3 : 0;
+      if ((f.help || f.caught) && f.aboard) {
+        stepToward(boat2, { x: state.player.x + 42, y: state.player.y - 2 }, dt, f.caught ? 90 : 120);
+      }
+      if (!f.follow) {
+        const andrew = findEnt("andrew");
+        andrew.x = boat.x - 14;
+        andrew.y = boat.y + 8 + (boat.sink || 0);
+        const james = findEnt("james");
+        const john = findEnt("john");
+        james.x = boat2.x - 12;
+        james.y = boat2.y + 8 + (boat2.sink || 0);
+        john.x = boat2.x + 8;
+        john.y = boat2.y + 8 + (boat2.sink || 0);
+      }
+      const netL = findEnt("netL");
+      const netR = findEnt("netR");
+      const showNet = !!(f.hauling || f.caught);
+      netL.alpha = showNet ? 1 : 0;
+      netR.alpha = showNet ? 1 : 0;
+      netL.x = boat.x - 16;
+      netL.y = boat.y + 10 + (boat.sink || 0);
+      netR.x = boat2.x + 8;
+      netR.y = boat2.y + 10 + (boat2.sink || 0);
+      if (f.caught) {
+        for (const e of state.entities) if (e.role === "crowd") e.talk = false;
+      }
+      if (f.hauling) {
+        f.haulT += dt;
+        const pull = Math.min(1, f.haulT / 1.6);
+        for (const e of state.entities) {
+          if (e.kind !== "fish" || !f.full) continue;
+          e.alpha = Math.min(1, f.haulT * 1.4);
+          e.x = boat.x + Math.cos(e.ang) * (48 * (1 - pull) + 7);
+          e.y = boat.y + Math.sin(e.ang) * (26 * (1 - pull) + 3);
+        }
+        if (f.full && f.haulT > 1.3 && !f.strained) {
+          f.strained = true;
+          state.shake = 0.45;
+          puff(boat.x, boat.y, "#e6d7b8", 10, 30);
+        }
+        if (f.haulT > (f.full ? 2.1 : 0.75) && !f.haulSaid) {
+          f.haulSaid = true;
+          if (f.full) {
+            say(
+              [
+                { name: "", text: VERSES.netBreaking, ref: "路加福音 5:6", verse: true },
+                { name: "", text: VERSES.bothBoats, ref: "路加福音 5:7", verse: true },
+              ],
+              () => {
+                f.hauling = false;
+                f.watch = false;
+                f.caught = true;
+                state.objective = "把船開回岸邊。";
+              }
+            );
+          } else {
+            say([{ name: "西門", text: "整夜勞力，並沒有打著甚麼。" }], () => {
+              f.hauling = false;
+              f.watch = false;
+              f.haulSaid = false;
+            });
+          }
+        }
+      } else if (f.caught) {
+        for (const e of state.entities) {
+          if (e.kind !== "fish") continue;
+          const home = e.ang > Math.PI ? boat2 : boat;
+          e.alpha = 1;
+          e.x = home.x + Math.cos(e.ang) * 8;
+          e.y = home.y + 4 + (home.sink || 0) + Math.sin(e.ang) * 3;
+        }
+      }
+      if (f.follow && !f.done) {
+        const j = findEnt("jesus");
+        const dest = tp(28, 8);
+        const arrived = stepToward(j, dest, dt, 48);
+        for (const id of ["andrew", "james", "john"]) {
+          const e = findEnt(id);
+          stepToward(e, { x: j.x - 18, y: j.y + 16 }, dt, 46);
+        }
+        if (arrived && f.simonThere) {
+          f.done = true;
+          say([{ name: "", text: VERSES.leftAll, ref: "路加福音 5:11", verse: true }], () => completeChapter());
+        }
+      }
+      if (f.follow) {
+        state.objective = "他們跟從耶穌。";
+        state.progress = "跟他走";
+      } else if (!f.sent) {
+        state.objective = "耶穌在岸邊講道。";
+        state.progress = "在岸上";
+      } else if (!f.caught && !f.aboard) {
+        state.objective = "走到船邊上船，再開到水深之處下網。";
+        state.progress = "在岸上";
+      } else if (!f.caught && tileAt(state.player.x, state.player.y) !== "d") {
+        state.objective = "把船開到水深之處。";
+        state.progress = "在船上";
+      } else if (!f.caught) {
+        state.objective = "按下交談，下網打魚。";
+        state.progress = "水深之處";
+      } else if (f.aboard) {
+        state.objective = "把船開回岸邊。";
+        state.progress = "魚滿了船";
+      } else if (!f.confessed) {
+        state.objective = "他走到耶穌面前。";
+        state.progress = "攏了岸";
       }
     },
-    talk(e) {
-      const flags = state.flags;
-      if (e.id === "villager") {
-        say([
-          { name: "村人", text: "拉比，海邊有人在補網。他們整晚勞力。" },
-          { name: "村人", text: "你若呼召他們，他們聽得見。" },
-        ]);
-        return;
-      }
-      if (e.role !== "fisher") return;
-      if (flags.called[e.id]) {
-        say([{ name: e.name, text: "我們在你身邊。網可以留在這裡。" }]);
-        return;
-      }
-      const lines = {
-        simon: [
-          { name: "西門", text: "夫子，整晚勞力，網裡卻不多。你找誰？" },
-          { name: "耶穌", text: VERSES.call, ref: "馬可福音 1:17", verse: true },
-          { name: "西門", text: "那就把網放下。我來了。" },
-        ],
-        andrew: [
-          { name: "安得烈", text: "我是安得烈，西門的兄弟。我們原是在等那將要來的。" },
-          { name: "耶穌", text: "來跟從我。你去告訴你的兄弟，也來。" },
-          { name: "安得烈", text: "我來。網留在岸上。" },
-        ],
-        james: [
-          { name: "雅各", text: "我和弟弟在父親的船上補網。" },
-          { name: "耶穌", text: "來跟從我。父親和雇工可以留在船上。" },
-          { name: "雅各", text: "我們跟你去。" },
-        ],
-        john: [
-          { name: "約翰", text: "海今天很亮。你站在船邊，好像早就認識我們。" },
-          { name: "耶穌", text: "我要叫你們得人如得魚一樣。把網留下。" },
-          { name: "約翰", text: "我把雇工留在船上。我跟你走。" },
-        ],
-      };
-      say(lines[e.id], () => {
-        flags.called[e.id] = true;
-        e.following = true;
-        e.dir = "up";
-        puff(e.x, e.y - 10, "#f0c84b", 8, 20);
-        this.refresh();
-        const n = Object.keys(flags.called).length;
-        state.objective = n >= 4 ? "他們都來了。" : "還有漁夫在岸邊。";
-        if (n >= 4) {
-          say(
-            [
-              { name: "耶穌", text: "你們來。從此，你們要與我同行。" },
-              { name: "", text: VERSES.nets, ref: "馬可福音 1:18", verse: true },
-            ],
-            () => completeChapter()
-          );
-        }
+    comeAshore() {
+      const f = state.flags;
+      f.ashore = true;
+      f.confessed = true;
+      this.guided = true;
+      state.objective = "他回到耶穌面前。";
+      state.progress = "攏了岸";
+      walkPlayer(20, 8, 56, () => {
+        const j = findEnt("jesus");
+        state.player.dir = j && j.x >= state.player.x ? "right" : "left";
+        if (j) j.dir = state.player.x >= j.x ? "right" : "left";
+        say(
+          [
+            { name: "西門", text: "主啊！離開我，我是個罪人！", ref: "路加福音 5:8", verse: VERSES.sinfulMan },
+            { name: "耶穌", text: "不要怕！從今以後，你要得人了。", ref: "路加福音 5:10", verse: VERSES.catchMen },
+          ],
+          () => {
+            f.follow = true;
+            [[15, 9], [16, 10], [18, 10]].forEach(([tx, ty], i) => {
+              const who = findEnt(["andrew", "james", "john"][i]);
+              const p = tp(tx, ty);
+              who.x = p.x;
+              who.y = p.y;
+            });
+            this.guided = true;
+            state.objective = "他們跟從耶穌。";
+            walkPlayer(27, 8, 48, () => {
+              f.simonThere = true;
+            });
+          }
+        );
       });
+    },
+    talk(e) {
+      if (e.role === "crowd") say([{ name: e.name, text: "我們在岸邊聽他講神的道。" }]);
     },
   },
   {
@@ -328,8 +511,9 @@ export const CHAPTERS = [
         person({ id: "jesus", name: "耶穌", tx: 16, ty: 9, look: "jesus", dir: "down" }),
         person({ id: "steward", name: "管筵席的", tx: 28, ty: 12, look: "steward", dir: "left" }),
         person({ id: "guest", name: "客人", tx: 23, ty: 15, look: "traveler", dir: "up" }),
-        person({ id: "john", name: "約翰", tx: 20, ty: 16, look: "john", dir: "left" }),
+        person({ id: "john", name: "約翰", tx: 19, ty: 10, look: "john", dir: "down" }),
       ];
+      addCompany(EARLY, 16, 9, { follow: false, dir: "down", slots: [[-2, 1], [2, 1], [-3, 2]] });
       [8, 11, 14, 17, 20, 23].forEach((tx, i) => {
         state.entities.push(prop({ kind: "jar", id: "jar" + i, name: "石缸", tx, ty: 8 }));
       });
@@ -655,7 +839,43 @@ export const CHAPTERS = [
       }
       return best;
     },
-    update() {},
+    update(dt) {
+      const f = state.flags;
+      if (!f.gather || f.gathered) return;
+      f.gatherT = (f.gatherT || 0) + dt;
+      const slots = [
+        [-20, 18],
+        [20, 18],
+        [-36, 30],
+        [36, 30],
+        [-12, 38],
+        [14, 38],
+        [-42, 14],
+        [42, 14],
+        [0, 46],
+        [-24, 48],
+        [26, 48],
+        [0, 26],
+      ];
+      let near = 0;
+      this.people.forEach((p, i) => {
+        const e = findEnt(p.id);
+        const s = slots[i];
+        const dest = { x: state.player.x + s[0], y: state.player.y + s[1] };
+        if (dist(e, dest) < 22) near++;
+        else stepToward(e, dest, dt, 62);
+      });
+      if ((near >= 8 && f.gatherT > 1.2) || f.gatherT > 4.5) {
+        f.gathered = true;
+        say(
+          [
+            { name: "耶穌", text: "這就是你們。要常和我同在，也要被差出去。" },
+            { name: "", text: VERSES.judasNamed, ref: "馬可福音 3:19", verse: true },
+          ],
+          () => completeChapter()
+        );
+      }
+    },
     talk(e) {
       const flags = state.flags;
       const info = this.people.find((p) => p.id === e.id);
@@ -670,16 +890,8 @@ export const CHAPTERS = [
         tone(620, 0.08, "triangle", 0.035);
         this.refresh();
         const n = Object.keys(flags.met).length;
-        state.objective = n >= 12 ? "十二個人都在你身邊了。" : "還有人站在這山上。";
-        if (n >= 12) {
-          say(
-            [
-              { name: "耶穌", text: "這就是你們。要常和我同在，也要被差出去。" },
-              { name: "", text: VERSES.judasNamed, ref: "馬可福音 3:19", verse: true },
-            ],
-            () => completeChapter()
-          );
-        }
+        state.objective = n >= 12 ? "他們來到你身邊。" : "還有人站在這山上。";
+        if (n >= 12) flags.gather = true;
       });
     },
   },
@@ -781,6 +993,7 @@ export const CHAPTERS = [
       this.people.forEach((p) => {
         state.entities.push(person({ id: p.id, name: p.name, tx: p.tx, ty: p.ty, look: p.look, mark: "worry", role: "crowd" }));
       });
+      addCompany(BAND, 16, 18, { dir: "up" });
       state.flags.comforted = {};
       state.objective = "把山上的話，說給五個憂愁的人聽。";
     },
@@ -808,7 +1021,9 @@ export const CHAPTERS = [
       }
       return best;
     },
-    update() {},
+    update(dt) {
+      trailCompany(dt);
+    },
     talk(e) {
       const flags = state.flags;
       const info = this.people.find((p) => p.id === e.id);
@@ -882,6 +1097,7 @@ export const CHAPTERS = [
         person({ id: "jesus", name: "耶穌", tx: 34, ty: 8, look: "jesus", dir: "left" }),
         person({ id: "john", name: "約翰", tx: 5, ty: 7, look: "john", dir: "right", mark: "worry" }),
         person({ id: "andrew", name: "安得烈", tx: 7, ty: 9, look: "andrew", dir: "right", mark: "worry" }),
+        person({ id: "james", name: "雅各", tx: 3, ty: 9, look: "james", dir: "right", talk: false, mark: "worry" }),
       ];
       state.faith = 100;
       state.objective = "他在海上。先聽他說話。";
@@ -1014,6 +1230,9 @@ export const CHAPTERS = [
         prop({ kind: "well", tx: 7, ty: 11, solid: true, radius: 8 }),
         person({ id: "jesus", name: "耶穌", tx: 17, ty: 5, look: "jesus", dir: "down" }),
         person({ id: "philip", name: "腓力", tx: 14, ty: 10, look: "philip", dir: "down" }),
+        person({ id: "peter", name: "彼得", tx: 15, ty: 6, look: "simon", dir: "down", talk: false }),
+        person({ id: "james", name: "雅各", tx: 19, ty: 6, look: "james", dir: "down", talk: false }),
+        person({ id: "andrew", name: "安得烈", tx: 17, ty: 7, look: "andrew", dir: "up", talk: false }),
         person({ id: "boy", name: "孩子", tx: 20, ty: 16, look: "boy", dir: "left" }),
       ];
       this.crowd.forEach(([lookId, name, tx, ty], i) => {
@@ -1357,6 +1576,8 @@ export const CHAPTERS = [
         prop({ kind: "beacon", id: "out", tx: 15, ty: 12 }),
         person({ id: "jesus", name: "耶穌", tx: 22, ty: 12, look: "jesus", dir: "left", alpha: 0, talk: false, wounds: true }),
         person({ id: "thomas", name: "多馬", tx: 24, ty: 16, look: "thomas", dir: "left" }),
+        person({ id: "peter", name: "彼得", tx: 8, ty: 13, look: "simon", dir: "right", talk: false }),
+        person({ id: "john", name: "約翰", tx: 10, ty: 12, look: "john", dir: "right", talk: false }),
       ];
       state.objective = "天還黑。進墳墓看看。";
     },
@@ -2072,78 +2293,172 @@ const MORE = [
     key: "nazareth",
     title: "拿撒勒",
     ref: "路加福音 4:16–30",
-    intro: "你在拿撒勒的會堂站起來，宣讀以賽亞書。今天這經應驗在他們耳中。他們卻惱怒，拉你到山崖，要把你推下去。你從他們中間直行過去。",
+    intro: "安息日，他照平常的規矩進了會堂。會堂裡的人都在。他站起來念以賽亞書。他們怒氣滿胸，把他帶到山崖，他卻從他們中間直行過去。",
     closing: "他卻從他們中間直行，過去了。",
     closingRef: "路加福音 4:30",
     music: "peace",
+    guided: true,
+    assembly: [
+      ["clerk", "執事", 6, 8, "steward", "right"],
+      ["elder", "管會堂的", 5, 10, "elder", "right"],
+      ["man", "會眾", 13, 8, "worker", "left"],
+      ["woman", "婦人", 5, 12, "woman", "right"],
+      ["youth", "會眾", 13, 11, "youth", "left"],
+      ["farmer", "會眾", 8, 12, "farmer", "up"],
+      ["traveler", "會眾", 12, 7, "traveler", "down"],
+    ],
+    slots: [
+      [28, 7],
+      [29, 9],
+      [30, 7],
+      [31, 9],
+      [30, 8],
+      [27, 8],
+      [32, 9],
+    ],
     build() {
-      const m = createMap(34, 18, ".");
-      m.rect(2, 4, 14, 10, "f");
-      m.rect(2, 4, 14, 1, "#");
-      stroke(m, [[16, 9], [30, 9]], "p", 0);
-      m.set(28, 6, "r");
-      m.set(30, 12, "r");
+      const m = createMap(40, 20, ".");
+      m.rect(3, 5, 14, 10, "#");
+      m.rect(4, 6, 12, 8, "f");
+      m.set(16, 7, "p");
+      m.set(16, 8, "p");
+      m.set(16, 9, "p");
+      stroke(m, [[17, 8], [35, 8]], "p", 1);
+      m.set(36, 6, "r");
+      m.set(36, 10, "r");
+      for (let y = 6; y <= 10; y++) m.set(37, y, "o");
       m.frame("#");
       state.map = m;
-      state.player = asJesus(8, 9, "right");
-      state.entities = [
-        person({ id: "elder", name: "管會堂的", tx: 6, ty: 7, look: "elder", dir: "down" }),
-        person({ id: "man", name: "會眾", tx: 22, ty: 9, look: "worker", dir: "left" }),
-        person({ id: "woman", name: "婦人", tx: 24, ty: 11, look: "woman", dir: "left" }),
-        prop({ kind: "beacon", id: "out", tx: 31, ty: 9 }),
-      ];
-      state.objective = "在會堂裡展開書卷。";
+      state.player = asJesus(9, 10, "up");
+      state.entities = this.assembly.map(([id, name, tx, ty, look, dir]) =>
+        person({ id, name, tx, ty, look, dir })
+      );
+      const scroll = prop({ kind: "scroll", id: "scroll", tx: 6, ty: 7, alpha: 0 });
+      state.entities.push(scroll);
+      state.objective = "會堂裡的人都在。";
+    },
+    people() {
+      return this.assembly.map(([id]) => findEnt(id));
     },
     onEnter() {
-      state.objective = "在會堂裡展開書卷。";
+      state.objective = "會堂裡的人都在。";
+      say([{ name: "", text: VERSES.sabbath, ref: "路加福音 4:16", verse: true }], () => {
+        state.objective = "他站起來，要念聖經。";
+        state.player.dir = "up";
+        walkPlayer(9, 8, 52, () => this.handScroll());
+      });
     },
-    goal() {
-      if (!state.flags.read) return findEnt("elder");
-      if (!state.flags.angry) return findEnt("man");
-      return findEnt("out");
+    handScroll() {
+      state.player.dir = "down";
+      state.flags.hand = true;
+      state.objective = "有人把先知的書交給他。";
     },
-    update() {
-      const out = findEnt("out");
-      if (!state.flags.angry || state.flags.left || state.dialogue.open) return;
-      if (out && dist(state.player, out) < 22) {
-        state.flags.left = true;
-        say([{ name: "", text: VERSES.passed, ref: "路加福音 4:30", verse: true }], () => completeChapter());
+    readIt() {
+      const scroll = findEnt("scroll");
+      scroll.alpha = 1;
+      scroll.x = state.player.x + 10;
+      scroll.y = state.player.y - 14;
+      say(
+        [
+          { name: "", text: VERSES.opened, ref: "路加福音 4:17", verse: true },
+          { name: "耶穌", text: VERSES.spirit, ref: "路加福音 4:18", verse: true },
+          { name: "耶穌", text: VERSES.year, ref: "路加福音 4:19", verse: true },
+        ],
+        () => this.returnScroll()
+      );
+    },
+    returnScroll() {
+      state.flags.returnScroll = true;
+      state.objective = "他把書捲起來，交還執事。";
+      walkPlayer(9, 10, 46);
+    },
+    eyesOnHim() {
+      for (const e of this.people()) {
+        const dx = state.player.x - e.x;
+        const dy = state.player.y - e.y;
+        e.dir = Math.abs(dx) > Math.abs(dy) ? (dx > 0 ? "right" : "left") : dy > 0 ? "down" : "up";
       }
+      state.player.dir = "down";
+      say(
+        [
+          { name: "", text: VERSES.eyes, ref: "路加福音 4:20", verse: true },
+          { name: "耶穌", text: VERSES.today, ref: "路加福音 4:21", verse: true },
+          { name: "", text: VERSES.josephSon, ref: "路加福音 4:22", verse: true },
+          { name: "耶穌", text: VERSES.hometown, ref: "路加福音 4:24", verse: true },
+        ],
+        () => this.wrath()
+      );
     },
-    talk(e) {
-      const f = state.flags;
-      if (e.id === "elder") {
-        say(
-          [
-            { name: "", text: "有人把先知以賽亞的書交給他。他展開，找到一處，就念。" },
-            { name: "耶穌", text: VERSES.spirit, ref: "路加福音 4:18", verse: true },
-            { name: "耶穌", text: VERSES.today, ref: "路加福音 4:21", verse: true },
-          ],
-          () => {
-            f.read = true;
-            state.objective = "走到會眾面前。";
-          }
-        );
-        return;
-      }
-      if (e.id === "man" || e.id === "woman") {
-        if (!f.read) {
-          say([{ name: e.name, text: "會堂裡還安靜。等他念完那卷書。" }]);
-          return;
+    wrath() {
+      for (const e of this.people()) e.mark = "anger";
+      say(
+        [
+          { name: "", text: VERSES.wrath, ref: "路加福音 4:28", verse: true },
+          { name: "", text: VERSES.cliff, ref: "路加福音 4:29", verse: true },
+        ],
+        () => {
+          state.flags.drive = true;
+          state.objective = "他們帶他出城，到山崖那裡。";
+          state.player.dir = "right";
+          walkPlayer(34, 8, 56);
         }
-        say(
-          [
-            { name: "會眾", text: "這不是約瑟的兒子嗎？" },
-            { name: "耶穌", text: VERSES.hometown, ref: "路加福音 4:24", verse: true },
-            { name: "會眾", text: "把他拉到山崖上，推下去！" },
-          ],
-          () => {
-            f.angry = true;
-            state.objective = "從他們中間直行，走到路的那一頭。";
-          }
-        );
+      );
+    },
+    atCliff() {
+      state.player.dir = "right";
+      state.shake = 0.35;
+      for (const e of this.people()) {
+        const dx = state.player.x - e.x;
+        e.dir = dx > 0 ? "right" : "left";
+      }
+      say([{ name: "會眾", text: "把他推下去！" }], () => {
+        state.objective = "他從他們中間直行過去。";
+        state.player.dir = "left";
+        walkPlayer(18, 8, 68, () => {
+          say([{ name: "", text: VERSES.passed, ref: "路加福音 4:30", verse: true }], () => completeChapter());
+        });
+      });
+    },
+    update(dt) {
+      const f = state.flags;
+      const clerk = findEnt("clerk");
+      const scroll = findEnt("scroll");
+      if (f.hand && clerk) {
+        const arrived = stepToward(clerk, { x: state.player.x - 16, y: state.player.y + 2 }, dt, 46);
+        if (arrived) {
+          f.hand = false;
+          clerk.dir = "right";
+          this.readIt();
+        }
+      }
+      if (f.returnScroll && clerk) {
+        if (scroll && scroll.alpha > 0) {
+          scroll.x = clerk.x + 8;
+          scroll.y = clerk.y - 12;
+        }
+        const home = tp(6, 8);
+        const arrived = stepToward(clerk, home, dt, 46);
+        if (arrived && !state.walk) {
+          f.returnScroll = false;
+          if (scroll) scroll.alpha = 0;
+          clerk.dir = "right";
+          this.eyesOnHim();
+        }
+      }
+      if (f.drive && !f.cliff) {
+        let ready = !state.walk;
+        this.people().forEach((e, i) => {
+          const spot = tp(this.slots[i][0], this.slots[i][1]);
+          if (!stepToward(e, spot, dt, 62)) ready = false;
+        });
+        if (ready) {
+          f.cliff = true;
+          f.drive = false;
+          this.atCliff();
+        }
       }
     },
+    talk() {},
   },
   {
     key: "heal",
@@ -2154,7 +2469,7 @@ const MORE = [
     closingRef: "馬可福音 10:52",
     music: "peace",
     build() {
-      const m = createMap(34, 18, ".");
+      const m = createMap(34, 22, ".");
       m.rect(4, 6, 8, 5, "f");
       stroke(m, [[6, 15], [28, 15]], "p", 0);
       m.frame("#");
@@ -2166,6 +2481,7 @@ const MORE = [
         person({ id: "friend", name: "朋友", tx: 6, ty: 7, look: "youth", dir: "right" }),
         person({ id: "blind", name: "瞎子", tx: 26, ty: 15, look: "elder", dir: "left", mark: "worry" }),
       ];
+      addCompany(BAND, 8, 15, { dir: "right" });
       state.flags.healed = {};
       state.objective = "三個人在等你的手。";
     },
@@ -2190,7 +2506,9 @@ const MORE = [
       }
       return best;
     },
-    update() {},
+    update(dt) {
+      trailCompany(dt);
+    },
     done(id, ent) {
       state.flags.healed[id] = true;
       ent.mark = "peace";
@@ -2282,6 +2600,8 @@ const MORE = [
       state.entities = [
         person({ id: "jesus", name: "耶穌", tx: 13, ty: 8, look: "jesus", dir: "left" }),
         person({ id: "john", name: "約翰", tx: 15, ty: 7, look: "john", dir: "left", mark: "worry" }),
+        person({ id: "james", name: "雅各", tx: 11, ty: 7, look: "james", dir: "right", talk: false, mark: "worry" }),
+        person({ id: "andrew", name: "安得烈", tx: 16, ty: 9, look: "andrew", dir: "left", talk: false, mark: "worry" }),
         prop({ kind: "mast", id: "wind", name: "風浪", tx: 18, ty: 8, talk: true }),
       ];
       state.objective = "到船尾叫醒他。";
@@ -2348,7 +2668,7 @@ const MORE = [
     closingRef: "約翰福音 11:44",
     music: "solemn",
     build() {
-      const m = createMap(32, 20, ".");
+      const m = createMap(32, 24, ".");
       m.rect(12, 2, 8, 5, "T");
       m.rect(14, 3, 4, 3, "o");
       m.set(15, 6, "p");
@@ -2363,6 +2683,7 @@ const MORE = [
         prop({ kind: "stone", id: "stone", name: "石頭", tx: 16, ty: 7, talk: true }),
         person({ id: "lazarus", name: "拉撒路", tx: 15, ty: 4, look: "lazarus", dir: "down", alpha: 0, talk: false }),
       ];
+      addCompany(BAND, 16, 16, { dir: "up", slots: [[-2, 1], [2, 1], [-3, 1], [3, 1], [-1, 2], [1, 2], [0, 2]] });
       state.objective = "馬大在村口。先去見她。";
     },
     onEnter() {
@@ -2376,6 +2697,12 @@ const MORE = [
       return findEnt("lazarus");
     },
     update(dt) {
+      const stone = findEnt("stone");
+      if (!state.flags.halted && stone && dist(state.player, stone) < 72) {
+        state.flags.halted = true;
+        stopCompany("up");
+      }
+      if (!state.flags.halted) trailCompany(dt);
       const man = findEnt("lazarus");
       if (!man || !state.flags.called || state.flags.out) return;
       const door = tp(16, 9);
@@ -2464,79 +2791,216 @@ const MORE = [
     closingRef: "馬太福音 21:13",
     music: "peace",
     build() {
-      const m = createMap(34, 22, ".");
-      stroke(m, [[6, 16], [28, 8]], "p", 1);
-      m.rect(18, 3, 12, 8, "f");
-      m.rect(18, 3, 12, 1, "#");
+      const m = createMap(30, 28, ".");
+      m.rect(9, 3, 13, 8, "f");
+      for (let x = 8; x <= 22; x++) {
+        m.set(x, 2, "#");
+        m.set(x, 11, "#");
+      }
+      for (let y = 2; y <= 11; y++) {
+        m.set(8, y, "#");
+        m.set(22, y, "#");
+      }
+      stroke(m, [[15, 25], [15, 11]], "p", 0);
       m.frame("#");
       state.map = m;
-      state.player = asJesus(8, 16, "right");
+      state.player = asJesus(15, 24, "up");
+      state.player.riding = false;
       state.entities = [
-        person({ id: "crowd", name: "眾人", tx: 16, ty: 12, look: "youth", dir: "left" }),
-        prop({ kind: "colt", id: "colt", name: "驢駒", tx: 12, ty: 16, talk: true }),
-        prop({ kind: "stall", id: "stall0", name: "銀錢桌", tx: 22, ty: 6, talk: true }),
-        prop({ kind: "stall", id: "stall1", name: "銀錢桌", tx: 26, ty: 6, talk: true }),
-        prop({ kind: "stall", id: "stall2", name: "賣鴿子的", tx: 24, ty: 8, talk: true }),
+        prop({ kind: "house", tx: 4, ty: 21, solid: true, box: { x: -16, y: -18, w: 32, h: 18 } }),
+        prop({ kind: "house", tx: 25, ty: 20, solid: true, box: { x: -16, y: -18, w: 32, h: 18 } }),
+        prop({ kind: "house", tx: 5, ty: 16, solid: true, box: { x: -16, y: -18, w: 32, h: 18 } }),
+        prop({ kind: "tree", tx: 26, ty: 23, solid: true, radius: 4 }),
+        prop({ kind: "tree", tx: 3, ty: 24, solid: true, radius: 4 }),
+        prop({ kind: "colt", id: "colt", name: "驢駒", tx: 15, ty: 21, dir: "up", talk: false }),
       ];
+      [
+        [15, 19, "#7a342c", "#c46a4a"],
+        [14, 18, "#6e5438", "#c4a574"],
+        [16, 17, "#8c4034", "#e6d3a4"],
+        [15, 16, "#5a4030", "#a56b38"],
+        [16, 20, "#7a342c", "#f4efe4"],
+      ].forEach(([tx, ty, color, trim], i) => {
+        state.entities.push(prop({ kind: "cloak", id: "cloak" + i, tx, ty, color, trim }));
+      });
+      [[14, 16], [16, 18], [14, 20], [16, 15]].forEach(([tx, ty], i) => {
+        state.entities.push(prop({ kind: "branch", id: "branch" + i, tx, ty }));
+      });
+      const faces = ["youth", "mother", "farmer", "elder", "worker", "traveler", "woman", "boy"];
+      const spots = [];
+      [16, 18, 20, 22].forEach((y) => spots.push([11, y], [19, y]));
+      [17, 19, 21, 23].forEach((y) => spots.push([10, y], [20, y]));
+      [[11, 15], [19, 15], [10, 14], [20, 14], [11, 13], [19, 13]].forEach((p) => spots.push(p));
+      spots.forEach(([tx, ty], i) => {
+        state.entities.push(
+          person({
+            id: "crowd" + i,
+            name: "眾人",
+            tx,
+            ty,
+            look: faces[i % faces.length],
+            dir: tx < 15 ? "right" : "left",
+            role: "crowd",
+            talk: false,
+          })
+        );
+      });
+      const stalls = [
+        { id: "stall0", name: "銀錢桌", tx: 11, ty: 5, vx: 11, vy: 4, look: "elder", away: [9, 6] },
+        { id: "stall1", name: "銀錢桌", tx: 15, ty: 5, vx: 15, vy: 4, look: "worker", away: [17, 3] },
+        { id: "stall2", name: "賣鴿子的", tx: 19, ty: 5, vx: 19, vy: 4, look: "traveler", away: [20, 4], doves: [[20, 6], [18, 6]] },
+        { id: "stall3", name: "賣鴿子的", tx: 11, ty: 8, vx: 10, vy: 7, look: "farmer", away: [9, 9], doves: [[12, 9]] },
+        { id: "stall4", name: "銀錢桌", tx: 19, ty: 8, vx: 20, vy: 7, look: "tax", away: [21, 9] },
+      ];
+      this.stalls = stalls.length;
+      stalls.forEach((s) => {
+        state.entities.push(prop({ kind: "stall", id: s.id, name: s.name, tx: s.tx, ty: s.ty, talk: true }));
+        state.entities.push(
+          person({
+            id: "vendor-" + s.id,
+            name: s.name === "賣鴿子的" ? "賣鴿子的" : "兌換銀錢的",
+            tx: s.vx,
+            ty: s.vy,
+            look: s.look,
+            dir: "down",
+            role: "vendor",
+            talk: false,
+            stall: s.id,
+            away: tp(s.away[0], s.away[1]),
+          })
+        );
+        (s.doves || []).forEach(([tx, ty], i) => {
+          state.entities.push(prop({ kind: "dove", id: s.id + "-dove" + i, tx, ty, stall: s.id, vx: i % 2 ? 22 : -22 }));
+        });
+      });
+      [
+        [13, 7, "youth", 9, 7],
+        [17, 7, "woman", 21, 7],
+        [14, 6, "boy", 10, 4],
+        [18, 6, "mother", 20, 8],
+      ].forEach(([tx, ty, look, ax, ay], i) => {
+        state.entities.push(
+          person({
+            id: "buyer" + i,
+            name: "來買的人",
+            tx,
+            ty,
+            look,
+            dir: "up",
+            role: "buyer",
+            talk: false,
+            away: tp(ax, ay),
+          })
+        );
+      });
+      addCompany(BAND, 15, 24, {
+        dir: "up",
+        slots: [[-2, 1], [2, 1], [-3, 1], [3, 1], [-1, 2], [1, 2], [0, 2]],
+      });
+      this.guided = true;
       state.flags.tipped = {};
-      state.objective = "進聖城。先聽路上的人。";
+      state.objective = "驢駒牽來了。";
     },
     onEnter() {
-      state.objective = "進聖城。先聽路上的人。";
+      this.guided = true;
+      state.objective = "驢駒牽來了。";
+      say([{ name: "", text: VERSES.colt, ref: "馬太福音 21:5", verse: true }], () => {
+        state.objective = "騎上驢駒，進聖城。";
+        walkPlayer(15, 21, 52, () => this.mount());
+      });
+    },
+    mount() {
+      state.player.riding = true;
+      state.player.dir = "up";
+      const colt = findEnt("colt");
+      if (colt) colt.alpha = 0;
+      state.objective = "騎著驢駒進聖城。";
+      walkPlayer(15, 17, 46, () => this.cheer());
+    },
+    cheer() {
+      say(
+        [
+          { name: "", text: "眾人把衣服和樹枝鋪在路上，喊著說：" },
+          { name: "眾人", text: VERSES.hosanna, ref: "馬太福音 21:9", verse: true },
+        ],
+        () => walkPlayer(15, 12, 46, () => this.dismount())
+      );
+    },
+    dismount() {
+      state.flags.halted = true;
+      stopCompany("up");
+      state.player.riding = false;
+      state.player.dir = "up";
+      const colt = findEnt("colt");
+      if (colt) {
+        const spot = tp(13, 13);
+        colt.x = spot.x;
+        colt.y = spot.y;
+        colt.alpha = 1;
+        colt.dir = "up";
+      }
+      state.objective = "下了驢，走進聖殿。";
+      walkPlayer(15, 8, 48, () => this.seeMarket());
+    },
+    seeMarket() {
+      state.player.dir = "up";
+      state.player.mark = "anger";
+      say([{ name: "", text: "殿裡滿了兌換銀錢的人，和賣鴿子的。" }], () => {
+        this.guided = false;
+        state.flags.seen = true;
+        state.objective = "你看了這些買賣。去推倒那些桌子。";
+        this.refresh();
+      });
     },
     refresh() {
-      if (state.flags.entered) state.progress = `桌子 ${Object.keys(state.flags.tipped).length}／3`;
+      if (state.flags.seen) state.progress = `桌子 ${Object.keys(state.flags.tipped).length}／${this.stalls}`;
     },
     goal() {
-      if (!state.flags.entered) return findEnt("crowd");
+      if (!state.flags.seen) return null;
       return state.entities.find((e) => e.kind === "stall" && !state.flags.tipped[e.id]) || null;
     },
     update(dt) {
-      const colt = findEnt("colt");
-      if (!colt || !colt.following) return;
-      const dx = state.player.x - 18 - colt.x;
-      const dy = state.player.y + 14 - colt.y;
-      colt.x += dx * Math.min(1, dt * 2);
-      colt.y += dy * Math.min(1, dt * 2);
-      colt.moving = Math.hypot(dx, dy) > 2;
+      if (!state.flags.halted) {
+        trailCompany(dt, null, [
+          [0, 22],
+          [-12, 36],
+          [12, 36],
+          [0, 50],
+          [-12, 64],
+          [12, 64],
+          [0, 78],
+        ]);
+      }
+      for (const e of state.entities) {
+        if (e.role === "crowd") e.dir = e.x < state.player.x ? "right" : "left";
+        if ((e.role === "vendor" || e.role === "buyer") && e.flee) stepToward(e, e.away, dt, 36);
+        if (e.kind === "dove" && e.fly) {
+          e.x += (e.vx || 12) * dt;
+          e.y -= 32 * dt;
+          if (e.y < 16) e.alpha = 0;
+        }
+      }
     },
     talk(e) {
       const f = state.flags;
-      if (e.id === "crowd" || e.id === "colt") {
+      if (e.kind !== "stall" || !f.seen || f.tipped[e.id]) return;
+      e.tipped = true;
+      f.tipped[e.id] = true;
+      state.shake = 0.25;
+      tone(180, 0.08, "square", 0.04);
+      for (const v of state.entities) {
+        if (v.role === "buyer") v.flee = true;
+        if (v.stall !== e.id) continue;
+        if (v.role === "vendor") v.flee = true;
+        if (v.kind === "dove") v.fly = true;
+      }
+      this.refresh();
+      if (Object.keys(f.tipped).length >= this.stalls) {
         say(
-          [
-            { name: "", text: VERSES.colt, ref: "馬太福音 21:5", verse: true },
-            { name: "眾人", text: VERSES.hosanna, ref: "馬太福音 21:9", verse: true },
-          ],
-          () => {
-            f.entered = true;
-            const colt = findEnt("colt");
-            colt.following = true;
-            state.objective = "進入聖殿，推倒那些桌子。";
-            this.refresh();
-          }
+          [{ name: "耶穌", text: VERSES.housePrayer, ref: "馬太福音 21:13", verse: true }],
+          () => completeChapter()
         );
-        return;
-      }
-      if (e.kind === "stall") {
-        if (!f.entered) {
-          say([{ name: "", text: "殿裡滿了兌換銀錢的人。你還沒有進門。" }]);
-          return;
-        }
-        if (f.tipped[e.id]) return;
-        e.tipped = true;
-        f.tipped[e.id] = true;
-        state.shake = 0.25;
-        tone(180, 0.08, "square", 0.04);
-        this.refresh();
-        const n = Object.keys(f.tipped).length;
-        if (n >= 3) {
-          say(
-            [{ name: "耶穌", text: VERSES.housePrayer, ref: "馬太福音 21:13", verse: true }],
-            () => completeChapter()
-          );
-        } else spawnFloat(e.x, e.y - 16, "推倒了");
-      }
+      } else spawnFloat(e.x, e.y - 16, "推倒了");
     },
   },
   {
@@ -2562,6 +3026,9 @@ const MORE = [
         person({ id: "peter", name: "彼得", tx: 13, ty: 14, look: "simon", dir: "up" }),
         person({ id: "james", name: "雅各", tx: 16, ty: 15, look: "james", dir: "up" }),
         person({ id: "john", name: "約翰", tx: 18, ty: 14, look: "john", dir: "up" }),
+        person({ id: "andrew", name: "安得烈", tx: 12, ty: 18, look: "andrew", dir: "up", talk: false }),
+        person({ id: "philip", name: "腓力", tx: 16, ty: 18, look: "philip", dir: "up", talk: false }),
+        person({ id: "matthew", name: "馬太", tx: 20, ty: 18, look: "tax", dir: "up", talk: false }),
         person({ id: "judas", name: "加略人猶大", tx: 8, ty: 17, look: "judas", dir: "right", alpha: 0, talk: false }),
         person({ id: "malchus", name: "馬勒古", tx: 22, ty: 17, look: "soldier", dir: "left", alpha: 0, talk: false }),
       ];
@@ -2669,6 +3136,8 @@ const MORE = [
         person({ id: "priest", name: "祭司長", tx: 8, ty: 8, look: "elder", dir: "right" }),
         person({ id: "crowd", name: "眾人", tx: 20, ty: 11, look: "worker", dir: "left" }),
         person({ id: "soldier", name: "兵丁", tx: 18, ty: 7, look: "soldier", dir: "left" }),
+        person({ id: "john", name: "約翰", tx: 23, ty: 12, look: "john", dir: "left", talk: false }),
+        person({ id: "peter", name: "彼得", tx: 5, ty: 12, look: "simon", dir: "right", talk: false, mark: "worry" }),
       ];
       state.objective = "站到彼拉多面前。";
     },
@@ -2919,6 +3388,121 @@ const MORE = [
 ];
 
 MORE.forEach((ch) => CHAPTERS.push(ch));
+
+const EARLY = [
+  ["simon", "西門", "simon"],
+  ["andrew", "安得烈", "andrew"],
+  ["james", "雅各", "james"],
+  ["john", "約翰", "john"],
+];
+const BAND = [
+  ["peter", "彼得", "simon"],
+  ["john", "約翰", "john"],
+  ["james", "雅各", "james"],
+  ["andrew", "安得烈", "andrew"],
+  ["matthew", "馬太", "tax"],
+  ["philip", "腓力", "philip"],
+  ["thomas", "多馬", "thomas"],
+];
+
+function addCompany(members, tx, ty, opt = {}) {
+  const slots = opt.slots || [
+    [-2, 1],
+    [2, 1],
+    [-1, 2],
+    [1, 2],
+    [-3, 2],
+    [3, 2],
+    [0, 3],
+  ];
+  let n = 0;
+  for (const [id, name, look] of members) {
+    if (state.entities.some((e) => e.id === id)) continue;
+    if (state.player && (state.player.name === name || state.player.role === id)) continue;
+    const s = slots[n++] || slots[0];
+    const x = tx + s[0];
+    const y = ty + s[1];
+    if (!state.map || y <= 0 || x <= 0 || y >= state.map.h - 1 || x >= state.map.w - 1) continue;
+    state.entities.push(
+      person({
+        id,
+        name,
+        look,
+        tx: x,
+        ty: y,
+        dir: opt.dir || "up",
+        role: "company",
+        talk: false,
+        following: opt.follow !== false,
+        mark: opt.mark || null,
+      })
+    );
+  }
+}
+
+function solidTile(x, y) {
+  const ch = tileAt(x, y);
+  if (ch === "#" || ch === "r" || ch === "T") return true;
+  const chapter = CHAPTERS[state.chapter];
+  const waterSolid = !chapter || chapter.waterSolid !== false;
+  return waterSolid && (ch === "w" || ch === "d" || ch === "n");
+}
+
+function stopCompany(dir) {
+  for (const e of state.entities) {
+    if (e.role !== "company") continue;
+    e.following = false;
+    e.moving = false;
+    if (dir) e.dir = dir;
+  }
+}
+
+function trailCompany(dt, leader, form) {
+  const lead = leader || state.player;
+  if (!lead) return;
+  const slots = form || [
+    [-22, 20],
+    [22, 20],
+    [-40, 36],
+    [40, 36],
+    [-14, 50],
+    [28, 50],
+    [8, 66],
+  ];
+  const taken = [];
+  let i = 0;
+  const m = state.map;
+  for (const e of state.entities) {
+    if (e.role !== "company" || !e.following) continue;
+    const f = slots[i++] || slots[0];
+    let x = lead.x + f[0];
+    let y = lead.y + f[1];
+    if (m) {
+      x = clamp(x, 24, (m.w - 1) * 16 - 8);
+      y = clamp(y, 24, (m.h - 1) * 16 - 8);
+    }
+    if (solidTile(x, y)) {
+      const dx = lead.x - x;
+      const dy = lead.y - y;
+      const d = Math.hypot(dx, dy) || 1;
+      for (let k = 1; k <= 12; k++) {
+        const nx = x + (dx / d) * k * 6;
+        const ny = y + (dy / d) * k * 6;
+        if (!solidTile(nx, ny)) {
+          x = nx;
+          y = ny;
+          break;
+        }
+      }
+    }
+    for (const t of taken) {
+      if (Math.hypot(t.x - x, t.y - y) < 14) x += 16;
+    }
+    if (m) x = clamp(x, 24, (m.w - 1) * 16 - 8);
+    taken.push({ x, y });
+    stepToward(e, { x, y }, dt, 78);
+  }
+}
 
 const LIFE_ORDER = [
   "bethlehem",
