@@ -1344,6 +1344,15 @@ function drawEntity(e, time) {
   else if (e.kind === "boat") drawBoat(e);
   else if (e.kind === "fish") drawFish(e);
   else if (e.kind === "cross") drawCross(e);
+  else if (e.kind === "coin") drawCoin(e.x, e.y);
+}
+
+function drawCoin(x, y) {
+  x = Math.round(x);
+  y = Math.round(y);
+  px(x - 3, y - 2, 6, 4, "#c9d0d8");
+  px(x - 2, y - 3, 4, 1, "#f4f7fa");
+  px(x - 1, y - 1, 2, 2, "#6e7780");
 }
 
 function drawBoat(e) {
@@ -1702,6 +1711,7 @@ function baseReset(musicMode) {
   state.crossStep = 0;
   state.roleName = "";
   state.walk = null;
+  state.camDy = 0;
   setMusic(musicMode);
 }
 
@@ -1776,7 +1786,7 @@ function updateCamera(dt) {
   const maxX = Math.max(0, state.map.w * TILE - VIEW_W);
   const maxY = Math.max(0, state.map.h * TILE - VIEW_H);
   let tx = clamp(state.player.x - VIEW_W / 2, 0, maxX);
-  let ty = clamp(state.player.y - VIEW_H / 2, 0, maxY);
+  let ty = clamp(state.player.y - VIEW_H / 2 + (state.camDy || 0), 0, maxY);
   if (state.mode === "title") {
     tx = clamp(tp(16, 7).x - VIEW_W / 2, 0, maxX);
     ty = 0;
@@ -2396,7 +2406,7 @@ export function openEnding() {
     <p class="verse" style="text-align:center">「${VERSES.withYou}」</p>
     <p class="ref">馬太福音 28:20</p>
     <div class="rule"></div>
-    <p>從馬槽到聖殿，從約旦河到曠野，從海上到席間，再到各各他、空墳墓與加利利的山。每一章，你走進這段記載裡該在場的那個人。</p>
+    <p>從馬槽到聖殿，從約旦河到曠野，從海上到席間。夜間他說神愛世人，在耶利哥他說人子來是要尋找、拯救失喪的人。文士與祭司商議要除滅他，猶大收了三十塊錢。然後是各各他、空墳墓與加利利的山。每一章，你走進這段記載裡該在場的那個人。</p>
     <p class="verse" style="text-align:center">「${VERSES.way}」</p>
     <p class="ref">約翰福音 14:6</p>
     <div class="rule"></div>

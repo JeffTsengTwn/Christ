@@ -193,6 +193,32 @@ export const VERSES = {
   loveKnows: "主啊，你是無所不知的，你知道我愛你。",
   feedSheep: "你餵養我的羊。",
   followAfter: "你跟從我吧！",
+  fromGod: "拉比，我們知道你是由神那裡來作師傅的；因為你所行的神蹟，若沒有神同在，無人能行。",
+  bornAgain: "我實實在在地告訴你，人若不重生，就不能見神的國。",
+  howBorn: "人已經老了，如何能重生呢？豈能再進母腹生出來嗎？",
+  waterSpirit: "我實實在在地告訴你，人若不是從水和聖靈生的，就不能進神的國。",
+  liftedUp: "摩西在曠野怎樣舉蛇，人子也必照樣被舉起來，叫一切信他的都得永生。",
+  godSoLoved: "神愛世人，甚至將他的獨生子賜給他們，叫一切信他的，不至滅亡，反得永生。",
+  notCondemn: "因為神差他的兒子降世，不是要定世人的罪，乃是要叫世人因他得救。",
+  comeDown: "撒該，快下來！今天我必住在你家裡。",
+  grumble: "他竟到罪人家裡去住宿。",
+  halfGoods: "主啊，我把所有的一半給窮人；我若訛詐了誰，就還他四倍。",
+  salvationHouse: "今天救恩到了這家，因為他也是亞伯拉罕的子孫。",
+  seekLost: "人子來，為要尋找、拯救失喪的人。",
+  blasphemy: "這個人為什麼這樣說呢？他說僭妄的話了。除了神以外，誰能赦罪呢？",
+  whyReason: "你們心裡為什麼這樣議論呢？",
+  authority: "但要叫你們知道，人子在地上有赦罪的權柄。",
+  withSinners: "他和稅吏並罪人一同吃喝嗎？",
+  physician: "健康的人用不著醫生，有病的人才用得著。我來本不是召義人，乃是召罪人。",
+  destroyHim: "法利賽人出去，同希律一黨的人商議，怎樣可以除滅耶穌。",
+  whatDo: "這人行好些神蹟，我們怎麼辦呢？若這樣由著他，人人都要信他，羅馬人也要來奪我們的地土和我們的百姓。",
+  caiaphas: "你們不知道甚麼。獨不想一個人替百姓死，免得通國滅亡，就是你們的益處。",
+  fromThatDay: "從那日起，他們就商議要殺耶穌。",
+  takeTrick: "大家商議要用詭計拿住耶穌，殺他。",
+  notOnFeast: "當節的日子不可，恐怕民間生亂。",
+  whatGive: "我把他交給你們，你們願意給我多少錢？",
+  thirty: "他們就給了他三十塊錢。",
+  opportunity: "從那時候，他就找機會，要把耶穌交給他們。",
 };
 
 export const INTERLUDE = [
@@ -210,7 +236,7 @@ export const CHAPTERS = [
     who: "西門",
     kicker: "第六章",
     intro:
-      "你是西門。船停在水上。耶穌和眾人在岸邊，他講道，他們聽。依從他的話，把船開到水深之處下網。魚滿了兩隻船，你在他面前認出自己是個罪人，然後跟他走。",
+      "拿撒勒的人要把他推下山崖，他卻走過去，來到湖邊。你是西門。船停在水上。依從他的話，把船開到水深之處下網。魚滿了兩隻船，你在他面前認出自己是個罪人，然後跟他走。",
     closing: "他們把兩隻船攏了岸，就撇下所有的，跟從了耶穌。",
     closingRef: "路加福音 5:11",
     music: "peace",
@@ -518,7 +544,7 @@ export const CHAPTERS = [
     who: "用人",
     kicker: "第二章",
     intro:
-      "加利利的迦拿有人擺設婚宴。酒用盡了。耶穌的母親對你們說：他告訴你們甚麼，你們就做甚麼。六口石缸還空著。",
+      "西門他們撇下所有的，跟從了他。第三日，加利利的迦拿有人擺設婚宴。酒用盡了。耶穌的母親對你們說：他告訴你們甚麼，你們就做甚麼。六口石缸還空著。",
     closing: "這是耶穌所行的頭一件神蹟。他的門徒就信他了。",
     closingRef: "約翰福音 2:11",
     music: "peace",
@@ -665,12 +691,70 @@ export const CHAPTERS = [
     },
   },
   {
+    key: "born",
+    title: "神愛世人",
+    ref: "約翰福音 3:1–17",
+    who: "尼哥德慕",
+    guided: true,
+    night: true,
+    intro:
+      "迦拿的神蹟以後，夜深了。你是法利賽人尼哥德慕。你來見耶穌。他說人若不重生，就不能見神的國；人子必被舉起來；神愛世人，甚至將他的獨生子賜給他們。這一程自己往前走。",
+    closing: "神愛世人，甚至將他的獨生子賜給他們，叫一切信他的，不至滅亡，反得永生。",
+    closingRef: "約翰福音 3:16",
+    music: "solemn",
+    build() {
+      const m = createMap(22, 16, "f");
+      m.frame("#");
+      m.rect(1, 1, 20, 2, "#");
+      state.map = m;
+      state.player = asRole(11, 13, "up", "joseph");
+      state.player.look = Object.assign({}, LOOKS.elder, { staff: false });
+      state.player.name = "尼哥德慕";
+      state.roleName = "尼哥德慕";
+      state.entities = [
+        prop({ kind: "lamp", tx: 6, ty: 6 }),
+        prop({ kind: "lamp", tx: 16, ty: 6 }),
+        prop({ kind: "lamp", tx: 11, ty: 11 }),
+        person({ id: "jesus", name: "耶穌", tx: 11, ty: 6, look: "jesus", dir: "down", seated: true, chair: true, talk: false }),
+      ];
+      this.guided = true;
+      state.objective = "夜裡來見耶穌。";
+    },
+    onEnter() {
+      this.guided = true;
+      state.objective = "夜裡來見耶穌。";
+      say(
+        [{ name: "", text: "有一個法利賽人，名叫尼哥德慕，是猶太人的官。這人夜裡來見耶穌。", ref: "約翰福音 3:1-2", verse: true }],
+        () => walkPlayer(11, 8, 46, () => this.ask())
+      );
+    },
+    ask() {
+      state.player.dir = "up";
+      const jesus = findEnt("jesus");
+      if (jesus) jesus.dir = "down";
+      say(
+        [
+          { name: "尼哥德慕", text: VERSES.fromGod, ref: "約翰福音 3:2", verse: true },
+          { name: "耶穌", text: VERSES.bornAgain, ref: "約翰福音 3:3", verse: true },
+          { name: "尼哥德慕", text: VERSES.howBorn, ref: "約翰福音 3:4", verse: true },
+          { name: "耶穌", text: VERSES.waterSpirit, ref: "約翰福音 3:5", verse: true },
+          { name: "耶穌", text: VERSES.liftedUp, ref: "約翰福音 3:14-15", verse: true },
+          { name: "耶穌", text: VERSES.godSoLoved, ref: "約翰福音 3:16", verse: true },
+          { name: "耶穌", text: VERSES.notCondemn, ref: "約翰福音 3:17", verse: true },
+        ],
+        () => completeChapter()
+      );
+    },
+    update() {},
+    talk() {},
+  },
+  {
     key: "twelve",
     title: "十二門徒",
     ref: "馬可福音 3:13–19",
     kicker: "第三章",
     intro:
-      "你上了山，隨自己的意思叫人來。十二個人要常和你同在，也要被差去傳道。一個一個走到他們面前，呼叫他們的名字。",
+      "夜間他說神愛世人，人子必被舉起來。你上了山，隨自己的意思叫人來。十二個人要常和你同在，也要被差去傳這話。一個一個走到他們面前，呼叫他們的名字。",
     closing: "他就設立十二個人，要他們常和自己同在。",
     closingRef: "馬可福音 3:14",
     music: "peace",
@@ -930,7 +1014,7 @@ export const CHAPTERS = [
     ref: "馬太福音 5:1–7",
     kicker: "第四章",
     intro:
-      "你上了山，開口教訓他們。山坡上坐著憂愁的人。走到每一個人面前，把那句話親自說給他聽。",
+      "文士和法利賽人剛出去，商議怎樣除滅他。你仍上了山，開口教訓他們。山坡上坐著憂愁的人。走到每一個人面前，把那句話親自說給他聽。",
     closing: "話留在他們心裡，他們就不再坐在憂愁裡。",
     closingRef: "馬太福音 5:2",
     music: "peace",
@@ -1095,7 +1179,7 @@ export const CHAPTERS = [
     who: "彼得",
     kicker: "第五章",
     intro:
-      "夜裡四更天，你在船上。因風不順，船被浪搖撼。他從海面上走來。你求他叫你從水面上走到他那裡。眼睛看著他，踏著金光。",
+      "風止住了，你們心裡作難：這到底是誰。夜裡四更天，你又在船上。他從海面上走來。你求他叫你從水面上走到他那裡。眼睛看著他，踏著金光。",
     closing: "他們上了船，風就住了。",
     closingRef: "馬太福音 14:32",
     music: "storm",
@@ -1225,7 +1309,7 @@ export const CHAPTERS = [
     ref: "約翰福音 6:1–13",
     who: "約翰",
     kicker: "第六章",
-    intro: "眾人餓了，地方又是野地。耶穌對你們說：你們給他們吃吧。一個孩子有五個大麥餅、兩條魚。你把餅拿到他那裡，他祝謝了，你再分給坐著的人。",
+    intro: "他們在船上認他是神的兒子。隔天，眾人跟著他到野地，餓了。耶穌對你們說：你們給他們吃吧。一個孩子有五個大麥餅、兩條魚。你把餅拿到他那裡，他祝謝了，你再分給坐著的人。",
     closing: "他們都吃飽了。",
     closingRef: "約翰福音 6:12",
     music: "peace",
@@ -1397,12 +1481,91 @@ export const CHAPTERS = [
     },
   },
   {
+    key: "silver",
+    title: "三十塊錢",
+    ref: "馬太福音 26:3–5、14–16",
+    who: "猶大",
+    guided: true,
+    night: true,
+    intro:
+      "祭司長和文士已經想法子要除滅他。他們聚集在大祭司該亞法的院裡，商議用詭計拿住耶穌，只是說當節的日子不可。你是加略人猶大。你進去問：我把他交給你們，你們願意給我多少錢。他們給了你三十塊錢。你就去找機會。這一程自己往前走。",
+    closing: "從那時候，他就找機會，要把耶穌交給他們。",
+    closingRef: "馬太福音 26:16",
+    music: "solemn",
+    build() {
+      const m = createMap(22, 16, "f");
+      m.frame("#");
+      m.rect(1, 1, 20, 2, "#");
+      state.map = m;
+      state.player = asRole(11, 13, "up", "servant");
+      state.player.look = LOOKS.judas;
+      state.player.name = "加略人猶大";
+      state.roleName = "加略人猶大";
+      state.entities = [
+        prop({ kind: "lamp", tx: 6, ty: 6 }),
+        prop({ kind: "lamp", tx: 16, ty: 6 }),
+        person({ id: "priest", name: "祭司長", tx: 11, ty: 5, look: "priest", dir: "down", seated: true, chair: true, talk: false }),
+        person({ id: "elder", name: "長老", tx: 8, ty: 6, look: "elder", dir: "right", talk: false }),
+        person({ id: "elder2", name: "長老", tx: 14, ty: 6, look: "elder", dir: "left", talk: false }),
+      ];
+      const spot = tp(11, 6);
+      [
+        [-20, -18], [-12, -12], [-4, -16], [4, -10], [12, -15], [20, -11],
+        [-16, -6], [-6, -4], [4, -5], [14, -3],
+      ].forEach(([dx, dy], i) => {
+        const coin = prop({ kind: "coin", id: "coin" + i, tx: 11, ty: 6, alpha: 0 });
+        coin.x = spot.x + dx;
+        coin.y = spot.y + dy;
+        state.entities.push(coin);
+      });
+      this.guided = true;
+      state.objective = "進大祭司的院子。";
+    },
+    onEnter() {
+      this.guided = true;
+      say(
+        [
+          { name: "", text: VERSES.takeTrick, ref: "馬太福音 26:3-4", verse: true },
+          { name: "祭司長", text: VERSES.notOnFeast, ref: "馬太福音 26:5", verse: true },
+        ],
+        () => walkPlayer(11, 8, 46, () => this.bargain())
+      );
+    },
+    bargain() {
+      state.player.dir = "up";
+      const priest = findEnt("priest");
+      if (priest) priest.dir = "down";
+      say(
+        [
+          { name: "加略人猶大", text: VERSES.whatGive, ref: "馬太福音 26:15", verse: true },
+          { name: "祭司長", text: "三十塊錢。" },
+        ],
+        () => {
+          state.entities.forEach((e) => {
+            if (e.kind === "coin") e.alpha = 1;
+          });
+          chime();
+          puff(tp(11, 6).x, tp(11, 6).y, "#d5dbe3", 12, 18);
+          say(
+            [
+              { name: "", text: VERSES.thirty, ref: "馬太福音 26:15", verse: true },
+              { name: "", text: VERSES.opportunity, ref: "馬太福音 26:16", verse: true },
+            ],
+            () => completeChapter()
+          );
+        }
+      );
+    },
+    update() {},
+    talk() {},
+  },
+  {
     key: "supper",
     title: "最後的晚餐",
     ref: "約翰福音 13；馬太福音 26:20–35",
     kicker: "第七章",
     intro:
-      "逾越節的晚上，樓房已經預備好。你起來洗他們的腳，又把餅和杯遞給他們。猶大出去以後，你告訴彼得：雞叫以先，他要三次不認你。這一夜的話很重。",
+      "猶大已經收了三十塊錢，正找機會。逾越節的晚上，樓房已經預備好。你起來洗他們的腳，又把餅和杯遞給他們。你說你們中間有一個人要賣我。猶大出去以後，你告訴彼得：雞叫以先，他要三次不認你。",
     closing: "他們唱了詩，就出來，往橄欖山去。",
     closingRef: "馬太福音 26:30",
     music: "solemn",
@@ -1609,7 +1772,7 @@ export const CHAPTERS = [
     who: "抹大拉的馬利亞",
     guided: true,
     intro:
-      "安息日將盡，七日的頭一日，天快亮的時候。你和那個馬利亞來看墳墓。地大震動，主的使者把石頭滾開，坐在上面。看守的人嚇得如死人一樣。你們又害怕又歡喜，跑去報信，路上遇見耶穌。這一程自己往前走。",
+      "他在各各他把靈魂交在父手裡，被安放在新墳墓裡。安息日將盡，七日的頭一日，天快亮的時候。你和那個馬利亞來看墳墓。地大震動，主的使者把石頭滾開，坐在上面。看守的人嚇得如死人一樣。你們又害怕又歡喜，跑去報信，路上遇見耶穌。這一程自己往前走。",
     closing: "不要害怕！你們去告訴我的弟兄，叫他們往加利利去，在那裡必見我。",
     closingRef: "馬太福音 28:10",
     music: "dawn",
@@ -1905,7 +2068,7 @@ const MORE = [
     who: "馬利亞",
     guided: true,
     intro:
-      "節期完了，你和約瑟往回走，才知道孩子不在同行的人裡。你們在親族中找他，又回耶路撒冷。過了三天，在殿裡看見他坐在教師中間，正對他們說話。這一程自己往前走。",
+      "他們連夜往埃及去了。過了些年，節期完了，你和約瑟往回走，才知道孩子不在同行的人裡。你們在親族中找他，又回耶路撒冷。過了三天，在殿裡看見他坐在教師中間，正對他們說話。這一程自己往前走。",
     closing: "豈不知我應當以我父的事為念嗎？",
     closingRef: "路加福音 2:49",
     music: "peace",
@@ -2034,7 +2197,7 @@ const MORE = [
     title: "約旦河",
     ref: "馬太福音 3:13–17",
     intro:
-      "眾百姓都在約旦河受洗。約翰站在水裡。你從加利利自己走到他面前，下到河中。受洗之後，天要開，鴿子要降下，有聲音從天上來。",
+      "孩子在殿裡說過，應當以父的事為念。多年以後，眾百姓都在約旦河受洗。約翰站在水裡。你從加利利走到他面前，下到河中。受洗之後，天要開，鴿子要降下，有聲音從天上來。",
     closing: "這是我的愛子，我所喜悅的。",
     closingRef: "馬太福音 3:17",
     music: "dawn",
@@ -2168,7 +2331,7 @@ const MORE = [
     key: "wild",
     title: "曠野",
     ref: "馬太福音 4:1–11",
-    intro: "聖靈引他到曠野，受魔鬼的試探。他禁食四十晝夜，後來就餓了。魔鬼沿路走來，三次試探他。",
+    intro: "天父剛說：這是我的愛子。聖靈隨即引他到曠野，受魔鬼的試探。他禁食四十晝夜，後來就餓了。魔鬼沿路走來，三次試探他。",
     closing: "於是，魔鬼離了耶穌，有天使來伺候他。",
     closingRef: "馬太福音 4:11",
     music: "solemn",
@@ -2388,7 +2551,7 @@ const MORE = [
     key: "nazareth",
     title: "拿撒勒",
     ref: "路加福音 4:16–30",
-    intro: "安息日，他照平常的規矩進了會堂。會堂裡的人都在。他站起來念以賽亞書。他們怒氣滿胸，把他帶到山崖，他卻從他們中間直行過去。",
+    intro: "魔鬼退了，有天使來伺候他。他回到拿撒勒。安息日，他照平常的規矩進了會堂。他站起來念以賽亞書。他們怒氣滿胸，把他帶到山崖，他卻從他們中間直行過去。",
     closing: "他卻從他們中間直行，過去了。",
     closingRef: "路加福音 4:30",
     music: "peace",
@@ -2559,7 +2722,7 @@ const MORE = [
     key: "heal",
     title: "伸手",
     ref: "馬太福音 8；馬可福音 2；馬可福音 10",
-    intro: "長大痲瘋的求你潔淨他。癱子從房頂被縋下來。瞎子在路旁喊大衛的子孫。你伸手，也開口。",
+    intro: "十二個人常和他同在。長大痲瘋的求你潔淨他。癱子從房頂被縋下來。瞎子在路旁喊大衛的子孫。你伸手，也開口。文士坐在旁邊聽。",
     closing: "你的信救了你了。",
     closingRef: "馬可福音 10:52",
     music: "peace",
@@ -2674,11 +2837,80 @@ const MORE = [
     },
   },
   {
+    key: "scribes",
+    title: "僭妄的話",
+    ref: "馬可福音 2:5–17；馬可福音 3:6",
+    who: "文士",
+    guided: true,
+    light: "room",
+    intro:
+      "你剛聽見他對癱子說：小子，你的罪赦了。你心裡說，這是僭妄的話。法利賽人又問，他為什麼和罪人一同吃喝。他把赦罪的權柄說完，你們出去，商議怎樣可以除滅他。這一程自己往前走。",
+    closing: "法利賽人出去，同希律一黨的人商議，怎樣可以除滅耶穌。",
+    closingRef: "馬可福音 3:6",
+    music: "solemn",
+    build() {
+      const m = createMap(22, 16, "f");
+      m.frame("#");
+      m.rect(1, 1, 20, 2, "#");
+      state.map = m;
+      state.player = asRole(11, 13, "up", "joseph");
+      state.player.look = Object.assign({}, LOOKS.elder, { staff: false });
+      state.player.name = "文士";
+      state.roleName = "文士";
+      state.entities = [
+        prop({ kind: "lamp", tx: 6, ty: 6 }),
+        prop({ kind: "lamp", tx: 16, ty: 6 }),
+        person({ id: "jesus", name: "耶穌", tx: 11, ty: 6, look: "jesus", dir: "down", talk: false }),
+        person({ id: "man", name: "那人", tx: 9, ty: 8, look: "youth", dir: "up", mark: "peace", talk: false }),
+        person({ id: "pharisee", name: "法利賽人", tx: 14, ty: 7, look: "priest", dir: "left", talk: false }),
+        person({ id: "pharisee2", name: "法利賽人", tx: 15, ty: 9, look: "elder", dir: "left", talk: false }),
+      ];
+      this.guided = true;
+      state.objective = "你心裡議論這話。";
+    },
+    onEnter() {
+      this.guided = true;
+      say(
+        [{ name: "", text: "他對癱子說：小子，你的罪赦了。有幾個文士坐在那裡，心裡議論。" }],
+        () => walkPlayer(11, 8, 46, () => this.charge())
+      );
+    },
+    charge() {
+      state.player.dir = "up";
+      const jesus = findEnt("jesus");
+      if (jesus) jesus.dir = "down";
+      say(
+        [
+          { name: "文士", text: VERSES.blasphemy, ref: "馬可福音 2:7", verse: true },
+          { name: "耶穌", text: VERSES.whyReason, ref: "馬可福音 2:8", verse: true },
+          { name: "耶穌", text: VERSES.authority, ref: "馬可福音 2:10", verse: true },
+          { name: "法利賽人", text: VERSES.withSinners, ref: "馬可福音 2:16", verse: true },
+          { name: "耶穌", text: VERSES.physician, ref: "馬可福音 2:17", verse: true },
+        ],
+        () => {
+          state.flags.out = true;
+          state.objective = "你們出去商議。";
+          walkPlayer(11, 13, 42, () => {
+            say([{ name: "", text: VERSES.destroyHim, ref: "馬可福音 3:6", verse: true }], () => completeChapter());
+          });
+        }
+      );
+    },
+    update(dt) {
+      if (!state.flags.out) return;
+      ["pharisee", "pharisee2"].forEach((id, i) => {
+        const e = findEnt(id);
+        if (e) stepToward(e, tp(12 + i, 12), dt, 40);
+      });
+    },
+    talk() {},
+  },
+  {
     key: "storm",
     title: "平靜風浪",
     ref: "馬可福音 4:35–41",
     who: "彼得",
-    intro: "晚上，船在海中。耶穌在船尾睡覺。忽然起了暴風，船要滿了水。你把他叫醒。他起來，斥責風，向海說：住了吧！靜了吧！",
+    intro: "山上的話還在你們心裡。晚上，他說我們渡到那邊去。船在海中，耶穌在船尾睡覺。忽然起了暴風，船要滿了水。你把他叫醒。",
     closing: "風就止住，大大地平靜了。",
     closingRef: "馬可福音 4:39",
     music: "storm",
@@ -2758,7 +2990,7 @@ const MORE = [
     key: "lazarus",
     title: "拉撒路",
     ref: "約翰福音 11:1–44",
-    intro: "拉撒路死了四天。馬大在村口迎接你。馬利亞俯伏在你腳前哭。你也哭了。到墳墓前，叫人把石頭挪開，然後大聲呼叫他的名字。",
+    intro: "野地裡的人都吃飽了。此後，伯大尼送信來：你所愛的人病了。你到的時候，拉撒路已經死了四天。馬大在村口迎接你。馬利亞俯伏在你腳前哭。你也哭了。到墳墓前，叫人把石頭挪開，然後大聲呼叫他的名字。",
     closing: "那死人就出來了，手腳裹著布。",
     closingRef: "約翰福音 11:44",
     music: "solemn",
@@ -2878,12 +3110,176 @@ const MORE = [
     },
   },
   {
+    key: "council",
+    title: "一個人死",
+    ref: "約翰福音 11:45–53",
+    who: "該亞法",
+    guided: true,
+    light: "room",
+    intro:
+      "拉撒路從墳墓裡出來，手腳裹著布。好些猶太人看見，就信了耶穌。祭司長和法利賽人聚集公會。你是大祭司該亞法。他們問：這人行好些神蹟，我們怎麼辦。你說，一個人替百姓死，就是益處。從那日起，他們商議要殺他。這一程自己往前走。",
+    closing: "從那日起，他們就商議要殺耶穌。",
+    closingRef: "約翰福音 11:53",
+    music: "solemn",
+    build() {
+      const m = createMap(22, 16, "f");
+      m.frame("#");
+      m.rect(1, 1, 20, 2, "#");
+      state.map = m;
+      state.player = asRole(11, 13, "up", "joseph");
+      state.player.look = LOOKS.priest;
+      state.player.name = "該亞法";
+      state.roleName = "該亞法";
+      state.entities = [
+        prop({ kind: "lamp", tx: 6, ty: 5 }),
+        prop({ kind: "lamp", tx: 16, ty: 5 }),
+        person({ id: "priest", name: "祭司長", tx: 8, ty: 5, look: "priest", dir: "down", seated: true, chair: true, talk: false }),
+        person({ id: "elder", name: "長老", tx: 14, ty: 5, look: "elder", dir: "down", seated: true, chair: true, talk: false }),
+        person({ id: "pharisee", name: "法利賽人", tx: 11, ty: 8, look: "elder", dir: "down", talk: false }),
+      ];
+      this.guided = true;
+      state.objective = "公會聚集。";
+    },
+    onEnter() {
+      this.guided = true;
+      say(
+        [{ name: "", text: "拉撒路從墳墓出來。好些猶太人看見耶穌所做的事，就信了他。祭司長和法利賽人聚集公會。", ref: "約翰福音 11:45-47", verse: true }],
+        () => walkPlayer(11, 7, 46, () => this.plot())
+      );
+    },
+    plot() {
+      state.player.dir = "down";
+      const man = findEnt("pharisee");
+      if (man) man.dir = "up";
+      say(
+        [
+          { name: "法利賽人", text: VERSES.whatDo, ref: "約翰福音 11:47-48", verse: true },
+          { name: "該亞法", text: VERSES.caiaphas, ref: "約翰福音 11:49-50", verse: true },
+          { name: "", text: VERSES.fromThatDay, ref: "約翰福音 11:53", verse: true },
+        ],
+        () => completeChapter()
+      );
+    },
+    update() {},
+    talk() {},
+  },
+  {
+    key: "sycamore",
+    title: "失喪的人",
+    ref: "路加福音 19:1–10",
+    who: "撒該",
+    guided: true,
+    intro:
+      "從那日起，他們商議要殺他。他仍往耶路撒冷去，經過耶利哥。你是稅吏長撒該，身材矮小，想看看他是誰。你跑到前頭，爬上桑樹。他在樹下叫你，說今天必住在你家裡。人子來，為要尋找、拯救失喪的人。這一程自己往前走。",
+    closing: "人子來，為要尋找、拯救失喪的人。",
+    closingRef: "路加福音 19:10",
+    music: "peace",
+    build() {
+      const m = createMap(28, 16, ".");
+      stroke(m, [[2, 7], [25, 7]], "p", 0);
+      m.frame("#");
+      state.map = m;
+      state.player = asRole(8, 8, "up", "servant");
+      state.player.look = Object.assign({}, LOOKS.tax, { scale: 0.82 });
+      state.player.name = "撒該";
+      state.roleName = "撒該";
+      state.entities = [
+        prop({ kind: "house", tx: 24, ty: 5, solid: true, box: { x: -16, y: -18, w: 32, h: 18 } }),
+        prop({ kind: "tree", id: "tree", tx: 16, ty: 4, solid: true, radius: 4 }),
+        person({ id: "jesus", name: "耶穌", tx: 4, ty: 7, look: "jesus", dir: "right", talk: false }),
+        person({ id: "peter", name: "彼得", tx: 3, ty: 8, look: "simon", dir: "right", talk: false }),
+        person({ id: "john", name: "約翰", tx: 5, ty: 8, look: "john", dir: "right", talk: false }),
+      ];
+      [
+        ["c0", "worker", 9, 7],
+        ["c1", "farmer", 11, 7],
+        ["c2", "woman", 13, 7],
+        ["c3", "youth", 10, 6],
+        ["c4", "elder", 12, 8],
+      ].forEach(([id, look, tx, ty]) => {
+        state.entities.push(person({ id, name: "眾人", tx, ty, look, dir: "left", role: "town", talk: false }));
+      });
+      this.guided = true;
+      state.objective = "你要看看耶穌是怎樣的人。";
+    },
+    onEnter() {
+      this.guided = true;
+      say(
+        [
+          { name: "", text: "耶穌進了耶利哥，正經過的時候。", ref: "路加福音 19:1", verse: true },
+          { name: "撒該", text: "我要看看耶穌是怎樣的人。只是人多，我又身材矮小。" },
+        ],
+        () => {
+          state.objective = "跑到前頭，爬上桑樹。";
+          walkPlayer(18, 5, 56, () => this.climbed());
+        }
+      );
+    },
+    climbed() {
+      state.player.dir = "down";
+      state.camDy = 40;
+      say([{ name: "", text: "他就跑到前頭，爬上桑樹，要看耶穌，因為耶穌必從那裡經過。", ref: "路加福音 19:4", verse: true }], () => {
+        state.flags.pass = true;
+        state.objective = "他走到樹下。";
+      });
+    },
+    called() {
+      const jesus = findEnt("jesus");
+      if (jesus) jesus.dir = "up";
+      state.player.dir = "down";
+      say(
+        [
+          { name: "耶穌", text: VERSES.comeDown, ref: "路加福音 19:5", verse: true },
+        ],
+        () => {
+          state.objective = "他就急忙下來。";
+          walkPlayer(16, 7, 48, () => this.house());
+        }
+      );
+    },
+    house() {
+      state.player.dir = "right";
+      const jesus = findEnt("jesus");
+      if (jesus) jesus.dir = "left";
+      say(
+        [
+          { name: "眾人", text: VERSES.grumble, ref: "路加福音 19:7", verse: true },
+          { name: "撒該", text: VERSES.halfGoods, ref: "路加福音 19:8", verse: true },
+          { name: "耶穌", text: VERSES.salvationHouse, ref: "路加福音 19:9", verse: true },
+          { name: "耶穌", text: VERSES.seekLost, ref: "路加福音 19:10", verse: true },
+        ],
+        () => completeChapter()
+      );
+    },
+    update(dt) {
+      if (!state.flags.pass || state.flags.arrived) return;
+      const jesus = findEnt("jesus");
+      if (!jesus) return;
+      const dest = tp(18, 7);
+      const done = stepToward(jesus, dest, dt, 42);
+      const peter = findEnt("peter");
+      const john = findEnt("john");
+      if (peter) stepToward(peter, { x: jesus.x - 18, y: jesus.y + 10 }, dt, 42);
+      if (john) stepToward(john, { x: jesus.x + 14, y: jesus.y + 12 }, dt, 42);
+      for (const e of state.entities) {
+        if (e.role !== "town") continue;
+        e.dir = e.x < jesus.x ? "right" : "left";
+      }
+      if (done) {
+        state.flags.arrived = true;
+        jesus.dir = "up";
+        this.called();
+      }
+    },
+    talk() {},
+  },
+  {
     key: "city",
     title: "聖城",
     ref: "馬太福音 21:1–13",
-    intro: "你騎著驢駒進耶路撒冷。眾人鋪衣服，喊和散那。然後你進入聖殿，推倒兌換銀錢之人的桌子。",
-    closing: "我的殿必稱為禱告的殿。",
-    closingRef: "馬太福音 21:13",
+    intro: "他在耶利哥說，人子來是要尋找、拯救失喪的人。如今你騎著驢駒進耶路撒冷。眾人鋪衣服，喊和散那。然後你進入聖殿，推倒兌換銀錢之人的桌子。祭司長聽見，就想法子要除滅他。",
+    closing: "祭司長和文士聽見這話，就想法子要除滅耶穌。",
+    closingRef: "馬可福音 11:18",
     music: "peace",
     build() {
       const m = createMap(30, 28, ".");
@@ -3092,7 +3488,10 @@ const MORE = [
       this.refresh();
       if (Object.keys(f.tipped).length >= this.stalls) {
         say(
-          [{ name: "耶穌", text: VERSES.housePrayer, ref: "馬太福音 21:13", verse: true }],
+          [
+            { name: "耶穌", text: VERSES.housePrayer, ref: "馬太福音 21:13", verse: true },
+            { name: "", text: "祭司長和文士聽見這話，就想法子要除滅耶穌。", ref: "馬可福音 11:18", verse: true },
+          ],
           () => completeChapter()
         );
       } else spawnFloat(e.x, e.y - 16, "推倒了");
@@ -3102,7 +3501,7 @@ const MORE = [
     key: "gethsemane",
     title: "客西馬尼",
     ref: "馬太福音 26:36–56；約翰福音 18",
-    intro: "你們唱了詩，往橄欖山去。你把彼得、雅各、約翰留下，自己走到前頭禱告。三次。然後走回他們那裡。火把來了。猶大帶著兵丁和祭司長走到你面前，與你親嘴。彼得拔刀。門徒都逃走了，只有彼得遠遠地跟著。",
+    intro: "他們唱了詩，就出來往橄欖山去。你把彼得、雅各、約翰留下，自己走到前頭禱告。三次。然後走回他們那裡。收了三十塊錢的猶大，帶著火把、兵丁和祭司長來，與你親嘴。彼得拔刀。門徒都逃走了，只有彼得遠遠地跟著。",
     closing: "彼得遠遠地跟著耶穌，一直到大祭司的院子裡。",
     closingRef: "馬太福音 26:58",
     music: "solemn",
@@ -3473,7 +3872,7 @@ const MORE = [
     title: "彼拉多",
     ref: "馬太福音 27；約翰福音 18–19",
     guided: true,
-    intro: "他們把你帶到總督府。羅馬兵圍在你身旁。彼拉多問：你是猶太人的王嗎？他查不出罪。眾人卻喊著要釘十字架。兵丁用荊棘編冠冕，戴在你頭上，又鞭打你。這一程自己往前走。",
+    intro: "彼得出去痛哭了。他們卻把你從大祭司那裡押到總督府。羅馬兵圍在你身旁。彼拉多問：你是猶太人的王嗎？他查不出罪。祭司長和眾人卻喊著要釘十字架。兵丁用荊棘編冠冕，戴在你頭上，又鞭打你。這一程自己往前走。",
     closing: "於是彼拉多將耶穌鞭打了，交給人釘十字架。",
     closingRef: "馬太福音 27:26",
     music: "solemn",
@@ -3602,7 +4001,7 @@ const MORE = [
     title: "各各他",
     ref: "路加福音 23；約翰福音 19；馬太福音 27",
     guided: true,
-    intro: "他們把十字架放在你肩上。羅馬兵圍著你，走向城外的各各他。有一次你跌倒，古利奈人西門把十字架接過去。到了那裡，他們釘你。天暗了。你把話說完。這一程自己往前走。",
+    intro: "彼拉多查不出罪，仍把你鞭打了，交給人釘十字架。他們把十字架放在你肩上。羅馬兵圍著你，走向城外的各各他。有一次你跌倒，古利奈人西門把十字架接過去。到了那裡，他們釘你。天暗了。你把話說完。這一程自己往前走。",
     closing: "父啊，我將我的靈魂交在你手裡。",
     closingRef: "路加福音 23:46",
     music: "solemn",
@@ -3837,7 +4236,7 @@ const MORE = [
     guided: true,
     waterSolid: false,
     intro:
-      "提比哩亞海邊，天將亮。你說我打魚去，他們也一同去。那一夜沒有打著什麼。岸上有一個人，你們卻不認得。他把網指到船的右邊。約翰說：是主。你跳進海裡，到了炭火旁。他三次問你愛不愛他。這一程自己往前走。",
+      "婦女們在路上遇見他，他叫她們往加利利去告訴弟兄。這些事以後，提比哩亞海邊，天將亮。你說我打魚去，他們也一同去。那一夜沒有打著什麼。岸上有一個人，你們卻不認得。他把網指到船的右邊。約翰說：是主。你跳進海裡，到了炭火旁。他三次問你愛不愛他。這一程自己往前走。",
     closing: "你跟從我吧！",
     closingRef: "約翰福音 21:19",
     music: "dawn",
@@ -3965,7 +4364,7 @@ const MORE = [
     who: "彼得",
     guided: true,
     intro:
-      "十一個門徒往加利利去，到了耶穌約定的山上。你與他們同行。他們見了耶穌就拜他，然而還有人疑惑。他進前來，把天上地下的權柄、去使萬民作門徒的吩咐，和常與你們同在的應許說完。這一程自己往前走。",
+      "他在海邊說：你跟從我吧。十一個門徒往加利利去，到了耶穌約定的山上。你與他們同行。他們見了耶穌就拜他，然而還有人疑惑。他進前來，把天上地下的權柄、去使萬民作門徒的吩咐，和常與你們同在的應許說完。這一程自己往前走。",
     closing: "我就常與你們同在，直到世界的末了。",
     closingRef: "馬太福音 28:20",
     music: "peace",
@@ -4227,14 +4626,19 @@ const LIFE_ORDER = [
   "nazareth",
   "shore",
   "cana",
+  "born",
   "twelve",
   "heal",
+  "scribes",
   "mount",
   "storm",
   "sea",
   "field",
   "lazarus",
+  "council",
+  "sycamore",
   "city",
+  "silver",
   "supper",
   "gethsemane",
   "deny",
