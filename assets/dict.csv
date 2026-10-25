@@ -1,0 +1,1097 @@
+key,zh,en
+docTitle,跟隨 — 四福音書裡的一生,Follow — a life in the four Gospels
+subtitle,四福音書裡的一生,A life in the four Gospels
+gameTitle,跟隨,Follow
+titleLead,耶穌說：「,"Jesus said, “"
+titleTail,」,”
+titleHelp,每一章，你扮演這段記載裡該走的那個人。,In each chapter you play the person who was there to walk.
+titleKeys,方向鍵或 WASD 移動。空白鍵、E 或 Enter 說話。,"Arrow keys or WASD to move. Space, E, or Enter to speak."
+titleNote,本遊戲依據四福音書的記載而作，經文引自和合本。,"The game follows the four Gospels. In Chinese, Scripture is quoted from the Chinese Union Version."
+titleSpan,從伯利恆到各各他，再到加利利的山。它並不取代聖經本身。,The English is a translation of those lines for this game. It does not take the place of the Bible.
+start,開始行走,Begin walking
+select,選擇篇章,Choose a chapter
+choose,選擇篇章,Choose a chapter
+back,回標題,Title
+enter,進入這一程,Enter this chapter
+next,下一程,Next chapter
+journal,經文,Scripture
+mute,靜音,Mute
+unmute,開聲,Sound
+faith,信心,Faith
+wind,風向 ↓,Wind ↓
+hint,方向鍵或 WASD 移動 · 空白鍵或 E 交談,Arrow keys or WASD to move · Space or E to talk
+cont,空白鍵繼續,Space to continue
+talk,交談,Talk
+up,上,Up
+down,下,Down
+left,左,Left
+right,右,Right
+pause,暫停,Paused
+pauseBody,路還在。你可以留在這裡。,The road is still here. You can stay.
+resume,繼續行走,Keep walking
+close,關閉,Close
+journalTitle,收下的經文,Scripture gathered
+journalEmpty,這一程還沒有收下經文。話會留在你開口的地方。,Nothing gathered yet. The words stay where you speak them.
+endingKicker,直到世界的末了,To the end of the age
+endingTitle,我就常與你們同在,I am with you always
+endingBody,從馬槽到聖殿，從約旦河到曠野，從海上到席間。夜間他說神愛世人，在耶利哥他說人子來是要尋找、拯救失喪的人。文士與祭司商議要除滅他，猶大收了三十塊錢。然後是各各他、空墳墓與加利利的山。每一章，你走進這段記載裡該在場的那個人。,"From the manger to the temple, from the Jordan to the wilderness, from the sea to the table. At night he said that God so loved the world. In Jericho he said the Son of Man came to seek and save the lost. The scribes and the priests plotted to destroy him, and Judas took thirty pieces of silver. Then Golgotha, the empty tomb, and the mountain in Galilee. In every chapter you step into the person who was there."
+endingEmpty,這一程的話，還在風裡。,The words of this road are still in the wind.
+endingAgain,從伯利恆再走一次,Walk again from Bethlehem
+gathered,這一程收下的話,Words gathered on this road
+interludeKicker,各各他之後,After Golgotha
+interludeTitle,第三日,The third day
+toTomb,前往墳墓,Go to the tomb
+goOn,繼續,Continue
+langSwitch,EN,中文
+chapter.1,第一章,Chapter 1
+chapter.2,第二章,Chapter 2
+chapter.3,第三章,Chapter 3
+chapter.4,第四章,Chapter 4
+chapter.5,第五章,Chapter 5
+chapter.6,第六章,Chapter 6
+chapter.7,第七章,Chapter 7
+chapter.8,第八章,Chapter 8
+chapter.9,第九章,Chapter 9
+chapter.10,第十章,Chapter 10
+chapter.11,第十一章,Chapter 11
+chapter.12,第十二章,Chapter 12
+chapter.13,第十三章,Chapter 13
+chapter.14,第十四章,Chapter 14
+chapter.15,第十五章,Chapter 15
+chapter.16,第十六章,Chapter 16
+chapter.17,第十七章,Chapter 17
+chapter.18,第十八章,Chapter 18
+chapter.19,第十九章,Chapter 19
+chapter.20,第二十章,Chapter 20
+chapter.21,第二十一章,Chapter 21
+chapter.22,第二十二章,Chapter 22
+chapter.23,第二十三章,Chapter 23
+chapter.24,第二十四章,Chapter 24
+chapter.25,第二十五章,Chapter 25
+chapter.26,第二十六章,Chapter 26
+chapter.27,第二十七章,Chapter 27
+chapter.28,第二十八章,Chapter 28
+progress.jars.0,石缸 0／6,Jars 0/6
+progress.jars.1,石缸 1／6,Jars 1/6
+progress.jars.2,石缸 2／6,Jars 2/6
+progress.jars.3,石缸 3／6,Jars 3/6
+progress.jars.4,石缸 4／6,Jars 4/6
+progress.jars.5,石缸 5／6,Jars 5/6
+progress.jars.6,石缸 6／6,Jars 6/6
+progress.called.0,已設立 0／12,Called 0/12
+progress.called.1,已設立 1／12,Called 1/12
+progress.called.2,已設立 2／12,Called 2/12
+progress.called.3,已設立 3／12,Called 3/12
+progress.called.4,已設立 4／12,Called 4/12
+progress.called.5,已設立 5／12,Called 5/12
+progress.called.6,已設立 6／12,Called 6/12
+progress.called.7,已設立 7／12,Called 7/12
+progress.called.8,已設立 8／12,Called 8/12
+progress.called.9,已設立 9／12,Called 9/12
+progress.called.10,已設立 10／12,Called 10/12
+progress.called.11,已設立 11／12,Called 11/12
+progress.called.12,已設立 12／12,Called 12/12
+progress.comforted.0,已安慰 0／5,Comforted 0/5
+progress.comforted.1,已安慰 1／5,Comforted 1/5
+progress.comforted.2,已安慰 2／5,Comforted 2/5
+progress.comforted.3,已安慰 3／5,Comforted 3/5
+progress.comforted.4,已安慰 4／5,Comforted 4/5
+progress.comforted.5,已安慰 5／5,Comforted 5/5
+progress.fed.0,已領受 0／8,Fed 0/8
+progress.fed.1,已領受 1／8,Fed 1/8
+progress.fed.2,已領受 2／8,Fed 2/8
+progress.fed.3,已領受 3／8,Fed 3/8
+progress.fed.4,已領受 4／8,Fed 4/8
+progress.fed.5,已領受 5／8,Fed 5/8
+progress.fed.6,已領受 6／8,Fed 6/8
+progress.fed.7,已領受 7／8,Fed 7/8
+progress.fed.8,已領受 8／8,Fed 8/8
+progress.healed.0,已醫治 0／3,Healed 0/3
+progress.healed.1,已醫治 1／3,Healed 1/3
+progress.healed.2,已醫治 2／3,Healed 2/3
+progress.healed.3,已醫治 3／3,Healed 3/3
+progress.tables.0,桌子 0／5,Tables 0/5
+progress.tables.1,桌子 1／5,Tables 1/5
+progress.tables.2,桌子 2／5,Tables 2/5
+progress.tables.3,桌子 3／5,Tables 3/5
+progress.tables.4,桌子 4／5,Tables 4/5
+progress.tables.5,桌子 5／5,Tables 5/5
+verse.call,來跟從我，我要叫你們得人如得魚一樣。,"Come, follow me, and I will make you fishers of people."
+verse.nets,他們就立刻捨了網，跟從了他。,Immediately they left their nets and followed him.
+verse.b3,虛心的人有福了！因為天國是他們的。,"Blessed are the poor in spirit, for theirs is the kingdom of heaven."
+verse.b4,哀慟的人有福了！因為他們必得安慰。,"Blessed are those who mourn, for they shall be comforted."
+verse.b5,溫柔的人有福了！因為他們必承受地土。,"Blessed are the meek, for they shall inherit the earth."
+verse.b6,飢渴慕義的人有福了！因為他們必得飽足。,"Blessed are those who hunger and thirst for righteousness, for they shall be filled."
+verse.b7,憐恤人的人有福了！因為他們必蒙憐恤。,"Blessed are the merciful, for they shall receive mercy."
+verse.fearNot,不要害怕！我知道你們是尋找那釘十字架的耶穌。,"Do not be afraid. I know you are looking for Jesus, who was crucified."
+verse.littleFaith,你這小信的人哪，為甚麼疑惑呢？,"O you of little faith, why did you doubt?"
+verse.windStill,風就住了。,The wind ceased.
+verse.loaves,有一個孩童，這裡有五個大麥餅、兩條魚。,There is a boy here who has five barley loaves and two fish.
+verse.bread,我就是生命的糧。到我這裡來的，必定不餓；信我的，永遠不渴。,"I am the bread of life. Whoever comes to me shall not hunger, and whoever believes in me shall never thirst."
+verse.leftovers,把剩下的零碎收拾起來，免得有糟蹋的。,"Gather up the pieces left over, so that nothing is wasted."
+verse.baskets,他們便將那五個大麥餅的零碎，收拾起來，裝滿了十二個籃子。,So they gathered the pieces of the five barley loaves and filled twelve baskets.
+verse.finished,耶穌嘗了那醋，就說：「成了！」便低下頭，將靈魂交付神了。,"When Jesus had tasted the sour wine, he said, It is finished, bowed his head, and gave up his spirit."
+verse.risen,不要害怕！我知道你們是尋找那釘十字架的耶穌。他不在這裡，照他所說的，已經復活了。你們來看安放主的地方。,"Do not be afraid. I know you seek Jesus who was crucified. He is not here, for he has risen, as he said. Come, see the place where the Lord lay."
+verse.maryLost,他們把我主挪了去，我不知道放在哪裡。,"They have taken my Lord away, and I do not know where they have laid him."
+verse.maryName,馬利亞。,Mary.
+verse.peace,願你們平安！父怎樣差遣了我，我也照樣差遣你們。,"Peace be with you. As the Father has sent me, so I send you."
+verse.way,我就是道路、真理、生命；若不藉著我，沒有人能到父那裡去。,"I am the way, the truth, and the life. No one comes to the Father except through me."
+verse.noWine,他們沒有酒了。,They have no wine.
+verse.whatever,他告訴你們甚麼，你們就做甚麼。,Do whatever he tells you.
+verse.notYet,婦人，我與你有甚麼相干？我的時候還沒有到。,"Woman, what does this have to do with me? My hour has not yet come."
+verse.fillJars,把缸倒滿了水。,Fill the jars with water.
+verse.drawOut,現在可以舀出來，送給管筵席的。,Now draw some out and take it to the master of the feast.
+verse.goodWine,人都是先擺上好酒，等客喝夠了，才擺上次的，你倒把好酒留到如今！,"Everyone serves the good wine first, and when people have drunk freely, then the poor wine. But you have kept the good wine until now!"
+verse.firstSign,這是耶穌所行的頭一件神蹟，是在加利利的迦拿行的，顯出他的榮耀來；他的門徒就信他了。,"This, the first of his signs, Jesus did at Cana in Galilee, and manifested his glory. His disciples believed in him."
+verse.appoint,他就設立十二個人，要他們常和自己同在，也要差他們去傳道。,"He appointed twelve, so that they might be with him and he might send them out to preach."
+verse.peterName,這十二個人有西門，耶穌又給他起名叫彼得。,"Among the twelve was Simon, and Jesus also named him Peter."
+verse.followMe,你跟從我來。,Follow me.
+verse.philipFound,摩西在律法上所寫的和眾先知所記的那一位，我們遇見了，就是約瑟的兒子拿撒勒人耶穌。,"We have found him of whom Moses wrote in the Law, and also the prophets: Jesus of Nazareth, the son of Joseph."
+verse.wash,我是你們的主，你們的夫子，尚且洗你們的腳，你們也當彼此洗腳。我給你們作了榜樣，叫你們照著我向你們所做的去做。,"If I, your Lord and Teacher, have washed your feet, you also ought to wash one another's feet. I have given you an example, that you should do as I have done to you."
+verse.body,你們拿著吃，這是我的身體。,Take and eat. This is my body.
+verse.cup,你們都喝這個；因為這是我立約的血，為多人流出來，使罪得赦。,"Drink of it, all of you, for this is my blood of the covenant, poured out for many for the forgiveness of sins."
+verse.betray,我實在告訴你們，你們中間有一個人要賣我了。,"Truly I tell you, one of you will betray me."
+verse.isItI,主，是我嗎？,"Lord, is it I?"
+verse.rabbi,拉比，是我嗎？,"Rabbi, is it I?"
+verse.night,猶大受了那點餅，立刻就出去。那時候是夜間了。,Judas took the piece of bread and went out at once. And it was night.
+verse.newCmd,我賜給你們一條新命令，乃是叫你們彼此相愛；我怎樣愛你們，你們也要怎樣相愛。,"A new commandment I give you, that you love one another. Just as I have loved you, you also are to love one another."
+verse.judasNamed,還有賣耶穌的加略人猶大。,"And Judas Iscariot, who betrayed Jesus."
+verse.nameJesus,你要給他起名叫耶穌，因他要將自己的百姓從罪惡裡救出來。,"You shall call his name Jesus, for he will save his people from their sins."
+verse.manger,就生了頭胎的兒子，用布包起來，放在馬槽裡，因為客店裡沒有地方。,"She gave birth to her firstborn son, wrapped him in cloths, and laid him in a manger, because there was no place for them in the inn."
+verse.goodNews,不要懼怕！我報給你們大喜的信息，是關乎萬民的。因今天在大衛的城裡，為你們生了救主，就是主基督。,"Fear not, for I bring you good news of great joy that will be for all the people. For unto you is born this day in the city of David a Savior, who is Christ the Lord."
+verse.gloria,在至高之處榮耀歸與神！在地上平安歸與他所喜悅的人！,"Glory to God in the highest, and on earth peace among those with whom he is pleased."
+verse.star,那生下來作猶太人之王的在哪裡？我們在東方看見他的星，特來拜他。,Where is he who has been born king of the Jews? We saw his star in the east and have come to worship him.
+verse.gifts,就俯伏拜那小孩子，揭開寶盒，拿黃金、乳香、沒藥為禮物獻給他。,"They fell down and worshiped the child, opened their treasures, and offered him gold, frankincense, and myrrh."
+verse.egypt,起來！帶著小孩子同他母親逃往埃及。,"Rise, take the child and his mother, and flee to Egypt."
+verse.fathers,為甚麼找我呢？豈不知我應當以我父的事為念嗎？,Why were you looking for me? Did you not know that I must be about my Father's business?
+verse.seeking,過了三天，就遇見他在殿裡，坐在教師中間，一面聽，一面問。,"After three days they found him in the temple, sitting among the teachers, listening and asking questions."
+verse.amazed,凡聽見他的，都希奇他的聰明和他的應對。,All who heard him were amazed at his understanding and his answers.
+verse.johnNeed,我當受你的洗，你反倒上我這裡來嗎？,"I need to be baptized by you, and do you come to me?"
+verse.fulfill,你暫且許我，因為我們理當這樣盡諸般的義。,"Let it be so now, for thus it is fitting for us to fulfill all righteousness."
+verse.beloved,這是我的愛子，我所喜悅的。,"This is my beloved Son, with whom I am well pleased."
+verse.heavens,眾百姓都受了洗，耶穌也受了洗。正禱告的時候，天就開了。,"When all the people were baptized, and Jesus also had been baptized and was praying, heaven was opened."
+verse.stones,你若是神的兒子，可以吩咐這些石頭變成食物。,"If you are the Son of God, command these stones to become bread."
+verse.notBread,人活著，不是單靠食物，乃是靠神口裡所出的一切話。,"People do not live by bread alone, but by every word that comes from the mouth of God."
+verse.jump,你若是神的兒子，可以跳下去，因為經上記著說：主要為你吩咐他的使者用手托著你，免得你的腳碰在石頭上。,"If you are the Son of God, throw yourself down, for it is written, He will command his angels concerning you, and they will bear you up, lest you strike your foot against a stone."
+verse.notTest,不可試探主你的神。,You shall not put the Lord your God to the test.
+verse.worship,你若俯伏拜我，我就把這一切都賜給你。,"If you will fall down and worship me, I will give you all this."
+verse.begone,撒但，退去吧！因為經上記著說：當拜主你的神，單要事奉他。,"Be gone, Satan! For it is written, You shall worship the Lord your God, and him only shall you serve."
+verse.led,當時，耶穌被聖靈引到曠野，受魔鬼的試探。他禁食四十晝夜，後來就餓了。,"Then Jesus was led by the Spirit into the wilderness to be tempted by the devil. He fasted forty days and forty nights, and afterward he was hungry."
+verse.toTemple,魔鬼就帶他進了聖城，叫他站在殿頂上。,Then the devil took him into the holy city and set him on the pinnacle of the temple.
+verse.toMountain,魔鬼又帶他上了一座最高的山，將世上的萬國與萬國的榮華都指給他看。,Again the devil took him to a very high mountain and showed him all the kingdoms of the world and their glory.
+verse.minister,於是，魔鬼離了耶穌，有天使來伺候他。,"Then the devil left Jesus, and angels came and ministered to him."
+verse.spirit,主的靈在我身上，因為他用膏膏我，叫我傳福音給貧窮的人；差遣我報告：被擄的得釋放，瞎眼的得看見，叫那受壓制的得自由。,"The Spirit of the Lord is upon me, because he has anointed me to proclaim good news to the poor. He has sent me to proclaim liberty to the captives and recovering of sight to the blind, to set at liberty those who are oppressed."
+verse.today,今天這經應驗在你們耳中了。,Today this Scripture is fulfilled in your hearing.
+verse.hometown,我實在告訴你們，沒有先知在自己家鄉被人悅納的。,"Truly I tell you, no prophet is accepted in his hometown."
+verse.passed,他卻從他們中間直行，過去了。,But he passed through the midst of them and went on his way.
+verse.sabbath,耶穌來到拿撒勒，就是他長大的地方。在安息日，照他平常的規矩進了會堂，站起來要念聖經。,"Jesus came to Nazareth, where he had been brought up. On the Sabbath, as was his custom, he went into the synagogue and stood up to read."
+verse.opened,有人把先知以賽亞的書交給他，他就打開，找到一處寫著說：,The scroll of the prophet Isaiah was handed to him. He unrolled it and found the place where it was written:
+verse.year,報告神悅納人的禧年。,To proclaim the year of the Lord's favor.
+verse.eyes,於是把書捲起來，交還執事，就坐下。會堂裡的人都定睛看他。,"He rolled up the scroll, gave it back to the attendant, and sat down. The eyes of everyone in the synagogue were fixed on him."
+verse.josephSon,眾人都稱讚他，並希奇他口中所出的恩言；又說：「這不是約瑟的兒子嗎？」,"All spoke well of him and marveled at the gracious words from his mouth. They said, Is this not Joseph's son?"
+verse.wrath,會堂裡的人聽見這話，都怒氣滿胸，,"When the people in the synagogue heard this, they were filled with rage,"
+verse.cliff,就起來攆他出城（他們的城造在山上）；他們帶他到山崖，要把他推下去。,"They rose up, drove him out of the town (their town was built on a hill), and brought him to the cliff to throw him down."
+verse.gennesaret,耶穌站在革尼撒勒湖邊，眾人擁擠他，要聽神的道。,"Jesus stood by the lake of Gennesaret, and the crowd pressed in on him to hear the word of God."
+verse.putOut,講完了，對西門說：「把船開到水深之處，下網打魚。」,"When he had finished speaking, he said to Simon, Put out into deep water and let down your nets for a catch."
+verse.atYourWord,西門說：「夫子，我們整夜勞力，並沒有打著甚麼。但依從你的話，我就下網。」,"Simon said, Master, we toiled all night and took nothing. But at your word I will let down the nets."
+verse.netBreaking,他們下了網，就圈住許多魚，網險些裂開，,"They let down the nets and enclosed a great number of fish, and their nets were beginning to break,"
+verse.bothBoats,便招呼那隻船上的同伴來幫助。他們就來，把魚裝滿了兩隻船，甚至船要沉下去。,"They signaled to their partners in the other boat to come and help. They came and filled both boats, so that they began to sink."
+verse.sinfulMan,西門彼得看見，就俯伏在耶穌膝前，說：「主啊！離開我，我是個罪人！」,"When Simon Peter saw it, he fell down at Jesus' knees and said, Depart from me, Lord, for I am a sinful man."
+verse.catchMen,他的夥伴西庇太的兒子雅各、約翰，也是這樣。耶穌對西門說：「不要怕！從今以後，你要得人了。」,"So also were James and John, sons of Zebedee, who were partners with Simon. Jesus said to Simon, Do not be afraid. From now on you will catch people."
+verse.leftAll,他們把兩隻船攏了岸，就撇下所有的，跟從了耶穌。,"They brought the two boats to shore, left everything, and followed Jesus."
+verse.ifWilling,主若肯，必能叫我潔淨了。,"Lord, if you are willing, you can make me clean."
+verse.willing,我肯，你潔淨了吧！,I am willing. Be clean.
+verse.sins,小子，你的罪赦了。,"Son, your sins are forgiven."
+verse.takeMat,我吩咐你，起來！拿你的褥子回家去吧。,"I say to you, rise, take up your mat, and go home."
+verse.sonOfDavid,大衛的子孫耶穌啊，可憐我吧！,"Jesus, Son of David, have mercy on me!"
+verse.see,你要我為你做甚麼？,What do you want me to do for you?
+verse.wantSee,拉波尼，我要能看見。,"Rabboni, I want to see."
+verse.yourFaith,你的信救了你了。,Your faith has made you well.
+verse.perish,夫子！我們喪命，你不顧嗎？,"Teacher, we are perishing. Do you not care?"
+verse.peaceSea,住了吧！靜了吧！,Peace! Be still!
+verse.whereFaith,為甚麼膽怯？你們還沒有信心嗎？,Why are you afraid? Do you still have no faith?
+verse.whoThen,這到底是誰，連風和海也聽從他了。,"Who is this, that even the wind and the sea obey him?"
+verse.ifHere,主啊，你若早在這裡，我兄弟必不死。,"Lord, if you had been here, my brother would not have died."
+verse.resurrection,復活在我，生命也在我。信我的人雖然死了，也必復活。,"I am the resurrection and the life. Whoever believes in me, though he die, yet shall he live."
+verse.wept,耶穌哭了。,Jesus wept.
+verse.stench,主啊，他現在必是臭了，因為他死了已經四天了。,"Lord, by now there will be a stench, for he has been dead four days."
+verse.comeOut,拉撒路出來！,"Lazarus, come out!"
+verse.unbind,解開，叫他走！,"Unbind him, and let him go."
+verse.colt,看哪，你的王來到你這裡，是溫柔的，又騎著驢，就是騎著驢駒子。,"Behold, your king is coming to you, humble, and mounted on a donkey, on a colt."
+verse.hosanna,和散那歸於大衛的子孫！奉主名來的是應當稱頌的！至高之上和散那！,Hosanna to the Son of David! Blessed is he who comes in the name of the Lord! Hosanna in the highest!
+verse.housePrayer,經上記著說：我的殿必稱為禱告的殿，你們倒使它成為賊窩了。,"It is written, My house shall be called a house of prayer, but you have made it a den of robbers."
+verse.thisCup,我父啊，倘若可行，求你叫這杯離開我；然而，不要照我的意思，只要照你的意思。,"My Father, if it is possible, let this cup pass from me. Yet not as I will, but as you will."
+verse.watch,怎麼樣？你們不能同我儆醒片時嗎？總要警醒禱告，免得入了迷惑。你們心靈固然願意，肉體卻軟弱了。,"So, could you not watch with me one hour? Watch and pray that you may not enter into temptation. The spirit indeed is willing, but the flesh is weak."
+verse.hail,請拉比安。,"Greetings, Rabbi."
+verse.iAm,我就是。,I am he.
+verse.sheath,收刀入鞘吧！我父所給我的那杯，我豈可不喝呢？,Put your sword back into its sheath. Shall I not drink the cup the Father has given me?
+verse.letThem,到了這個地步，由他們吧！,Let them go this far.
+verse.king,你是猶太人的王嗎？,Are you the King of the Jews?
+verse.youSay,你說的是。,You have said so.
+verse.noFault,我查不出他有甚麼罪來。,I find no guilt in him.
+verse.behold,你們看這個人！,Behold the man!
+verse.innocent,流這義人的血，罪不在我，你們承當吧。,I am innocent of this righteous man's blood. See to it yourselves.
+verse.thorns,兵丁用荊棘編做冠冕，戴在他頭上，給他穿上紫袍。,"The soldiers twisted a crown of thorns, set it on his head, and put a purple robe on him."
+verse.women,耶路撒冷的女子，不要為我哭，當為自己和自己的兒女哭。,"Daughters of Jerusalem, do not weep for me. Weep for yourselves and for your children."
+verse.forgive,父啊！赦免他們；因為他們所作的，他們不曉得。,"Father, forgive them, for they do not know what they are doing."
+verse.paradise,我實在告訴你，今日你要同我在樂園裡了。,"Truly I tell you, today you will be with me in paradise."
+verse.beholdSon,母親，看，你的兒子！,"Woman, behold your son!"
+verse.beholdMother,看，你的母親！,"Behold, your mother!"
+verse.eli,以利！以利！拉馬撒巴各大尼？,"Eli, Eli, lema sabachthani?"
+verse.forsaken,我的神！我的神！為甚麼離棄我？,"My God, my God, why have you forsaken me?"
+verse.thirst,我渴了。,I thirst.
+verse.intoHands,父啊！我將我的靈魂交在你手裡。,"Father, into your hands I commit my spirit."
+verse.spear,惟有一個兵拿槍扎他的肋旁，隨即有血和水流出來。,"One of the soldiers pierced his side with a spear, and at once blood and water came out."
+verse.buried,約瑟取了身體，用細麻布加上香料裹好，安放在自己的新墳墓裡。,"Joseph took the body, wrapped it in linen with spices, and laid it in his own new tomb."
+verse.whyWeep,婦人，為甚麼哭？你找誰呢？,"Woman, why are you weeping? Whom are you seeking?"
+verse.gardener,先生，若是你把他移了去，請告訴我，你把他放在哪裡，我便去取他。,"Sir, if you have carried him away, tell me where you have laid him, and I will take him."
+verse.notYetUp,不要摸我，因我還沒有升上去見我的父。你往我弟兄那裡去，告訴他們說，我要升上去見我的父，也是你們的父，見我的神，也是你們的神。,"Do not cling to me, for I have not yet ascended to the Father. Go to my brothers and say to them, I am ascending to my Father and your Father, to my God and your God."
+verse.touch,伸過你的指頭來，摸我的手；伸出你的手來，探入我的肋旁。不要疑惑，總要信！,"Put your finger here, and see my hands. Reach out your hand and put it into my side. Do not disbelieve, but believe."
+verse.myLord,我的主！我的神！,My Lord and my God!
+verse.commission,天上地下所有的權柄都賜給我了。所以，你們要去，使萬民作我的門徒。,All authority in heaven and on earth has been given to me. Go therefore and make disciples of all nations.
+verse.notHere,他不在這裡，照他所說的，已經復活了。你們來看安放主的地方。,"He is not here, for he has risen, as he said. Come, see the place where the Lord lay."
+verse.goTell,快去告訴他的門徒，說他從死裡復活了，並且在你們以先往加利利去，在那裡你們要見他。看哪，我已經告訴你們了。,"Go quickly and tell his disciples that he has risen from the dead, and is going before you to Galilee. There you will see him. See, I have told you."
+verse.peaceWomen,願你們平安！,Peace be with you.
+verse.tellBrothers,不要害怕！你們去告訴我的弟兄，叫他們往加利利去，在那裡必見我。,"Do not be afraid. Go and tell my brothers to go to Galilee, and there they will see me."
+verse.allAuthority,天上地下所有的權柄都賜給我了。,All authority in heaven and on earth has been given to me.
+verse.makeDisciples,所以，你們要去，使萬民作我的門徒，奉父、子、聖靈的名給他們施洗。,"Go therefore and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit."
+verse.withYou,凡我所吩咐你們的，都教訓他們遵守，我就常與你們同在，直到世界的末了。,"Teaching them to observe all that I have commanded you. And behold, I am with you always, to the end of the age."
+verse.cannotFollow,我所去的地方，你現在不能跟我去，後來卻要跟我去。,"Where I am going you cannot follow me now, but you will follow afterward."
+verse.denyThrice,你願意為我捨命嗎？我實實在在地告訴你，雞叫以先，你要三次不認我。,"Will you lay down your life for me? Truly, truly, I tell you, the rooster will not crow till you have denied me three times."
+verse.notDisciple,你不也是這人的門徒嗎？,"You are not one of this man's disciples too, are you?"
+verse.notI,我不是。,I am not.
+verse.alsoOne,你也是他們一黨的。,You are one of them too.
+verse.inGarden,我不是看見你同他在園子裡嗎？,Did I not see you with him in the garden?
+verse.knowNot,你這個人，我不曉得你說的是甚麼！,I do not know what you are talking about!
+verse.remembered,今日雞叫以先，你要三次不認我。,"Before the rooster crows today, you will deny me three times."
+verse.goFish,我打魚去。,I am going fishing.
+verse.childrenEat,小子！你們有吃的沒有？,"Children, do you have anything to eat?"
+verse.castRight,你們把網撒在船的右邊，就必得著。,"Cast the net on the right side of the boat, and you will find some."
+verse.itIsLord,是主！,It is the Lord!
+verse.comeEat,你們來吃早飯。,Come and have breakfast.
+verse.loveMore,約翰的兒子西門，你愛我比這些更深嗎？,"Simon, son of John, do you love me more than these?"
+verse.loveYes,主啊，是的，你知道我愛你。,"Lord, yes. You know that I love you."
+verse.feedLambs,你餵養我的小羊。,Feed my lambs.
+verse.loveSecond,約翰的兒子西門，你愛我嗎？,"Simon, son of John, do you love me?"
+verse.tendSheep,你牧養我的羊。,Tend my sheep.
+verse.loveKnows,主啊，你是無所不知的，你知道我愛你。,"Lord, you know everything. You know that I love you."
+verse.feedSheep,你餵養我的羊。,Feed my sheep.
+verse.followAfter,你跟從我吧！,Follow me.
+verse.fromGod,拉比，我們知道你是由神那裡來作師傅的；因為你所行的神蹟，若沒有神同在，無人能行。,"Rabbi, we know that you are a teacher come from God, for no one can do these signs unless God is with him."
+verse.bornAgain,我實實在在地告訴你，人若不重生，就不能見神的國。,"Truly, truly, I tell you, unless one is born again, he cannot see the kingdom of God."
+verse.howBorn,人已經老了，如何能重生呢？豈能再進母腹生出來嗎？,How can someone be born when he is old? Can he enter his mother's womb a second time?
+verse.waterSpirit,我實實在在地告訴你，人若不是從水和聖靈生的，就不能進神的國。,"Truly, truly, I tell you, unless one is born of water and the Spirit, he cannot enter the kingdom of God."
+verse.liftedUp,摩西在曠野怎樣舉蛇，人子也必照樣被舉起來，叫一切信他的都得永生。,"As Moses lifted up the serpent in the wilderness, so must the Son of Man be lifted up, that whoever believes in him may have eternal life."
+verse.godSoLoved,神愛世人，甚至將他的獨生子賜給他們，叫一切信他的，不至滅亡，反得永生。,"For God so loved the world that he gave his only Son, that whoever believes in him should not perish but have eternal life."
+verse.notCondemn,因為神差他的兒子降世，不是要定世人的罪，乃是要叫世人因他得救。,"For God did not send his Son into the world to condemn the world, but that the world might be saved through him."
+verse.comeDown,撒該，快下來！今天我必住在你家裡。,"Zacchaeus, hurry and come down. I must stay at your house today."
+verse.grumble,他竟到罪人家裡去住宿。,He has gone to stay at a sinner's house.
+verse.halfGoods,主啊，我把所有的一半給窮人；我若訛詐了誰，就還他四倍。,"Lord, half of my goods I give to the poor, and if I have defrauded anyone, I restore it fourfold."
+verse.salvationHouse,今天救恩到了這家，因為他也是亞伯拉罕的子孫。,"Today salvation has come to this house, because he too is a son of Abraham."
+verse.seekLost,人子來，為要尋找、拯救失喪的人。,The Son of Man came to seek and to save the lost.
+verse.blasphemy,這個人為什麼這樣說呢？他說僭妄的話了。除了神以外，誰能赦罪呢？,Why does this man speak like this? He is blaspheming. Who can forgive sins but God alone?
+verse.whyReason,你們心裡為什麼這樣議論呢？,Why do you reason about these things in your hearts?
+verse.authority,但要叫你們知道，人子在地上有赦罪的權柄。,But so that you may know that the Son of Man has authority on earth to forgive sins.
+verse.withSinners,他和稅吏並罪人一同吃喝嗎？,Does he eat with tax collectors and sinners?
+verse.physician,健康的人用不著醫生，有病的人才用得著。我來本不是召義人，乃是召罪人。,"Those who are well have no need of a physician, but those who are sick. I came not to call the righteous, but sinners."
+verse.destroyHim,法利賽人出去，同希律一黨的人商議，怎樣可以除滅耶穌。,The Pharisees went out and held counsel with the Herodians about how to destroy Jesus.
+verse.whatDo,這人行好些神蹟，我們怎麼辦呢？若這樣由著他，人人都要信他，羅馬人也要來奪我們的地土和我們的百姓。,"This man performs many signs. What are we to do? If we let him go on like this, everyone will believe in him, and the Romans will come and take away both our place and our nation."
+verse.caiaphas,你們不知道甚麼。獨不想一個人替百姓死，免得通國滅亡，就是你們的益處。,"You know nothing at all. You do not understand that it is better for you that one man die for the people, so that the whole nation not perish."
+verse.fromThatDay,從那日起，他們就商議要殺耶穌。,From that day they plotted to kill Jesus.
+verse.takeTrick,大家商議要用詭計拿住耶穌，殺他。,They plotted to arrest Jesus by stealth and kill him.
+verse.notOnFeast,當節的日子不可，恐怕民間生亂。,"Not during the feast, or the people may riot."
+verse.whatGive,我把他交給你們，你們願意給我多少錢？,What will you give me if I hand him over to you?
+verse.thirty,他們就給了他三十塊錢。,They counted out thirty pieces of silver for him.
+verse.opportunity,從那時候，他就找機會，要把耶穌交給他們。,From then on he looked for an opportunity to hand Jesus over to them.
+after_this_he_was_delivered_into_the_hands_of_me,此後，他被交在人手裡。,After this he was delivered into the hands of men.
+they_brought_him_to_golgotha_outside_the_garden_,他們把他帶到各各他。園子外的天亮了，又暗了。,"They brought him to Golgotha. Outside the garden the day grew bright, and then dark."
+ref_john_19_30,約翰福音 19:30,John 19:30
+on_the_first_day_of_the_week_as_dawn_was_breakin,七日的頭一日，天快亮的時候。,"On the first day of the week, as dawn was breaking."
+deep_water,水深之處,Deep Water
+ref_luke_5_1_11,路加福音 5:1–11,Luke 5:1–11
+simon,西門,Simon
+chapter_6,第六章,Chapter 6
+the_people_of_nazareth_try_to_throw_him_off_the_,拿撒勒的人要把他推下山崖，他卻走過去，來到湖邊。你是西門。船停在水上。依從他的話，把船開到水深之處下網。魚滿了兩隻船，你在他面前認出自己是個罪人，然後跟他走。,"The people of Nazareth try to throw him off the cliff, but he walks on through and comes to the lake. You are Simon. The boat is on the water. At his word you put out into deep water and let down the nets. Fish fill both boats. Before him you see that you are a sinner, and then you follow him."
+ref_luke_5_11,路加福音 5:11,Luke 5:11
+andrew,安得烈,Andrew
+james,雅各,James
+john,約翰,John
+jesus,耶穌,Jesus
+an_elder,老人,An elder
+woman,婦人,Woman
+villager,村人,Villager
+the_congregation,會眾,The congregation
+a_passerby,過路的,A passerby
+a_young_man,青年,A young man
+jesus_is_teaching_on_the_shore,耶穌在岸邊講道。,Jesus is teaching on the shore.
+on_shore,在岸上,On shore
+ref_luke_5_1,路加福音 5:1,Luke 5:1
+listen_to_the_word_of_god,你們要聽神的道。,Listen to the word of God.
+ref_luke_5_4,路加福音 5:4,Luke 5:4
+master_we_toiled_all_night_and_caught_nothing_bu,夫子，我們整夜勞力，並沒有打著甚麼。但依從你的話，我就下網。,"Master, we toiled all night and caught nothing. But at your word I will let down the nets."
+ref_luke_5_5,路加福音 5:5,Luke 5:5
+walk_to_the_boat_get_in_and_put_out_into_deep_wa,走到船邊上船，開到水深之處下網。,"Walk to the boat, get in, and put out into deep water to let down the nets."
+board,上船,Board
+cast_the_net,下網,Cast the net
+ref_luke_5_6,路加福音 5:6,Luke 5:6
+ref_luke_5_7,路加福音 5:7,Luke 5:7
+bring_the_boat_back_to_shore,把船開回岸邊。,Bring the boat back to shore.
+we_toiled_all_night_and_caught_nothing,整夜勞力，並沒有打著甚麼。,We toiled all night and caught nothing.
+they_follow_jesus,他們跟從耶穌。,They follow Jesus.
+follow_him,跟他走,Follow him
+walk_to_the_boat_get_in_again_and_put_out_into_d,走到船邊上船，再開到水深之處下網。,"Walk to the boat, get in again, and put out into deep water to let down the nets."
+put_out_into_deep_water,把船開到水深之處。,Put out into deep water.
+on_the_boat,在船上,On the boat
+press_talk_and_let_down_the_nets,按下交談，下網打魚。,"Press Talk, and let down the nets."
+the_boat_is_full_of_fish,魚滿了船,The boat is full of fish
+he_walks_up_to_jesus,他走到耶穌面前。,He walks up to Jesus.
+ashore,攏了岸,Ashore
+he_comes_back_before_jesus,他回到耶穌面前。,He comes back before Jesus.
+lord_depart_from_me_for_i_am_a_sinful_man,主啊！離開我，我是個罪人！,"Lord, depart from me, for I am a sinful man."
+ref_luke_5_8,路加福音 5:8,Luke 5:8
+do_not_be_afraid_from_now_on_you_will_catch_peop,不要怕！從今以後，你要得人了。,Do not be afraid. From now on you will catch people.
+ref_luke_5_10,路加福音 5:10,Luke 5:10
+we_are_on_the_shore_listening_to_him_speak_the_w,我們在岸邊聽他講神的道。,"We are on the shore, listening to him speak the word of God."
+the_wedding_at_cana,迦拿的婚宴,The Wedding at Cana
+ref_john_2_1_11,約翰福音 2:1–11,John 2:1–11
+servant,用人,Servant
+chapter_2,第二章,Chapter 2
+simon_and_the_others_left_everything_and_followe,西門他們撇下所有的，跟從了他。第三日，加利利的迦拿有人擺設婚宴。酒用盡了。耶穌的母親對你們說：他告訴你們甚麼，你們就做甚麼。六口石缸還空著。,"Simon and the others left everything and followed him. On the third day there is a wedding at Cana in Galilee. The wine runs out. The mother of Jesus says to you, Do whatever he tells you. Six stone jars are still empty."
+this_was_the_first_sign_jesus_did_his_disciples_,這是耶穌所行的頭一件神蹟。他的門徒就信他了。,This was the first sign Jesus did. His disciples believed in him.
+ref_john_2_11,約翰福音 2:11,John 2:11
+well,井,Well
+the_mother_of_jesus,耶穌的母親,The mother of Jesus
+master_of_the_feast,管筵席的,Master of the feast
+guest,客人,Guest
+stone_jars,石缸,Stone jars
+the_wine_has_run_out_go_and_listen_to_the_mother,酒用盡了。去聽耶穌的母親。,The wine has run out. Go and listen to the mother of Jesus.
+the_jars_are_full_to_the_brim_go_to_jesus_again,缸已滿到缸口。再到耶穌面前。,The jars are full to the brim. Go to Jesus again.
+this_wine_is_better_than_what_was_served_first,這酒比先前所擺的更好。,This wine is better than what was served first.
+rabbi_the_feast_is_still_warm_only_the_wine_is_g,拉比，席還熱著。只是酒，已經沒有了。,"Rabbi, the feast is still warm. Only the wine is gone."
+we_have_seen_and_we_believe_him,我們看見了，就信他。,"We have seen, and we believe him."
+his_mother_says_there_is_no_wine_if_he_gives_an_,他的母親說酒沒有了。他若吩咐，我們就去做。,"His mother says there is no wine. If he gives an order, we will do it."
+ref_john_2_3,約翰福音 2:3,John 2:3
+ref_john_2_4,約翰福音 2:4,John 2:4
+ref_john_2_5,約翰福音 2:5,John 2:5
+go_to_jesus_he_tells_you_to_fill_the_jars,到耶穌面前。他吩咐你把缸倒滿。,Go to Jesus. He tells you to fill the jars.
+my_mother_is_over_there_go_and_listen_to_her_fir,我母親在那邊。先去聽她。,My mother is over there. Go and listen to her first.
+ref_john_2_7,約翰福音 2:7,John 2:7
+we_will_draw_water_until_the_jars_are_full,我們去打水，直到缸口。,We will draw water until the jars are full.
+fill_the_six_stone_jars_to_the_brim,把六口石缸倒滿到缸口。,Fill the six stone jars to the brim.
+the_water_is_still_pouring_the_brim_is_nearly_fu,水還在倒。缸口就快滿了。,The water is still pouring. The brim is nearly full.
+ref_john_2_8,約翰福音 2:8,John 2:8
+i_will_draw_some_out_and_take_it_to_the_master_o,我舀出來，送去給管筵席的。,I will draw some out and take it to the master of the feast.
+take_what_you_have_drawn_and_let_the_master_of_t,把舀出來的送去，讓管筵席的嘗。,Take what you have drawn and let the master of the feast taste it.
+it_has_been_taken_to_him_he_himself_does_not_kno,已經送去了。他自己不知道這酒是哪裡來的。,It has been taken to him. He himself does not know where the wine came from.
+where_is_the_wine_the_guests_have_not_left_and_t,酒在哪裡？客還沒有散，席上卻已經沒有了。,"Where is the wine? The guests have not left, and the table is already empty."
+ref_john_2_10,約翰福音 2:10,John 2:10
+for_god_so_loved_the_world,神愛世人,For God So Loved the World
+ref_john_3_1_17,約翰福音 3:1–17,John 3:1–17
+nicodemus,尼哥德慕,Nicodemus
+after_the_sign_at_cana_the_night_is_deep_you_are,迦拿的神蹟以後，夜深了。你是法利賽人尼哥德慕。你來見耶穌。他說人若不重生，就不能見神的國；人子必被舉起來；神愛世人，甚至將他的獨生子賜給他們。這一程自己往前走。,"After the sign at Cana, the night is deep. You are Nicodemus the Pharisee. You come to Jesus. He says that unless one is born again he cannot see the kingdom of God, that the Son of Man must be lifted up, and that God so loved the world that he gave his only Son. This chapter walks itself."
+ref_john_3_16,約翰福音 3:16,John 3:16
+come_to_jesus_by_night,夜裡來見耶穌。,Come to Jesus by night.
+there_was_a_pharisee_named_nicodemus_a_ruler_of_,有一個法利賽人，名叫尼哥德慕，是猶太人的官。這人夜裡來見耶穌。,"There was a Pharisee named Nicodemus, a ruler of the Jews. He came to Jesus by night."
+ref_john_3_1_2,約翰福音 3:1-2,John 3:1-2
+ref_john_3_2,約翰福音 3:2,John 3:2
+ref_john_3_3,約翰福音 3:3,John 3:3
+ref_john_3_4,約翰福音 3:4,John 3:4
+ref_john_3_5,約翰福音 3:5,John 3:5
+ref_john_3_14_15,約翰福音 3:14-15,John 3:14-15
+ref_john_3_17,約翰福音 3:17,John 3:17
+the_twelve,十二門徒,The Twelve
+ref_mark_3_13_19,馬可福音 3:13–19,Mark 3:13–19
+chapter_3,第三章,Chapter 3
+at_night_he_said_that_god_so_loved_the_world_and,夜間他說神愛世人，人子必被舉起來。你上了山，隨自己的意思叫人來。十二個人要常和你同在，也要被差去傳這話。一個一個走到他們面前，呼叫他們的名字。,"At night he said that God so loved the world, and that the Son of Man must be lifted up. You go up the mountain and call those you want. Twelve are to stay with you and be sent to carry this word. Walk up to each one and call him by name."
+he_appointed_twelve_to_be_with_him,他就設立十二個人，要他們常和自己同在。,"He appointed twelve, to be with him."
+ref_mark_3_14,馬可福音 3:14,Mark 3:14
+the_nets_by_the_sea_still_remember_me_you_have_c,海邊的網還記得我。你也走上這座山了。,The nets by the sea still remember me. You have come up this mountain too.
+you_are_simon_i_also_name_you_peter,你是西門，我又給你起名叫彼得。,You are Simon. I also name you Peter.
+ref_mark_3_16,馬可福音 3:16,Mark 3:16
+the_name_peter_i_am_still_saying_it_in_my_heart,彼得這個名字，我還在心裡稱它。,The name Peter — I am still saying it in my heart.
+i_am_james_son_of_zebedee_my_brother_john_is_rig,我是西庇太的兒子雅各。弟弟約翰就在旁邊。,"I am James, son of Zebedee. My brother John is right beside me."
+he_also_named_these_two_boanerges_that_is_sons_o,他又給這兩個人起名叫半尼其，就是雷子的意思。,"He also named these two Boanerges, that is, sons of thunder."
+ref_mark_3_17,馬可福音 3:17,Mark 3:17
+sons_of_thunder_but_today_there_is_no_thunder_on,雷子。可是今天山上沒有雷，只有他的聲音。,"Sons of thunder. But today there is no thunder on the mountain, only his voice."
+he_told_my_brother_and_me_to_stay_with_him_every,他叫我和哥哥留在他身邊。我想知道的，都在他身上。,He told my brother and me to stay with him. Everything I want to know is in him.
+the_name_can_be_son_of_thunder_i_would_rather_be,名字可以是雷子。我更願意做常和他同在的人。,The name can be son of thunder. I would rather be one who stays with him.
+we_are_to_stay_with_him_that_is_why_he_appointed,我們要常和他同在。這是他設立我們的緣故。,We are to stay with him. That is why he appointed us.
+where_my_brother_is_i_am_whoever_he_calls_that_o,我兄弟在，我也在。他叫誰，誰就上來。,"Where my brother is, I am. Whoever he calls, that one comes up."
+twelve_not_many_but_enough_to_carry_one_sentence,十二個人。不多。可是夠把一句話帶到別處。,Twelve. Not many. But enough to carry one sentence somewhere else.
+do_you_know_them_all_someone_is_still_standing_o,你都認得了嗎？還有人站在坡上。,Do you know them all? Someone is still standing on the slope.
+philip,腓力,Philip
+he_found_me_and_said_come_follow_me,他找到我，對我說：來跟從我吧。,"He found me and said, Come, follow me."
+ref_john_1_43,約翰福音 1:43,John 1:43
+come_follow_me,來跟從我吧。,"Come, follow me."
+ref_john_1_45,約翰福音 1:45,John 1:45
+lord_you_called_me_so_i_am_on_this_mountain,主，你叫我來，我就在這山上。,"Lord, you called me, so I am on this mountain."
+bartholomew,巴多羅買,Bartholomew
+i_am_bartholomew_when_he_called_me_i_did_not_ask,我是巴多羅買。他叫我的時候，我沒有多問，就來了。,"I am Bartholomew. When he called me, I did not ask many questions. I came."
+the_one_written_of_in_the_law_i_want_to_come_to_,律法上所寫的那一位，我要在他身邊一點一點認識。,"The one written of in the Law — I want to come to know him, little by little, at his side."
+i_am_still_sitting_here_he_did_not_tell_me_to_go,我還坐在這裡。他沒有叫我下去。,I am still sitting here. He did not tell me to go down.
+matthew,馬太,Matthew
+i_sat_at_the_tax_booth_everyone_knew_that_seat,我坐在稅關上。人都認得那個位子。,I sat at the tax booth. Everyone knew that seat.
+ref_matthew_9_9,馬太福音 9:9,Matthew 9:9
+i_got_up_and_followed_him_the_tax_booth_is_still,我就起來，跟從了他。稅關還在那裡，我不在了。,I got up and followed him. The tax booth is still there. I am not.
+the_account_books_can_stay_where_they_are_i_am_o,帳冊可以留在原處。我如今在這山上。,The account books can stay where they are. I am on this mountain now.
+thomas,多馬,Thomas
+there_are_words_i_have_to_see_with_my_own_eyes_b,有些話，我要親眼看見，心才放下。,There are words I have to see with my own eyes before my heart can rest.
+but_he_called_me_so_i_walked_seeing_clearly_and_,可是他叫我，我就走。看清楚，和跟從，可以是同一條路。,"But he called me, so I walked. Seeing clearly and following can be the same road."
+i_am_here_you_do_not_have_to_guess_whether_i_bel,我在。你不必猜我信不信，我已經上來了。,I am here. You do not have to guess whether I believe. I have already come up.
+james_son_of_alphaeus,亞勒腓的雅各,James son of Alphaeus
+do_not_confuse_me_with_the_son_of_zebedee_i_am_j,別把我和西庇太的兒子搞混。我是亞勒腓的兒子雅各。,"Do not confuse me with the son of Zebedee. I am James, son of Alphaeus."
+people_who_share_a_name_can_still_be_appointed_b,名字相同的人，也可以被同一個主設立。,People who share a name can still be appointed by the same Lord.
+son_of_alphaeus_if_you_call_me_that_i_know_you_r,亞勒腓的兒子。你這樣叫我，我就知道你認得我。,"Son of Alphaeus. If you call me that, I know you recognize me."
+thaddaeus,達太,Thaddaeus
+some_call_me_thaddaeus_others_call_me_judas_son_,有人叫我達太，也有人叫我雅各的兒子猶大。,"Some call me Thaddaeus. Others call me Judas, son of James."
+i_am_not_the_one_from_kerioth_remember_this_face,我不是加略人。你記住這張臉，後來就不會叫錯。,"I am not the one from Kerioth. Remember this face, and later you will not call the wrong name."
+if_you_are_looking_for_judas_ask_which_one_first,你若要找猶大，先問是哪一個。,"If you are looking for Judas, ask which one first."
+simon_the_zealot,奮銳黨的西門,Simon the Zealot
+i_was_zealous_for_an_earthly_kingdom_i_was_even_,我曾為一個地上的國熱心，連刀都肯帶在身上。,I was zealous for an earthly kingdom. I was even willing to carry a sword.
+he_asked_for_my_zeal_i_left_the_sword_and_follow,他把我的熱心要了去。我把刀留下，跟他上山。,He asked for my zeal. I left the sword and followed him up the mountain.
+the_zeal_is_still_here_only_the_direction_has_ch,熱心還在。只是方向換了。,The zeal is still here. Only the direction has changed.
+judas_iscariot,加略人猶大,Judas Iscariot
+i_am_judas_iscariot_you_called_me_too_so_i_am_am,我是加略人猶大。你也叫了我，我就在這十二人裡。,"I am Judas Iscariot. You called me too, so I am among these twelve."
+the_group_s_money_bag_is_in_my_hands_if_you_need,一夥人的錢囊，在我手裡。需要買甚麼，可以來找我。,"The group's money bag is in my hands. If you need to buy something, come to me."
+i_am_still_on_this_mountain_you_did_not_take_me_,我還在這山上。你沒有把我從十二人裡拿開。,I am still on this mountain. You did not take me out of the twelve.
+walk_up_to_each_one_and_appoint_these_twelve,走到每一個人面前，設立這十二個人。,Walk up to each one and appoint these twelve.
+jesus_went_up_on_the_mountain_and_called_to_him_,耶穌上了山，隨自己的意思叫人來，他們便來到他那裡。,"Jesus went up on the mountain and called to him those he wanted, and they came to him."
+this_is_you_stay_with_me_and_be_sent_out_as_well,這就是你們。要常和我同在，也要被差出去。,"This is you. Stay with me, and be sent out as well."
+ref_mark_3_19,馬可福音 3:19,Mark 3:19
+they_come_to_your_side,他們來到你身邊。,They come to your side.
+someone_is_still_standing_on_this_mountain,還有人站在這山上。,Someone is still standing on this mountain.
+on_the_mountain,山上的話,On the Mountain
+ref_matthew_5_1_7,馬太福音 5:1–7,Matthew 5:1–7
+chapter_4,第四章,Chapter 4
+the_scribes_and_pharisees_have_just_gone_out_to_,文士和法利賽人剛出去，商議怎樣除滅他。你仍上了山，開口教訓他們。山坡上坐著憂愁的人。走到每一個人面前，把那句話親自說給他聽。,The scribes and Pharisees have just gone out to plot how to destroy him. You still go up the mountain and teach. Grieving people sit on the slope. Walk up to each one and speak the word to that person.
+when_the_words_stay_in_them_they_no_longer_sit_i,話留在他們心裡，他們就不再坐在憂愁裡。,"When the words stay in them, they no longer sit in sorrow."
+ref_matthew_5_2,馬太福音 5:2,Matthew 5:2
+tax_collector,稅吏,Tax collector
+everyone_knows_my_trade_i_thought_the_kingdom_of,人都知道我的行業。我以為天國沒有我的份。,Everyone knows my trade. I thought the kingdom of heaven had no share for me.
+if_the_kingdom_of_heaven_belongs_to_the_poor_in_,若天國是虛心之人的，那我也坐在這裡聽。,"If the kingdom of heaven belongs to the poor in spirit, then I will sit here and listen too."
+ref_matthew_5_3,馬太福音 5:3,Matthew 5:3
+i_have_lost_a_child_the_mountain_wind_is_strong_,我失去了孩子。山風很大，心裡更空。,"I have lost a child. The mountain wind is strong, and my heart is emptier still."
+if_it_is_what_he_says_i_will_wait_here_for_that_,……若是他說的，我就在這裡等那安慰。,"…If it is what he says, I will wait here for that comfort."
+ref_matthew_5_4,馬太福音 5:4,Matthew 5:4
+youth,少年,Youth
+people_say_i_am_weak_that_i_ought_to_be_harder,人都說我軟弱，說我該更硬一點。,"People say I am weak, that I ought to be harder."
+if_meekness_is_also_a_road_then_i_do_not_have_to,溫柔若也是一條路，那我不必裝成別人。,"If meekness is also a road, then I do not have to pretend to be someone else."
+ref_matthew_5_5,馬太福音 5:5,Matthew 5:5
+traveler,旅人,Traveler
+i_thirst_for_righteousness_the_way_a_traveler_th,我渴想公義，像走路的人渴想水。到處都是彎曲的。,I thirst for righteousness the way a traveler thirsts for water. Everywhere things are crooked.
+then_i_will_sit_down_and_wait_for_the_fullness_h,那我就坐下來，等他說的飽足。,Then I will sit down and wait for the fullness he speaks of.
+ref_matthew_5_6,馬太福音 5:6,Matthew 5:6
+i_have_been_sick_a_long_time_no_one_will_come_ne,我病了很久，沒有人肯靠近我的鋪蓋。,I have been sick a long time. No one will come near my mat.
+if_mercy_comes_from_his_mouth_it_ought_to_go_out,憐恤若從他口裡出來，也該從我們手裡出去。,"If mercy comes from his mouth, it ought to go out from our hands as well."
+ref_matthew_5_7,馬太福音 5:7,Matthew 5:7
+speak_the_words_from_the_mountain_to_the_five_wh,把山上的話，說給五個憂愁的人聽。,Speak the words from the mountain to the five who are grieving.
+seeing_the_crowds_jesus_went_up_on_the_mountain_,耶穌看見這許多的人，就上了山。門徒到他跟前來，他就開口教訓他們。,"Seeing the crowds, Jesus went up on the mountain. His disciples came to him, and he opened his mouth and taught them."
+i_am_still_sitting_here_but_my_heart_is_quiet,我還坐在這裡，可是心裡安靜了。,"I am still sitting here, but my heart is quiet."
+the_words_have_been_left_with_them,話已經留下。,The words have been left with them.
+someone_is_still_waiting_for_a_word,還有人在等一句話。,Someone is still waiting for a word.
+you_are_the_light_of_the_world_when_the_word_rem,你們是世上的光。話留下，人就不必再走在暗中。,"You are the light of the world. When the word remains, people need not walk in the dark."
+go_on_the_mountain_is_still_here_but_their_faces,去吧。山還在，可是他們的臉已經不一樣了。,"Go on. The mountain is still here, but their faces are no longer the same."
+walking_on_the_water,履海,Walking on the Water
+ref_matthew_14_22_33,馬太福音 14:22–33,Matthew 14:22–33
+peter,彼得,Peter
+chapter_5,第五章,Chapter 5
+the_wind_has_ceased_and_you_wonder_who_is_this_i,風止住了，你們心裡作難：這到底是誰。夜裡四更天，你又在船上。他從海面上走來。你求他叫你從水面上走到他那裡。眼睛看著他，踏著金光。,"The wind has ceased, and you wonder, Who is this? In the fourth watch of the night you are in the boat again. He comes walking on the sea. You ask him to let you come to him on the water. Keep your eyes on him, and step onto the gold light."
+they_got_into_the_boat_and_the_wind_ceased,他們上了船，風就住了。,"They got into the boat, and the wind ceased."
+ref_matthew_14_32,馬太福音 14:32,Matthew 14:32
+he_is_on_the_sea_listen_to_him_first,他在海上。先聽他說話。,He is on the sea. Listen to him first.
+disciples,門徒,Disciples
+it_is_a_ghost,是個鬼怪！,It is a ghost!
+ref_matthew_14_27,馬太福音 14:27,Matthew 14:27
+lord_if_it_is_you_command_me_to_come_to_you_on_t,主，如果是你，請叫我從水面上走到你那裡去。,"Lord, if it is you, command me to come to you on the water."
+come,你來吧。,Come.
+walk_to_him_on_the_gold_light_step_off_it_and_th,踏著金光走到他那裡。下了光，風會把你推開。,"Walk to him on the gold light. Step off it, and the wind will push you away."
+come_up,上來。,Come up.
+truly_you_are_the_son_of_god,你真是神的兒子了。,Truly you are the Son of God.
+lord_save_me,主啊，救我！,"Lord, save me!"
+jesus_reached_out_at_once_and_caught_him,耶穌趕緊伸手拉住他。,Jesus reached out at once and caught him.
+ref_matthew_14_31,馬太福音 14:31,Matthew 14:31
+step_onto_the_gold_light_again_and_walk_to_him_k,再踏著金光走到他那裡。眼睛看著他。,Step onto the gold light again and walk to him. Keep your eyes on him.
+walk_a_little_farther_i_am_here,再走幾步。我在這裡。,Walk a little farther. I am here.
+someone_is_walking_toward_us_on_the_sea_we_are_a,海上有人走過來。我們都怕。,Someone is walking toward us on the sea. We are all afraid.
+five_loaves_and_two_fish,五餅二魚,Five Loaves and Two Fish
+ref_john_6_1_13,約翰福音 6:1–13,John 6:1–13
+in_the_boat_they_confess_that_he_is_the_son_of_g,他們在船上認他是神的兒子。隔天，眾人跟著他到野地，餓了。耶穌對你們說：你們給他們吃吧。一個孩子有五個大麥餅、兩條魚。你把餅拿到他那裡，他祝謝了，你再分給坐著的人。,"In the boat they confess that he is the Son of God. The next day the crowd follows him into the wilderness and grows hungry. Jesus says to you, You give them something to eat. A child has five barley loaves and two fish. You take the bread to him. He gives thanks, and you share it with the people sitting there."
+they_all_ate_and_were_filled,他們都吃飽了。,They all ate and were filled.
+ref_john_6_12,約翰福音 6:12,John 6:12
+farmer,農夫,Farmer
+mother,母親,Mother
+worker,工人,Worker
+beggar,乞丐,Beggar
+child,孩子,Child
+go_and_find_the_child_who_will_give_up_his_lunch,去找那個願意交出午餐的孩子。,Go and find the child who will give up his lunch.
+you_give_them_something_to_eat,你們給他們吃吧。,You give them something to eat.
+even_two_hundred_denarii_of_bread_would_not_be_e,就是二十兩銀子的餅，叫他們各人吃一點也是不夠的。,Even two hundred denarii of bread would not be enough for each of them to have a little.
+ref_john_6_7,約翰福音 6:7,John 6:7
+you_give_them_something_to_eat_first_go_and_find,你們給他們吃吧。先去找那個孩子。,You give them something to eat. First go and find the child.
+bring_it_here,拿過來。,Bring it here.
+jesus_took_the_loaves_gave_thanks_and_distribute,耶穌拿起餅來，祝謝了，就分給那坐著的人。,"Jesus took the loaves, gave thanks, and distributed them to those who were seated."
+ref_john_6_11,約翰福音 6:11,John 6:11
+ref_john_6_35,約翰福音 6:35,John 6:35
+the_bread_of_life,生命的糧,The bread of life
+he_gives_you_the_bread_share_it_with_the_eight_p,他把餅交給你。分給場上的八個人。,He gives you the bread. Share it with the eight people here.
+give_it_first_to_the_people_sitting_here,先分給坐著的人。,Give it first to the people sitting here.
+ref_john_6_13,約翰福音 6:13,John 6:13
+sir_this_is_all_i_have_what_is_that_among_so_man,先生，我只有這些。這麼多人，算什麼呢？,"Sir, this is all I have. What is that among so many?"
+ref_john_6_9,約翰福音 6:9,John 6:9
+take_it_to_him,你拿去給他吧。,Take it to him.
+take_the_bread_to_jesus,把餅拿到耶穌那裡。,Take the bread to Jesus.
+there_really_is_enough_for_everyone_i_have_never,真的夠大家吃。我從沒看過這樣的事。,There really is enough for everyone. I have never seen anything like it.
+take_them_to_him_first,先拿去給他。,Take them to him first.
+we_are_hungry_this_place_is_wilderness,我們餓了。這地方是野地。,We are hungry. This place is wilderness.
+i_am_full,我飽了。,I am full.
+thank_you,謝謝你。,Thank you.
+this_bread_is_warm,這餅是熱的。,This bread is warm.
+thank_the_lord,謝謝主。,Thank the Lord.
+enough_truly_enough,夠了，真的夠了。,Enough. Truly enough.
+i_am_hungry_no_longer,我不再餓了。,I am hungry no longer.
+please_give_some_to_the_person_beside_me,請也給旁邊的人。,Please give some to the person beside me.
+may_the_lord_remember_you,願主記念你。,May the Lord remember you.
+everyone_has_eaten_and_is_full_go_back_to_jesus_,眾人都吃飽了。回到耶穌那裡，把剩下的收拾起來。,Everyone has eaten and is full. Go back to Jesus and gather what is left.
+thirty_pieces_of_silver,三十塊錢,Thirty Pieces of Silver
+ref_matthew_26_3_5_14_16,馬太福音 26:3–5、14–16,"Matthew 26:3–5, 14–16"
+judas,猶大,Judas
+the_chief_priests_and_the_scribes_are_already_lo,祭司長和文士已經想法子要除滅他。他們聚集在大祭司該亞法的院裡，商議用詭計拿住耶穌，只是說當節的日子不可。你是加略人猶大。你進去問：我把他交給你們，你們願意給我多少錢。他們給了你三十塊錢。你就去找機會。這一程自己往前走。,"The chief priests and the scribes are already looking for a way to destroy him. They gather in the court of Caiaphas the high priest and plot to arrest Jesus by stealth, but not during the feast. You are Judas Iscariot. You go in and ask what they will give you to hand him over. They give you thirty pieces of silver. Then you look for an opportunity. This chapter walks itself."
+ref_matthew_26_16,馬太福音 26:16,Matthew 26:16
+chief_priest,祭司長,Chief priest
+elder,長老,Elder
+enter_the_high_priest_s_courtyard,進大祭司的院子。,Enter the high priest's courtyard.
+ref_matthew_26_3_4,馬太福音 26:3-4,Matthew 26:3-4
+ref_matthew_26_5,馬太福音 26:5,Matthew 26:5
+ref_matthew_26_15,馬太福音 26:15,Matthew 26:15
+thirty_pieces_of_silver_2,三十塊錢。,Thirty pieces of silver.
+the_last_supper,最後的晚餐,The Last Supper
+ref_john_13_matthew_26_20_35,約翰福音 13；馬太福音 26:20–35,John 13; Matthew 26:20–35
+chapter_7,第七章,Chapter 7
+judas_has_already_taken_the_thirty_pieces_and_is,猶大已經收了三十塊錢，正找機會。逾越節的晚上，樓房已經預備好。你起來洗他們的腳，又把餅和杯遞給他們。你說你們中間有一個人要賣我。猶大出去以後，你告訴彼得：雞叫以先，他要三次不認你。,"Judas has already taken the thirty pieces and is looking for a chance. On the evening of Passover the upper room is ready. You rise and wash their feet, and you give them the bread and the cup. You say that one of them will betray you. After Judas leaves, you tell Peter that before the rooster crows he will deny you three times."
+they_sang_a_hymn_and_went_out_to_the_mount_of_ol,他們唱了詩，就出來，往橄欖山去。,They sang a hymn and went out to the Mount of Olives.
+ref_matthew_26_30,馬太福音 26:30,Matthew 26:30
+they_are_at_table,他們坐席。,They are at table.
+when_evening_came_jesus_sat_at_table_with_the_tw,到了晚上，耶穌和十二個門徒坐席。,"When evening came, Jesus sat at table with the twelve."
+ref_matthew_26_20,馬太福音 26:20,Matthew 26:20
+i_have_earnestly_desired_to_eat_this_passover_wi,我很願意在受害以先和你們吃這逾越節的筵席。,I have earnestly desired to eat this Passover with you before I suffer.
+ref_luke_22_15,路加福音 22:15,Luke 22:15
+he_leaves_the_table_and_comes_to_peter,他離席，到彼得面前。,He leaves the table and comes to Peter.
+he_pours_water_into_a_basin_and_washes_the_disci,他把水倒在盆裡，就洗門徒的腳。,He pours water into a basin and washes the disciples' feet.
+lord_are_you_going_to_wash_my_feet,主啊，你洗我的腳嗎？,"Lord, are you going to wash my feet?"
+you_shall_never_wash_my_feet,你永不可洗我的腳！,You shall never wash my feet!
+if_i_do_not_wash_you_you_have_no_share_with_me,我若不洗你，你就與我無分了。,"If I do not wash you, you have no share with me."
+ref_john_13_8,約翰福音 13:8,John 13:8
+lord_not_my_feet_only_but_also_my_hands_and_my_h,主啊，不但我的腳，連手和頭也要洗。,"Lord, not my feet only, but also my hands and my head."
+ref_john_13_14_15,約翰福音 13:14-15,John 13:14-15
+he_returns_to_his_place,他回到自己的位子。,He returns to his place.
+ref_matthew_26_26,馬太福音 26:26,Matthew 26:26
+ref_matthew_26_27_28,馬太福音 26:27-28,Matthew 26:27-28
+the_bread_is_placed_in_their_hands_the_cup_is_pa,餅遞到他們手裡。杯也遞過去。,The bread is placed in their hands. The cup is passed as well.
+ref_matthew_26_21,馬太福音 26:21,Matthew 26:21
+ref_matthew_26_22,馬太福音 26:22,Matthew 26:22
+ref_matthew_26_25,馬太福音 26:25,Matthew 26:25
+ref_john_13_30,約翰福音 13:30,John 13:30
+he_gets_up_and_walks_out_into_the_night,他起來，往夜裡走了。,He gets up and walks out into the night.
+ref_john_13_34,約翰福音 13:34,John 13:34
+by_this_everyone_will_know_that_you_are_my_disci,你們若有彼此相愛的心，眾人因此就認出你們是我的門徒了。,"By this everyone will know that you are my disciples, if you have love for one another."
+ref_john_13_35,約翰福音 13:35,John 13:35
+lord_where_are_you_going,主往哪裡去？,"Lord, where are you going?"
+ref_john_13_36,約翰福音 13:36,John 13:36
+lord_why_can_i_not_follow_you_now_i_will_lay_dow,主啊，我為什麼現在不能跟你去？我願意為你捨命！,"Lord, why can I not follow you now? I will lay down my life for you."
+ref_john_13_38,約翰福音 13:38,John 13:38
+at_dawn,天快亮,At Dawn
+ref_matthew_28_1_10,馬太福音 28:1–10,Matthew 28:1–10
+mary_magdalene,抹大拉的馬利亞,Mary Magdalene
+at_golgotha_he_commits_his_spirit_to_the_father_,他在各各他把靈魂交在父手裡，被安放在新墳墓裡。安息日將盡，七日的頭一日，天快亮的時候。你和那個馬利亞來看墳墓。地大震動，主的使者把石頭滾開，坐在上面。看守的人嚇得如死人一樣。你們又害怕又歡喜，跑去報信，路上遇見耶穌。這一程自己往前走。,"At Golgotha he commits his spirit to the Father and is laid in a new tomb. After the Sabbath, toward dawn on the first day of the week, you and the other Mary come to see the tomb. The earth shakes. An angel of the Lord rolls the stone away and sits on it. The guards become like dead men. Afraid and full of joy, you run to tell the news, and on the way you meet Jesus. This chapter walks itself."
+ref_matthew_28_10,馬太福音 28:10,Matthew 28:10
+the_other_mary,那個馬利亞,The other Mary
+guards,看守的人,Guards
+angel,天使,Angel
+dawn_is_near_you_have_come_to_see_the_tomb,天快亮了。你們來看墳墓。,Dawn is near. You have come to see the tomb.
+after_the_sabbath_toward_the_dawn_of_the_first_d,安息日將盡，七日的頭一日，天快亮的時候，抹大拉的馬利亞和那個馬利亞來看墳墓。,"After the Sabbath, toward the dawn of the first day of the week, Mary Magdalene and the other Mary went to see the tomb."
+the_earth_shakes_the_angel_rolls_the_stone_away,地大震動。使者把石頭滾開。,The earth shakes. The angel rolls the stone away.
+suddenly_there_was_a_great_earthquake_an_angel_o,忽然，地大震動。有主的使者從天上下來，把石頭滾開，坐在上面。他的相貌如同閃電，衣服潔白如雪。,"Suddenly there was a great earthquake. An angel of the Lord descended from heaven, rolled back the stone, and sat on it. His appearance was like lightning, and his clothing white as snow."
+the_guards_shook_with_fear_because_of_him_and_be,看守的人就因他嚇得渾身亂戰，甚至和死人一樣。,The guards shook with fear because of him and became like dead men.
+ref_matthew_28_5,馬太福音 28:5,Matthew 28:5
+ref_matthew_28_6,馬太福音 28:6,Matthew 28:6
+ref_matthew_28_7,馬太福音 28:7,Matthew 28:7
+afraid_and_full_of_joy_run_and_tell_them,又害怕，又大大地歡喜。跑去報信。,"Afraid, and full of joy. Run and tell them."
+the_women_hurried_away_from_the_tomb_afraid_and_,婦女們就急忙離開墳墓，又害怕，又大大地歡喜，跑去要報給他的門徒。忽然，耶穌遇見她們。,"The women hurried away from the tomb, afraid and filled with joy, and ran to tell his disciples. Suddenly Jesus met them."
+ref_matthew_28_9,馬太福音 28:9,Matthew 28:9
+they_came_and_took_hold_of_his_feet_and_worshipe,她們就上前抱住他的腳拜他。,They came and took hold of his feet and worshiped him.
+bethlehem,伯利恆,Bethlehem
+ref_luke_2_matthew_1_2,路加福音 2；馬太福音 1–2,Luke 2; Matthew 1–2
+at_night_shepherds_keep_watch_over_their_flock_i,夜間，野地裡有牧羊人看守羊群。你向他們顯現，並領他們走到馬槽前。嬰孩在馬利亞懷裡。博士隨後跟著星來。然後你告訴約瑟，要帶孩子和他母親往埃及去。這一程自己往前走，你只要把話說完。,At night shepherds keep watch over their flock in the fields. You appear to them and lead them to the manger. The baby is in Mary's arms. The wise men follow the star afterward. Then you tell Joseph to take the child and his mother to Egypt. This chapter walks itself. You only have to finish the words.
+joseph_rose_and_took_the_child_and_his_mother_by,約瑟就起來，夜間帶著小孩子和他母親往埃及去。,Joseph rose and took the child and his mother by night and went to Egypt.
+ref_matthew_2_14,馬太福音 2:14,Matthew 2:14
+manger,馬槽,Manger
+mary,馬利亞,Mary
+joseph,約瑟,Joseph
+shepherd,牧羊人,Shepherd
+a_wise_man,博士,A wise man
+the_light_goes_toward_the_people_keeping_watch,光向著守夜的人去。,The light goes toward the people keeping watch.
+suddenly_there_was_light_in_the_night_we_were_te,夜裡忽然有光。我們甚懼怕。,Suddenly there was light in the night. We were terrified.
+ref_luke_2_10_11,路加福音 2:10-11,Luke 2:10-11
+ref_luke_2_14,路加福音 2:14,Luke 2:14
+let_us_go_to_bethlehem_and_see_this_thing_that_h,我們往伯利恆去，看看所成的事。,Let us go to Bethlehem and see this thing that has happened.
+lead_them_to_the_manger,你領他們走到馬槽前。,Lead them to the manger.
+it_really_is_a_baby_wrapped_in_cloth_mary_holds_,果然是個嬰孩，包著布。馬利亞把他抱在懷裡。,"It really is a baby, wrapped in cloth. Mary holds him."
+ref_luke_2_7,路加福音 2:7,Luke 2:7
+ref_matthew_1_21,馬太福音 1:21,Matthew 1:21
+the_star_goes_ahead_the_wise_men_follow_it,星在前頭。博士跟著它走來。,The star goes ahead. The wise men follow it.
+ref_matthew_2_2,馬太福音 2:2,Matthew 2:2
+ref_matthew_2_11,馬太福音 2:11,Matthew 2:11
+go_to_joseph_there_is_still_a_word_from_the_drea,你到約瑟面前。夢裡還有話。,Go to Joseph. There is still a word from the dream.
+ref_matthew_2_13,馬太福音 2:13,Matthew 2:13
+i_get_up_and_take_the_child_and_his_mother,我起來，帶著小孩子和他母親走。,I get up and take the child and his mother.
+watch_them_leave_the_city_by_night,看他們連夜出城。,Watch them leave the city by night.
+the_temple,聖殿,The Temple
+ref_luke_2_41_52,路加福音 2:41–52,Luke 2:41–52
+they_fled_to_egypt_by_night_years_later_when_the,他們連夜往埃及去了。過了些年，節期完了，你和約瑟往回走，才知道孩子不在同行的人裡。你們在親族中找他，又回耶路撒冷。過了三天，在殿裡看見他坐在教師中間，正對他們說話。這一程自己往前走。,"They fled to Egypt by night. Years later, when the feast is over, you and Joseph start home and find that the child is not in the company. You look among the relatives, then return to Jerusalem. After three days you find him in the temple, sitting among the teachers and speaking with them. This chapter walks itself."
+did_you_not_know_that_i_must_be_about_my_father_,豈不知我應當以我父的事為念嗎？,Did you not know that I must be about my Father's business?
+ref_luke_2_49,路加福音 2:49,Luke 2:49
+teacher,教師,Teacher
+scribe,文士,Scribe
+rabbi,拉比,Rabbi
+kin,親族,Kin
+townsman,同鄉,Townsman
+look_for_him_among_the_travelers,在同行的人裡找他。,Look for him among the travelers.
+when_the_feast_was_ended_they_started_back_the_c,節期完了，他們回去。孩子卻仍在耶路撒冷。他們走了一天的路程，就在親族和熟識的人中找他。,"When the feast was ended, they started back. The child stayed behind in Jerusalem. After a day's journey they began to look for him among their relatives and acquaintances."
+have_you_seen_the_child_he_was_supposed_to_be_wi,你們看見那孩子沒有？他本該在我們中間。,Have you seen the child? He was supposed to be with us.
+he_is_not_here_we_thought_he_was_with_you,這裡沒有他。我們以為他跟你們在一處。,He is not here. We thought he was with you.
+look_among_the_people_farther_ahead,再往前的人裡找一找。,Look among the people farther ahead.
+neighbor_is_the_child_with_you,同鄉，孩子在你們那裡嗎？,"Neighbor, is the child with you?"
+no_we_have_not_seen_him_since_yesterday,沒有。從昨天起，就沒有看見他。,No. We have not seen him since yesterday.
+he_is_not_among_the_relatives_nor_among_the_peop,不在親族裡，也不在熟識的人裡。,"He is not among the relatives, nor among the people we know."
+go_back_to_jerusalem_he_is_still_in_the_city,回耶路撒冷去。他還在城裡。,Go back to Jerusalem. He is still in the city.
+in_the_temple_he_is_speaking_with_the_teachers,殿裡，他正對教師說話。,In the temple he is speaking with the teachers.
+ref_luke_2_46,路加福音 2:46,Luke 2:46
+sit_down_and_listen_if_you_have_a_question_ask_i,你坐下來聽。有甚麼要問的，就問。,"Sit down and listen. If you have a question, ask it."
+scripture_says_you_shall_love_the_lord_your_god_,經上說當盡心愛主你的神。這話，你們怎樣講？,Scripture says you shall love the Lord your God with all your heart. How do you explain that?
+listen_to_him_ask_and_listen_to_him_answer,聽他問，也聽他答。,"Listen to him ask, and listen to him answer."
+ref_luke_2_47,路加福音 2:47,Luke 2:47
+go_to_him_you_have_been_looking_for_him_for_thre,上前去。你找了他三天。,Go to him. You have been looking for him for three days.
+son_why_have_you_treated_us_so_your_father_and_i,我兒！為甚麼向我們這樣行呢？看哪，你父親和我傷心來找你！,"Son, why have you treated us so? Your father and I have been searching for you in sorrow."
+ref_luke_2_48,路加福音 2:48,Luke 2:48
+his_parents_did_not_understand_what_he_said_he_w,他父母不明白他所說的話。他就同他們下去，回到拿撒勒。,His parents did not understand what he said. He went down with them and returned to Nazareth.
+he_goes_down_with_you_and_returns_to_nazareth,他同你們下去，回拿撒勒。,He goes down with you and returns to Nazareth.
+the_jordan,約旦河,The Jordan
+ref_matthew_3_13_17,馬太福音 3:13–17,Matthew 3:13–17
+the_child_in_the_temple_said_he_must_be_about_hi,孩子在殿裡說過，應當以父的事為念。多年以後，眾百姓都在約旦河受洗。約翰站在水裡。你從加利利走到他面前，下到河中。受洗之後，天要開，鴿子要降下，有聲音從天上來。,"The child in the temple said he must be about his Father's business. Years later the people are being baptized in the Jordan. John stands in the water. You walk from Galilee to him and go down into the river. After the baptism heaven opens, the dove descends, and a voice comes from above."
+ref_matthew_3_17,馬太福音 3:17,Matthew 3:17
+john_the_baptist,施洗約翰,John the Baptist
+crowd,群眾,Crowd
+walk_into_the_river_to_john_the_baptist,你往河裡走，到施洗約翰面前。,"Walk into the river, to John the Baptist."
+listen_to_the_voice_from_heaven,聽那從天上來的聲音。,Listen to the voice from heaven.
+father,天父,Father
+we_are_being_baptized_in_this_river_too_he_is_wa,我們也在這河裡受洗。他在水深處等你。,We are being baptized in this river too. He is waiting for you in the deep water.
+behold_the_lamb_of_god_who_takes_away_the_sin_of,看哪，神的羔羊，除去世人罪孽的。,"Behold, the Lamb of God, who takes away the sin of the world."
+all_the_people_have_gone_down_into_the_river_you,眾人都下到河裡了。你也來。,All the people have gone down into the river. You come too.
+ref_matthew_3_14,馬太福音 3:14,Matthew 3:14
+ref_matthew_3_15,馬太福音 3:15,Matthew 3:15
+ref_luke_3_21,路加福音 3:21,Luke 3:21
+heaven_opened,天開了。,Heaven opened.
+the_wilderness,曠野,The Wilderness
+ref_matthew_4_1_11,馬太福音 4:1–11,Matthew 4:1–11
+the_father_has_just_said_this_is_my_beloved_son_,天父剛說：這是我的愛子。聖靈隨即引他到曠野，受魔鬼的試探。他禁食四十晝夜，後來就餓了。魔鬼沿路走來，三次試探他。,"The Father has just said, This is my beloved Son. At once the Spirit leads him into the wilderness to be tempted by the devil. He fasts forty days and nights, and then he is hungry. The devil comes along the road and tempts him three times."
+ref_matthew_4_11,馬太福音 4:11,Matthew 4:11
+the_tempter,試探者,The tempter
+walk_on_along_the_road,你沿著路往前走。,Walk on along the road.
+ref_matthew_4_1_2,馬太福音 4:1–2,Matthew 4:1–2
+someone_comes_from_the_stones,有人從石頭那邊走來。,Someone comes from the stones.
+he_comes_near_the_pinnacle_again,他又走近殿頂。,He comes near the pinnacle again.
+he_comes_near_you_on_the_mountain,他在山上走近你。,He comes near you on the mountain.
+ref_matthew_4_3,馬太福音 4:3,Matthew 4:3
+ref_matthew_4_4,馬太福音 4:4,Matthew 4:4
+ref_matthew_4_6,馬太福音 4:6,Matthew 4:6
+ref_matthew_4_7,馬太福音 4:7,Matthew 4:7
+ref_matthew_4_9,馬太福音 4:9,Matthew 4:9
+ref_matthew_4_10,馬太福音 4:10,Matthew 4:10
+ref_matthew_4_5,馬太福音 4:5,Matthew 4:5
+he_sets_you_on_the_pinnacle_of_the_temple,他帶你站在殿頂上。,He sets you on the pinnacle of the temple.
+ref_matthew_4_8,馬太福音 4:8,Matthew 4:8
+again_he_leads_you_up_a_very_high_mountain,他又帶你上了最高的山。,Again he leads you up a very high mountain.
+satan_leaves,撒但退去。,Satan leaves.
+angels_come_to_serve_him,有天使來伺候。,Angels come to serve him.
+nazareth,拿撒勒,Nazareth
+ref_luke_4_16_30,路加福音 4:16–30,Luke 4:16–30
+the_devil_leaves_and_angels_minister_to_him_he_r,魔鬼退了，有天使來伺候他。他回到拿撒勒。安息日，他照平常的規矩進了會堂。他站起來念以賽亞書。他們怒氣滿胸，把他帶到山崖，他卻從他們中間直行過去。,"The devil leaves, and angels minister to him. He returns to Nazareth. On the Sabbath, as usual, he goes into the synagogue. He stands to read Isaiah. They are filled with rage and take him to the cliff, but he walks straight through the middle of them."
+ref_luke_4_30,路加福音 4:30,Luke 4:30
+attendant,執事,Attendant
+synagogue_leader,管會堂的,Synagogue leader
+everyone_in_the_synagogue_is_here,會堂裡的人都在。,Everyone in the synagogue is here.
+ref_luke_4_16,路加福音 4:16,Luke 4:16
+he_stands_up_to_read_the_scripture,他站起來，要念聖經。,He stands up to read the Scripture.
+someone_hands_him_the_scroll_of_the_prophet,有人把先知的書交給他。,Someone hands him the scroll of the prophet.
+ref_luke_4_17,路加福音 4:17,Luke 4:17
+ref_luke_4_18,路加福音 4:18,Luke 4:18
+ref_luke_4_19,路加福音 4:19,Luke 4:19
+he_rolls_up_the_scroll_and_gives_it_back_to_the_,他把書捲起來，交還執事。,He rolls up the scroll and gives it back to the attendant.
+ref_luke_4_20,路加福音 4:20,Luke 4:20
+ref_luke_4_21,路加福音 4:21,Luke 4:21
+ref_luke_4_22,路加福音 4:22,Luke 4:22
+ref_luke_4_24,路加福音 4:24,Luke 4:24
+ref_luke_4_28,路加福音 4:28,Luke 4:28
+ref_luke_4_29,路加福音 4:29,Luke 4:29
+they_lead_him_out_of_the_town_to_the_cliff,他們帶他出城，到山崖那裡。,"They lead him out of the town, to the cliff."
+throw_him_down,把他推下去！,Throw him down!
+he_walks_straight_through_the_middle_of_them,他從他們中間直行過去。,He walks straight through the middle of them.
+he_reached_out,伸手,He Reached Out
+ref_matthew_8_mark_2_mark_10,馬太福音 8；馬可福音 2；馬可福音 10,Matthew 8; Mark 2; Mark 10
+the_twelve_stay_with_him_a_man_with_leprosy_asks,十二個人常和他同在。長大痲瘋的求你潔淨他。癱子從房頂被縋下來。瞎子在路旁喊大衛的子孫。你伸手，也開口。文士坐在旁邊聽。,"The twelve stay with him. A man with leprosy asks you to make him clean. A paralyzed man is let down through the roof. A blind man by the road cries out, Son of David. You reach out your hand, and you speak. A scribe sits nearby, listening."
+ref_mark_10_52,馬可福音 10:52,Mark 10:52
+a_man_with_leprosy,長大痲瘋的,A man with leprosy
+the_paralyzed_man,癱子,The paralyzed man
+friend,朋友,Friend
+the_blind_man,瞎子,The blind man
+three_people_are_waiting_for_your_hand,三個人在等你的手。,Three people are waiting for your hand.
+someone_is_still_waiting,還有人在等。,Someone is still waiting.
+the_crowd_was_too_thick_so_we_took_off_the_roof_,人太多，我們拆了屋頂，把他連褥子縋下來。,"The crowd was too thick, so we took off the roof and let him down on his mat."
+i_am_clean_i_will_go_and_show_myself_to_the_prie,我潔淨了。我要去給祭司察看。,I am clean. I will go and show myself to the priest.
+ref_matthew_8_2,馬太福音 8:2,Matthew 8:2
+ref_matthew_8_3,馬太福音 8:3,Matthew 8:3
+the_mat_is_on_my_shoulder_i_am_going_home,褥子在我肩上。我回家去了。,The mat is on my shoulder. I am going home.
+ref_mark_2_5,馬可福音 2:5,Mark 2:5
+ref_mark_2_11,馬可福音 2:11,Mark 2:11
+i_have_seen_i_am_following_you_on_the_road,我看見了。我在路上跟隨你。,I have seen. I am following you on the road.
+ref_mark_10_47,馬可福音 10:47,Mark 10:47
+ref_mark_10_51,馬可福音 10:51,Mark 10:51
+blasphemy,僭妄的話,Blasphemy
+ref_mark_2_5_17_mark_3_6,馬可福音 2:5–17；馬可福音 3:6,Mark 2:5–17; Mark 3:6
+you_have_just_heard_him_say_to_the_paralyzed_man,你剛聽見他對癱子說：小子，你的罪赦了。你心裡說，這是僭妄的話。法利賽人又問，他為什麼和罪人一同吃喝。他把赦罪的權柄說完，你們出去，商議怎樣可以除滅他。這一程自己往前走。,"You have just heard him say to the paralyzed man, Son, your sins are forgiven. In your heart you say this is blasphemy. A Pharisee also asks why he eats with sinners. When he has finished speaking of the authority to forgive, you go out and plot how to destroy him. This chapter walks itself."
+ref_mark_3_6,馬可福音 3:6,Mark 3:6
+the_man,那人,The man
+pharisee,法利賽人,Pharisee
+you_reason_about_this_in_your_heart,你心裡議論這話。,You reason about this in your heart.
+he_said_to_the_paralyzed_man_son_your_sins_are_f,他對癱子說：小子，你的罪赦了。有幾個文士坐在那裡，心裡議論。,"He said to the paralyzed man, Son, your sins are forgiven. Some of the scribes were sitting there, questioning in their hearts."
+ref_mark_2_7,馬可福音 2:7,Mark 2:7
+ref_mark_2_8,馬可福音 2:8,Mark 2:8
+ref_mark_2_10,馬可福音 2:10,Mark 2:10
+ref_mark_2_16,馬可福音 2:16,Mark 2:16
+ref_mark_2_17,馬可福音 2:17,Mark 2:17
+you_go_out_and_confer,你們出去商議。,You go out and confer.
+the_storm_stilled,平靜風浪,The Storm Stilled
+ref_mark_4_35_41,馬可福音 4:35–41,Mark 4:35–41
+the_words_from_the_mountain_are_still_in_you_in_,山上的話還在你們心裡。晚上，他說我們渡到那邊去。船在海中，耶穌在船尾睡覺。忽然起了暴風，船要滿了水。你把他叫醒。,"The words from the mountain are still in you. In the evening he says, Let us cross to the other side. The boat is out on the sea, and Jesus is asleep in the stern. A storm rises, the boat is filling, and you wake him."
+the_wind_stopped_and_there_was_a_great_calm,風就止住，大大地平靜了。,"The wind stopped, and there was a great calm."
+ref_mark_4_39,馬可福音 4:39,Mark 4:39
+the_storm,風浪,The storm
+go_to_the_stern_and_wake_him,到船尾叫醒他。,Go to the stern and wake him.
+ref_mark_4_38,馬可福音 4:38,Mark 4:38
+here_i_am,我在這裡。,Here I am.
+go_to_the_bow_he_will_rebuke_the_wind_and_the_se,走到船頭。他要斥責風和海。,Go to the bow. He will rebuke the wind and the sea.
+even_the_wind_and_the_sea_obey_me,連風和海也聽從我。,Even the wind and the sea obey me.
+go_to_the_bow,到船頭去。,Go to the bow.
+even_the_wind_and_the_sea_obey_him,連風和海也聽從他。,Even the wind and the sea obey him.
+the_boat_is_filling_wake_him_first,船要滿了水。先叫醒他。,The boat is filling. Wake him first.
+the_wind_is_still_pouring_in_wake_the_one_in_the,風還在灌進來。先叫醒船尾的人。,The wind is still pouring in. Wake the one in the stern first.
+ref_mark_4_40,馬可福音 4:40,Mark 4:40
+ref_mark_4_41,馬可福音 4:41,Mark 4:41
+lazarus,拉撒路,Lazarus
+ref_john_11_1_44,約翰福音 11:1–44,John 11:1–44
+everyone_in_the_wilderness_has_eaten_and_is_full,野地裡的人都吃飽了。此後，伯大尼送信來：你所愛的人病了。你到的時候，拉撒路已經死了四天。馬大在村口迎接你。馬利亞俯伏在你腳前哭。你也哭了。到墳墓前，叫人把石頭挪開，然後大聲呼叫他的名字。,"Everyone in the wilderness has eaten and is full. After that a message comes from Bethany: the one you love is ill. When you arrive, Lazarus has been dead four days. Martha meets you at the edge of the village. Mary falls at your feet and weeps. You weep too. At the tomb you tell them to take away the stone, and then you call his name aloud."
+the_dead_man_came_out_his_hands_and_feet_wrapped,那死人就出來了，手腳裹著布。,"The dead man came out, his hands and feet wrapped in cloth."
+ref_john_11_44,約翰福音 11:44,John 11:44
+martha,馬大,Martha
+stone,石頭,Stone
+martha_is_at_the_edge_of_the_village_go_to_her_f,馬大在村口。先去見她。,Martha is at the edge of the village. Go to her first.
+the_dead_man_came_out_his_hands_and_feet_bound_w,那死人就出來了，手腳裹著布，臉上包著手巾。,"The dead man came out, his hands and feet bound with strips, and his face wrapped in a cloth."
+ref_john_11_21,約翰福音 11:21,John 11:21
+ref_john_11_25,約翰福音 11:25,John 11:25
+yes_lord_i_believe_that_you_are_the_christ_the_s,主啊，是的，我信你是基督，是神的兒子。,"Yes, Lord. I believe that you are the Christ, the Son of God."
+mary_is_weeping_at_the_tomb_go_to_her,馬利亞在墳前哭。去見她。,Mary is weeping at the tomb. Go to her.
+lord_if_you_had_been_here,主啊，你若早在這裡……,"Lord, if you had been here…"
+ref_john_11_35,約翰福音 11:35,John 11:35
+go_to_the_stone_and_tell_them_to_take_it_away,到石頭那裡，叫他們挪開。,Go to the stone and tell them to take it away.
+the_stone_still_blocks_the_tomb_mary_is_weeping,石頭還擋著洞口。馬利亞在哭。,The stone still blocks the tomb. Mary is weeping.
+take_away_the_stone,你們把石頭挪開。,Take away the stone.
+ref_john_11_39,約翰福音 11:39,John 11:39
+did_i_not_tell_you_that_if_you_believed_you_woul,我不是對你說過，你若信，就必看見神的榮耀嗎？,"Did I not tell you that if you believed, you would see the glory of God?"
+ref_john_11_43,約翰福音 11:43,John 11:43
+watch_him_come_out,看他出來。,Watch him come out.
+one_man_dies,一個人死,One Man Dies
+ref_john_11_45_53,約翰福音 11:45–53,John 11:45–53
+caiaphas,該亞法,Caiaphas
+lazarus_comes_out_of_the_tomb_hands_and_feet_wra,拉撒路從墳墓裡出來，手腳裹著布。好些猶太人看見，就信了耶穌。祭司長和法利賽人聚集公會。你是大祭司該亞法。他們問：這人行好些神蹟，我們怎麼辦。你說，一個人替百姓死，就是益處。從那日起，他們商議要殺他。這一程自己往前走。,"Lazarus comes out of the tomb, hands and feet wrapped. Many of the Jews see it and believe in Jesus. The chief priests and the Pharisees gather the council. You are Caiaphas, the high priest. They ask what to do, since this man does many signs. You say it is better that one man die for the people. From that day they plot to kill him. This chapter walks itself."
+ref_john_11_53,約翰福音 11:53,John 11:53
+the_council_is_gathered,公會聚集。,The council is gathered.
+lazarus_came_out_of_the_tomb_many_of_the_jews_sa,拉撒路從墳墓出來。好些猶太人看見耶穌所做的事，就信了他。祭司長和法利賽人聚集公會。,Lazarus came out of the tomb. Many of the Jews saw what Jesus had done and believed in him. The chief priests and the Pharisees gathered the council.
+ref_john_11_45_47,約翰福音 11:45-47,John 11:45-47
+ref_john_11_47_48,約翰福音 11:47-48,John 11:47-48
+ref_john_11_49_50,約翰福音 11:49-50,John 11:49-50
+the_lost,失喪的人,The Lost
+ref_luke_19_1_10,路加福音 19:1–10,Luke 19:1–10
+zacchaeus,撒該,Zacchaeus
+from_that_day_they_plot_to_kill_him_he_still_goe,從那日起，他們商議要殺他。他仍往耶路撒冷去，經過耶利哥。你是稅吏長撒該，身材矮小，想看看他是誰。你跑到前頭，爬上桑樹。他在樹下叫你，說今天必住在你家裡。人子來，為要尋找、拯救失喪的人。這一程自己往前走。,"From that day they plot to kill him. He still goes up to Jerusalem and passes through Jericho. You are Zacchaeus, a chief tax collector, short, and you want to see who he is. You run ahead and climb a sycamore. Under the tree he calls you and says he must stay at your house today. The Son of Man came to seek and save the lost. This chapter walks itself."
+ref_luke_19_10,路加福音 19:10,Luke 19:10
+the_crowd,眾人,The crowd
+you_want_to_see_what_sort_of_man_jesus_is,你要看看耶穌是怎樣的人。,You want to see what sort of man Jesus is.
+jesus_entered_jericho_and_was_passing_through,耶穌進了耶利哥，正經過的時候。,Jesus entered Jericho and was passing through.
+ref_luke_19_1,路加福音 19:1,Luke 19:1
+i_want_to_see_what_sort_of_man_jesus_is_but_the_,我要看看耶穌是怎樣的人。只是人多，我又身材矮小。,"I want to see what sort of man Jesus is. But the crowd is thick, and I am short."
+run_ahead_and_climb_the_sycamore,跑到前頭，爬上桑樹。,Run ahead and climb the sycamore.
+he_ran_on_ahead_and_climbed_a_sycamore_tree_to_s,他就跑到前頭，爬上桑樹，要看耶穌，因為耶穌必從那裡經過。,"He ran on ahead and climbed a sycamore tree to see Jesus, because he was going to pass that way."
+ref_luke_19_4,路加福音 19:4,Luke 19:4
+he_has_come_to_the_tree,他走到樹下。,He has come to the tree.
+ref_luke_19_5,路加福音 19:5,Luke 19:5
+he_hurried_down,他就急忙下來。,He hurried down.
+ref_luke_19_7,路加福音 19:7,Luke 19:7
+ref_luke_19_8,路加福音 19:8,Luke 19:8
+ref_luke_19_9,路加福音 19:9,Luke 19:9
+the_holy_city,聖城,The Holy City
+ref_matthew_21_1_13,馬太福音 21:1–13,Matthew 21:1–13
+in_jericho_he_said_the_son_of_man_came_to_seek_a,他在耶利哥說，人子來是要尋找、拯救失喪的人。如今你騎著驢駒進耶路撒冷。眾人鋪衣服，喊和散那。然後你進入聖殿，推倒兌換銀錢之人的桌子。祭司長聽見，就想法子要除滅他。,"In Jericho he said the Son of Man came to seek and save the lost. Now you ride a colt into Jerusalem. The crowd spreads cloaks and shouts Hosanna. Then you enter the temple and overturn the money changers' tables. When the chief priests hear it, they look for a way to destroy him."
+when_the_chief_priests_and_the_scribes_heard_thi,祭司長和文士聽見這話，就想法子要除滅耶穌。,"When the chief priests and the scribes heard this, they looked for a way to destroy Jesus."
+ref_mark_11_18,馬可福音 11:18,Mark 11:18
+colt,驢駒,Colt
+money_table,銀錢桌,Money table
+dove_sellers,賣鴿子的,Dove sellers
+money_changers,兌換銀錢的,Money changers
+shoppers,來買的人,Shoppers
+the_colt_is_here,驢駒牽來了。,The colt is here.
+ref_matthew_21_5,馬太福音 21:5,Matthew 21:5
+mount_the_colt_and_enter_the_holy_city,騎上驢駒，進聖城。,Mount the colt and enter the holy city.
+ride_the_colt_into_the_holy_city,騎著驢駒進聖城。,Ride the colt into the holy city.
+the_crowd_spreads_cloaks_and_branches_on_the_roa,眾人把衣服和樹枝鋪在路上，喊著說：,The crowd spreads cloaks and branches on the road and shouts:
+ref_matthew_21_9,馬太福音 21:9,Matthew 21:9
+dismount_and_go_into_the_temple,下了驢，走進聖殿。,"Dismount, and go into the temple."
+the_temple_is_full_of_money_changers_and_people_,殿裡滿了兌換銀錢的人，和賣鴿子的。,The temple is full of money changers and people selling doves.
+you_have_seen_this_trade_go_and_overturn_the_tab,你看了這些買賣。去推倒那些桌子。,You have seen this trade. Go and overturn the tables.
+ref_matthew_21_13,馬太福音 21:13,Matthew 21:13
+tipped_over,推倒了,Tipped over
+gethsemane,客西馬尼,Gethsemane
+ref_matthew_26_36_56_john_18,馬太福音 26:36–56；約翰福音 18,Matthew 26:36–56; John 18
+they_sing_a_hymn_and_go_out_to_the_mount_of_oliv,他們唱了詩，就出來往橄欖山去。你把彼得、雅各、約翰留下，自己走到前頭禱告。三次。然後走回他們那裡。收了三十塊錢的猶大，帶著火把、兵丁和祭司長來，與你親嘴。彼得拔刀。門徒都逃走了，只有彼得遠遠地跟著。,"They sing a hymn and go out to the Mount of Olives. You leave Peter, James, and John, and walk ahead to pray. Three times. Then you walk back to them. Judas, who took the thirty pieces, comes with torches, soldiers, and the chief priests, and kisses you. Peter draws a sword. The disciples flee. Only Peter follows at a distance."
+peter_followed_jesus_at_a_distance_right_into_th,彼得遠遠地跟著耶穌，一直到大祭司的院子裡。,"Peter followed Jesus at a distance, right into the high priest's courtyard."
+ref_matthew_26_58,馬太福音 26:58,Matthew 26:58
+rock,磐石,Rock
+malchus,馬勒古,Malchus
+soldiers,兵丁,Soldiers
+walk_ahead_to_the_rock_and_pray,走到前頭的磐石那裡禱告。,Walk ahead to the rock and pray.
+walk_ahead_to_the_rock_and_pray_they_will_fall_a,走到前頭的磐石那裡禱告。他們會睡著。,Walk ahead to the rock and pray. They will fall asleep.
+then_all_the_disciples_left_him_and_fled,當下，門徒都離開他，逃走了。,Then all the disciples left him and fled.
+ref_matthew_26_56,馬太福音 26:56,Matthew 26:56
+they_led_jesus_to_the_high_priest_peter_followed,他們把耶穌帶到大祭司那裡去。彼得遠遠地跟著，進了大祭司的院子。,They led Jesus to the high priest. Peter followed at a distance and entered the high priest's courtyard.
+ref_matthew_26_57_58,馬太福音 26:57-58,Matthew 26:57-58
+walk_back_to_the_disciples,走回門徒那裡。,Walk back to the disciples.
+they_have_fallen_asleep_go_and_pray_again,他們睡著了。再去禱告。,They have fallen asleep. Go and pray again.
+the_torches_are_here_judas_comes_with_soldiers_a,火把來了。猶大帶著兵丁和祭司長走來。,The torches are here. Judas comes with soldiers and the chief priests.
+judas_kisses_you,猶大與你親嘴。,Judas kisses you.
+judas_having_procured_a_band_of_soldiers_and_off,猶大領了一隊兵，和祭司長並法利賽人的差役，拿著燈籠、火把、兵器，來到園裡。,"Judas, having procured a band of soldiers and officers from the chief priests and the Pharisees, came there with lanterns and torches and weapons."
+ref_john_18_3,約翰福音 18:3,John 18:3
+ref_matthew_26_49,馬太福音 26:49,Matthew 26:49
+and_he_kissed_him,就與他親嘴。,And he kissed him.
+friend_do_what_you_came_to_do,朋友，你來要做的事，就做吧。,"Friend, do what you came to do."
+ref_john_18_5,約翰福音 18:5,John 18:5
+they_close_in_to_seize_you,他們圍上來，要拿住你。,They close in to seize you.
+they_are_coming_to_seize_you,他們要拿住你。,They are coming to seize you.
+then_they_seized_jesus,他們就上手拿住耶穌。,Then they seized Jesus.
+he_drew_his_sword_struck_the_high_priest_s_serva,他拔出刀來，將大祭司的僕人砍了一刀，削掉他的右耳。,"He drew his sword, struck the high priest's servant, and cut off his right ear."
+ref_john_18_11,約翰福音 18:11,John 18:11
+ref_luke_22_51,路加福音 22:51,Luke 22:51
+jesus_touched_the_man_s_ear_and_healed_him,耶穌就摸那人的耳朵，把他治好了。,Jesus touched the man's ear and healed him.
+have_you_come_out_with_swords_and_clubs_to_arres,你們帶著刀棒出來拿我，如同拿強盜嗎？但這是你們的時候，黑暗掌權了。,"Have you come out with swords and clubs to arrest me, as against a robber? But this is your hour, and the power of darkness."
+the_disciples_have_all_fled_peter_follows_at_a_d,門徒都逃走了。彼得遠遠地跟著。,The disciples have all fled. Peter follows at a distance.
+you_have_prayed_three_times_walk_back_to_the_dis,禱告已經三次。走回門徒那裡。,You have prayed three times. Walk back to the disciples.
+ref_matthew_26_39,馬太福音 26:39,Matthew 26:39
+ref_matthew_26_40_41,馬太福音 26:40-41,Matthew 26:40-41
+our_eyes_are_heavy,……我們的眼睛困倦。,…Our eyes are heavy.
+lord_we_are_sitting_here,主，我們在這裡坐著。,"Lord, we are sitting here."
+before_the_rooster_crows,雞叫以先,Before the Rooster Crows
+ref_john_18_15_27_luke_22_54_62,約翰福音 18:15–27；路加福音 22:54–62,John 18:15–27; Luke 22:54–62
+they_bring_jesus_into_the_high_priest_s_courtyar,他們把耶穌帶到大祭司的院子。你遠遠跟著進去，在火邊烤火。有人三次問你是不是他的門徒。你都說不是。雞叫了，主轉過身來看你。你想起他的話，出去痛哭。這一程自己往前走。,"They bring Jesus into the high priest's courtyard. You follow at a distance, and warm yourself by the fire. Three times someone asks if you are his disciple. Each time you say you are not. The rooster crows. The Lord turns and looks at you. You remember his words, go out, and weep. This chapter walks itself."
+he_went_out_and_wept,他就出去痛哭。,He went out and wept.
+ref_luke_22_62,路加福音 22:62,Luke 22:62
+high_priest,大祭司,High priest
+servant_girl,使女,Servant girl
+an_officer,差役,An officer
+servant_of_the_high_priest,大祭司的僕人,Servant of the high priest
+follow_at_a_distance_into_the_high_priest_s_cour,遠遠跟著，進大祭司的院子。,Follow at a distance into the high priest's courtyard.
+they_led_jesus_to_the_high_priest_peter__2,他們把耶穌帶到大祭司那裡。彼得遠遠地跟著，進了院子，和差役一同坐著烤火。,"They led Jesus to the high priest. Peter followed at a distance, entered the courtyard, and sat with the officers, warming himself."
+ref_john_18_17,約翰福音 18:17,John 18:17
+he_is_by_the_fire_again,他又在火邊。,He is by the fire again.
+ref_luke_22_58,路加福音 22:58,Luke 22:58
+ref_john_18_25,約翰福音 18:25,John 18:25
+another_person_comes_over,又有一個人走過來。,Another person comes over.
+ref_john_18_26,約翰福音 18:26,John 18:26
+ref_mark_14_71,馬可福音 14:71,Mark 14:71
+immediately_the_rooster_crowed_the_lord_turned_a,立時雞就叫了。主轉過身來，看彼得。,Immediately the rooster crowed. The Lord turned and looked at Peter.
+ref_luke_22_60_61,路加福音 22:60-61,Luke 22:60-61
+peter_remembered_what_jesus_had_said,彼得想起耶穌所說的話：,Peter remembered what Jesus had said:
+ref_luke_22_61,路加福音 22:61,Luke 22:61
+pilate,彼拉多,Pilate
+ref_matthew_27_john_18_19,馬太福音 27；約翰福音 18–19,Matthew 27; John 18–19
+peter_has_gone_out_and_wept_they_bring_you_from_,彼得出去痛哭了。他們卻把你從大祭司那裡押到總督府。羅馬兵圍在你身旁。彼拉多問：你是猶太人的王嗎？他查不出罪。祭司長和眾人卻喊著要釘十字架。兵丁用荊棘編冠冕，戴在你頭上，又鞭打你。這一程自己往前走。,"Peter has gone out and wept. They bring you from the high priest to the governor's headquarters. Roman soldiers stand around you. Pilate asks, Are you the King of the Jews? He finds no guilt. The chief priests and the crowd still shout to crucify him. The soldiers twist a crown of thorns, set it on your head, and flog you. This chapter walks itself."
+then_pilate_had_jesus_flogged_and_handed_him_ove,於是彼拉多將耶穌鞭打了，交給人釘十字架。,Then Pilate had Jesus flogged and handed him over to be crucified.
+ref_matthew_27_26,馬太福音 27:26,Matthew 27:26
+the_romans_bring_you_before_pilate,羅馬兵押你到彼拉多面前。,The Romans bring you before Pilate.
+ref_matthew_27_11,馬太福音 27:11,Matthew 27:11
+ref_john_18_38,約翰福音 18:38,John 18:38
+the_crowd_is_shouting_outside,眾人在外圍喊著。,The crowd is shouting outside.
+crucify_him_crucify_him,把他釘十字架！把他釘十字架！,Crucify him! Crucify him!
+the_roman_soldiers_come_up_to_mock_you,羅馬兵上來戲弄你。,The Roman soldiers come up to mock you.
+ref_john_19_2,約翰福音 19:2,John 19:2
+roman_soldiers,羅馬兵丁,Roman soldiers
+hail_king_of_the_jews,恭喜，猶太人的王啊！,"Hail, King of the Jews!"
+they_strike_his_back_with_whips,他們用鞭子打他的背。,They strike his back with whips.
+they_bring_you_before_pilate,他們把你帶到彼拉多面前。,They bring you before Pilate.
+ref_john_19_5,約翰福音 19:5,John 19:5
+ref_matthew_27_24,馬太福音 27:24,Matthew 27:24
+golgotha,各各他,Golgotha
+ref_luke_23_john_19_matthew_27,路加福音 23；約翰福音 19；馬太福音 27,Luke 23; John 19; Matthew 27
+pilate_finds_no_guilt_yet_he_has_you_flogged_and,彼拉多查不出罪，仍把你鞭打了，交給人釘十字架。他們把十字架放在你肩上。羅馬兵圍著你，走向城外的各各他。有一次你跌倒，古利奈人西門把十字架接過去。到了那裡，他們釘你。天暗了。你把話說完。這一程自己往前走。,"Pilate finds no guilt, yet he has you flogged and handed over to be crucified. They lay the cross on your shoulder. Roman soldiers surround you on the way out of the city to Golgotha. Once you fall, and Simon of Cyrene takes the cross. There they nail you to it. The sky grows dark. You finish the words. This chapter walks itself."
+father_into_your_hands_i_commit_my_spirit,父啊，我將我的靈魂交在你手裡。,"Father, into your hands I commit my spirit."
+ref_luke_23_46,路加福音 23:46,Luke 23:46
+ref_luke_23_34,路加福音 23:34,Luke 23:34
+robber,強盜,Robber
+do_you_not_fear_god_we_are_receiving_what_we_des,你不懼怕神嗎？我們是應該的。這個人沒有做過一件不好的事。,Do you not fear God? We are receiving what we deserve. This man has done nothing wrong.
+ref_luke_23_43,路加福音 23:43,Luke 23:43
+ref_john_19_26,約翰福音 19:26,John 19:26
+ref_john_19_27,約翰福音 19:27,John 19:27
+from_noon_until_three_darkness_came_over_the_who,從午正到申初，遍地都黑暗了。,"From noon until three, darkness came over the whole land."
+ref_matthew_27_46,馬太福音 27:46,Matthew 27:46
+ref_john_19_28,約翰福音 19:28,John 19:28
+it_is_finished,成了！,It is finished!
+jesus_tasted_the_sour_wine_bowed_his_head_and_ga,耶穌嘗了那醋，就低下頭，將靈魂交付神了。,"Jesus tasted the sour wine, bowed his head, and gave up his spirit."
+ref_john_19_34,約翰福音 19:34,John 19:34
+ref_matthew_27_59_60,馬太福音 27:59-60,Matthew 27:59-60
+daughters_of_jerusalem,耶路撒冷的女子,Daughters of Jerusalem
+simon_of_cyrene,古利奈人西門,Simon of Cyrene
+the_romans_lead_you_toward_golgotha,羅馬兵押你往各各他走。,The Romans lead you toward Golgotha.
+they_lay_the_cross_on_his_shoulder,他們把十字架放在他肩上。,They lay the cross on his shoulder.
+they_weep_and_wail_for_him,她們為他號咷痛哭。,They weep and wail for him.
+ref_luke_23_28,路加福音 23:28,Luke 23:28
+keep_going,繼續往前。,Keep going.
+the_cross_bears_down_you_fall_on_the_road,十字架壓下來。你倒在路上。,The cross bears down. You fall on the road.
+they_seized_simon_who_was_coming_in_from_the_cou,他們就抓住那從鄉下來的西門，把十字架擱在他身上，叫他背著跟隨耶穌。,"They seized Simon, who was coming in from the country, laid the cross on him, and made him carry it behind Jesus."
+simon_of_cyrene_comes_to_take_the_cross,古利奈人西門來接十字架。,Simon of Cyrene comes to take the cross.
+give_me_the_cross_you_walk_ahead,把十字架給我。你走在前頭。,Give me the cross. You walk ahead.
+the_romans_lead_you_up_the_hill,羅馬兵押你上山。,The Romans lead you up the hill.
+they_came_to_a_place_called_golgotha_which_means,他們到了一個地方，名叫各各他，意思就是髑髏地。,"They came to a place called Golgotha, which means the Place of a Skull."
+they_crucified_him_and_offered_him_wine_mixed_wi,於是將他釘在十字架上，又拿苦膽調和的酒給他喝。他嘗了，就不肯喝。,"They crucified him, and offered him wine mixed with gall. He tasted it and would not drink."
+above_his_head_they_placed_a_sign_this_is_jesus_,在他頭以上安一個牌子，寫著：這是猶太人的王耶穌。,"Above his head they placed a sign: This is Jesus, the King of the Jews."
+speak_the_words_through,把話說完。,Speak the words through.
+do_you_love_me,你愛我嗎,Do You Love Me?
+ref_john_21_1_19,約翰福音 21:1–19,John 21:1–19
+the_women_meet_him_on_the_road_and_he_tells_them,婦女們在路上遇見他，他叫她們往加利利去告訴弟兄。這些事以後，提比哩亞海邊，天將亮。你說我打魚去，他們也一同去。那一夜沒有打著什麼。岸上有一個人，你們卻不認得。他把網指到船的右邊。約翰說：是主。你跳進海裡，到了炭火旁。他三次問你愛不愛他。這一程自己往前走。,"The women meet him on the road, and he tells them to go to Galilee and tell the brothers. After this, at the Sea of Tiberias, day is breaking. You say you are going fishing, and they go with you. That night you catch nothing. Someone is on the shore, and you do not recognize him. He points the net to the right side of the boat. John says, It is the Lord. You jump into the sea and come to the charcoal fire. Three times he asks whether you love him. This chapter walks itself."
+ref_john_21_19,約翰福音 21:19,John 21:19
+nathanael,拿但業,Nathanael
+that_night_they_caught_nothing,那一夜，沒有打著什麼。,That night they caught nothing.
+after_these_things_jesus_showed_himself_again_to,這些事以後，耶穌在提比哩亞海邊又向門徒顯現。,After these things Jesus showed himself again to the disciples by the Sea of Tiberias.
+ref_john_21_1,約翰福音 21:1,John 21:1
+we_will_go_with_you_too,我們也和你同去。,We will go with you too.
+they_got_into_the_boat_that_night_they_caught_no,他們上了船。那一夜並沒有打著什麼。,They got into the boat. That night they caught nothing.
+just_as_day_was_breaking_jesus_stood_on_the_shor,天將亮的時候，耶穌站在岸上，門徒卻不知道是耶穌。,"Just as day was breaking, Jesus stood on the shore, but the disciples did not know it was Jesus."
+ref_john_21_5,約翰福音 21:5,John 21:5
+no,沒有。,No.
+ref_john_21_6,約翰福音 21:6,John 21:6
+they_cast_the_net_and_then_they_could_not_haul_i,他們便撒下網去，竟拉不上來了，因為魚甚多。,"They cast the net, and then they could not haul it in, for there were so many fish."
+ref_john_21_7,約翰福音 21:7,John 21:7
+you_jump_into_the_sea_and_head_for_shore,你跳進海裡，往岸上去。,You jump into the sea and head for shore.
+when_they_came_ashore_they_saw_a_charcoal_fire_t,他們上了岸，就看見那裡有炭火，上面有魚，又有餅。,"When they came ashore they saw a charcoal fire there, with fish on it, and bread."
+ref_john_21_12,約翰福音 21:12,John 21:12
+none_of_the_disciples_dared_ask_him_who_are_you_,門徒中沒有一個敢問他「你是誰」，因為知道是主。,"None of the disciples dared ask him, Who are you? They knew it was the Lord."
+ref_john_21_15,約翰福音 21:15,John 21:15
+ref_john_21_16,約翰福音 21:16,John 21:16
+ref_john_21_17,約翰福音 21:17,John 21:17
+peter_was_grieved_because_jesus_said_to_him_the_,彼得因為耶穌第三次對他說「你愛我嗎」，就憂愁。,"Peter was grieved because Jesus said to him the third time, Do you love me?"
+the_mountain_in_galilee,加利利的山,The Mountain in Galilee
+ref_matthew_28_16_20,馬太福音 28:16–20,Matthew 28:16–20
+by_the_sea_he_said_follow_me_the_eleven_disciple,他在海邊說：你跟從我吧。十一個門徒往加利利去，到了耶穌約定的山上。你與他們同行。他們見了耶穌就拜他，然而還有人疑惑。他進前來，把天上地下的權柄、去使萬民作門徒的吩咐，和常與你們同在的應許說完。這一程自己往前走。,"By the sea he said, Follow me. The eleven disciples go to Galilee, to the mountain Jesus appointed. You walk with them. When they see Jesus they worship him, though some doubt. He comes near and finishes the words: all authority in heaven and on earth, the command to make disciples of all nations, and the promise that he is with you always. This chapter walks itself."
+i_am_with_you_always_to_the_end_of_the_age,我就常與你們同在，直到世界的末了。,"I am with you always, to the end of the age."
+ref_matthew_28_20,馬太福音 28:20,Matthew 28:20
+james_the_younger,小雅各,James the younger
+the_eleven_disciples_go_to_galilee,十一個門徒往加利利去。,The eleven disciples go to Galilee.
+go_up_to_the_mountain_he_appointed,上到他約定的山上。,Go up to the mountain he appointed.
+the_eleven_disciples_went_to_galilee_to_the_moun,十一個門徒往加利利去，到了耶穌約定的山上。,"The eleven disciples went to Galilee, to the mountain Jesus had appointed."
+when_they_saw_jesus_they_worshiped_him_but_some_,他們見了耶穌就拜他，然而還有人疑惑。,"When they saw Jesus they worshiped him, but some doubted."
+he_came_near,他進前來。,He came near.
+ref_matthew_28_18,馬太福音 28:18,Matthew 28:18
+ref_matthew_28_19,馬太福音 28:19,Matthew 28:19
+the_boy_jesus,少年耶穌,The boy Jesus
+you,你,You
+ref_john_14_6,約翰福音 14:6,John 14:6
+role.simon,你是西門,You are Simon
+role.andrew,你是安得烈,You are Andrew
+role.james,你是雅各,You are James
+role.john,你是約翰,You are John
+role.jesus,你是耶穌,You are Jesus
+role.an_elder,你是老人,You are An elder
+role.woman,你是婦人,You are Woman
+role.villager,你是村人,You are Villager
+role.the_congregation,你是會眾,You are The congregation
+role.a_passerby,你是過路的,You are A passerby
+role.a_young_man,你是青年,You are A young man
+role.servant,你是用人,You are a servant
+role.well,你是井,You are Well
+role.the_mother_of_jesus,你是耶穌的母親,You are The mother of Jesus
+role.master_of_the_feast,你是管筵席的,You are Master of the feast
+role.guest,你是客人,You are Guest
+role.stone_jars,你是石缸,You are Stone jars
+role.nicodemus,你是尼哥德慕,You are Nicodemus
+role.philip,你是腓力,You are Philip
+role.bartholomew,你是巴多羅買,You are Bartholomew
+role.matthew,你是馬太,You are Matthew
+role.thomas,你是多馬,You are Thomas
+role.james_son_of_alphaeus,你是亞勒腓的雅各,You are James son of Alphaeus
+role.thaddaeus,你是達太,You are Thaddaeus
+role.simon_the_zealot,你是奮銳黨的西門,You are Simon the Zealot
+role.judas_iscariot,你是加略人猶大,You are Judas Iscariot
+role.tax_collector,你是稅吏,You are Tax collector
+role.youth,你是少年,You are Youth
+role.traveler,你是旅人,You are Traveler
+role.peter,你是彼得,You are Peter
+role.disciples,你是門徒,You are Disciples
+role.child,你是孩子,You are Child
+role.judas,你是猶大,You are Judas
+role.chief_priest,你是祭司長,You are Chief priest
+role.elder,你是長老,You are Elder
+role.mary_magdalene,你是抹大拉的馬利亞,You are Mary Magdalene
+role.the_other_mary,你是那個馬利亞,You are The other Mary
+role.guards,你是看守的人,You are Guards
+role.angel,你是天使,You are an angel
+role.manger,你是馬槽,You are Manger
+role.mary,你是馬利亞,You are Mary
+role.joseph,你是約瑟,You are Joseph
+role.shepherd,你是牧羊人,You are Shepherd
+role.a_wise_man,你是博士,You are A wise man
+role.teacher,你是教師,You are Teacher
+role.scribe,你是文士,You are a scribe
+role.rabbi,你是拉比,You are Rabbi
+role.kin,你是親族,You are Kin
+role.townsman,你是同鄉,You are Townsman
+role.john_the_baptist,你是施洗約翰,You are John the Baptist
+role.crowd,你是群眾,You are Crowd
+role.father,你是天父,You are Father
+role.the_tempter,你是試探者,You are The tempter
+role.a_man_with_leprosy,你是長大痲瘋的,You are A man with leprosy
+role.the_paralyzed_man,你是癱子,You are The paralyzed man
+role.friend,你是朋友,You are Friend
+role.the_blind_man,你是瞎子,You are The blind man
+role.the_man,你是那人,You are The man
+role.pharisee,你是法利賽人,You are Pharisee
+role.the_storm,你是風浪,You are The storm
+role.martha,你是馬大,You are Martha
+role.stone,你是石頭,You are Stone
+role.lazarus,你是拉撒路,You are Lazarus
+role.caiaphas,你是該亞法,You are Caiaphas
+role.zacchaeus,你是撒該,You are Zacchaeus
+role.the_crowd,你是眾人,You are The crowd
+role.colt,你是驢駒,You are Colt
+role.money_table,你是銀錢桌,You are Money table
+role.dove_sellers,你是賣鴿子的,You are Dove sellers
+role.shoppers,你是來買的人,You are Shoppers
+role.rock,你是磐石,You are Rock
+role.malchus,你是馬勒古,You are Malchus
+role.soldiers,你是兵丁,You are Soldiers
+role.high_priest,你是大祭司,You are High priest
+role.servant_girl,你是使女,You are Servant girl
+role.an_officer,你是差役,You are An officer
+role.servant_of_the_high_priest,你是大祭司的僕人,You are Servant of the high priest
+role.pilate,你是彼拉多,You are Pilate
+role.roman_soldiers,你是羅馬兵丁,You are Roman soldiers
+role.robber,你是強盜,You are Robber
+role.daughters_of_jerusalem,你是耶路撒冷的女子,You are Daughters of Jerusalem
+role.simon_of_cyrene,你是古利奈人西門,You are Simon of Cyrene
+role.nathanael,你是拿但業,You are Nathanael
+role.the_boy_jesus,你是少年耶穌,You are The boy Jesus

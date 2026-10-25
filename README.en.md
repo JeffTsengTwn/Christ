@@ -4,7 +4,7 @@
 
 A life from the four Gospels. A small pixel game for the web: from Bethlehem to Golgotha, on to the empty tomb on the first day of the week, and to the mountain in Galilee. In each chapter you play the person who was there, and walk the words through to the end.
 
-The picture is 320×192, scaled up by whole numbers to fit the window. Scripture is quoted from the Chinese Union Version. The game follows the four Gospels. It does not take the place of the Bible.
+The picture is 320×192, scaled up by whole numbers to fit the window. In Chinese, Scripture is quoted from the Chinese Union Version. The English is a translation of those lines for this game. The game follows the four Gospels. It does not take the place of the Bible.
 
 ## Development
 
@@ -31,8 +31,9 @@ npm run preview  # previews the build
 | Scripture journal | J, or “Scripture” at the upper right | Same |
 | Mute | M, or “Mute” at the upper right | Same |
 | Pause | Esc | — |
+| Language | — | “EN” or “中文” at the upper right; the title screen has the same button |
 
-A coarse pointer (phone or tablet) shows the d-pad and the Talk button. Mute is stored in the browser’s `localStorage` under the key `follow-mute`. If the system has “reduce motion” turned on, particles and screen shake are skipped.
+A coarse pointer (phone or tablet) shows the d-pad and the Talk button. Mute is stored in the browser’s `localStorage` under the key `follow-mute`, and the language under `follow-lang`. If the system has “reduce motion” turned on, particles and screen shake are skipped.
 
 Some chapters walk forward on their own, and you mainly finish the words. In the others you walk up to someone and talk, or follow the goal at the bottom of the screen. Verses you pass through are kept in the journal, and you can read them again at the end of a chapter and in the ending.
 
@@ -73,12 +74,26 @@ From the title you can “Begin walking” and play all twenty-eight chapters in
 
 “Walking on the Water” has a faith meter: keep your eyes on Jesus and walk across the water. Night, indoor, and storm chapters add light and weather. Golgotha becomes the scene of the crosses; when the words are finished, the next chapter begins. After the mountain in Galilee comes the ending, which lists the verses gathered along the way.
 
+## Language
+
+The interface, chapter titles, dialogue, and Scripture share one set of keys. To change the wording, edit `assets/dict.csv` (columns `key,zh,en`) and generate the dictionary. That step needs Python 3. Playing the game needs only Node.js.
+
+```bash
+python3 scripts/gen_dict.py
+```
+
+The script writes `src/dict.js`. At runtime, `text(key)` in `src/lang.js` reads the line for the current language.
+
 ## Project layout
 
 ```
 index.html          page shell, interface styles, touch controls
 vite.config.js      dev server (port 5173)
+assets/dict.csv     Chinese and English dictionary (key, Chinese, English)
+scripts/gen_dict.py builds src/dict.js from dict.csv
 src/main.js         loads the chapters and starts the game
+src/lang.js         language switch, and text(key) for each line
+src/dict.js         generated Chinese and English lines
 src/chapters.js     scripture, the twenty-eight chapters, and their maps
 src/game.js         movement, dialogue, music, interface, and drawing
 src/render/pixi.js  pixel drawing through PixiJS

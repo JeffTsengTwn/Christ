@@ -31,214 +31,214 @@ import {
 } from "./game.js";
 
 export const VERSES = {
-  call: "來跟從我，我要叫你們得人如得魚一樣。",
-  nets: "他們就立刻捨了網，跟從了他。",
-  b3: "虛心的人有福了！因為天國是他們的。",
-  b4: "哀慟的人有福了！因為他們必得安慰。",
-  b5: "溫柔的人有福了！因為他們必承受地土。",
-  b6: "飢渴慕義的人有福了！因為他們必得飽足。",
-  b7: "憐恤人的人有福了！因為他們必蒙憐恤。",
-  fearNot: "你們放心，是我，不要怕！",
-  littleFaith: "你這小信的人哪，為甚麼疑惑呢？",
-  windStill: "風就住了。",
-  loaves: "有一個孩童，這裡有五個大麥餅、兩條魚。",
-  bread: "我就是生命的糧。到我這裡來的，必定不餓；信我的，永遠不渴。",
-  leftovers: "把剩下的零碎收拾起來，免得有糟蹋的。",
-  baskets: "他們便將那五個大麥餅的零碎，收拾起來，裝滿了十二個籃子。",
-  finished: "耶穌嘗了那醋，就說：「成了！」便低下頭，將靈魂交付神了。",
-  risen: "不要害怕！我知道你們是尋找那釘十字架的耶穌。他不在這裡，照他所說的，已經復活了。你們來看安放主的地方。",
-  maryLost: "他們把我主挪了去，我不知道放在哪裡。",
-  maryName: "馬利亞。",
-  peace: "願你們平安！父怎樣差遣了我，我也照樣差遣你們。",
-  way: "我就是道路、真理、生命；若不藉著我，沒有人能到父那裡去。",
-  noWine: "他們沒有酒了。",
-  whatever: "他告訴你們甚麼，你們就做甚麼。",
-  notYet: "婦人，我與你有甚麼相干？我的時候還沒有到。",
-  fillJars: "把缸倒滿了水。",
-  drawOut: "現在可以舀出來，送給管筵席的。",
-  goodWine: "人都是先擺上好酒，等客喝夠了，才擺上次的，你倒把好酒留到如今！",
-  firstSign: "這是耶穌所行的頭一件神蹟，是在加利利的迦拿行的，顯出他的榮耀來；他的門徒就信他了。",
-  appoint: "他就設立十二個人，要他們常和自己同在，也要差他們去傳道。",
-  peterName: "這十二個人有西門，耶穌又給他起名叫彼得。",
-  followMe: "你跟從我來。",
-  philipFound: "摩西在律法上所寫的和眾先知所記的那一位，我們遇見了，就是約瑟的兒子拿撒勒人耶穌。",
-  wash: "我是你們的主，你們的夫子，尚且洗你們的腳，你們也當彼此洗腳。我給你們作了榜樣，叫你們照著我向你們所做的去做。",
-  body: "你們拿著吃，這是我的身體。",
-  cup: "你們都喝這個；因為這是我立約的血，為多人流出來，使罪得赦。",
-  betray: "我實在告訴你們，你們中間有一個人要賣我了。",
-  isItI: "主，是我嗎？",
-  rabbi: "拉比，是我嗎？",
-  night: "猶大受了那點餅，立刻就出去。那時候是夜間了。",
-  newCmd: "我賜給你們一條新命令，乃是叫你們彼此相愛；我怎樣愛你們，你們也要怎樣相愛。",
-  judasNamed: "還有賣耶穌的加略人猶大。",
-  nameJesus: "你要給他起名叫耶穌，因他要將自己的百姓從罪惡裡救出來。",
-  manger: "就生了頭胎的兒子，用布包起來，放在馬槽裡，因為客店裡沒有地方。",
-  goodNews: "不要懼怕！我報給你們大喜的信息，是關乎萬民的。因今天在大衛的城裡，為你們生了救主，就是主基督。",
-  gloria: "在至高之處榮耀歸與神！在地上平安歸與他所喜悅的人！",
-  star: "那生下來作猶太人之王的在哪裡？我們在東方看見他的星，特來拜他。",
-  gifts: "就俯伏拜那小孩子，揭開寶盒，拿黃金、乳香、沒藥為禮物獻給他。",
-  egypt: "起來！帶著小孩子同他母親逃往埃及。",
-  fathers: "為甚麼找我呢？豈不知我應當以我父的事為念嗎？",
-  seeking: "過了三天，就遇見他在殿裡，坐在教師中間，一面聽，一面問。",
-  amazed: "凡聽見他的，都希奇他的聰明和他的應對。",
-  johnNeed: "我當受你的洗，你反倒上我這裡來嗎？",
-  fulfill: "你暫且許我，因為我們理當這樣盡諸般的義。",
-  beloved: "這是我的愛子，我所喜悅的。",
-  heavens: "眾百姓都受了洗，耶穌也受了洗。正禱告的時候，天就開了。",
-  stones: "你若是神的兒子，可以吩咐這些石頭變成食物。",
-  notBread: "人活著，不是單靠食物，乃是靠神口裡所出的一切話。",
-  jump: "你若是神的兒子，可以跳下去，因為經上記著說：主要為你吩咐他的使者用手托著你，免得你的腳碰在石頭上。",
-  notTest: "不可試探主你的神。",
-  worship: "你若俯伏拜我，我就把這一切都賜給你。",
-  begone: "撒但，退去吧！因為經上記著說：當拜主你的神，單要事奉他。",
-  led: "當時，耶穌被聖靈引到曠野，受魔鬼的試探。他禁食四十晝夜，後來就餓了。",
-  toTemple: "魔鬼就帶他進了聖城，叫他站在殿頂上。",
-  toMountain: "魔鬼又帶他上了一座最高的山，將世上的萬國與萬國的榮華都指給他看。",
-  minister: "於是，魔鬼離了耶穌，有天使來伺候他。",
-  spirit: "主的靈在我身上，因為他用膏膏我，叫我傳福音給貧窮的人；差遣我報告：被擄的得釋放，瞎眼的得看見，叫那受壓制的得自由。",
-  today: "今天這經應驗在你們耳中了。",
-  hometown: "我實在告訴你們，沒有先知在自己家鄉被人悅納的。",
-  passed: "他卻從他們中間直行，過去了。",
-  sabbath: "耶穌來到拿撒勒，就是他長大的地方。在安息日，照他平常的規矩進了會堂，站起來要念聖經。",
-  opened: "有人把先知以賽亞的書交給他，他就打開，找到一處寫著說：",
-  year: "報告神悅納人的禧年。",
-  eyes: "於是把書捲起來，交還執事，就坐下。會堂裡的人都定睛看他。",
-  josephSon: "眾人都稱讚他，並希奇他口中所出的恩言；又說：「這不是約瑟的兒子嗎？」",
-  wrath: "會堂裡的人聽見這話，都怒氣滿胸，",
-  cliff: "就起來攆他出城（他們的城造在山上）；他們帶他到山崖，要把他推下去。",
-  gennesaret: "耶穌站在革尼撒勒湖邊，眾人擁擠他，要聽神的道。",
-  putOut: "講完了，對西門說：「把船開到水深之處，下網打魚。」",
-  atYourWord: "西門說：「夫子，我們整夜勞力，並沒有打著甚麼。但依從你的話，我就下網。」",
-  netBreaking: "他們下了網，就圈住許多魚，網險些裂開，",
-  bothBoats: "便招呼那隻船上的同伴來幫助。他們就來，把魚裝滿了兩隻船，甚至船要沉下去。",
-  sinfulMan: "西門彼得看見，就俯伏在耶穌膝前，說：「主啊！離開我，我是個罪人！」",
-  catchMen: "他的夥伴西庇太的兒子雅各、約翰，也是這樣。耶穌對西門說：「不要怕！從今以後，你要得人了。」",
-  leftAll: "他們把兩隻船攏了岸，就撇下所有的，跟從了耶穌。",
-  ifWilling: "主若肯，必能叫我潔淨了。",
-  willing: "我肯，你潔淨了吧！",
-  sins: "小子，你的罪赦了。",
-  takeMat: "我吩咐你，起來！拿你的褥子回家去吧。",
-  sonOfDavid: "大衛的子孫耶穌啊，可憐我吧！",
-  see: "你要我為你做甚麼？",
-  wantSee: "拉波尼，我要能看見。",
-  yourFaith: "你的信救了你了。",
-  perish: "夫子！我們喪命，你不顧嗎？",
-  peaceSea: "住了吧！靜了吧！",
-  whereFaith: "為甚麼膽怯？你們還沒有信心嗎？",
-  whoThen: "這到底是誰，連風和海也聽從他了。",
-  ifHere: "主啊，你若早在這裡，我兄弟必不死。",
-  resurrection: "復活在我，生命也在我。信我的人雖然死了，也必復活。",
-  wept: "耶穌哭了。",
-  stench: "主啊，他現在必是臭了，因為他死了已經四天了。",
-  comeOut: "拉撒路出來！",
-  unbind: "解開，叫他走！",
-  colt: "看哪，你的王來到你這裡，是溫柔的，又騎著驢，就是騎著驢駒子。",
-  hosanna: "和散那歸於大衛的子孫！奉主名來的是應當稱頌的！至高之上和散那！",
-  housePrayer: "經上記著說：我的殿必稱為禱告的殿，你們倒使它成為賊窩了。",
-  thisCup: "我父啊，倘若可行，求你叫這杯離開我；然而，不要照我的意思，只要照你的意思。",
-  watch: "怎麼樣？你們不能同我儆醒片時嗎？總要警醒禱告，免得入了迷惑。你們心靈固然願意，肉體卻軟弱了。",
-  hail: "請拉比安。",
-  iAm: "我就是。",
-  sheath: "收刀入鞘吧！我父所給我的那杯，我豈可不喝呢？",
-  letThem: "到了這個地步，由他們吧！",
-  king: "你是猶太人的王嗎？",
-  youSay: "你說的是。",
-  noFault: "我查不出他有甚麼罪來。",
-  behold: "你們看這個人！",
-  innocent: "流這義人的血，罪不在我，你們承當吧。",
-  thorns: "兵丁用荊棘編做冠冕，戴在他頭上，給他穿上紫袍。",
-  women: "耶路撒冷的女子，不要為我哭，當為自己和自己的兒女哭。",
-  forgive: "父啊！赦免他們；因為他們所作的，他們不曉得。",
-  paradise: "我實在告訴你，今日你要同我在樂園裡了。",
-  beholdSon: "母親，看，你的兒子！",
-  beholdMother: "看，你的母親！",
-  eli: "以利！以利！拉馬撒巴各大尼？",
-  forsaken: "我的神！我的神！為甚麼離棄我？",
-  thirst: "我渴了。",
-  intoHands: "父啊！我將我的靈魂交在你手裡。",
-  spear: "惟有一個兵拿槍扎他的肋旁，隨即有血和水流出來。",
-  buried: "約瑟取了身體，用細麻布加上香料裹好，安放在自己的新墳墓裡。",
-  whyWeep: "婦人，為甚麼哭？你找誰呢？",
-  gardener: "先生，若是你把他移了去，請告訴我，你把他放在哪裡，我便去取他。",
-  notYetUp: "不要摸我，因我還沒有升上去見我的父。你往我弟兄那裡去，告訴他們說，我要升上去見我的父，也是你們的父，見我的神，也是你們的神。",
-  touch: "伸過你的指頭來，摸我的手；伸出你的手來，探入我的肋旁。不要疑惑，總要信！",
-  myLord: "我的主！我的神！",
-  commission: "天上地下所有的權柄都賜給我了。所以，你們要去，使萬民作我的門徒。",
-  fearNot: "不要害怕！我知道你們是尋找那釘十字架的耶穌。",
-  notHere: "他不在這裡，照他所說的，已經復活了。你們來看安放主的地方。",
-  goTell: "快去告訴他的門徒，說他從死裡復活了，並且在你們以先往加利利去，在那裡你們要見他。看哪，我已經告訴你們了。",
-  peaceWomen: "願你們平安！",
-  tellBrothers: "不要害怕！你們去告訴我的弟兄，叫他們往加利利去，在那裡必見我。",
-  allAuthority: "天上地下所有的權柄都賜給我了。",
-  makeDisciples: "所以，你們要去，使萬民作我的門徒，奉父、子、聖靈的名給他們施洗。",
-  withYou: "凡我所吩咐你們的，都教訓他們遵守，我就常與你們同在，直到世界的末了。",
-  cannotFollow: "我所去的地方，你現在不能跟我去，後來卻要跟我去。",
-  denyThrice: "你願意為我捨命嗎？我實實在在地告訴你，雞叫以先，你要三次不認我。",
-  notDisciple: "你不也是這人的門徒嗎？",
-  notI: "我不是。",
-  alsoOne: "你也是他們一黨的。",
-  inGarden: "我不是看見你同他在園子裡嗎？",
-  knowNot: "你這個人，我不曉得你說的是甚麼！",
-  remembered: "今日雞叫以先，你要三次不認我。",
-  goFish: "我打魚去。",
-  childrenEat: "小子！你們有吃的沒有？",
-  castRight: "你們把網撒在船的右邊，就必得著。",
-  itIsLord: "是主！",
-  comeEat: "你們來吃早飯。",
-  loveMore: "約翰的兒子西門，你愛我比這些更深嗎？",
-  loveYes: "主啊，是的，你知道我愛你。",
-  feedLambs: "你餵養我的小羊。",
-  loveSecond: "約翰的兒子西門，你愛我嗎？",
-  tendSheep: "你牧養我的羊。",
-  loveKnows: "主啊，你是無所不知的，你知道我愛你。",
-  feedSheep: "你餵養我的羊。",
-  followAfter: "你跟從我吧！",
-  fromGod: "拉比，我們知道你是由神那裡來作師傅的；因為你所行的神蹟，若沒有神同在，無人能行。",
-  bornAgain: "我實實在在地告訴你，人若不重生，就不能見神的國。",
-  howBorn: "人已經老了，如何能重生呢？豈能再進母腹生出來嗎？",
-  waterSpirit: "我實實在在地告訴你，人若不是從水和聖靈生的，就不能進神的國。",
-  liftedUp: "摩西在曠野怎樣舉蛇，人子也必照樣被舉起來，叫一切信他的都得永生。",
-  godSoLoved: "神愛世人，甚至將他的獨生子賜給他們，叫一切信他的，不至滅亡，反得永生。",
-  notCondemn: "因為神差他的兒子降世，不是要定世人的罪，乃是要叫世人因他得救。",
-  comeDown: "撒該，快下來！今天我必住在你家裡。",
-  grumble: "他竟到罪人家裡去住宿。",
-  halfGoods: "主啊，我把所有的一半給窮人；我若訛詐了誰，就還他四倍。",
-  salvationHouse: "今天救恩到了這家，因為他也是亞伯拉罕的子孫。",
-  seekLost: "人子來，為要尋找、拯救失喪的人。",
-  blasphemy: "這個人為什麼這樣說呢？他說僭妄的話了。除了神以外，誰能赦罪呢？",
-  whyReason: "你們心裡為什麼這樣議論呢？",
-  authority: "但要叫你們知道，人子在地上有赦罪的權柄。",
-  withSinners: "他和稅吏並罪人一同吃喝嗎？",
-  physician: "健康的人用不著醫生，有病的人才用得著。我來本不是召義人，乃是召罪人。",
-  destroyHim: "法利賽人出去，同希律一黨的人商議，怎樣可以除滅耶穌。",
-  whatDo: "這人行好些神蹟，我們怎麼辦呢？若這樣由著他，人人都要信他，羅馬人也要來奪我們的地土和我們的百姓。",
-  caiaphas: "你們不知道甚麼。獨不想一個人替百姓死，免得通國滅亡，就是你們的益處。",
-  fromThatDay: "從那日起，他們就商議要殺耶穌。",
-  takeTrick: "大家商議要用詭計拿住耶穌，殺他。",
-  notOnFeast: "當節的日子不可，恐怕民間生亂。",
-  whatGive: "我把他交給你們，你們願意給我多少錢？",
-  thirty: "他們就給了他三十塊錢。",
-  opportunity: "從那時候，他就找機會，要把耶穌交給他們。",
+  call: "verse.call",
+  nets: "verse.nets",
+  b3: "verse.b3",
+  b4: "verse.b4",
+  b5: "verse.b5",
+  b6: "verse.b6",
+  b7: "verse.b7",
+  fearNot: "verse.fearNot",
+  littleFaith: "verse.littleFaith",
+  windStill: "verse.windStill",
+  loaves: "verse.loaves",
+  bread: "verse.bread",
+  leftovers: "verse.leftovers",
+  baskets: "verse.baskets",
+  finished: "verse.finished",
+  risen: "verse.risen",
+  maryLost: "verse.maryLost",
+  maryName: "verse.maryName",
+  peace: "verse.peace",
+  way: "verse.way",
+  noWine: "verse.noWine",
+  whatever: "verse.whatever",
+  notYet: "verse.notYet",
+  fillJars: "verse.fillJars",
+  drawOut: "verse.drawOut",
+  goodWine: "verse.goodWine",
+  firstSign: "verse.firstSign",
+  appoint: "verse.appoint",
+  peterName: "verse.peterName",
+  followMe: "verse.followMe",
+  philipFound: "verse.philipFound",
+  wash: "verse.wash",
+  body: "verse.body",
+  cup: "verse.cup",
+  betray: "verse.betray",
+  isItI: "verse.isItI",
+  rabbi: "verse.rabbi",
+  night: "verse.night",
+  newCmd: "verse.newCmd",
+  judasNamed: "verse.judasNamed",
+  nameJesus: "verse.nameJesus",
+  manger: "verse.manger",
+  goodNews: "verse.goodNews",
+  gloria: "verse.gloria",
+  star: "verse.star",
+  gifts: "verse.gifts",
+  egypt: "verse.egypt",
+  fathers: "verse.fathers",
+  seeking: "verse.seeking",
+  amazed: "verse.amazed",
+  johnNeed: "verse.johnNeed",
+  fulfill: "verse.fulfill",
+  beloved: "verse.beloved",
+  heavens: "verse.heavens",
+  stones: "verse.stones",
+  notBread: "verse.notBread",
+  jump: "verse.jump",
+  notTest: "verse.notTest",
+  worship: "verse.worship",
+  begone: "verse.begone",
+  led: "verse.led",
+  toTemple: "verse.toTemple",
+  toMountain: "verse.toMountain",
+  minister: "verse.minister",
+  spirit: "verse.spirit",
+  today: "verse.today",
+  hometown: "verse.hometown",
+  passed: "verse.passed",
+  sabbath: "verse.sabbath",
+  opened: "verse.opened",
+  year: "verse.year",
+  eyes: "verse.eyes",
+  josephSon: "verse.josephSon",
+  wrath: "verse.wrath",
+  cliff: "verse.cliff",
+  gennesaret: "verse.gennesaret",
+  putOut: "verse.putOut",
+  atYourWord: "verse.atYourWord",
+  netBreaking: "verse.netBreaking",
+  bothBoats: "verse.bothBoats",
+  sinfulMan: "verse.sinfulMan",
+  catchMen: "verse.catchMen",
+  leftAll: "verse.leftAll",
+  ifWilling: "verse.ifWilling",
+  willing: "verse.willing",
+  sins: "verse.sins",
+  takeMat: "verse.takeMat",
+  sonOfDavid: "verse.sonOfDavid",
+  see: "verse.see",
+  wantSee: "verse.wantSee",
+  yourFaith: "verse.yourFaith",
+  perish: "verse.perish",
+  peaceSea: "verse.peaceSea",
+  whereFaith: "verse.whereFaith",
+  whoThen: "verse.whoThen",
+  ifHere: "verse.ifHere",
+  resurrection: "verse.resurrection",
+  wept: "verse.wept",
+  stench: "verse.stench",
+  comeOut: "verse.comeOut",
+  unbind: "verse.unbind",
+  colt: "verse.colt",
+  hosanna: "verse.hosanna",
+  housePrayer: "verse.housePrayer",
+  thisCup: "verse.thisCup",
+  watch: "verse.watch",
+  hail: "verse.hail",
+  iAm: "verse.iAm",
+  sheath: "verse.sheath",
+  letThem: "verse.letThem",
+  king: "verse.king",
+  youSay: "verse.youSay",
+  noFault: "verse.noFault",
+  behold: "verse.behold",
+  innocent: "verse.innocent",
+  thorns: "verse.thorns",
+  women: "verse.women",
+  forgive: "verse.forgive",
+  paradise: "verse.paradise",
+  beholdSon: "verse.beholdSon",
+  beholdMother: "verse.beholdMother",
+  eli: "verse.eli",
+  forsaken: "verse.forsaken",
+  thirst: "verse.thirst",
+  intoHands: "verse.intoHands",
+  spear: "verse.spear",
+  buried: "verse.buried",
+  whyWeep: "verse.whyWeep",
+  gardener: "verse.gardener",
+  notYetUp: "verse.notYetUp",
+  touch: "verse.touch",
+  myLord: "verse.myLord",
+  commission: "verse.commission",
+  fearNot: "verse.fearNot",
+  notHere: "verse.notHere",
+  goTell: "verse.goTell",
+  peaceWomen: "verse.peaceWomen",
+  tellBrothers: "verse.tellBrothers",
+  allAuthority: "verse.allAuthority",
+  makeDisciples: "verse.makeDisciples",
+  withYou: "verse.withYou",
+  cannotFollow: "verse.cannotFollow",
+  denyThrice: "verse.denyThrice",
+  notDisciple: "verse.notDisciple",
+  notI: "verse.notI",
+  alsoOne: "verse.alsoOne",
+  inGarden: "verse.inGarden",
+  knowNot: "verse.knowNot",
+  remembered: "verse.remembered",
+  goFish: "verse.goFish",
+  childrenEat: "verse.childrenEat",
+  castRight: "verse.castRight",
+  itIsLord: "verse.itIsLord",
+  comeEat: "verse.comeEat",
+  loveMore: "verse.loveMore",
+  loveYes: "verse.loveYes",
+  feedLambs: "verse.feedLambs",
+  loveSecond: "verse.loveSecond",
+  tendSheep: "verse.tendSheep",
+  loveKnows: "verse.loveKnows",
+  feedSheep: "verse.feedSheep",
+  followAfter: "verse.followAfter",
+  fromGod: "verse.fromGod",
+  bornAgain: "verse.bornAgain",
+  howBorn: "verse.howBorn",
+  waterSpirit: "verse.waterSpirit",
+  liftedUp: "verse.liftedUp",
+  godSoLoved: "verse.godSoLoved",
+  notCondemn: "verse.notCondemn",
+  comeDown: "verse.comeDown",
+  grumble: "verse.grumble",
+  halfGoods: "verse.halfGoods",
+  salvationHouse: "verse.salvationHouse",
+  seekLost: "verse.seekLost",
+  blasphemy: "verse.blasphemy",
+  whyReason: "verse.whyReason",
+  authority: "verse.authority",
+  withSinners: "verse.withSinners",
+  physician: "verse.physician",
+  destroyHim: "verse.destroyHim",
+  whatDo: "verse.whatDo",
+  caiaphas: "verse.caiaphas",
+  fromThatDay: "verse.fromThatDay",
+  takeTrick: "verse.takeTrick",
+  notOnFeast: "verse.notOnFeast",
+  whatGive: "verse.whatGive",
+  thirty: "verse.thirty",
+  opportunity: "verse.opportunity",
 };
 
 export const INTERLUDE = [
-  { text: "此後，他被交在人手裡。", ref: "" },
-  { text: "他們把他帶到各各他。園子外的天亮了，又暗了。", ref: "" },
-  { text: VERSES.finished, ref: "約翰福音 19:30", verse: true },
-  { text: "七日的頭一日，天快亮的時候。", ref: "" },
+  { text: "after_this_he_was_delivered_into_the_hands_of_me", ref: "" },
+  { text: "they_brought_him_to_golgotha_outside_the_garden_", ref: "" },
+  { text: VERSES.finished, ref: "ref_john_19_30", verse: true },
+  { text: "on_the_first_day_of_the_week_as_dawn_was_breakin", ref: "" },
 ];
 
 export const CHAPTERS = [
   {
     key: "shore",
-    title: "水深之處",
-    ref: "路加福音 5:1–11",
-    who: "西門",
-    kicker: "第六章",
+    title: "deep_water",
+    ref: "ref_luke_5_1_11",
+    who: "simon",
+    kicker: "chapter_6",
     intro:
-      "拿撒勒的人要把他推下山崖，他卻走過去，來到湖邊。你是西門。船停在水上。依從他的話，把船開到水深之處下網。魚滿了兩隻船，你在他面前認出自己是個罪人，然後跟他走。",
-    closing: "他們把兩隻船攏了岸，就撇下所有的，跟從了耶穌。",
-    closingRef: "路加福音 5:11",
+      "the_people_of_nazareth_try_to_throw_him_off_the_",
+    closing: "verse.leftAll",
+    closingRef: "ref_luke_5_11",
     music: "peace",
     build() {
       this.waterSolid = true;
@@ -260,16 +260,16 @@ export const CHAPTERS = [
         prop({ kind: "boat", id: "boat2", tx: 20, ty: 3 }),
         prop({ kind: "net", id: "netL", tx: 11, ty: 5, alpha: 0 }),
         prop({ kind: "net", id: "netR", tx: 23, ty: 3, alpha: 0 }),
-        person({ id: "andrew", name: "安得烈", tx: 10, ty: 5, look: "andrew", dir: "down", talk: false }),
-        person({ id: "james", name: "雅各", tx: 19, ty: 3, look: "james", dir: "left", talk: false }),
-        person({ id: "john", name: "約翰", tx: 21, ty: 3, look: "john", dir: "left", talk: false }),
-        person({ id: "jesus", name: "耶穌", tx: 21, ty: 8, look: "jesus", dir: "left" }),
-        person({ id: "elder", name: "老人", tx: 16, ty: 8, look: "elder", dir: "right", role: "crowd" }),
-        person({ id: "mother", name: "婦人", tx: 17, ty: 9, look: "mother", dir: "right", role: "crowd" }),
-        person({ id: "farmer", name: "村人", tx: 15, ty: 9, look: "farmer", dir: "right", role: "crowd" }),
-        person({ id: "worker", name: "會眾", tx: 18, ty: 9, look: "worker", dir: "up", role: "crowd" }),
-        person({ id: "traveler", name: "過路的", tx: 19, ty: 8, look: "traveler", dir: "right", role: "crowd" }),
-        person({ id: "youth", name: "青年", tx: 18, ty: 10, look: "boy", dir: "up", role: "crowd" }),
+        person({ id: "andrew", name: "andrew", tx: 10, ty: 5, look: "andrew", dir: "down", talk: false }),
+        person({ id: "james", name: "james", tx: 19, ty: 3, look: "james", dir: "left", talk: false }),
+        person({ id: "john", name: "john", tx: 21, ty: 3, look: "john", dir: "left", talk: false }),
+        person({ id: "jesus", name: "jesus", tx: 21, ty: 8, look: "jesus", dir: "left" }),
+        person({ id: "elder", name: "an_elder", tx: 16, ty: 8, look: "elder", dir: "right", role: "crowd" }),
+        person({ id: "mother", name: "woman", tx: 17, ty: 9, look: "mother", dir: "right", role: "crowd" }),
+        person({ id: "farmer", name: "villager", tx: 15, ty: 9, look: "farmer", dir: "right", role: "crowd" }),
+        person({ id: "worker", name: "the_congregation", tx: 18, ty: 9, look: "worker", dir: "up", role: "crowd" }),
+        person({ id: "traveler", name: "a_passerby", tx: 19, ty: 8, look: "traveler", dir: "right", role: "crowd" }),
+        person({ id: "youth", name: "a_young_man", tx: 18, ty: 10, look: "boy", dir: "up", role: "crowd" }),
       ];
       for (let i = 0; i < 12; i++) {
         state.entities.push(
@@ -284,13 +284,13 @@ export const CHAPTERS = [
         );
       }
       this.guided = true;
-      state.objective = "耶穌在岸邊講道。";
-      state.progress = "在岸上";
+      state.objective = "jesus_is_teaching_on_the_shore";
+      state.progress = "on_shore";
     },
     onEnter() {
       this.guided = true;
-      state.objective = "耶穌在岸邊講道。";
-      state.progress = "在岸上";
+      state.objective = "jesus_is_teaching_on_the_shore";
+      state.progress = "on_shore";
       walkPlayer(20, 10, 56, () => this.hear());
     },
     hear() {
@@ -299,13 +299,13 @@ export const CHAPTERS = [
       if (j) j.dir = "left";
       say(
         [
-          { name: "", text: VERSES.gennesaret, ref: "路加福音 5:1", verse: true },
-          { name: "耶穌", text: "你們要聽神的道。" },
-          { name: "", text: VERSES.putOut, ref: "路加福音 5:4", verse: true },
+          { name: "", text: VERSES.gennesaret, ref: "ref_luke_5_1", verse: true },
+          { name: "jesus", text: "listen_to_the_word_of_god" },
+          { name: "", text: VERSES.putOut, ref: "ref_luke_5_4", verse: true },
           {
-            name: "西門",
-            text: "夫子，我們整夜勞力，並沒有打著甚麼。但依從你的話，我就下網。",
-            ref: "路加福音 5:5",
+            name: "simon",
+            text: "master_we_toiled_all_night_and_caught_nothing_bu",
+            ref: "ref_luke_5_5",
             verse: VERSES.atYourWord,
           },
         ],
@@ -315,7 +315,7 @@ export const CHAPTERS = [
           for (const e of state.entities) {
             if (e.role === "crowd" || e.id === "jesus") e.talk = false;
           }
-          state.objective = "走到船邊上船，開到水深之處下網。";
+          state.objective = "walk_to_the_boat_get_in_and_put_out_into_deep_wa";
         }
       );
     },
@@ -330,8 +330,8 @@ export const CHAPTERS = [
       const f = state.flags;
       if (this.guided || f.hauling || f.caught || f.watch || state.dialogue.open) return "";
       const boat = findEnt("boat");
-      if (!f.aboard && boat && dist(state.player, boat) < 40) return "上船";
-      if (f.aboard && tileAt(state.player.x, state.player.y) === "d") return "下網";
+      if (!f.aboard && boat && dist(state.player, boat) < 40) return "board";
+      if (f.aboard && tileAt(state.player.x, state.player.y) === "d") return "cast_the_net";
       return "";
     },
     onAct() {
@@ -437,18 +437,18 @@ export const CHAPTERS = [
           if (f.full) {
             say(
               [
-                { name: "", text: VERSES.netBreaking, ref: "路加福音 5:6", verse: true },
-                { name: "", text: VERSES.bothBoats, ref: "路加福音 5:7", verse: true },
+                { name: "", text: VERSES.netBreaking, ref: "ref_luke_5_6", verse: true },
+                { name: "", text: VERSES.bothBoats, ref: "ref_luke_5_7", verse: true },
               ],
               () => {
                 f.hauling = false;
                 f.watch = false;
                 f.caught = true;
-                state.objective = "把船開回岸邊。";
+                state.objective = "bring_the_boat_back_to_shore";
               }
             );
           } else {
-            say([{ name: "西門", text: "整夜勞力，並沒有打著甚麼。" }], () => {
+            say([{ name: "simon", text: "we_toiled_all_night_and_caught_nothing" }], () => {
               f.hauling = false;
               f.watch = false;
               f.haulSaid = false;
@@ -474,30 +474,30 @@ export const CHAPTERS = [
         }
         if (arrived && f.simonThere) {
           f.done = true;
-          say([{ name: "", text: VERSES.leftAll, ref: "路加福音 5:11", verse: true }], () => completeChapter());
+          say([{ name: "", text: VERSES.leftAll, ref: "ref_luke_5_11", verse: true }], () => completeChapter());
         }
       }
       if (f.follow) {
-        state.objective = "他們跟從耶穌。";
-        state.progress = "跟他走";
+        state.objective = "they_follow_jesus";
+        state.progress = "follow_him";
       } else if (!f.sent) {
-        state.objective = "耶穌在岸邊講道。";
-        state.progress = "在岸上";
+        state.objective = "jesus_is_teaching_on_the_shore";
+        state.progress = "on_shore";
       } else if (!f.caught && !f.aboard) {
-        state.objective = "走到船邊上船，再開到水深之處下網。";
-        state.progress = "在岸上";
+        state.objective = "walk_to_the_boat_get_in_again_and_put_out_into_d";
+        state.progress = "on_shore";
       } else if (!f.caught && tileAt(state.player.x, state.player.y) !== "d") {
-        state.objective = "把船開到水深之處。";
-        state.progress = "在船上";
+        state.objective = "put_out_into_deep_water";
+        state.progress = "on_the_boat";
       } else if (!f.caught) {
-        state.objective = "按下交談，下網打魚。";
-        state.progress = "水深之處";
+        state.objective = "press_talk_and_let_down_the_nets";
+        state.progress = "deep_water";
       } else if (f.aboard) {
-        state.objective = "把船開回岸邊。";
-        state.progress = "魚滿了船";
+        state.objective = "bring_the_boat_back_to_shore";
+        state.progress = "the_boat_is_full_of_fish";
       } else if (!f.confessed) {
-        state.objective = "他走到耶穌面前。";
-        state.progress = "攏了岸";
+        state.objective = "he_walks_up_to_jesus";
+        state.progress = "ashore";
       }
     },
     comeAshore() {
@@ -505,16 +505,16 @@ export const CHAPTERS = [
       f.ashore = true;
       f.confessed = true;
       this.guided = true;
-      state.objective = "他回到耶穌面前。";
-      state.progress = "攏了岸";
+      state.objective = "he_comes_back_before_jesus";
+      state.progress = "ashore";
       walkPlayer(20, 8, 56, () => {
         const j = findEnt("jesus");
         state.player.dir = j && j.x >= state.player.x ? "right" : "left";
         if (j) j.dir = state.player.x >= j.x ? "right" : "left";
         say(
           [
-            { name: "西門", text: "主啊！離開我，我是個罪人！", ref: "路加福音 5:8", verse: VERSES.sinfulMan },
-            { name: "耶穌", text: "不要怕！從今以後，你要得人了。", ref: "路加福音 5:10", verse: VERSES.catchMen },
+            { name: "simon", text: "lord_depart_from_me_for_i_am_a_sinful_man", ref: "ref_luke_5_8", verse: VERSES.sinfulMan },
+            { name: "jesus", text: "do_not_be_afraid_from_now_on_you_will_catch_peop", ref: "ref_luke_5_10", verse: VERSES.catchMen },
           ],
           () => {
             f.follow = true;
@@ -525,7 +525,7 @@ export const CHAPTERS = [
               who.y = p.y;
             });
             this.guided = true;
-            state.objective = "他們跟從耶穌。";
+            state.objective = "they_follow_jesus";
             walkPlayer(27, 8, 48, () => {
               f.simonThere = true;
             });
@@ -534,19 +534,19 @@ export const CHAPTERS = [
       });
     },
     talk(e) {
-      if (e.role === "crowd") say([{ name: e.name, text: "我們在岸邊聽他講神的道。" }]);
+      if (e.role === "crowd") say([{ name: e.name, text: "we_are_on_the_shore_listening_to_him_speak_the_w" }]);
     },
   },
   {
     key: "cana",
-    title: "迦拿的婚宴",
-    ref: "約翰福音 2:1–11",
-    who: "用人",
-    kicker: "第二章",
+    title: "the_wedding_at_cana",
+    ref: "ref_john_2_1_11",
+    who: "servant",
+    kicker: "chapter_2",
     intro:
-      "西門他們撇下所有的，跟從了他。第三日，加利利的迦拿有人擺設婚宴。酒用盡了。耶穌的母親對你們說：他告訴你們甚麼，你們就做甚麼。六口石缸還空著。",
-    closing: "這是耶穌所行的頭一件神蹟。他的門徒就信他了。",
-    closingRef: "約翰福音 2:11",
+      "simon_and_the_others_left_everything_and_followe",
+    closing: "this_was_the_first_sign_jesus_did_his_disciples_",
+    closingRef: "ref_john_2_11",
     music: "peace",
     build() {
       const m = createMap(34, 22, ".");
@@ -561,26 +561,26 @@ export const CHAPTERS = [
         prop({ kind: "house", tx: 26, ty: 6, solid: true, box: { x: -14, y: -16, w: 28, h: 16 } }),
         prop({ kind: "tree", tx: 4, ty: 11, solid: true, radius: 4 }),
         prop({ kind: "tree", tx: 30, ty: 12, solid: true, radius: 4 }),
-        prop({ kind: "well", id: "well", name: "井", tx: 6, ty: 14, solid: true, radius: 8 }),
-        person({ id: "mother", name: "耶穌的母親", tx: 16, ty: 12, look: "mother", dir: "down" }),
-        person({ id: "jesus", name: "耶穌", tx: 16, ty: 9, look: "jesus", dir: "down" }),
-        person({ id: "steward", name: "管筵席的", tx: 28, ty: 12, look: "steward", dir: "left" }),
-        person({ id: "guest", name: "客人", tx: 23, ty: 15, look: "traveler", dir: "up" }),
-        person({ id: "john", name: "約翰", tx: 19, ty: 10, look: "john", dir: "down" }),
+        prop({ kind: "well", id: "well", name: "well", tx: 6, ty: 14, solid: true, radius: 8 }),
+        person({ id: "mother", name: "the_mother_of_jesus", tx: 16, ty: 12, look: "mother", dir: "down" }),
+        person({ id: "jesus", name: "jesus", tx: 16, ty: 9, look: "jesus", dir: "down" }),
+        person({ id: "steward", name: "master_of_the_feast", tx: 28, ty: 12, look: "steward", dir: "left" }),
+        person({ id: "guest", name: "guest", tx: 23, ty: 15, look: "traveler", dir: "up" }),
+        person({ id: "john", name: "john", tx: 19, ty: 10, look: "john", dir: "down" }),
       ];
       addCompany(EARLY, 16, 9, { follow: false, dir: "down", slots: [[-2, 1], [2, 1], [-3, 2]] });
       [8, 11, 14, 17, 20, 23].forEach((tx, i) => {
-        state.entities.push(prop({ kind: "jar", id: "jar" + i, name: "石缸", tx, ty: 8 }));
+        state.entities.push(prop({ kind: "jar", id: "jar" + i, name: "stone_jars", tx, ty: 8 }));
       });
       state.flags.filled = {};
-      state.objective = "酒用盡了。去聽耶穌的母親。";
+      state.objective = "the_wine_has_run_out_go_and_listen_to_the_mother";
     },
     onEnter() {
-      state.objective = "酒用盡了。去聽耶穌的母親。";
+      state.objective = "the_wine_has_run_out_go_and_listen_to_the_mother";
     },
     refresh() {
       const n = Object.keys(state.flags.filled).length;
-      state.progress = state.flags.commandFill ? `石缸 ${n}／6` : "";
+      state.progress = state.flags.commandFill ? "progress.jars." + n : "";
     },
     goal() {
       const flags = state.flags;
@@ -605,85 +605,85 @@ export const CHAPTERS = [
       if (n >= 6 && !flags.fillDone) {
         flags.fillDone = true;
         flags.filling = false;
-        state.objective = "缸已滿到缸口。再到耶穌面前。";
+        state.objective = "the_jars_are_full_to_the_brim_go_to_jesus_again";
       }
     },
     talk(e) {
       const flags = state.flags;
       if (e.id === "guest") {
-        say([{ name: "客人", text: flags.drawn ? "這酒比先前所擺的更好。" : "拉比，席還熱著。只是酒，已經沒有了。" }]);
+        say([{ name: "guest", text: flags.drawn ? "this_wine_is_better_than_what_was_served_first" : "rabbi_the_feast_is_still_warm_only_the_wine_is_g" }]);
         return;
       }
       if (e.id === "john") {
-        say([{ name: "約翰", text: flags.drawn ? "我們看見了，就信他。" : "他的母親說酒沒有了。他若吩咐，我們就去做。" }]);
+        say([{ name: "john", text: flags.drawn ? "we_have_seen_and_we_believe_him" : "his_mother_says_there_is_no_wine_if_he_gives_an_" }]);
         return;
       }
       if (e.id === "mother") {
         if (!flags.heardMother) {
           say(
             [
-              { name: "耶穌的母親", text: VERSES.noWine, ref: "約翰福音 2:3", verse: true },
-              { name: "耶穌", text: VERSES.notYet, ref: "約翰福音 2:4", verse: true },
-              { name: "耶穌的母親", text: VERSES.whatever, ref: "約翰福音 2:5", verse: true },
+              { name: "the_mother_of_jesus", text: VERSES.noWine, ref: "ref_john_2_3", verse: true },
+              { name: "jesus", text: VERSES.notYet, ref: "ref_john_2_4", verse: true },
+              { name: "the_mother_of_jesus", text: VERSES.whatever, ref: "ref_john_2_5", verse: true },
             ],
             () => {
               flags.heardMother = true;
-              state.objective = "到耶穌面前。他吩咐你把缸倒滿。";
+              state.objective = "go_to_jesus_he_tells_you_to_fill_the_jars";
             }
           );
           return;
         }
-        say([{ name: "耶穌的母親", text: "他告訴你們甚麼，你們就做甚麼。" }]);
+        say([{ name: "the_mother_of_jesus", text: "verse.whatever" }]);
         return;
       }
       if (e.id === "jesus") {
         if (!flags.heardMother) {
-          say([{ name: "耶穌", text: "我母親在那邊。先去聽她。" }]);
+          say([{ name: "jesus", text: "my_mother_is_over_there_go_and_listen_to_her_fir" }]);
           return;
         }
         if (!flags.commandFill) {
           say(
-            [{ name: "耶穌", text: VERSES.fillJars, ref: "約翰福音 2:7", verse: true }, { name: "用人", text: "我們去打水，直到缸口。" }],
+            [{ name: "jesus", text: VERSES.fillJars, ref: "ref_john_2_7", verse: true }, { name: "servant", text: "we_will_draw_water_until_the_jars_are_full" }],
             () => {
               flags.commandFill = true;
               flags.filling = true;
               flags.fillT = 0;
-              state.objective = "把六口石缸倒滿到缸口。";
+              state.objective = "fill_the_six_stone_jars_to_the_brim";
               this.refresh();
             }
           );
           return;
         }
         if (!flags.fillDone) {
-          say([{ name: "耶穌", text: "水還在倒。缸口就快滿了。" }]);
+          say([{ name: "jesus", text: "the_water_is_still_pouring_the_brim_is_nearly_fu" }]);
           return;
         }
         if (!flags.drawn) {
           say(
-            [{ name: "耶穌", text: VERSES.drawOut, ref: "約翰福音 2:8", verse: true }, { name: "用人", text: "我舀出來，送去給管筵席的。" }],
+            [{ name: "jesus", text: VERSES.drawOut, ref: "ref_john_2_8", verse: true }, { name: "servant", text: "i_will_draw_some_out_and_take_it_to_the_master_o" }],
             () => {
               flags.drawn = true;
               state.entities.forEach((jar) => {
                 if (jar.kind === "jar") jar.wine = true;
               });
               chime();
-              state.objective = "把舀出來的送去，讓管筵席的嘗。";
+              state.objective = "take_what_you_have_drawn_and_let_the_master_of_t";
             }
           );
           return;
         }
-        say([{ name: "耶穌", text: "已經送去了。他自己不知道這酒是哪裡來的。" }]);
+        say([{ name: "jesus", text: "it_has_been_taken_to_him_he_himself_does_not_kno" }]);
         return;
       }
       if (e.id === "steward") {
         if (!flags.drawn) {
-          say([{ name: "管筵席的", text: "酒在哪裡？客還沒有散，席上卻已經沒有了。" }]);
+          say([{ name: "master_of_the_feast", text: "where_is_the_wine_the_guests_have_not_left_and_t" }]);
           return;
         }
         say(
           [
-            { name: "管筵席的", text: VERSES.goodWine, ref: "約翰福音 2:10", verse: true },
-            { name: "", text: VERSES.firstSign, ref: "約翰福音 2:11", verse: true },
+            { name: "master_of_the_feast", text: VERSES.goodWine, ref: "ref_john_2_10", verse: true },
+            { name: "", text: VERSES.firstSign, ref: "ref_john_2_11", verse: true },
           ],
           () => completeChapter()
         );
@@ -692,15 +692,15 @@ export const CHAPTERS = [
   },
   {
     key: "born",
-    title: "神愛世人",
-    ref: "約翰福音 3:1–17",
-    who: "尼哥德慕",
+    title: "for_god_so_loved_the_world",
+    ref: "ref_john_3_1_17",
+    who: "nicodemus",
     guided: true,
     night: true,
     intro:
-      "迦拿的神蹟以後，夜深了。你是法利賽人尼哥德慕。你來見耶穌。他說人若不重生，就不能見神的國；人子必被舉起來；神愛世人，甚至將他的獨生子賜給他們。這一程自己往前走。",
-    closing: "神愛世人，甚至將他的獨生子賜給他們，叫一切信他的，不至滅亡，反得永生。",
-    closingRef: "約翰福音 3:16",
+      "after_the_sign_at_cana_the_night_is_deep_you_are",
+    closing: "verse.godSoLoved",
+    closingRef: "ref_john_3_16",
     music: "solemn",
     build() {
       const m = createMap(22, 16, "f");
@@ -709,22 +709,22 @@ export const CHAPTERS = [
       state.map = m;
       state.player = asRole(11, 13, "up", "joseph");
       state.player.look = Object.assign({}, LOOKS.elder, { staff: false });
-      state.player.name = "尼哥德慕";
-      state.roleName = "尼哥德慕";
+      state.player.name = "nicodemus";
+      state.roleName = "nicodemus";
       state.entities = [
         prop({ kind: "lamp", tx: 6, ty: 6 }),
         prop({ kind: "lamp", tx: 16, ty: 6 }),
         prop({ kind: "lamp", tx: 11, ty: 11 }),
-        person({ id: "jesus", name: "耶穌", tx: 11, ty: 6, look: "jesus", dir: "down", seated: true, chair: true, talk: false }),
+        person({ id: "jesus", name: "jesus", tx: 11, ty: 6, look: "jesus", dir: "down", seated: true, chair: true, talk: false }),
       ];
       this.guided = true;
-      state.objective = "夜裡來見耶穌。";
+      state.objective = "come_to_jesus_by_night";
     },
     onEnter() {
       this.guided = true;
-      state.objective = "夜裡來見耶穌。";
+      state.objective = "come_to_jesus_by_night";
       say(
-        [{ name: "", text: "有一個法利賽人，名叫尼哥德慕，是猶太人的官。這人夜裡來見耶穌。", ref: "約翰福音 3:1-2", verse: true }],
+        [{ name: "", text: "there_was_a_pharisee_named_nicodemus_a_ruler_of_", ref: "ref_john_3_1_2", verse: true }],
         () => walkPlayer(11, 8, 46, () => this.ask())
       );
     },
@@ -734,13 +734,13 @@ export const CHAPTERS = [
       if (jesus) jesus.dir = "down";
       say(
         [
-          { name: "尼哥德慕", text: VERSES.fromGod, ref: "約翰福音 3:2", verse: true },
-          { name: "耶穌", text: VERSES.bornAgain, ref: "約翰福音 3:3", verse: true },
-          { name: "尼哥德慕", text: VERSES.howBorn, ref: "約翰福音 3:4", verse: true },
-          { name: "耶穌", text: VERSES.waterSpirit, ref: "約翰福音 3:5", verse: true },
-          { name: "耶穌", text: VERSES.liftedUp, ref: "約翰福音 3:14-15", verse: true },
-          { name: "耶穌", text: VERSES.godSoLoved, ref: "約翰福音 3:16", verse: true },
-          { name: "耶穌", text: VERSES.notCondemn, ref: "約翰福音 3:17", verse: true },
+          { name: "nicodemus", text: VERSES.fromGod, ref: "ref_john_3_2", verse: true },
+          { name: "jesus", text: VERSES.bornAgain, ref: "ref_john_3_3", verse: true },
+          { name: "nicodemus", text: VERSES.howBorn, ref: "ref_john_3_4", verse: true },
+          { name: "jesus", text: VERSES.waterSpirit, ref: "ref_john_3_5", verse: true },
+          { name: "jesus", text: VERSES.liftedUp, ref: "ref_john_3_14_15", verse: true },
+          { name: "jesus", text: VERSES.godSoLoved, ref: "ref_john_3_16", verse: true },
+          { name: "jesus", text: VERSES.notCondemn, ref: "ref_john_3_17", verse: true },
         ],
         () => completeChapter()
       );
@@ -750,159 +750,159 @@ export const CHAPTERS = [
   },
   {
     key: "twelve",
-    title: "十二門徒",
-    ref: "馬可福音 3:13–19",
-    kicker: "第三章",
+    title: "the_twelve",
+    ref: "ref_mark_3_13_19",
+    kicker: "chapter_3",
     intro:
-      "夜間他說神愛世人，人子必被舉起來。你上了山，隨自己的意思叫人來。十二個人要常和你同在，也要被差去傳這話。一個一個走到他們面前，呼叫他們的名字。",
-    closing: "他就設立十二個人，要他們常和自己同在。",
-    closingRef: "馬可福音 3:14",
+      "at_night_he_said_that_god_so_loved_the_world_and",
+    closing: "he_appointed_twelve_to_be_with_him",
+    closingRef: "ref_mark_3_14",
     music: "peace",
     people: [
       {
         id: "peter",
-        name: "西門",
+        name: "simon",
         look: "simon",
         tx: 8,
         ty: 8,
         lines: [
-          { name: "西門", text: "海邊的網還記得我。你也走上這座山了。" },
-          { name: "耶穌", text: "你是西門，我又給你起名叫彼得。", ref: "馬可福音 3:16", verse: VERSES.peterName },
+          { name: "simon", text: "the_nets_by_the_sea_still_remember_me_you_have_c" },
+          { name: "jesus", text: "you_are_simon_i_also_name_you_peter", ref: "ref_mark_3_16", verse: VERSES.peterName },
         ],
-        again: "彼得這個名字，我還在心裡稱它。",
+        again: "the_name_peter_i_am_still_saying_it_in_my_heart",
       },
       {
         id: "james",
-        name: "雅各",
+        name: "james",
         look: "james",
         tx: 12,
         ty: 7,
         lines: [
-          { name: "雅各", text: "我是西庇太的兒子雅各。弟弟約翰就在旁邊。" },
-          { name: "耶穌", text: "他又給這兩個人起名叫半尼其，就是雷子的意思。", ref: "馬可福音 3:17", verse: true },
+          { name: "james", text: "i_am_james_son_of_zebedee_my_brother_john_is_rig" },
+          { name: "jesus", text: "he_also_named_these_two_boanerges_that_is_sons_o", ref: "ref_mark_3_17", verse: true },
         ],
-        again: "雷子。可是今天山上沒有雷，只有他的聲音。",
+        again: "sons_of_thunder_but_today_there_is_no_thunder_on",
       },
       {
         id: "john",
-        name: "約翰",
+        name: "john",
         look: "john",
         tx: 16,
         ty: 7,
         lines: [
-          { name: "約翰", text: "他叫我和哥哥留在他身邊。我想知道的，都在他身上。" },
-          { name: "約翰", text: "名字可以是雷子。我更願意做常和他同在的人。" },
+          { name: "john", text: "he_told_my_brother_and_me_to_stay_with_him_every" },
+          { name: "john", text: "the_name_can_be_son_of_thunder_i_would_rather_be" },
         ],
-        again: "我們要常和他同在。這是他設立我們的緣故。",
+        again: "we_are_to_stay_with_him_that_is_why_he_appointed",
       },
       {
         id: "andrew",
-        name: "安得烈",
+        name: "andrew",
         look: "andrew",
         tx: 20,
         ty: 7,
         lines: [
-          { name: "安得烈", text: "我兄弟在，我也在。他叫誰，誰就上來。" },
-          { name: "安得烈", text: "十二個人。不多。可是夠把一句話帶到別處。" },
+          { name: "andrew", text: "where_my_brother_is_i_am_whoever_he_calls_that_o" },
+          { name: "andrew", text: "twelve_not_many_but_enough_to_carry_one_sentence" },
         ],
-        again: "你都認得了嗎？還有人站在坡上。",
+        again: "do_you_know_them_all_someone_is_still_standing_o",
       },
       {
         id: "philip",
-        name: "腓力",
+        name: "philip",
         look: "philip",
         tx: 25,
         ty: 9,
         lines: [
-          { name: "腓力", text: "他找到我，對我說：來跟從我吧。", ref: "約翰福音 1:43", verse: "來跟從我吧。" },
-          { name: "腓力", text: VERSES.philipFound, ref: "約翰福音 1:45", verse: true },
+          { name: "philip", text: "he_found_me_and_said_come_follow_me", ref: "ref_john_1_43", verse: "come_follow_me" },
+          { name: "philip", text: VERSES.philipFound, ref: "ref_john_1_45", verse: true },
         ],
-        again: "主，你叫我來，我就在這山上。",
+        again: "lord_you_called_me_so_i_am_on_this_mountain",
       },
       {
         id: "bart",
-        name: "巴多羅買",
+        name: "bartholomew",
         look: "bart",
         tx: 8,
         ty: 12,
         lines: [
-          { name: "巴多羅買", text: "我是巴多羅買。他叫我的時候，我沒有多問，就來了。" },
-          { name: "巴多羅買", text: "律法上所寫的那一位，我要在他身邊一點一點認識。" },
+          { name: "bartholomew", text: "i_am_bartholomew_when_he_called_me_i_did_not_ask" },
+          { name: "bartholomew", text: "the_one_written_of_in_the_law_i_want_to_come_to_" },
         ],
-        again: "我還坐在這裡。他沒有叫我下去。",
+        again: "i_am_still_sitting_here_he_did_not_tell_me_to_go",
       },
       {
         id: "matthew",
-        name: "馬太",
+        name: "matthew",
         look: "tax",
         tx: 12,
         ty: 13,
         lines: [
-          { name: "馬太", text: "我坐在稅關上。人都認得那個位子。" },
-          { name: "耶穌", text: VERSES.followMe, ref: "馬太福音 9:9", verse: true },
-          { name: "馬太", text: "我就起來，跟從了他。稅關還在那裡，我不在了。" },
+          { name: "matthew", text: "i_sat_at_the_tax_booth_everyone_knew_that_seat" },
+          { name: "jesus", text: VERSES.followMe, ref: "ref_matthew_9_9", verse: true },
+          { name: "matthew", text: "i_got_up_and_followed_him_the_tax_booth_is_still" },
         ],
-        again: "帳冊可以留在原處。我如今在這山上。",
+        again: "the_account_books_can_stay_where_they_are_i_am_o",
       },
       {
         id: "thomas",
-        name: "多馬",
+        name: "thomas",
         look: "thomas",
         tx: 17,
         ty: 13,
         lines: [
-          { name: "多馬", text: "有些話，我要親眼看見，心才放下。" },
-          { name: "多馬", text: "可是他叫我，我就走。看清楚，和跟從，可以是同一條路。" },
+          { name: "thomas", text: "there_are_words_i_have_to_see_with_my_own_eyes_b" },
+          { name: "thomas", text: "but_he_called_me_so_i_walked_seeing_clearly_and_" },
         ],
-        again: "我在。你不必猜我信不信，我已經上來了。",
+        again: "i_am_here_you_do_not_have_to_guess_whether_i_bel",
       },
       {
         id: "james2",
-        name: "亞勒腓的雅各",
+        name: "james_son_of_alphaeus",
         look: "james2",
         tx: 22,
         ty: 12,
         lines: [
-          { name: "雅各", text: "別把我和西庇太的兒子搞混。我是亞勒腓的兒子雅各。" },
-          { name: "雅各", text: "名字相同的人，也可以被同一個主設立。" },
+          { name: "james", text: "do_not_confuse_me_with_the_son_of_zebedee_i_am_j" },
+          { name: "james", text: "people_who_share_a_name_can_still_be_appointed_b" },
         ],
-        again: "亞勒腓的兒子。你這樣叫我，我就知道你認得我。",
+        again: "son_of_alphaeus_if_you_call_me_that_i_know_you_r",
       },
       {
         id: "thad",
-        name: "達太",
+        name: "thaddaeus",
         look: "thad",
         tx: 26,
         ty: 13,
         lines: [
-          { name: "達太", text: "有人叫我達太，也有人叫我雅各的兒子猶大。" },
-          { name: "達太", text: "我不是加略人。你記住這張臉，後來就不會叫錯。" },
+          { name: "thaddaeus", text: "some_call_me_thaddaeus_others_call_me_judas_son_" },
+          { name: "thaddaeus", text: "i_am_not_the_one_from_kerioth_remember_this_face" },
         ],
-        again: "你若要找猶大，先問是哪一個。",
+        again: "if_you_are_looking_for_judas_ask_which_one_first",
       },
       {
         id: "simonZ",
-        name: "奮銳黨的西門",
+        name: "simon_the_zealot",
         look: "zealot",
         tx: 10,
         ty: 17,
         lines: [
-          { name: "奮銳黨的西門", text: "我曾為一個地上的國熱心，連刀都肯帶在身上。" },
-          { name: "奮銳黨的西門", text: "他把我的熱心要了去。我把刀留下，跟他上山。" },
+          { name: "simon_the_zealot", text: "i_was_zealous_for_an_earthly_kingdom_i_was_even_" },
+          { name: "simon_the_zealot", text: "he_asked_for_my_zeal_i_left_the_sword_and_follow" },
         ],
-        again: "熱心還在。只是方向換了。",
+        again: "the_zeal_is_still_here_only_the_direction_has_ch",
       },
       {
         id: "judas",
-        name: "加略人猶大",
+        name: "judas_iscariot",
         look: "judas",
         tx: 22,
         ty: 17,
         lines: [
-          { name: "加略人猶大", text: "我是加略人猶大。你也叫了我，我就在這十二人裡。" },
-          { name: "加略人猶大", text: "一夥人的錢囊，在我手裡。需要買甚麼，可以來找我。" },
+          { name: "judas_iscariot", text: "i_am_judas_iscariot_you_called_me_too_so_i_am_am" },
+          { name: "judas_iscariot", text: "the_group_s_money_bag_is_in_my_hands_if_you_need" },
         ],
-        again: "我還在這山上。你沒有把我從十二人裡拿開。",
+        again: "i_am_still_on_this_mountain_you_did_not_take_me_",
       },
     ],
     build() {
@@ -924,19 +924,19 @@ export const CHAPTERS = [
         state.entities.push(person({ id: p.id, name: p.name, tx: p.tx, ty: p.ty, look: p.look, role: "twelve" }));
       });
       state.flags.met = {};
-      state.objective = "走到每一個人面前，設立這十二個人。";
+      state.objective = "walk_up_to_each_one_and_appoint_these_twelve";
     },
     onEnter() {
       say([
-        { name: "", text: "耶穌上了山，隨自己的意思叫人來，他們便來到他那裡。" },
-        { name: "耶穌", text: VERSES.appoint, ref: "馬可福音 3:14", verse: true },
+        { name: "", text: "jesus_went_up_on_the_mountain_and_called_to_him_" },
+        { name: "jesus", text: VERSES.appoint, ref: "ref_mark_3_14", verse: true },
       ]);
-      state.objective = "走到每一個人面前，設立這十二個人。";
+      state.objective = "walk_up_to_each_one_and_appoint_these_twelve";
       this.refresh();
     },
     refresh() {
       const n = Object.keys(state.flags.met).length;
-      state.progress = `已設立 ${n}／12`;
+      state.progress = "progress.called." + n;
     },
     goal() {
       let best = null;
@@ -982,8 +982,8 @@ export const CHAPTERS = [
         f.gathered = true;
         say(
           [
-            { name: "耶穌", text: "這就是你們。要常和我同在，也要被差出去。" },
-            { name: "", text: VERSES.judasNamed, ref: "馬可福音 3:19", verse: true },
+            { name: "jesus", text: "this_is_you_stay_with_me_and_be_sent_out_as_well" },
+            { name: "", text: VERSES.judasNamed, ref: "ref_mark_3_19", verse: true },
           ],
           () => completeChapter()
         );
@@ -1003,76 +1003,76 @@ export const CHAPTERS = [
         tone(620, 0.08, "triangle", 0.035);
         this.refresh();
         const n = Object.keys(flags.met).length;
-        state.objective = n >= 12 ? "他們來到你身邊。" : "還有人站在這山上。";
+        state.objective = n >= 12 ? "they_come_to_your_side" : "someone_is_still_standing_on_this_mountain";
         if (n >= 12) flags.gather = true;
       });
     },
   },
   {
     key: "mount",
-    title: "山上的話",
-    ref: "馬太福音 5:1–7",
-    kicker: "第四章",
+    title: "on_the_mountain",
+    ref: "ref_matthew_5_1_7",
+    kicker: "chapter_4",
     intro:
-      "文士和法利賽人剛出去，商議怎樣除滅他。你仍上了山，開口教訓他們。山坡上坐著憂愁的人。走到每一個人面前，把那句話親自說給他聽。",
-    closing: "話留在他們心裡，他們就不再坐在憂愁裡。",
-    closingRef: "馬太福音 5:2",
+      "the_scribes_and_pharisees_have_just_gone_out_to_",
+    closing: "when_the_words_stay_in_them_they_no_longer_sit_i",
+    closingRef: "ref_matthew_5_2",
     music: "peace",
     people: [
       {
         id: "tax",
-        name: "稅吏",
+        name: "tax_collector",
         look: "tax",
         tx: 22,
         ty: 16,
-        pain: "人都知道我的行業。我以為天國沒有我的份。",
-        reply: "若天國是虛心之人的，那我也坐在這裡聽。",
+        pain: "everyone_knows_my_trade_i_thought_the_kingdom_of",
+        reply: "if_the_kingdom_of_heaven_belongs_to_the_poor_in_",
         verse: VERSES.b3,
-        ref: "馬太福音 5:3",
+        ref: "ref_matthew_5_3",
       },
       {
         id: "widow",
-        name: "婦人",
+        name: "woman",
         look: "woman",
         tx: 9,
         ty: 14,
-        pain: "我失去了孩子。山風很大，心裡更空。",
-        reply: "……若是他說的，我就在這裡等那安慰。",
+        pain: "i_have_lost_a_child_the_mountain_wind_is_strong_",
+        reply: "if_it_is_what_he_says_i_will_wait_here_for_that_",
         verse: VERSES.b4,
-        ref: "馬太福音 5:4",
+        ref: "ref_matthew_5_4",
       },
       {
         id: "youth",
-        name: "少年",
+        name: "youth",
         look: "youth",
         tx: 11,
         ty: 10,
-        pain: "人都說我軟弱，說我該更硬一點。",
-        reply: "溫柔若也是一條路，那我不必裝成別人。",
+        pain: "people_say_i_am_weak_that_i_ought_to_be_harder",
+        reply: "if_meekness_is_also_a_road_then_i_do_not_have_to",
         verse: VERSES.b5,
-        ref: "馬太福音 5:5",
+        ref: "ref_matthew_5_5",
       },
       {
         id: "traveler",
-        name: "旅人",
+        name: "traveler",
         look: "traveler",
         tx: 23,
         ty: 8,
-        pain: "我渴想公義，像走路的人渴想水。到處都是彎曲的。",
-        reply: "那我就坐下來，等他說的飽足。",
+        pain: "i_thirst_for_righteousness_the_way_a_traveler_th",
+        reply: "then_i_will_sit_down_and_wait_for_the_fullness_h",
         verse: VERSES.b6,
-        ref: "馬太福音 5:6",
+        ref: "ref_matthew_5_6",
       },
       {
         id: "elder",
-        name: "老人",
+        name: "an_elder",
         look: "elder",
         tx: 14,
         ty: 6,
-        pain: "我病了很久，沒有人肯靠近我的鋪蓋。",
-        reply: "憐恤若從他口裡出來，也該從我們手裡出去。",
+        pain: "i_have_been_sick_a_long_time_no_one_will_come_ne",
+        reply: "if_mercy_comes_from_his_mouth_it_ought_to_go_out",
         verse: VERSES.b7,
-        ref: "馬太福音 5:7",
+        ref: "ref_matthew_5_7",
       },
     ],
     build() {
@@ -1108,17 +1108,17 @@ export const CHAPTERS = [
       });
       addCompany(BAND, 16, 18, { dir: "up" });
       state.flags.comforted = {};
-      state.objective = "把山上的話，說給五個憂愁的人聽。";
+      state.objective = "speak_the_words_from_the_mountain_to_the_five_wh";
     },
     onEnter() {
       say([
-        { name: "", text: "耶穌看見這許多的人，就上了山。門徒到他跟前來，他就開口教訓他們。" },
+        { name: "", text: "seeing_the_crowds_jesus_went_up_on_the_mountain_" },
       ]);
-      state.objective = "把山上的話，說給五個憂愁的人聽。";
+      state.objective = "speak_the_words_from_the_mountain_to_the_five_wh";
     },
     refresh() {
       const n = Object.keys(state.flags.comforted).length;
-      state.progress = `已安慰 ${n}／5`;
+      state.progress = "progress.comforted." + n;
     },
     goal() {
       let best = null;
@@ -1142,13 +1142,13 @@ export const CHAPTERS = [
       const info = this.people.find((p) => p.id === e.id);
       if (!info) return;
       if (flags.comforted[e.id]) {
-        say([{ name: e.name, text: "我還坐在這裡，可是心裡安靜了。" }]);
+        say([{ name: e.name, text: "i_am_still_sitting_here_but_my_heart_is_quiet" }]);
         return;
       }
       say(
         [
           { name: e.name, text: info.pain },
-          { name: "耶穌", text: info.verse, ref: info.ref, verse: true },
+          { name: "jesus", text: info.verse, ref: info.ref, verse: true },
           { name: e.name, text: info.reply },
         ],
         () => {
@@ -1158,12 +1158,12 @@ export const CHAPTERS = [
           tone(740, 0.12, "triangle", 0.04);
           this.refresh();
           const n = Object.keys(flags.comforted).length;
-          state.objective = n >= 5 ? "話已經留下。" : "還有人在等一句話。";
+          state.objective = n >= 5 ? "the_words_have_been_left_with_them" : "someone_is_still_waiting_for_a_word";
           if (n >= 5) {
             say(
               [
-                { name: "耶穌", text: "你們是世上的光。話留下，人就不必再走在暗中。" },
-                { name: "耶穌", text: "去吧。山還在，可是他們的臉已經不一樣了。" },
+                { name: "jesus", text: "you_are_the_light_of_the_world_when_the_word_rem" },
+                { name: "jesus", text: "go_on_the_mountain_is_still_here_but_their_faces" },
               ],
               () => completeChapter()
             );
@@ -1174,14 +1174,14 @@ export const CHAPTERS = [
   },
   {
     key: "sea",
-    title: "履海",
-    ref: "馬太福音 14:22–33",
-    who: "彼得",
-    kicker: "第五章",
+    title: "walking_on_the_water",
+    ref: "ref_matthew_14_22_33",
+    who: "peter",
+    kicker: "chapter_5",
     intro:
-      "風止住了，你們心裡作難：這到底是誰。夜裡四更天，你又在船上。他從海面上走來。你求他叫你從水面上走到他那裡。眼睛看著他，踏著金光。",
-    closing: "他們上了船，風就住了。",
-    closingRef: "馬太福音 14:32",
+      "the_wind_has_ceased_and_you_wonder_who_is_this_i",
+    closing: "they_got_into_the_boat_and_the_wind_ceased",
+    closingRef: "ref_matthew_14_32",
     music: "storm",
     waterSolid: false,
     night: true,
@@ -1207,27 +1207,27 @@ export const CHAPTERS = [
       state.player = asRole(5, 8, "right", "peter");
       state.entities = [
         prop({ kind: "mast", tx: 4, ty: 7 }),
-        person({ id: "jesus", name: "耶穌", tx: 34, ty: 8, look: "jesus", dir: "left" }),
-        person({ id: "john", name: "約翰", tx: 5, ty: 7, look: "john", dir: "right", mark: "worry" }),
-        person({ id: "andrew", name: "安得烈", tx: 7, ty: 9, look: "andrew", dir: "right", mark: "worry" }),
-        person({ id: "james", name: "雅各", tx: 3, ty: 9, look: "james", dir: "right", talk: false, mark: "worry" }),
+        person({ id: "jesus", name: "jesus", tx: 34, ty: 8, look: "jesus", dir: "left" }),
+        person({ id: "john", name: "john", tx: 5, ty: 7, look: "john", dir: "right", mark: "worry" }),
+        person({ id: "andrew", name: "andrew", tx: 7, ty: 9, look: "andrew", dir: "right", mark: "worry" }),
+        person({ id: "james", name: "james", tx: 3, ty: 9, look: "james", dir: "right", talk: false, mark: "worry" }),
       ];
       state.faith = 100;
-      state.objective = "他在海上。先聽他說話。";
+      state.objective = "he_is_on_the_sea_listen_to_him_first";
     },
     onEnter() {
-      state.objective = "他在海上。先聽他說話。";
+      state.objective = "he_is_on_the_sea_listen_to_him_first";
       say(
         [
-          { name: "門徒", text: "是個鬼怪！" },
-          { name: "耶穌", text: VERSES.fearNot, ref: "馬太福音 14:27", verse: true },
-          { name: "彼得", text: "主，如果是你，請叫我從水面上走到你那裡去。" },
-          { name: "耶穌", text: "你來吧。" },
+          { name: "disciples", text: "it_is_a_ghost" },
+          { name: "jesus", text: VERSES.fearNot, ref: "ref_matthew_14_27", verse: true },
+          { name: "peter", text: "lord_if_it_is_you_command_me_to_come_to_you_on_t" },
+          { name: "jesus", text: "come" },
         ],
         () => {
           state.flags.called = true;
           state.faith = 100;
-          state.objective = "踏著金光走到他那裡。下了光，風會把你推開。";
+          state.objective = "walk_to_him_on_the_gold_light_step_off_it_and_th";
         }
       );
     },
@@ -1265,9 +1265,9 @@ export const CHAPTERS = [
         puff(state.player.x, state.player.y, "#d6ecff", 12, 20);
         say(
           [
-            { name: "耶穌", text: "上來。" },
-            { name: "", text: "他們上了船，風就住了。", ref: "馬太福音 14:32", verse: VERSES.windStill },
-            { name: "門徒", text: "你真是神的兒子了。" },
+            { name: "jesus", text: "come_up" },
+            { name: "", text: "they_got_into_the_boat_and_the_wind_ceased", ref: "ref_matthew_14_32", verse: VERSES.windStill },
+            { name: "disciples", text: "truly_you_are_the_son_of_god" },
           ],
           () => completeChapter()
         );
@@ -1278,9 +1278,9 @@ export const CHAPTERS = [
         state.faith = 0;
         say(
           [
-            { name: "彼得", text: "主啊，救我！" },
-            { name: "", text: "耶穌趕緊伸手拉住他。" },
-            { name: "耶穌", text: VERSES.littleFaith, ref: "馬太福音 14:31", verse: true },
+            { name: "peter", text: "lord_save_me" },
+            { name: "", text: "jesus_reached_out_at_once_and_caught_him" },
+            { name: "jesus", text: VERSES.littleFaith, ref: "ref_matthew_14_31", verse: true },
           ],
           () => {
             const boat = tp(5, 8);
@@ -1289,7 +1289,7 @@ export const CHAPTERS = [
             state.player.dir = "right";
             state.faith = 100;
             flags.sinking = false;
-            state.objective = "再踏著金光走到他那裡。眼睛看著他。";
+            state.objective = "step_onto_the_gold_light_again_and_walk_to_him_k";
           }
         );
       }
@@ -1297,31 +1297,31 @@ export const CHAPTERS = [
     talk(e) {
       const flags = state.flags;
       if (e.id === "jesus") {
-        say([{ name: "耶穌", text: flags.called ? "再走幾步。我在這裡。" : "你來吧。" }]);
+        say([{ name: "jesus", text: flags.called ? "walk_a_little_farther_i_am_here" : "come" }]);
         return;
       }
-      say([{ name: e.name, text: flags.calm ? "你真是神的兒子了。" : "海上有人走過來。我們都怕。" }]);
+      say([{ name: e.name, text: flags.calm ? "truly_you_are_the_son_of_god" : "someone_is_walking_toward_us_on_the_sea_we_are_a" }]);
     },
   },
   {
     key: "field",
-    title: "五餅二魚",
-    ref: "約翰福音 6:1–13",
-    who: "約翰",
-    kicker: "第六章",
-    intro: "他們在船上認他是神的兒子。隔天，眾人跟著他到野地，餓了。耶穌對你們說：你們給他們吃吧。一個孩子有五個大麥餅、兩條魚。你把餅拿到他那裡，他祝謝了，你再分給坐著的人。",
-    closing: "他們都吃飽了。",
-    closingRef: "約翰福音 6:12",
+    title: "five_loaves_and_two_fish",
+    ref: "ref_john_6_1_13",
+    who: "john",
+    kicker: "chapter_6",
+    intro: "in_the_boat_they_confess_that_he_is_the_son_of_g",
+    closing: "they_all_ate_and_were_filled",
+    closingRef: "ref_john_6_12",
     music: "peace",
     crowd: [
-      ["farmer", "農夫", 12, 9],
-      ["woman", "婦人", 22, 9],
-      ["elder", "老人", 10, 12],
-      ["traveler", "旅人", 24, 12],
-      ["youth", "少年", 14, 13],
-      ["mother", "母親", 20, 14],
-      ["worker", "工人", 13, 15],
-      ["poor", "乞丐", 23, 11],
+      ["farmer", "farmer", 12, 9],
+      ["woman", "woman", 22, 9],
+      ["elder", "an_elder", 10, 12],
+      ["traveler", "traveler", 24, 12],
+      ["youth", "youth", 14, 13],
+      ["mother", "mother", 20, 14],
+      ["worker", "worker", 13, 15],
+      ["poor", "beggar", 23, 11],
     ],
     build() {
       const m = createMap(34, 22, ".");
@@ -1341,12 +1341,12 @@ export const CHAPTERS = [
         prop({ kind: "tree", tx: 5, ty: 17, solid: true, radius: 4 }),
         prop({ kind: "tree", tx: 28, ty: 15, solid: true, radius: 4 }),
         prop({ kind: "well", tx: 7, ty: 11, solid: true, radius: 8 }),
-        person({ id: "jesus", name: "耶穌", tx: 17, ty: 5, look: "jesus", dir: "down" }),
-        person({ id: "philip", name: "腓力", tx: 14, ty: 10, look: "philip", dir: "down" }),
-        person({ id: "peter", name: "彼得", tx: 15, ty: 6, look: "simon", dir: "down", talk: false }),
-        person({ id: "james", name: "雅各", tx: 19, ty: 6, look: "james", dir: "down", talk: false }),
-        person({ id: "andrew", name: "安得烈", tx: 17, ty: 7, look: "andrew", dir: "up", talk: false }),
-        person({ id: "boy", name: "孩子", tx: 20, ty: 16, look: "boy", dir: "left" }),
+        person({ id: "jesus", name: "jesus", tx: 17, ty: 5, look: "jesus", dir: "down" }),
+        person({ id: "philip", name: "philip", tx: 14, ty: 10, look: "philip", dir: "down" }),
+        person({ id: "peter", name: "peter", tx: 15, ty: 6, look: "simon", dir: "down", talk: false }),
+        person({ id: "james", name: "james", tx: 19, ty: 6, look: "james", dir: "down", talk: false }),
+        person({ id: "andrew", name: "andrew", tx: 17, ty: 7, look: "andrew", dir: "up", talk: false }),
+        person({ id: "boy", name: "child", tx: 20, ty: 16, look: "boy", dir: "left" }),
       ];
       this.crowd.forEach(([lookId, name, tx, ty], i) => {
         state.entities.push(
@@ -1363,13 +1363,13 @@ export const CHAPTERS = [
         );
       });
       state.flags.fed = 0;
-      state.objective = "去找那個願意交出午餐的孩子。";
+      state.objective = "go_and_find_the_child_who_will_give_up_his_lunch";
     },
     onEnter() {
-      state.objective = "去找那個願意交出午餐的孩子。";
+      state.objective = "go_and_find_the_child_who_will_give_up_his_lunch";
     },
     refresh() {
-      if (state.flags.blessed) state.progress = `已領受 ${state.flags.fed}／8`;
+      if (state.flags.blessed) state.progress = "progress.fed." + state.flags.fed;
       else state.progress = "";
     },
     goal() {
@@ -1396,27 +1396,27 @@ export const CHAPTERS = [
       const flags = state.flags;
       if (e.id === "philip") {
         say([
-          { name: "耶穌", text: "你們給他們吃吧。" },
-          { name: "腓力", text: "就是二十兩銀子的餅，叫他們各人吃一點也是不夠的。", ref: "約翰福音 6:7" },
+          { name: "jesus", text: "you_give_them_something_to_eat" },
+          { name: "philip", text: "even_two_hundred_denarii_of_bread_would_not_be_e", ref: "ref_john_6_7" },
         ]);
         return;
       }
       if (e.id === "jesus") {
         if (!flags.hasBasket) {
-          say([{ name: "耶穌", text: "你們給他們吃吧。先去找那個孩子。" }]);
+          say([{ name: "jesus", text: "you_give_them_something_to_eat_first_go_and_find" }]);
           return;
         }
         if (!flags.blessed) {
           say(
             [
-              { name: "耶穌", text: "拿過來。" },
-              { name: "", text: "耶穌拿起餅來，祝謝了，就分給那坐著的人。", ref: "約翰福音 6:11", verse: true },
-              { name: "耶穌", text: VERSES.bread, ref: "約翰福音 6:35", verse: true },
+              { name: "jesus", text: "bring_it_here" },
+              { name: "", text: "jesus_took_the_loaves_gave_thanks_and_distribute", ref: "ref_john_6_11", verse: true },
+              { name: "jesus", text: VERSES.bread, ref: "ref_john_6_35", verse: true },
             ],
             () => {
               flags.blessed = true;
-              state.held = "生命的糧";
-              state.objective = "他把餅交給你。分給場上的八個人。";
+              state.held = "the_bread_of_life";
+              state.objective = "he_gives_you_the_bread_share_it_with_the_eight_p";
               puff(e.x, e.y - 8, "#f0c84b", 22, 36);
               chime();
               this.refresh();
@@ -1425,13 +1425,13 @@ export const CHAPTERS = [
           return;
         }
         if (flags.fed < 8) {
-          say([{ name: "耶穌", text: "先分給坐著的人。" }]);
+          say([{ name: "jesus", text: "give_it_first_to_the_people_sitting_here" }]);
           return;
         }
         say(
           [
-            { name: "耶穌", text: VERSES.leftovers, ref: "約翰福音 6:12", verse: true },
-            { name: "", text: VERSES.baskets, ref: "約翰福音 6:13" },
+            { name: "jesus", text: VERSES.leftovers, ref: "ref_john_6_12", verse: true },
+            { name: "", text: VERSES.baskets, ref: "ref_john_6_13" },
           ],
           () => completeChapter()
         );
@@ -1441,40 +1441,40 @@ export const CHAPTERS = [
         if (!flags.hasBasket) {
           say(
             [
-              { name: "孩子", text: "先生，我只有這些。這麼多人，算什麼呢？" },
-              { name: "", text: VERSES.loaves, ref: "約翰福音 6:9", verse: true },
-              { name: "孩子", text: "你拿去給他吧。" },
+              { name: "child", text: "sir_this_is_all_i_have_what_is_that_among_so_man" },
+              { name: "", text: VERSES.loaves, ref: "ref_john_6_9", verse: true },
+              { name: "child", text: "take_it_to_him" },
             ],
             () => {
               flags.hasBasket = true;
-              state.held = "五餅二魚";
-              state.objective = "把餅拿到耶穌那裡。";
+              state.held = "five_loaves_and_two_fish";
+              state.objective = "take_the_bread_to_jesus";
             }
           );
           return;
         }
-        say([{ name: "孩子", text: flags.blessed ? "真的夠大家吃。我從沒看過這樣的事。" : "先拿去給他。" }]);
+        say([{ name: "child", text: flags.blessed ? "there_really_is_enough_for_everyone_i_have_never" : "take_them_to_him_first" }]);
         return;
       }
       if (e.role === "hungry") {
         if (!flags.blessed) {
-          say([{ name: e.name, text: "我們餓了。這地方是野地。" }]);
+          say([{ name: e.name, text: "we_are_hungry_this_place_is_wilderness" }]);
           return;
         }
         if (e.fed) {
-          spawnFloat(e.x, e.y - 24, "我飽了。");
+          spawnFloat(e.x, e.y - 24, "i_am_full");
           return;
         }
         e.fed = true;
         e.mark = null;
         flags.fed += 1;
-        const thanks = ["謝謝你。", "我飽了。", "這餅是熱的。", "謝謝主。", "夠了，真的夠了。", "我不再餓了。", "請也給旁邊的人。", "願主記念你。"];
+        const thanks = ["thank_you", "i_am_full", "this_bread_is_warm", "thank_the_lord", "enough_truly_enough", "i_am_hungry_no_longer", "please_give_some_to_the_person_beside_me", "may_the_lord_remember_you"];
         spawnFloat(e.x, e.y - 24, thanks[flags.fed % thanks.length]);
         puff(e.x, e.y - 10, "#f2d48a", 6, 16);
         tone(640, 0.08, "triangle", 0.04);
         this.refresh();
         if (flags.fed >= 8) {
-          state.objective = "眾人都吃飽了。回到耶穌那裡，把剩下的收拾起來。";
+          state.objective = "everyone_has_eaten_and_is_full_go_back_to_jesus_";
           chime();
         }
       }
@@ -1482,15 +1482,15 @@ export const CHAPTERS = [
   },
   {
     key: "silver",
-    title: "三十塊錢",
-    ref: "馬太福音 26:3–5、14–16",
-    who: "猶大",
+    title: "thirty_pieces_of_silver",
+    ref: "ref_matthew_26_3_5_14_16",
+    who: "judas",
     guided: true,
     night: true,
     intro:
-      "祭司長和文士已經想法子要除滅他。他們聚集在大祭司該亞法的院裡，商議用詭計拿住耶穌，只是說當節的日子不可。你是加略人猶大。你進去問：我把他交給你們，你們願意給我多少錢。他們給了你三十塊錢。你就去找機會。這一程自己往前走。",
-    closing: "從那時候，他就找機會，要把耶穌交給他們。",
-    closingRef: "馬太福音 26:16",
+      "the_chief_priests_and_the_scribes_are_already_lo",
+    closing: "verse.opportunity",
+    closingRef: "ref_matthew_26_16",
     music: "solemn",
     build() {
       const m = createMap(22, 16, "f");
@@ -1499,14 +1499,14 @@ export const CHAPTERS = [
       state.map = m;
       state.player = asRole(11, 13, "up", "servant");
       state.player.look = LOOKS.judas;
-      state.player.name = "加略人猶大";
-      state.roleName = "加略人猶大";
+      state.player.name = "judas_iscariot";
+      state.roleName = "judas_iscariot";
       state.entities = [
         prop({ kind: "lamp", tx: 6, ty: 6 }),
         prop({ kind: "lamp", tx: 16, ty: 6 }),
-        person({ id: "priest", name: "祭司長", tx: 11, ty: 5, look: "priest", dir: "down", seated: true, chair: true, talk: false }),
-        person({ id: "elder", name: "長老", tx: 8, ty: 6, look: "elder", dir: "right", talk: false }),
-        person({ id: "elder2", name: "長老", tx: 14, ty: 6, look: "elder", dir: "left", talk: false }),
+        person({ id: "priest", name: "chief_priest", tx: 11, ty: 5, look: "priest", dir: "down", seated: true, chair: true, talk: false }),
+        person({ id: "elder", name: "elder", tx: 8, ty: 6, look: "elder", dir: "right", talk: false }),
+        person({ id: "elder2", name: "elder", tx: 14, ty: 6, look: "elder", dir: "left", talk: false }),
       ];
       const spot = tp(11, 6);
       [
@@ -1519,14 +1519,14 @@ export const CHAPTERS = [
         state.entities.push(coin);
       });
       this.guided = true;
-      state.objective = "進大祭司的院子。";
+      state.objective = "enter_the_high_priest_s_courtyard";
     },
     onEnter() {
       this.guided = true;
       say(
         [
-          { name: "", text: VERSES.takeTrick, ref: "馬太福音 26:3-4", verse: true },
-          { name: "祭司長", text: VERSES.notOnFeast, ref: "馬太福音 26:5", verse: true },
+          { name: "", text: VERSES.takeTrick, ref: "ref_matthew_26_3_4", verse: true },
+          { name: "chief_priest", text: VERSES.notOnFeast, ref: "ref_matthew_26_5", verse: true },
         ],
         () => walkPlayer(11, 8, 46, () => this.bargain())
       );
@@ -1537,8 +1537,8 @@ export const CHAPTERS = [
       if (priest) priest.dir = "down";
       say(
         [
-          { name: "加略人猶大", text: VERSES.whatGive, ref: "馬太福音 26:15", verse: true },
-          { name: "祭司長", text: "三十塊錢。" },
+          { name: "judas_iscariot", text: VERSES.whatGive, ref: "ref_matthew_26_15", verse: true },
+          { name: "chief_priest", text: "thirty_pieces_of_silver_2" },
         ],
         () => {
           state.entities.forEach((e) => {
@@ -1548,8 +1548,8 @@ export const CHAPTERS = [
           puff(tp(11, 6).x, tp(11, 6).y, "#d5dbe3", 12, 18);
           say(
             [
-              { name: "", text: VERSES.thirty, ref: "馬太福音 26:15", verse: true },
-              { name: "", text: VERSES.opportunity, ref: "馬太福音 26:16", verse: true },
+              { name: "", text: VERSES.thirty, ref: "ref_matthew_26_15", verse: true },
+              { name: "", text: VERSES.opportunity, ref: "ref_matthew_26_16", verse: true },
             ],
             () => completeChapter()
           );
@@ -1561,27 +1561,27 @@ export const CHAPTERS = [
   },
   {
     key: "supper",
-    title: "最後的晚餐",
-    ref: "約翰福音 13；馬太福音 26:20–35",
-    kicker: "第七章",
+    title: "the_last_supper",
+    ref: "ref_john_13_matthew_26_20_35",
+    kicker: "chapter_7",
     intro:
-      "猶大已經收了三十塊錢，正找機會。逾越節的晚上，樓房已經預備好。你起來洗他們的腳，又把餅和杯遞給他們。你說你們中間有一個人要賣我。猶大出去以後，你告訴彼得：雞叫以先，他要三次不認你。",
-    closing: "他們唱了詩，就出來，往橄欖山去。",
-    closingRef: "馬太福音 26:30",
+      "judas_has_already_taken_the_thirty_pieces_and_is",
+    closing: "they_sang_a_hymn_and_went_out_to_the_mount_of_ol",
+    closingRef: "ref_matthew_26_30",
     music: "solemn",
     light: "room",
     people: [
-      { id: "matthew", name: "馬太", look: "tax", tx: 12, ty: 8, dir: "down" },
-      { id: "thomas", name: "多馬", look: "thomas", tx: 18, ty: 8, dir: "down" },
-      { id: "peter", name: "彼得", look: "simon", tx: 10, ty: 9, dir: "right" },
-      { id: "james", name: "雅各", look: "james", tx: 9, ty: 10, dir: "right" },
-      { id: "andrew", name: "安得烈", look: "andrew", tx: 10, ty: 11, dir: "right" },
-      { id: "john", name: "約翰", look: "john", tx: 20, ty: 9, dir: "left" },
-      { id: "philip", name: "腓力", look: "philip", tx: 21, ty: 10, dir: "left" },
-      { id: "bart", name: "巴多羅買", look: "bart", tx: 20, ty: 11, dir: "left" },
-      { id: "james2", name: "亞勒腓的雅各", look: "james2", tx: 12, ty: 12, dir: "up" },
-      { id: "thad", name: "達太", look: "thad", tx: 14, ty: 12, dir: "up" },
-      { id: "simonZ", name: "奮銳黨的西門", look: "zealot", tx: 18, ty: 12, dir: "up" },
+      { id: "matthew", name: "matthew", look: "tax", tx: 12, ty: 8, dir: "down" },
+      { id: "thomas", name: "thomas", look: "thomas", tx: 18, ty: 8, dir: "down" },
+      { id: "peter", name: "peter", look: "simon", tx: 10, ty: 9, dir: "right" },
+      { id: "james", name: "james", look: "james", tx: 9, ty: 10, dir: "right" },
+      { id: "andrew", name: "andrew", look: "andrew", tx: 10, ty: 11, dir: "right" },
+      { id: "john", name: "john", look: "john", tx: 20, ty: 9, dir: "left" },
+      { id: "philip", name: "philip", look: "philip", tx: 21, ty: 10, dir: "left" },
+      { id: "bart", name: "bartholomew", look: "bart", tx: 20, ty: 11, dir: "left" },
+      { id: "james2", name: "james_son_of_alphaeus", look: "james2", tx: 12, ty: 12, dir: "up" },
+      { id: "thad", name: "thaddaeus", look: "thad", tx: 14, ty: 12, dir: "up" },
+      { id: "simonZ", name: "simon_the_zealot", look: "zealot", tx: 18, ty: 12, dir: "up" },
     ],
     build() {
       const m = createMap(30, 18, "f");
@@ -1597,7 +1597,7 @@ export const CHAPTERS = [
         prop({ kind: "lamp", tx: 22, ty: 8 }),
         person({
           id: "judas",
-          name: "加略人猶大",
+          name: "judas_iscariot",
           tx: 16,
           ty: 12,
           look: "judas",
@@ -1624,21 +1624,21 @@ export const CHAPTERS = [
         );
       });
       this.guided = true;
-      state.objective = "他們坐席。";
+      state.objective = "they_are_at_table";
     },
     onEnter() {
       this.guided = true;
       state.player.seated = true;
       state.player.chair = true;
       state.player.dir = "down";
-      state.objective = "他們坐席。";
+      state.objective = "they_are_at_table";
       say(
         [
-          { name: "", text: "到了晚上，耶穌和十二個門徒坐席。", ref: "馬太福音 26:20", verse: true },
+          { name: "", text: "when_evening_came_jesus_sat_at_table_with_the_tw", ref: "ref_matthew_26_20", verse: true },
           {
-            name: "耶穌",
-            text: "我很願意在受害以先和你們吃這逾越節的筵席。",
-            ref: "路加福音 22:15",
+            name: "jesus",
+            text: "i_have_earnestly_desired_to_eat_this_passover_wi",
+            ref: "ref_luke_22_15",
             verse: true,
           },
         ],
@@ -1651,7 +1651,7 @@ export const CHAPTERS = [
     },
     rise() {
       this.sit(false);
-      state.objective = "他離席，到彼得面前。";
+      state.objective = "he_leaves_the_table_and_comes_to_peter";
       walkPlayer(8, 7, 48, () => {
         walkPlayer(8, 9, 48, () => {
           state.player.dir = "right";
@@ -1662,17 +1662,17 @@ export const CHAPTERS = [
     wash() {
       say(
         [
-          { name: "", text: "他把水倒在盆裡，就洗門徒的腳。" },
-          { name: "彼得", text: "主啊，你洗我的腳嗎？" },
-          { name: "彼得", text: "你永不可洗我的腳！" },
-          { name: "耶穌", text: "我若不洗你，你就與我無分了。", ref: "約翰福音 13:8" },
-          { name: "彼得", text: "主啊，不但我的腳，連手和頭也要洗。" },
-          { name: "耶穌", text: VERSES.wash, ref: "約翰福音 13:14-15", verse: true },
+          { name: "", text: "he_pours_water_into_a_basin_and_washes_the_disci" },
+          { name: "peter", text: "lord_are_you_going_to_wash_my_feet" },
+          { name: "peter", text: "you_shall_never_wash_my_feet" },
+          { name: "jesus", text: "if_i_do_not_wash_you_you_have_no_share_with_me", ref: "ref_john_13_8" },
+          { name: "peter", text: "lord_not_my_feet_only_but_also_my_hands_and_my_h" },
+          { name: "jesus", text: VERSES.wash, ref: "ref_john_13_14_15", verse: true },
         ],
         () => {
           state.flags.washed = true;
           puff(findEnt("peter").x, findEnt("peter").y, "#9ad4ea", 10, 14);
-          state.objective = "他回到自己的位子。";
+          state.objective = "he_returns_to_his_place";
           walkPlayer(8, 7, 48, () => {
             walkPlayer(15, 8, 48, () => {
               state.player.dir = "down";
@@ -1686,9 +1686,9 @@ export const CHAPTERS = [
     bless() {
       say(
         [
-          { name: "耶穌", text: VERSES.body, ref: "馬太福音 26:26", verse: true },
-          { name: "耶穌", text: VERSES.cup, ref: "馬太福音 26:27-28", verse: true },
-          { name: "", text: "餅遞到他們手裡。杯也遞過去。" },
+          { name: "jesus", text: VERSES.body, ref: "ref_matthew_26_26", verse: true },
+          { name: "jesus", text: VERSES.cup, ref: "ref_matthew_26_27_28", verse: true },
+          { name: "", text: "the_bread_is_placed_in_their_hands_the_cup_is_pa" },
         ],
         () => {
           state.flags.meal = true;
@@ -1701,28 +1701,28 @@ export const CHAPTERS = [
     betray() {
       say(
         [
-          { name: "耶穌", text: VERSES.betray, ref: "馬太福音 26:21", verse: true },
-          { name: "門徒", text: "主，是我嗎？", ref: "馬太福音 26:22", verse: VERSES.isItI },
-          { name: "加略人猶大", text: VERSES.rabbi, ref: "馬太福音 26:25", verse: true },
-          { name: "", text: VERSES.night, ref: "約翰福音 13:30", verse: true },
+          { name: "jesus", text: VERSES.betray, ref: "ref_matthew_26_21", verse: true },
+          { name: "disciples", text: "verse.isItI", ref: "ref_matthew_26_22", verse: VERSES.isItI },
+          { name: "judas_iscariot", text: VERSES.rabbi, ref: "ref_matthew_26_25", verse: true },
+          { name: "", text: VERSES.night, ref: "ref_john_13_30", verse: true },
         ],
         () => {
           const judas = findEnt("judas");
           judas.seated = false;
           judas.chair = false;
           state.flags.leaving = true;
-          state.objective = "他起來，往夜裡走了。";
+          state.objective = "he_gets_up_and_walks_out_into_the_night";
         }
       );
     },
     command() {
       say(
         [
-          { name: "耶穌", text: VERSES.newCmd, ref: "約翰福音 13:34", verse: true },
+          { name: "jesus", text: VERSES.newCmd, ref: "ref_john_13_34", verse: true },
           {
-            name: "耶穌",
-            text: "你們若有彼此相愛的心，眾人因此就認出你們是我的門徒了。",
-            ref: "約翰福音 13:35",
+            name: "jesus",
+            text: "by_this_everyone_will_know_that_you_are_my_disci",
+            ref: "ref_john_13_35",
             verse: true,
           },
         ],
@@ -1735,11 +1735,11 @@ export const CHAPTERS = [
       if (peter) peter.dir = "right";
       say(
         [
-          { name: "彼得", text: "主往哪裡去？" },
-          { name: "耶穌", text: VERSES.cannotFollow, ref: "約翰福音 13:36", verse: true },
-          { name: "彼得", text: "主啊，我為什麼現在不能跟你去？我願意為你捨命！" },
-          { name: "耶穌", text: VERSES.denyThrice, ref: "約翰福音 13:38", verse: true },
-          { name: "", text: "他們唱了詩，就出來，往橄欖山去。", ref: "馬太福音 26:30", verse: true },
+          { name: "peter", text: "lord_where_are_you_going" },
+          { name: "jesus", text: VERSES.cannotFollow, ref: "ref_john_13_36", verse: true },
+          { name: "peter", text: "lord_why_can_i_not_follow_you_now_i_will_lay_dow" },
+          { name: "jesus", text: VERSES.denyThrice, ref: "ref_john_13_38", verse: true },
+          { name: "", text: "they_sang_a_hymn_and_went_out_to_the_mount_of_ol", ref: "ref_matthew_26_30", verse: true },
         ],
         () => completeChapter()
       );
@@ -1767,14 +1767,14 @@ export const CHAPTERS = [
   },
   {
     key: "garden",
-    title: "天快亮",
-    ref: "馬太福音 28:1–10",
-    who: "抹大拉的馬利亞",
+    title: "at_dawn",
+    ref: "ref_matthew_28_1_10",
+    who: "mary_magdalene",
     guided: true,
     intro:
-      "他在各各他把靈魂交在父手裡，被安放在新墳墓裡。安息日將盡，七日的頭一日，天快亮的時候。你和那個馬利亞來看墳墓。地大震動，主的使者把石頭滾開，坐在上面。看守的人嚇得如死人一樣。你們又害怕又歡喜，跑去報信，路上遇見耶穌。這一程自己往前走。",
-    closing: "不要害怕！你們去告訴我的弟兄，叫他們往加利利去，在那裡必見我。",
-    closingRef: "馬太福音 28:10",
+      "at_golgotha_he_commits_his_spirit_to_the_father_",
+    closing: "verse.tellBrothers",
+    closingRef: "ref_matthew_28_10",
     music: "dawn",
     build() {
       const m = createMap(26, 18, ".");
@@ -1794,20 +1794,20 @@ export const CHAPTERS = [
         prop({ kind: "tree", tx: 22, ty: 13, variant: "cypress", solid: true, radius: 3 }),
         prop({ kind: "linen", id: "linen", tx: 12, ty: 4 }),
         prop({ kind: "stone", id: "stone", tx: 13, ty: 7, big: true }),
-        person({ id: "mary2", name: "那個馬利亞", tx: 14, ty: 15, look: "mother", dir: "up", talk: false }),
-        person({ id: "guard0", name: "看守的人", tx: 10, ty: 8, look: "roman", dir: "down", talk: false }),
-        person({ id: "guard1", name: "看守的人", tx: 16, ty: 8, look: "roman", dir: "down", talk: false }),
-        person({ id: "angel", name: "天使", tx: 18, ty: 7, look: "angel", dir: "down", alpha: 0, talk: false }),
-        person({ id: "jesus", name: "耶穌", tx: 12, ty: 11, look: "jesus", dir: "down", alpha: 0, talk: false }),
+        person({ id: "mary2", name: "the_other_mary", tx: 14, ty: 15, look: "mother", dir: "up", talk: false }),
+        person({ id: "guard0", name: "guards", tx: 10, ty: 8, look: "roman", dir: "down", talk: false }),
+        person({ id: "guard1", name: "guards", tx: 16, ty: 8, look: "roman", dir: "down", talk: false }),
+        person({ id: "angel", name: "angel", tx: 18, ty: 7, look: "angel", dir: "down", alpha: 0, talk: false }),
+        person({ id: "jesus", name: "jesus", tx: 12, ty: 11, look: "jesus", dir: "down", alpha: 0, talk: false }),
       ];
       this.guided = true;
-      state.objective = "天快亮了。你們來看墳墓。";
+      state.objective = "dawn_is_near_you_have_come_to_see_the_tomb";
     },
     onEnter() {
       this.guided = true;
-      state.objective = "天快亮了。你們來看墳墓。";
+      state.objective = "dawn_is_near_you_have_come_to_see_the_tomb";
       say(
-        [{ name: "", text: "安息日將盡，七日的頭一日，天快亮的時候，抹大拉的馬利亞和那個馬利亞來看墳墓。" }],
+        [{ name: "", text: "after_the_sabbath_toward_the_dawn_of_the_first_d" }],
         () => this.walkWith(12, 10, 46, () => this.atTomb())
       );
     },
@@ -1826,7 +1826,7 @@ export const CHAPTERS = [
       state.flags.quake = true;
       const angel = findEnt("angel");
       if (angel) angel.alpha = 0.05;
-      state.objective = "地大震動。使者把石頭滾開。";
+      state.objective = "the_earth_shakes_the_angel_rolls_the_stone_away";
     },
     angelSits() {
       const stone = findEnt("stone");
@@ -1846,14 +1846,14 @@ export const CHAPTERS = [
       state.flash = 0.55;
       say(
         [
-          { name: "", text: "忽然，地大震動。有主的使者從天上下來，把石頭滾開，坐在上面。他的相貌如同閃電，衣服潔白如雪。" },
-          { name: "", text: "看守的人就因他嚇得渾身亂戰，甚至和死人一樣。" },
-          { name: "天使", text: VERSES.fearNot, ref: "馬太福音 28:5", verse: true },
-          { name: "天使", text: VERSES.notHere, ref: "馬太福音 28:6", verse: true },
-          { name: "天使", text: VERSES.goTell, ref: "馬太福音 28:7", verse: true },
+          { name: "", text: "suddenly_there_was_a_great_earthquake_an_angel_o" },
+          { name: "", text: "the_guards_shook_with_fear_because_of_him_and_be" },
+          { name: "angel", text: VERSES.fearNot, ref: "ref_matthew_28_5", verse: true },
+          { name: "angel", text: VERSES.notHere, ref: "ref_matthew_28_6", verse: true },
+          { name: "angel", text: VERSES.goTell, ref: "ref_matthew_28_7", verse: true },
         ],
         () => {
-          state.objective = "又害怕，又大大地歡喜。跑去報信。";
+          state.objective = "afraid_and_full_of_joy_run_and_tell_them";
           this.walkWith(12, 13, 70, () => this.meet());
         }
       );
@@ -1874,8 +1874,8 @@ export const CHAPTERS = [
       appearSound();
       say(
         [
-          { name: "", text: "婦女們就急忙離開墳墓，又害怕，又大大地歡喜，跑去要報給他的門徒。忽然，耶穌遇見她們。" },
-          { name: "耶穌", text: VERSES.peaceWomen, ref: "馬太福音 28:9", verse: true },
+          { name: "", text: "the_women_hurried_away_from_the_tomb_afraid_and_" },
+          { name: "jesus", text: VERSES.peaceWomen, ref: "ref_matthew_28_9", verse: true },
         ],
         () => this.walkWith(12, 12, 40, () => this.worship())
       );
@@ -1886,8 +1886,8 @@ export const CHAPTERS = [
       if (other) other.dir = "up";
       say(
         [
-          { name: "", text: "她們就上前抱住他的腳拜他。" },
-          { name: "耶穌", text: VERSES.tellBrothers, ref: "馬太福音 28:10", verse: true },
+          { name: "", text: "they_came_and_took_hold_of_his_feet_and_worshipe" },
+          { name: "jesus", text: VERSES.tellBrothers, ref: "ref_matthew_28_10", verse: true },
         ],
         () => completeChapter()
       );
@@ -1917,14 +1917,14 @@ export const CHAPTERS = [
 const MORE = [
   {
     key: "bethlehem",
-    title: "伯利恆",
-    ref: "路加福音 2；馬太福音 1–2",
-    who: "天使",
+    title: "bethlehem",
+    ref: "ref_luke_2_matthew_1_2",
+    who: "angel",
     guided: true,
     intro:
-      "夜間，野地裡有牧羊人看守羊群。你向他們顯現，並領他們走到馬槽前。嬰孩在馬利亞懷裡。博士隨後跟著星來。然後你告訴約瑟，要帶孩子和他母親往埃及去。這一程自己往前走，你只要把話說完。",
-    closing: "約瑟就起來，夜間帶著小孩子和他母親往埃及去。",
-    closingRef: "馬太福音 2:14",
+      "at_night_shepherds_keep_watch_over_their_flock_i",
+    closing: "joseph_rose_and_took_the_child_and_his_mother_by",
+    closingRef: "ref_matthew_2_14",
     music: "dawn",
     night: true,
     build() {
@@ -1937,38 +1937,38 @@ const MORE = [
       state.player = asRole(12, 17, "left", "angel");
       state.entities = [
         prop({ kind: "stable", tx: 16, ty: 6 }),
-        prop({ kind: "manger", id: "manger", name: "馬槽", tx: 17, ty: 8, solid: true, radius: 6 }),
+        prop({ kind: "manger", id: "manger", name: "manger", tx: 17, ty: 8, solid: true, radius: 6 }),
         prop({ kind: "star", id: "star", tx: 31, ty: 13 }),
-        person({ id: "mary", name: "馬利亞", tx: 15, ty: 8, look: "mother", dir: "right", holdInfant: true }),
-        person({ id: "joseph", name: "約瑟", tx: 18, ty: 8, look: "elder", dir: "left" }),
-        person({ id: "shepherd", name: "牧羊人", tx: 7, ty: 18, look: "traveler", dir: "down", mark: "worry" }),
-        person({ id: "shepherd2", name: "牧羊人", tx: 9, ty: 20, look: "farmer", dir: "left", mark: "worry" }),
+        person({ id: "mary", name: "mary", tx: 15, ty: 8, look: "mother", dir: "right", holdInfant: true }),
+        person({ id: "joseph", name: "joseph", tx: 18, ty: 8, look: "elder", dir: "left" }),
+        person({ id: "shepherd", name: "shepherd", tx: 7, ty: 18, look: "traveler", dir: "down", mark: "worry" }),
+        person({ id: "shepherd2", name: "shepherd", tx: 9, ty: 20, look: "farmer", dir: "left", mark: "worry" }),
         prop({ kind: "sheep", id: "sheep", tx: 5, ty: 20 }),
         prop({ kind: "sheep", id: "sheep2", tx: 11, ty: 20 }),
-        person({ id: "magi", name: "博士", tx: 31, ty: 18, look: "steward", dir: "left" }),
-        person({ id: "magi2", name: "博士", tx: 33, ty: 20, look: "tax", dir: "left" }),
+        person({ id: "magi", name: "a_wise_man", tx: 31, ty: 18, look: "steward", dir: "left" }),
+        person({ id: "magi2", name: "a_wise_man", tx: 33, ty: 20, look: "tax", dir: "left" }),
       ];
-      state.objective = "光向著守夜的人去。";
+      state.objective = "the_light_goes_toward_the_people_keeping_watch";
     },
     onEnter() {
       state.flash = 0.55;
-      state.objective = "光向著守夜的人去。";
+      state.objective = "the_light_goes_toward_the_people_keeping_watch";
       walkPlayer(8, 18, 70, () => this.announce());
     },
     announce() {
       state.player.dir = "left";
       say(
         [
-          { name: "牧羊人", text: "夜裡忽然有光。我們甚懼怕。" },
-          { name: "天使", text: VERSES.goodNews, ref: "路加福音 2:10-11", verse: true },
-          { name: "天使", text: VERSES.gloria, ref: "路加福音 2:14", verse: true },
-          { name: "牧羊人", text: "我們往伯利恆去，看看所成的事。" },
+          { name: "shepherd", text: "suddenly_there_was_light_in_the_night_we_were_te" },
+          { name: "angel", text: VERSES.goodNews, ref: "ref_luke_2_10_11", verse: true },
+          { name: "angel", text: VERSES.gloria, ref: "ref_luke_2_14", verse: true },
+          { name: "shepherd", text: "let_us_go_to_bethlehem_and_see_this_thing_that_h" },
         ],
         () => {
           state.flags.told = true;
           findEnt("shepherd").mark = null;
           findEnt("shepherd2").mark = null;
-          state.objective = "你領他們走到馬槽前。";
+          state.objective = "lead_them_to_the_manger";
           walkPlayer(12, 11, 56, () => {
             state.player.dir = "up";
           });
@@ -1984,13 +1984,13 @@ const MORE = [
       findEnt("shepherd2").dir = "up";
       say(
         [
-          { name: "牧羊人", text: "果然是個嬰孩，包著布。馬利亞把他抱在懷裡。" },
-          { name: "", text: VERSES.manger, ref: "路加福音 2:7", verse: true },
-          { name: "馬利亞", text: VERSES.nameJesus, ref: "馬太福音 1:21", verse: true },
+          { name: "shepherd", text: "it_really_is_a_baby_wrapped_in_cloth_mary_holds_" },
+          { name: "", text: VERSES.manger, ref: "ref_luke_2_7", verse: true },
+          { name: "mary", text: VERSES.nameJesus, ref: "ref_matthew_1_21", verse: true },
         ],
         () => {
           state.flags.seenChild = true;
-          state.objective = "星在前頭。博士跟著它走來。";
+          state.objective = "the_star_goes_ahead_the_wise_men_follow_it";
         }
       );
     },
@@ -2000,13 +2000,13 @@ const MORE = [
       findEnt("mary").dir = "right";
       say(
         [
-          { name: "博士", text: VERSES.star, ref: "馬太福音 2:2", verse: true },
-          { name: "", text: VERSES.gifts, ref: "馬太福音 2:11", verse: true },
+          { name: "a_wise_man", text: VERSES.star, ref: "ref_matthew_2_2", verse: true },
+          { name: "", text: VERSES.gifts, ref: "ref_matthew_2_11", verse: true },
         ],
         () => {
           state.flags.magi = true;
           puff(findEnt("mary").x, findEnt("mary").y - 18, "#f0c84b", 12, 16);
-          state.objective = "你到約瑟面前。夢裡還有話。";
+          state.objective = "go_to_joseph_there_is_still_a_word_from_the_drea";
           walkPlayer(17, 10, 52, () => this.dream());
         }
       );
@@ -2016,12 +2016,12 @@ const MORE = [
       findEnt("joseph").dir = "down";
       say(
         [
-          { name: "天使", text: VERSES.egypt, ref: "馬太福音 2:13", verse: true },
-          { name: "約瑟", text: "我起來，帶著小孩子和他母親走。" },
+          { name: "angel", text: VERSES.egypt, ref: "ref_matthew_2_13", verse: true },
+          { name: "joseph", text: "i_get_up_and_take_the_child_and_his_mother" },
         ],
         () => {
           state.flags.flee = true;
-          state.objective = "看他們連夜出城。";
+          state.objective = "watch_them_leave_the_city_by_night";
           walkPlayer(10, 16, 48, () => {
             state.player.dir = "left";
           });
@@ -2063,14 +2063,14 @@ const MORE = [
   },
   {
     key: "temple",
-    title: "聖殿",
-    ref: "路加福音 2:41–52",
-    who: "馬利亞",
+    title: "the_temple",
+    ref: "ref_luke_2_41_52",
+    who: "mary",
     guided: true,
     intro:
-      "他們連夜往埃及去了。過了些年，節期完了，你和約瑟往回走，才知道孩子不在同行的人裡。你們在親族中找他，又回耶路撒冷。過了三天，在殿裡看見他坐在教師中間，正對他們說話。這一程自己往前走。",
-    closing: "豈不知我應當以我父的事為念嗎？",
-    closingRef: "路加福音 2:49",
+      "they_fled_to_egypt_by_night_years_later_when_the",
+    closing: "did_you_not_know_that_i_must_be_about_my_father_",
+    closingRef: "ref_luke_2_49",
     music: "peace",
     build() {
       const m = createMap(22, 32, ".");
@@ -2091,20 +2091,20 @@ const MORE = [
         prop({ kind: "house", tx: 18, ty: 18, solid: true, box: { x: -14, y: -16, w: 28, h: 16 } }),
         prop({ kind: "house", tx: 4, ty: 24, solid: true, box: { x: -14, y: -16, w: 28, h: 16 } }),
         prop({ kind: "house", tx: 18, ty: 24, solid: true, box: { x: -14, y: -16, w: 28, h: 16 } }),
-        person({ id: "jesus", name: "耶穌", tx: 11, ty: 5, look: "child", dir: "right" }),
-        person({ id: "teacher", name: "教師", tx: 8, ty: 4, look: "elder", dir: "right" }),
-        person({ id: "scribe", name: "文士", tx: 14, ty: 4, look: "tax", dir: "left" }),
-        person({ id: "rabbi", name: "拉比", tx: 8, ty: 7, look: "steward", dir: "right" }),
-        person({ id: "kin", name: "親族", tx: 11, ty: 18, look: "traveler", dir: "down" }),
-        person({ id: "kin2", name: "同鄉", tx: 16, ty: 15, look: "woman", dir: "left" }),
-        person({ id: "joseph", name: "約瑟", tx: 13, ty: 28, look: "elder", dir: "up" }),
+        person({ id: "jesus", name: "jesus", tx: 11, ty: 5, look: "child", dir: "right" }),
+        person({ id: "teacher", name: "teacher", tx: 8, ty: 4, look: "elder", dir: "right" }),
+        person({ id: "scribe", name: "scribe", tx: 14, ty: 4, look: "tax", dir: "left" }),
+        person({ id: "rabbi", name: "rabbi", tx: 8, ty: 7, look: "steward", dir: "right" }),
+        person({ id: "kin", name: "kin", tx: 11, ty: 18, look: "traveler", dir: "down" }),
+        person({ id: "kin2", name: "townsman", tx: 16, ty: 15, look: "woman", dir: "left" }),
+        person({ id: "joseph", name: "joseph", tx: 13, ty: 28, look: "elder", dir: "up" }),
       ];
-      state.objective = "在同行的人裡找他。";
+      state.objective = "look_for_him_among_the_travelers";
     },
     onEnter() {
-      state.objective = "在同行的人裡找他。";
+      state.objective = "look_for_him_among_the_travelers";
       say(
-        [{ name: "", text: "節期完了，他們回去。孩子卻仍在耶路撒冷。他們走了一天的路程，就在親族和熟識的人中找他。" }],
+        [{ name: "", text: "when_the_feast_was_ended_they_started_back_the_c" }],
         () => {
           walkPlayer(11, 19, 62, () => this.askKin());
         }
@@ -2115,11 +2115,11 @@ const MORE = [
       findEnt("kin").dir = "down";
       say(
         [
-          { name: "馬利亞", text: "你們看見那孩子沒有？他本該在我們中間。" },
-          { name: "親族", text: "這裡沒有他。我們以為他跟你們在一處。" },
+          { name: "mary", text: "have_you_seen_the_child_he_was_supposed_to_be_wi" },
+          { name: "kin", text: "he_is_not_here_we_thought_he_was_with_you" },
         ],
         () => {
-          state.objective = "再往前的人裡找一找。";
+          state.objective = "look_among_the_people_farther_ahead";
           walkPlayer(15, 16, 60, () => this.askKin2());
         }
       );
@@ -2129,12 +2129,12 @@ const MORE = [
       findEnt("kin2").dir = "left";
       say(
         [
-          { name: "馬利亞", text: "同鄉，孩子在你們那裡嗎？" },
-          { name: "同鄉", text: "沒有。從昨天起，就沒有看見他。" },
-          { name: "約瑟", text: "不在親族裡，也不在熟識的人裡。" },
+          { name: "mary", text: "neighbor_is_the_child_with_you" },
+          { name: "townsman", text: "no_we_have_not_seen_him_since_yesterday" },
+          { name: "joseph", text: "he_is_not_among_the_relatives_nor_among_the_peop" },
         ],
         () => {
-          state.objective = "回耶路撒冷去。他還在城裡。";
+          state.objective = "go_back_to_jerusalem_he_is_still_in_the_city";
           walkPlayer(11, 9, 64, () => this.seeHim());
         }
       );
@@ -2144,17 +2144,17 @@ const MORE = [
       state.player.mark = null;
       findEnt("joseph").dir = "up";
       jesus().dir = "right";
-      state.objective = "殿裡，他正對教師說話。";
+      state.objective = "in_the_temple_he_is_speaking_with_the_teachers";
       say(
         [
-          { name: "", text: VERSES.seeking, ref: "路加福音 2:46", verse: true },
-          { name: "教師", text: "你坐下來聽。有甚麼要問的，就問。" },
-          { name: "耶穌", text: "經上說當盡心愛主你的神。這話，你們怎樣講？" },
-          { name: "文士", text: "聽他問，也聽他答。" },
-          { name: "", text: VERSES.amazed, ref: "路加福音 2:47", verse: true },
+          { name: "", text: VERSES.seeking, ref: "ref_luke_2_46", verse: true },
+          { name: "teacher", text: "sit_down_and_listen_if_you_have_a_question_ask_i" },
+          { name: "jesus", text: "scripture_says_you_shall_love_the_lord_your_god_" },
+          { name: "scribe", text: "listen_to_him_ask_and_listen_to_him_answer" },
+          { name: "", text: VERSES.amazed, ref: "ref_luke_2_47", verse: true },
         ],
         () => {
-          state.objective = "上前去。你找了他三天。";
+          state.objective = "go_to_him_you_have_been_looking_for_him_for_thre";
           walkPlayer(11, 8, 48, () => this.found());
         }
       );
@@ -2167,13 +2167,13 @@ const MORE = [
       findEnt("rabbi").dir = "down";
       say(
         [
-          { name: "馬利亞", text: "我兒！為甚麼向我們這樣行呢？看哪，你父親和我傷心來找你！", ref: "路加福音 2:48", verse: true },
-          { name: "耶穌", text: VERSES.fathers, ref: "路加福音 2:49", verse: true },
-          { name: "", text: "他父母不明白他所說的話。他就同他們下去，回到拿撒勒。" },
+          { name: "mary", text: "son_why_have_you_treated_us_so_your_father_and_i", ref: "ref_luke_2_48", verse: true },
+          { name: "jesus", text: VERSES.fathers, ref: "ref_luke_2_49", verse: true },
+          { name: "", text: "his_parents_did_not_understand_what_he_said_he_w" },
         ],
         () => {
           state.flags.found = true;
-          state.objective = "他同你們下去，回拿撒勒。";
+          state.objective = "he_goes_down_with_you_and_returns_to_nazareth";
           walkPlayer(11, 28, 58, () => {
             state.flags.left = true;
             completeChapter();
@@ -2194,12 +2194,12 @@ const MORE = [
   },
   {
     key: "baptism",
-    title: "約旦河",
-    ref: "馬太福音 3:13–17",
+    title: "the_jordan",
+    ref: "ref_matthew_3_13_17",
     intro:
-      "孩子在殿裡說過，應當以父的事為念。多年以後，眾百姓都在約旦河受洗。約翰站在水裡。你從加利利走到他面前，下到河中。受洗之後，天要開，鴿子要降下，有聲音從天上來。",
-    closing: "這是我的愛子，我所喜悅的。",
-    closingRef: "馬太福音 3:17",
+      "the_child_in_the_temple_said_he_must_be_about_hi",
+    closing: "verse.beloved",
+    closingRef: "ref_matthew_3_17",
     music: "dawn",
     guided: true,
     waterSolid: false,
@@ -2223,20 +2223,20 @@ const MORE = [
       m.frame("#");
       state.map = m;
       state.player = asJesus(15, 15, "up");
-      state.entities = [person({ id: "john", name: "施洗約翰", tx: 14, ty: 8, look: "baptist", dir: "down" })];
+      state.entities = [person({ id: "john", name: "john_the_baptist", tx: 14, ty: 8, look: "baptist", dir: "down" })];
       this.crowd.forEach(([look, tx, ty, dir], i) => {
-        const e = person({ id: "crowd" + i, name: "群眾", tx, ty, look, dir });
+        const e = person({ id: "crowd" + i, name: "crowd", tx, ty, look, dir });
         e.baseY = e.y;
         e.wade = ty >= 6 && ty <= 11;
         state.entities.push(e);
       });
-      const a = person({ id: "wade1", name: "群眾", tx: 6, ty: 13, look: "traveler", dir: "up", toTx: 10, toTy: 9 });
-      const b = person({ id: "wade2", name: "群眾", tx: 24, ty: 14, look: "worker", dir: "up", toTx: 20, toTy: 9 });
+      const a = person({ id: "wade1", name: "crowd", tx: 6, ty: 13, look: "traveler", dir: "up", toTx: 10, toTy: 9 });
+      const b = person({ id: "wade2", name: "crowd", tx: 24, ty: 14, look: "worker", dir: "up", toTx: 20, toTy: 9 });
       state.entities.push(a, b);
-      state.objective = "你往河裡走，到施洗約翰面前。";
+      state.objective = "walk_into_the_river_to_john_the_baptist";
     },
     onEnter() {
-      state.objective = "你往河裡走，到施洗約翰面前。";
+      state.objective = "walk_into_the_river_to_john_the_baptist";
       walkPlayer(15, 9, 62, () => this.meetJohn());
     },
     meetJohn() {
@@ -2289,29 +2289,29 @@ const MORE = [
       }
       if (f.riteT > 4.7 && !f.voice) {
         f.voice = true;
-        state.objective = "聽那從天上來的聲音。";
-        say([{ name: "天父", text: VERSES.beloved, ref: "馬太福音 3:17", verse: true }], () => completeChapter());
+        state.objective = "listen_to_the_voice_from_heaven";
+        say([{ name: "father", text: VERSES.beloved, ref: "ref_matthew_3_17", verse: true }], () => completeChapter());
       }
     },
     talk(e) {
       if (state.flags.rite) return;
       if (e.id !== "john") {
-        say([{ name: e.name, text: "我們也在這河裡受洗。他在水深處等你。" }]);
+        say([{ name: e.name, text: "we_are_being_baptized_in_this_river_too_he_is_wa" }]);
         return;
       }
       if (!this.inWater()) {
         say([
-          { name: "施洗約翰", text: "看哪，神的羔羊，除去世人罪孽的。" },
-          { name: "施洗約翰", text: "眾人都下到河裡了。你也來。" },
+          { name: "john_the_baptist", text: "behold_the_lamb_of_god_who_takes_away_the_sin_of" },
+          { name: "john_the_baptist", text: "all_the_people_have_gone_down_into_the_river_you" },
         ]);
         return;
       }
       if (state.flags.done) return;
       say(
         [
-          { name: "施洗約翰", text: VERSES.johnNeed, ref: "馬太福音 3:14", verse: true },
-          { name: "耶穌", text: VERSES.fulfill, ref: "馬太福音 3:15", verse: true },
-          { name: "", text: VERSES.heavens, ref: "路加福音 3:21", verse: true },
+          { name: "john_the_baptist", text: VERSES.johnNeed, ref: "ref_matthew_3_14", verse: true },
+          { name: "jesus", text: VERSES.fulfill, ref: "ref_matthew_3_15", verse: true },
+          { name: "", text: VERSES.heavens, ref: "ref_luke_3_21", verse: true },
         ],
         () => {
           state.flags.done = true;
@@ -2321,7 +2321,7 @@ const MORE = [
           state.flash = 1;
           state.player.dir = "up";
           state.entities.push(prop({ kind: "dove", id: "dove", x: state.player.x, y: state.player.y - 92, alpha: 0 }));
-          state.objective = "天開了。";
+          state.objective = "heaven_opened";
           chime();
         }
       );
@@ -2329,11 +2329,11 @@ const MORE = [
   },
   {
     key: "wild",
-    title: "曠野",
-    ref: "馬太福音 4:1–11",
-    intro: "天父剛說：這是我的愛子。聖靈隨即引他到曠野，受魔鬼的試探。他禁食四十晝夜，後來就餓了。魔鬼沿路走來，三次試探他。",
-    closing: "於是，魔鬼離了耶穌，有天使來伺候他。",
-    closingRef: "馬太福音 4:11",
+    title: "the_wilderness",
+    ref: "ref_matthew_4_1_11",
+    intro: "the_father_has_just_said_this_is_my_beloved_son_",
+    closing: "verse.minister",
+    closingRef: "ref_matthew_4_11",
     music: "solemn",
     guided: true,
     build() {
@@ -2357,10 +2357,10 @@ const MORE = [
         [25, 5],
       ];
       state.entities = [
-        person({ id: "tempter", name: "試探者", tx: 6, ty: 18, look: "tempter", dir: "right", alpha: 0, talk: false }),
+        person({ id: "tempter", name: "the_tempter", tx: 6, ty: 18, look: "tempter", dir: "right", alpha: 0, talk: false }),
         person({ id: "shade", name: "", tx: 16, ty: 31, look: "jesus", dir: "down", alpha: 0, talk: false }),
-        person({ id: "angel", name: "天使", tx: 16, ty: 3, look: "angel", dir: "down", alpha: 0, talk: false }),
-        person({ id: "angel2", name: "天使", tx: 18, ty: 3, look: "angel", dir: "down", alpha: 0, talk: false }),
+        person({ id: "angel", name: "angel", tx: 16, ty: 3, look: "angel", dir: "down", alpha: 0, talk: false }),
+        person({ id: "angel2", name: "angel", tx: 18, ty: 3, look: "angel", dir: "down", alpha: 0, talk: false }),
         prop({ kind: "pinnacle", tx: 25, ty: 15 }),
       ];
       for (const [tx, ty] of rocks) {
@@ -2376,11 +2376,11 @@ const MORE = [
         state.entities.push(realm);
       }
       state.flags.step = 0;
-      state.objective = "你沿著路往前走。";
+      state.objective = "walk_on_along_the_road";
     },
     onEnter() {
-      state.objective = "你沿著路往前走。";
-      say([{ name: "", text: VERSES.led, ref: "馬太福音 4:1–2", verse: true }], () => {
+      state.objective = "walk_on_along_the_road";
+      say([{ name: "", text: VERSES.led, ref: "ref_matthew_4_1_2", verse: true }], () => {
         walkPlayer(16, 23, 58, () => this.tempterComes());
       });
     },
@@ -2396,23 +2396,23 @@ const MORE = [
       f.meetY = state.player.y + 2;
       f.approach = true;
       state.player.dir = fromRight ? "right" : "left";
-      state.objective = f.step === 0 ? "有人從石頭那邊走來。" : f.step === 1 ? "他又走近殿頂。" : "他在山上走近你。";
+      state.objective = f.step === 0 ? "someone_comes_from_the_stones" : f.step === 1 ? "he_comes_near_the_pinnacle_again" : "he_comes_near_you_on_the_mountain";
     },
     tempt() {
       const f = state.flags;
       const d = findEnt("tempter");
       const rounds = [
         [
-          { name: "試探者", text: VERSES.stones, ref: "馬太福音 4:3", verse: true },
-          { name: "耶穌", text: VERSES.notBread, ref: "馬太福音 4:4", verse: true },
+          { name: "the_tempter", text: VERSES.stones, ref: "ref_matthew_4_3", verse: true },
+          { name: "jesus", text: VERSES.notBread, ref: "ref_matthew_4_4", verse: true },
         ],
         [
-          { name: "試探者", text: VERSES.jump, ref: "馬太福音 4:6", verse: true },
-          { name: "耶穌", text: VERSES.notTest, ref: "馬太福音 4:7", verse: true },
+          { name: "the_tempter", text: VERSES.jump, ref: "ref_matthew_4_6", verse: true },
+          { name: "jesus", text: VERSES.notTest, ref: "ref_matthew_4_7", verse: true },
         ],
         [
-          { name: "試探者", text: VERSES.worship, ref: "馬太福音 4:9", verse: true },
-          { name: "耶穌", text: VERSES.begone, ref: "馬太福音 4:10", verse: true },
+          { name: "the_tempter", text: VERSES.worship, ref: "ref_matthew_4_9", verse: true },
+          { name: "jesus", text: VERSES.begone, ref: "ref_matthew_4_10", verse: true },
         ],
       ];
       f.vision = ["stones", "fall", "realms"][f.step];
@@ -2423,22 +2423,22 @@ const MORE = [
         f.vision = "";
         f.step += 1;
         if (f.step === 1) {
-          say([{ name: "", text: VERSES.toTemple, ref: "馬太福音 4:5", verse: true }], () => {
-            state.objective = "他帶你站在殿頂上。";
+          say([{ name: "", text: VERSES.toTemple, ref: "ref_matthew_4_5", verse: true }], () => {
+            state.objective = "he_sets_you_on_the_pinnacle_of_the_temple";
             const dest = tp(22, 15);
             f.lead = { x: dest.x + 46, y: dest.y + 4 };
             walkPlayer(22, 15, 54);
           });
         } else if (f.step === 2) {
-          say([{ name: "", text: VERSES.toMountain, ref: "馬太福音 4:8", verse: true }], () => {
-            state.objective = "他又帶你上了最高的山。";
+          say([{ name: "", text: VERSES.toMountain, ref: "ref_matthew_4_8", verse: true }], () => {
+            state.objective = "again_he_leads_you_up_a_very_high_mountain";
             const dest = tp(16, 4);
             f.lead = { x: dest.x - 48, y: dest.y + 6 };
             walkPlayer(16, 4, 54);
           });
         } else {
           f.leaving = true;
-          state.objective = "撒但退去。";
+          state.objective = "satan_leaves";
           puff(d.x, d.y, "#1a1618", 8, 12);
         }
       });
@@ -2463,7 +2463,7 @@ const MORE = [
           f.meetY = state.player.y + 2;
           f.approach = true;
           state.player.dir = fromRight ? "right" : "left";
-          state.objective = f.step === 1 ? "他又走近殿頂。" : "他在山上走近你。";
+          state.objective = f.step === 1 ? "he_comes_near_the_pinnacle_again" : "he_comes_near_you_on_the_mountain";
         }
       }
       if (f.leaving && d) {
@@ -2483,7 +2483,7 @@ const MORE = [
             a.x = spots[i][0];
             a.y = spots[i][1];
           });
-          state.objective = "有天使來伺候。";
+          state.objective = "angels_come_to_serve_him";
           puff(state.player.x, state.player.y - 24, "#f7f4ee", 8, 10);
         }
       }
@@ -2500,7 +2500,7 @@ const MORE = [
           f.ministered = true;
           f.angelIn = false;
           state.player.dir = "up";
-          say([{ name: "", text: VERSES.minister, ref: "馬太福音 4:11", verse: true }], () => completeChapter());
+          say([{ name: "", text: VERSES.minister, ref: "ref_matthew_4_11", verse: true }], () => completeChapter());
         }
       }
     },
@@ -2549,21 +2549,21 @@ const MORE = [
   },
   {
     key: "nazareth",
-    title: "拿撒勒",
-    ref: "路加福音 4:16–30",
-    intro: "魔鬼退了，有天使來伺候他。他回到拿撒勒。安息日，他照平常的規矩進了會堂。他站起來念以賽亞書。他們怒氣滿胸，把他帶到山崖，他卻從他們中間直行過去。",
-    closing: "他卻從他們中間直行，過去了。",
-    closingRef: "路加福音 4:30",
+    title: "nazareth",
+    ref: "ref_luke_4_16_30",
+    intro: "the_devil_leaves_and_angels_minister_to_him_he_r",
+    closing: "verse.passed",
+    closingRef: "ref_luke_4_30",
     music: "peace",
     guided: true,
     assembly: [
-      ["clerk", "執事", 6, 8, "steward", "right"],
-      ["elder", "管會堂的", 5, 10, "elder", "right"],
-      ["man", "會眾", 13, 8, "worker", "left"],
-      ["woman", "婦人", 5, 12, "woman", "right"],
-      ["youth", "會眾", 13, 11, "youth", "left"],
-      ["farmer", "會眾", 8, 12, "farmer", "up"],
-      ["traveler", "會眾", 12, 7, "traveler", "down"],
+      ["clerk", "attendant", 6, 8, "steward", "right"],
+      ["elder", "synagogue_leader", 5, 10, "elder", "right"],
+      ["man", "the_congregation", 13, 8, "worker", "left"],
+      ["woman", "woman", 5, 12, "woman", "right"],
+      ["youth", "the_congregation", 13, 11, "youth", "left"],
+      ["farmer", "the_congregation", 8, 12, "farmer", "up"],
+      ["traveler", "the_congregation", 12, 7, "traveler", "down"],
     ],
     slots: [
       [28, 7],
@@ -2593,15 +2593,15 @@ const MORE = [
       );
       const scroll = prop({ kind: "scroll", id: "scroll", tx: 6, ty: 7, alpha: 0 });
       state.entities.push(scroll);
-      state.objective = "會堂裡的人都在。";
+      state.objective = "everyone_in_the_synagogue_is_here";
     },
     people() {
       return this.assembly.map(([id]) => findEnt(id));
     },
     onEnter() {
-      state.objective = "會堂裡的人都在。";
-      say([{ name: "", text: VERSES.sabbath, ref: "路加福音 4:16", verse: true }], () => {
-        state.objective = "他站起來，要念聖經。";
+      state.objective = "everyone_in_the_synagogue_is_here";
+      say([{ name: "", text: VERSES.sabbath, ref: "ref_luke_4_16", verse: true }], () => {
+        state.objective = "he_stands_up_to_read_the_scripture";
         state.player.dir = "up";
         walkPlayer(9, 8, 52, () => this.handScroll());
       });
@@ -2609,7 +2609,7 @@ const MORE = [
     handScroll() {
       state.player.dir = "down";
       state.flags.hand = true;
-      state.objective = "有人把先知的書交給他。";
+      state.objective = "someone_hands_him_the_scroll_of_the_prophet";
     },
     readIt() {
       const scroll = findEnt("scroll");
@@ -2618,16 +2618,16 @@ const MORE = [
       scroll.y = state.player.y - 14;
       say(
         [
-          { name: "", text: VERSES.opened, ref: "路加福音 4:17", verse: true },
-          { name: "耶穌", text: VERSES.spirit, ref: "路加福音 4:18", verse: true },
-          { name: "耶穌", text: VERSES.year, ref: "路加福音 4:19", verse: true },
+          { name: "", text: VERSES.opened, ref: "ref_luke_4_17", verse: true },
+          { name: "jesus", text: VERSES.spirit, ref: "ref_luke_4_18", verse: true },
+          { name: "jesus", text: VERSES.year, ref: "ref_luke_4_19", verse: true },
         ],
         () => this.returnScroll()
       );
     },
     returnScroll() {
       state.flags.returnScroll = true;
-      state.objective = "他把書捲起來，交還執事。";
+      state.objective = "he_rolls_up_the_scroll_and_gives_it_back_to_the_";
       walkPlayer(9, 10, 46);
     },
     eyesOnHim() {
@@ -2639,10 +2639,10 @@ const MORE = [
       state.player.dir = "down";
       say(
         [
-          { name: "", text: VERSES.eyes, ref: "路加福音 4:20", verse: true },
-          { name: "耶穌", text: VERSES.today, ref: "路加福音 4:21", verse: true },
-          { name: "", text: VERSES.josephSon, ref: "路加福音 4:22", verse: true },
-          { name: "耶穌", text: VERSES.hometown, ref: "路加福音 4:24", verse: true },
+          { name: "", text: VERSES.eyes, ref: "ref_luke_4_20", verse: true },
+          { name: "jesus", text: VERSES.today, ref: "ref_luke_4_21", verse: true },
+          { name: "", text: VERSES.josephSon, ref: "ref_luke_4_22", verse: true },
+          { name: "jesus", text: VERSES.hometown, ref: "ref_luke_4_24", verse: true },
         ],
         () => this.wrath()
       );
@@ -2651,12 +2651,12 @@ const MORE = [
       for (const e of this.people()) e.mark = "anger";
       say(
         [
-          { name: "", text: VERSES.wrath, ref: "路加福音 4:28", verse: true },
-          { name: "", text: VERSES.cliff, ref: "路加福音 4:29", verse: true },
+          { name: "", text: VERSES.wrath, ref: "ref_luke_4_28", verse: true },
+          { name: "", text: VERSES.cliff, ref: "ref_luke_4_29", verse: true },
         ],
         () => {
           state.flags.drive = true;
-          state.objective = "他們帶他出城，到山崖那裡。";
+          state.objective = "they_lead_him_out_of_the_town_to_the_cliff";
           state.player.dir = "right";
           walkPlayer(34, 8, 56);
         }
@@ -2669,11 +2669,11 @@ const MORE = [
         const dx = state.player.x - e.x;
         e.dir = dx > 0 ? "right" : "left";
       }
-      say([{ name: "會眾", text: "把他推下去！" }], () => {
-        state.objective = "他從他們中間直行過去。";
+      say([{ name: "the_congregation", text: "throw_him_down" }], () => {
+        state.objective = "he_walks_straight_through_the_middle_of_them";
         state.player.dir = "left";
         walkPlayer(18, 8, 68, () => {
-          say([{ name: "", text: VERSES.passed, ref: "路加福音 4:30", verse: true }], () => completeChapter());
+          say([{ name: "", text: VERSES.passed, ref: "ref_luke_4_30", verse: true }], () => completeChapter());
         });
       });
     },
@@ -2720,11 +2720,11 @@ const MORE = [
   },
   {
     key: "heal",
-    title: "伸手",
-    ref: "馬太福音 8；馬可福音 2；馬可福音 10",
-    intro: "十二個人常和他同在。長大痲瘋的求你潔淨他。癱子從房頂被縋下來。瞎子在路旁喊大衛的子孫。你伸手，也開口。文士坐在旁邊聽。",
-    closing: "你的信救了你了。",
-    closingRef: "馬可福音 10:52",
+    title: "he_reached_out",
+    ref: "ref_matthew_8_mark_2_mark_10",
+    intro: "the_twelve_stay_with_him_a_man_with_leprosy_asks",
+    closing: "verse.yourFaith",
+    closingRef: "ref_mark_10_52",
     music: "peace",
     build() {
       const m = createMap(34, 22, ".");
@@ -2734,20 +2734,20 @@ const MORE = [
       state.map = m;
       state.player = asJesus(8, 15, "right");
       state.entities = [
-        person({ id: "leper", name: "長大痲瘋的", tx: 14, ty: 12, look: "sick", dir: "left", mark: "worry" }),
-        person({ id: "para", name: "癱子", tx: 8, ty: 8, look: "poor", dir: "down", mark: "hungry" }),
-        person({ id: "friend", name: "朋友", tx: 6, ty: 7, look: "youth", dir: "right" }),
-        person({ id: "blind", name: "瞎子", tx: 26, ty: 15, look: "elder", dir: "left", mark: "worry" }),
+        person({ id: "leper", name: "a_man_with_leprosy", tx: 14, ty: 12, look: "sick", dir: "left", mark: "worry" }),
+        person({ id: "para", name: "the_paralyzed_man", tx: 8, ty: 8, look: "poor", dir: "down", mark: "hungry" }),
+        person({ id: "friend", name: "friend", tx: 6, ty: 7, look: "youth", dir: "right" }),
+        person({ id: "blind", name: "the_blind_man", tx: 26, ty: 15, look: "elder", dir: "left", mark: "worry" }),
       ];
       addCompany(BAND, 8, 15, { dir: "right" });
       state.flags.healed = {};
-      state.objective = "三個人在等你的手。";
+      state.objective = "three_people_are_waiting_for_your_hand";
     },
     onEnter() {
-      state.objective = "三個人在等你的手。";
+      state.objective = "three_people_are_waiting_for_your_hand";
     },
     refresh() {
-      state.progress = `已醫治 ${Object.keys(state.flags.healed).length}／3`;
+      state.progress = "progress.healed." + Object.keys(state.flags.healed).length;
     },
     goal() {
       const ids = ["leper", "para", "blind"];
@@ -2774,23 +2774,23 @@ const MORE = [
       chime();
       this.refresh();
       if (Object.keys(state.flags.healed).length >= 3) completeChapter();
-      else state.objective = "還有人在等。";
+      else state.objective = "someone_is_still_waiting";
     },
     talk(e) {
       const f = state.flags;
       if (e.id === "friend") {
-        say([{ name: "朋友", text: "人太多，我們拆了屋頂，把他連褥子縋下來。" }]);
+        say([{ name: "friend", text: "the_crowd_was_too_thick_so_we_took_off_the_roof_" }]);
         return;
       }
       if (e.id === "leper") {
         if (f.healed.leper) {
-          say([{ name: e.name, text: "我潔淨了。我要去給祭司察看。" }]);
+          say([{ name: e.name, text: "i_am_clean_i_will_go_and_show_myself_to_the_prie" }]);
           return;
         }
         say(
           [
-            { name: "長大痲瘋的", text: VERSES.ifWilling, ref: "馬太福音 8:2", verse: true },
-            { name: "耶穌", text: VERSES.willing, ref: "馬太福音 8:3", verse: true },
+            { name: "a_man_with_leprosy", text: VERSES.ifWilling, ref: "ref_matthew_8_2", verse: true },
+            { name: "jesus", text: VERSES.willing, ref: "ref_matthew_8_3", verse: true },
           ],
           () => {
             e.look = LOOKS.traveler;
@@ -2801,13 +2801,13 @@ const MORE = [
       }
       if (e.id === "para") {
         if (f.healed.para) {
-          say([{ name: e.name, text: "褥子在我肩上。我回家去了。" }]);
+          say([{ name: e.name, text: "the_mat_is_on_my_shoulder_i_am_going_home" }]);
           return;
         }
         say(
           [
-            { name: "耶穌", text: VERSES.sins, ref: "馬可福音 2:5", verse: true },
-            { name: "耶穌", text: VERSES.takeMat, ref: "馬可福音 2:11", verse: true },
+            { name: "jesus", text: VERSES.sins, ref: "ref_mark_2_5", verse: true },
+            { name: "jesus", text: VERSES.takeMat, ref: "ref_mark_2_11", verse: true },
           ],
           () => {
             e.look = LOOKS.youth;
@@ -2818,15 +2818,15 @@ const MORE = [
       }
       if (e.id === "blind") {
         if (f.healed.blind) {
-          say([{ name: e.name, text: "我看見了。我在路上跟隨你。" }]);
+          say([{ name: e.name, text: "i_have_seen_i_am_following_you_on_the_road" }]);
           return;
         }
         say(
           [
-            { name: "瞎子", text: VERSES.sonOfDavid, ref: "馬可福音 10:47", verse: true },
-            { name: "耶穌", text: VERSES.see, ref: "馬可福音 10:51", verse: true },
-            { name: "瞎子", text: VERSES.wantSee, ref: "馬可福音 10:51" },
-            { name: "耶穌", text: VERSES.yourFaith, ref: "馬可福音 10:52", verse: true },
+            { name: "the_blind_man", text: VERSES.sonOfDavid, ref: "ref_mark_10_47", verse: true },
+            { name: "jesus", text: VERSES.see, ref: "ref_mark_10_51", verse: true },
+            { name: "the_blind_man", text: VERSES.wantSee, ref: "ref_mark_10_51" },
+            { name: "jesus", text: VERSES.yourFaith, ref: "ref_mark_10_52", verse: true },
           ],
           () => {
             e.mark = "peace";
@@ -2838,15 +2838,15 @@ const MORE = [
   },
   {
     key: "scribes",
-    title: "僭妄的話",
-    ref: "馬可福音 2:5–17；馬可福音 3:6",
-    who: "文士",
+    title: "blasphemy",
+    ref: "ref_mark_2_5_17_mark_3_6",
+    who: "scribe",
     guided: true,
     light: "room",
     intro:
-      "你剛聽見他對癱子說：小子，你的罪赦了。你心裡說，這是僭妄的話。法利賽人又問，他為什麼和罪人一同吃喝。他把赦罪的權柄說完，你們出去，商議怎樣可以除滅他。這一程自己往前走。",
-    closing: "法利賽人出去，同希律一黨的人商議，怎樣可以除滅耶穌。",
-    closingRef: "馬可福音 3:6",
+      "you_have_just_heard_him_say_to_the_paralyzed_man",
+    closing: "verse.destroyHim",
+    closingRef: "ref_mark_3_6",
     music: "solemn",
     build() {
       const m = createMap(22, 16, "f");
@@ -2855,23 +2855,23 @@ const MORE = [
       state.map = m;
       state.player = asRole(11, 13, "up", "joseph");
       state.player.look = Object.assign({}, LOOKS.elder, { staff: false });
-      state.player.name = "文士";
-      state.roleName = "文士";
+      state.player.name = "scribe";
+      state.roleName = "scribe";
       state.entities = [
         prop({ kind: "lamp", tx: 6, ty: 6 }),
         prop({ kind: "lamp", tx: 16, ty: 6 }),
-        person({ id: "jesus", name: "耶穌", tx: 11, ty: 6, look: "jesus", dir: "down", talk: false }),
-        person({ id: "man", name: "那人", tx: 9, ty: 8, look: "youth", dir: "up", mark: "peace", talk: false }),
-        person({ id: "pharisee", name: "法利賽人", tx: 14, ty: 7, look: "priest", dir: "left", talk: false }),
-        person({ id: "pharisee2", name: "法利賽人", tx: 15, ty: 9, look: "elder", dir: "left", talk: false }),
+        person({ id: "jesus", name: "jesus", tx: 11, ty: 6, look: "jesus", dir: "down", talk: false }),
+        person({ id: "man", name: "the_man", tx: 9, ty: 8, look: "youth", dir: "up", mark: "peace", talk: false }),
+        person({ id: "pharisee", name: "pharisee", tx: 14, ty: 7, look: "priest", dir: "left", talk: false }),
+        person({ id: "pharisee2", name: "pharisee", tx: 15, ty: 9, look: "elder", dir: "left", talk: false }),
       ];
       this.guided = true;
-      state.objective = "你心裡議論這話。";
+      state.objective = "you_reason_about_this_in_your_heart";
     },
     onEnter() {
       this.guided = true;
       say(
-        [{ name: "", text: "他對癱子說：小子，你的罪赦了。有幾個文士坐在那裡，心裡議論。" }],
+        [{ name: "", text: "he_said_to_the_paralyzed_man_son_your_sins_are_f" }],
         () => walkPlayer(11, 8, 46, () => this.charge())
       );
     },
@@ -2881,17 +2881,17 @@ const MORE = [
       if (jesus) jesus.dir = "down";
       say(
         [
-          { name: "文士", text: VERSES.blasphemy, ref: "馬可福音 2:7", verse: true },
-          { name: "耶穌", text: VERSES.whyReason, ref: "馬可福音 2:8", verse: true },
-          { name: "耶穌", text: VERSES.authority, ref: "馬可福音 2:10", verse: true },
-          { name: "法利賽人", text: VERSES.withSinners, ref: "馬可福音 2:16", verse: true },
-          { name: "耶穌", text: VERSES.physician, ref: "馬可福音 2:17", verse: true },
+          { name: "scribe", text: VERSES.blasphemy, ref: "ref_mark_2_7", verse: true },
+          { name: "jesus", text: VERSES.whyReason, ref: "ref_mark_2_8", verse: true },
+          { name: "jesus", text: VERSES.authority, ref: "ref_mark_2_10", verse: true },
+          { name: "pharisee", text: VERSES.withSinners, ref: "ref_mark_2_16", verse: true },
+          { name: "jesus", text: VERSES.physician, ref: "ref_mark_2_17", verse: true },
         ],
         () => {
           state.flags.out = true;
-          state.objective = "你們出去商議。";
+          state.objective = "you_go_out_and_confer";
           walkPlayer(11, 13, 42, () => {
-            say([{ name: "", text: VERSES.destroyHim, ref: "馬可福音 3:6", verse: true }], () => completeChapter());
+            say([{ name: "", text: VERSES.destroyHim, ref: "ref_mark_3_6", verse: true }], () => completeChapter());
           });
         }
       );
@@ -2907,12 +2907,12 @@ const MORE = [
   },
   {
     key: "storm",
-    title: "平靜風浪",
-    ref: "馬可福音 4:35–41",
-    who: "彼得",
-    intro: "山上的話還在你們心裡。晚上，他說我們渡到那邊去。船在海中，耶穌在船尾睡覺。忽然起了暴風，船要滿了水。你把他叫醒。",
-    closing: "風就止住，大大地平靜了。",
-    closingRef: "馬可福音 4:39",
+    title: "the_storm_stilled",
+    ref: "ref_mark_4_35_41",
+    who: "peter",
+    intro: "the_words_from_the_mountain_are_still_in_you_in_",
+    closing: "the_wind_stopped_and_there_was_a_great_calm",
+    closingRef: "ref_mark_4_39",
     music: "storm",
     night: true,
     waterSolid: true,
@@ -2925,16 +2925,16 @@ const MORE = [
       state.map = m;
       state.player = asRole(10, 8, "right", "peter");
       state.entities = [
-        person({ id: "jesus", name: "耶穌", tx: 13, ty: 8, look: "jesus", dir: "left" }),
-        person({ id: "john", name: "約翰", tx: 15, ty: 7, look: "john", dir: "left", mark: "worry" }),
-        person({ id: "james", name: "雅各", tx: 11, ty: 7, look: "james", dir: "right", talk: false, mark: "worry" }),
-        person({ id: "andrew", name: "安得烈", tx: 16, ty: 9, look: "andrew", dir: "left", talk: false, mark: "worry" }),
-        prop({ kind: "mast", id: "wind", name: "風浪", tx: 18, ty: 8, talk: true }),
+        person({ id: "jesus", name: "jesus", tx: 13, ty: 8, look: "jesus", dir: "left" }),
+        person({ id: "john", name: "john", tx: 15, ty: 7, look: "john", dir: "left", mark: "worry" }),
+        person({ id: "james", name: "james", tx: 11, ty: 7, look: "james", dir: "right", talk: false, mark: "worry" }),
+        person({ id: "andrew", name: "andrew", tx: 16, ty: 9, look: "andrew", dir: "left", talk: false, mark: "worry" }),
+        prop({ kind: "mast", id: "wind", name: "the_storm", tx: 18, ty: 8, talk: true }),
       ];
-      state.objective = "到船尾叫醒他。";
+      state.objective = "go_to_the_stern_and_wake_him";
     },
     onEnter() {
-      state.objective = "到船尾叫醒他。";
+      state.objective = "go_to_the_stern_and_wake_him";
     },
     goal() {
       if (!state.flags.woke) return jesus();
@@ -2946,35 +2946,35 @@ const MORE = [
         if (!state.flags.woke) {
           say(
             [
-              { name: "彼得", text: VERSES.perish, ref: "馬可福音 4:38", verse: true },
-              { name: "耶穌", text: "我在這裡。" },
+              { name: "peter", text: VERSES.perish, ref: "ref_mark_4_38", verse: true },
+              { name: "jesus", text: "here_i_am" },
             ],
             () => {
               state.flags.woke = true;
               e.dir = "right";
-              state.objective = "走到船頭。他要斥責風和海。";
+              state.objective = "go_to_the_bow_he_will_rebuke_the_wind_and_the_se";
             }
           );
           return;
         }
-        say([{ name: "耶穌", text: state.flags.calm ? "連風和海也聽從我。" : "到船頭去。" }]);
+        say([{ name: "jesus", text: state.flags.calm ? "even_the_wind_and_the_sea_obey_me" : "go_to_the_bow" }]);
         return;
       }
       if (e.id === "john") {
-        say([{ name: "約翰", text: state.flags.calm ? "連風和海也聽從他。" : "船要滿了水。先叫醒他。" }]);
+        say([{ name: "john", text: state.flags.calm ? "even_the_wind_and_the_sea_obey_him" : "the_boat_is_filling_wake_him_first" }]);
         return;
       }
       if (e.id === "wind" && !state.flags.woke) {
-        say([{ name: "", text: "風還在灌進來。先叫醒船尾的人。" }]);
+        say([{ name: "", text: "the_wind_is_still_pouring_in_wake_the_one_in_the" }]);
         return;
       }
       if (e.id === "wind" && !state.flags.calm) {
         say(
           [
-            { name: "耶穌", text: VERSES.peaceSea, ref: "馬可福音 4:39", verse: true },
-            { name: "", text: "風就止住，大大地平靜了。" },
-            { name: "耶穌", text: VERSES.whereFaith, ref: "馬可福音 4:40", verse: true },
-            { name: "門徒", text: VERSES.whoThen, ref: "馬可福音 4:41", verse: true },
+            { name: "jesus", text: VERSES.peaceSea, ref: "ref_mark_4_39", verse: true },
+            { name: "", text: "the_wind_stopped_and_there_was_a_great_calm" },
+            { name: "jesus", text: VERSES.whereFaith, ref: "ref_mark_4_40", verse: true },
+            { name: "disciples", text: VERSES.whoThen, ref: "ref_mark_4_41", verse: true },
           ],
           () => {
             state.flags.calm = true;
@@ -2988,11 +2988,11 @@ const MORE = [
   },
   {
     key: "lazarus",
-    title: "拉撒路",
-    ref: "約翰福音 11:1–44",
-    intro: "野地裡的人都吃飽了。此後，伯大尼送信來：你所愛的人病了。你到的時候，拉撒路已經死了四天。馬大在村口迎接你。馬利亞俯伏在你腳前哭。你也哭了。到墳墓前，叫人把石頭挪開，然後大聲呼叫他的名字。",
-    closing: "那死人就出來了，手腳裹著布。",
-    closingRef: "約翰福音 11:44",
+    title: "lazarus",
+    ref: "ref_john_11_1_44",
+    intro: "everyone_in_the_wilderness_has_eaten_and_is_full",
+    closing: "the_dead_man_came_out_his_hands_and_feet_wrapped",
+    closingRef: "ref_john_11_44",
     music: "solemn",
     build() {
       const m = createMap(32, 24, ".");
@@ -3005,16 +3005,16 @@ const MORE = [
       state.map = m;
       state.player = asJesus(16, 16, "up");
       state.entities = [
-        person({ id: "martha", name: "馬大", tx: 16, ty: 13, look: "woman", dir: "down" }),
-        person({ id: "maryb", name: "馬利亞", tx: 18, ty: 10, look: "mary", dir: "down" }),
-        prop({ kind: "stone", id: "stone", name: "石頭", tx: 16, ty: 7, talk: true }),
-        person({ id: "lazarus", name: "拉撒路", tx: 15, ty: 4, look: "lazarus", dir: "down", alpha: 0, talk: false }),
+        person({ id: "martha", name: "martha", tx: 16, ty: 13, look: "woman", dir: "down" }),
+        person({ id: "maryb", name: "mary", tx: 18, ty: 10, look: "mary", dir: "down" }),
+        prop({ kind: "stone", id: "stone", name: "stone", tx: 16, ty: 7, talk: true }),
+        person({ id: "lazarus", name: "lazarus", tx: 15, ty: 4, look: "lazarus", dir: "down", alpha: 0, talk: false }),
       ];
       addCompany(BAND, 16, 16, { dir: "up", slots: [[-2, 1], [2, 1], [-3, 1], [3, 1], [-1, 2], [1, 2], [0, 2]] });
-      state.objective = "馬大在村口。先去見她。";
+      state.objective = "martha_is_at_the_edge_of_the_village_go_to_her_f";
     },
     onEnter() {
-      state.objective = "馬大在村口。先去見她。";
+      state.objective = "martha_is_at_the_edge_of_the_village_go_to_her_f";
     },
     goal() {
       const f = state.flags;
@@ -3045,8 +3045,8 @@ const MORE = [
         man.talk = true;
         say(
           [
-            { name: "", text: "那死人就出來了，手腳裹著布，臉上包著手巾。" },
-            { name: "耶穌", text: VERSES.unbind, ref: "約翰福音 11:44", verse: true },
+            { name: "", text: "the_dead_man_came_out_his_hands_and_feet_bound_w" },
+            { name: "jesus", text: VERSES.unbind, ref: "ref_john_11_44", verse: true },
           ],
           () => completeChapter()
         );
@@ -3057,53 +3057,53 @@ const MORE = [
       if (e.id === "martha") {
         say(
           [
-            { name: "馬大", text: VERSES.ifHere, ref: "約翰福音 11:21", verse: true },
-            { name: "耶穌", text: VERSES.resurrection, ref: "約翰福音 11:25", verse: true },
-            { name: "馬大", text: "主啊，是的，我信你是基督，是神的兒子。" },
+            { name: "martha", text: VERSES.ifHere, ref: "ref_john_11_21", verse: true },
+            { name: "jesus", text: VERSES.resurrection, ref: "ref_john_11_25", verse: true },
+            { name: "martha", text: "yes_lord_i_believe_that_you_are_the_christ_the_s" },
           ],
           () => {
             f.martha = true;
-            state.objective = "馬利亞在墳前哭。去見她。";
+            state.objective = "mary_is_weeping_at_the_tomb_go_to_her";
           }
         );
         return;
       }
       if (e.id === "maryb") {
         if (!f.martha) {
-          say([{ name: "馬利亞", text: "主啊，你若早在這裡……" }]);
+          say([{ name: "mary", text: "lord_if_you_had_been_here" }]);
           return;
         }
         say(
           [
-            { name: "馬利亞", text: "主啊，你若早在這裡，我兄弟必不死。" },
-            { name: "", text: VERSES.wept, ref: "約翰福音 11:35", verse: true },
+            { name: "mary", text: "verse.ifHere" },
+            { name: "", text: VERSES.wept, ref: "ref_john_11_35", verse: true },
           ],
           () => {
             f.mary = true;
-            state.objective = "到石頭那裡，叫他們挪開。";
+            state.objective = "go_to_the_stone_and_tell_them_to_take_it_away";
           }
         );
         return;
       }
       if (e.id === "stone") {
         if (!f.mary) {
-          say([{ name: "", text: "石頭還擋著洞口。馬利亞在哭。" }]);
+          say([{ name: "", text: "the_stone_still_blocks_the_tomb_mary_is_weeping" }]);
           return;
         }
         if (f.called) return;
         say(
           [
-            { name: "耶穌", text: "你們把石頭挪開。" },
-            { name: "馬大", text: VERSES.stench, ref: "約翰福音 11:39", verse: true },
-            { name: "耶穌", text: "我不是對你說過，你若信，就必看見神的榮耀嗎？" },
-            { name: "耶穌", text: VERSES.comeOut, ref: "約翰福音 11:43", verse: true },
+            { name: "jesus", text: "take_away_the_stone" },
+            { name: "martha", text: VERSES.stench, ref: "ref_john_11_39", verse: true },
+            { name: "jesus", text: "did_i_not_tell_you_that_if_you_believed_you_woul" },
+            { name: "jesus", text: VERSES.comeOut, ref: "ref_john_11_43", verse: true },
           ],
           () => {
             f.called = true;
             const man = findEnt("lazarus");
             man.alpha = 1;
             state.flash = 0.4;
-            state.objective = "看他出來。";
+            state.objective = "watch_him_come_out";
           }
         );
       }
@@ -3111,15 +3111,15 @@ const MORE = [
   },
   {
     key: "council",
-    title: "一個人死",
-    ref: "約翰福音 11:45–53",
-    who: "該亞法",
+    title: "one_man_dies",
+    ref: "ref_john_11_45_53",
+    who: "caiaphas",
     guided: true,
     light: "room",
     intro:
-      "拉撒路從墳墓裡出來，手腳裹著布。好些猶太人看見，就信了耶穌。祭司長和法利賽人聚集公會。你是大祭司該亞法。他們問：這人行好些神蹟，我們怎麼辦。你說，一個人替百姓死，就是益處。從那日起，他們商議要殺他。這一程自己往前走。",
-    closing: "從那日起，他們就商議要殺耶穌。",
-    closingRef: "約翰福音 11:53",
+      "lazarus_comes_out_of_the_tomb_hands_and_feet_wra",
+    closing: "verse.fromThatDay",
+    closingRef: "ref_john_11_53",
     music: "solemn",
     build() {
       const m = createMap(22, 16, "f");
@@ -3128,22 +3128,22 @@ const MORE = [
       state.map = m;
       state.player = asRole(11, 13, "up", "joseph");
       state.player.look = LOOKS.priest;
-      state.player.name = "該亞法";
-      state.roleName = "該亞法";
+      state.player.name = "caiaphas";
+      state.roleName = "caiaphas";
       state.entities = [
         prop({ kind: "lamp", tx: 6, ty: 5 }),
         prop({ kind: "lamp", tx: 16, ty: 5 }),
-        person({ id: "priest", name: "祭司長", tx: 8, ty: 5, look: "priest", dir: "down", seated: true, chair: true, talk: false }),
-        person({ id: "elder", name: "長老", tx: 14, ty: 5, look: "elder", dir: "down", seated: true, chair: true, talk: false }),
-        person({ id: "pharisee", name: "法利賽人", tx: 11, ty: 8, look: "elder", dir: "down", talk: false }),
+        person({ id: "priest", name: "chief_priest", tx: 8, ty: 5, look: "priest", dir: "down", seated: true, chair: true, talk: false }),
+        person({ id: "elder", name: "elder", tx: 14, ty: 5, look: "elder", dir: "down", seated: true, chair: true, talk: false }),
+        person({ id: "pharisee", name: "pharisee", tx: 11, ty: 8, look: "elder", dir: "down", talk: false }),
       ];
       this.guided = true;
-      state.objective = "公會聚集。";
+      state.objective = "the_council_is_gathered";
     },
     onEnter() {
       this.guided = true;
       say(
-        [{ name: "", text: "拉撒路從墳墓出來。好些猶太人看見耶穌所做的事，就信了他。祭司長和法利賽人聚集公會。", ref: "約翰福音 11:45-47", verse: true }],
+        [{ name: "", text: "lazarus_came_out_of_the_tomb_many_of_the_jews_sa", ref: "ref_john_11_45_47", verse: true }],
         () => walkPlayer(11, 7, 46, () => this.plot())
       );
     },
@@ -3153,9 +3153,9 @@ const MORE = [
       if (man) man.dir = "up";
       say(
         [
-          { name: "法利賽人", text: VERSES.whatDo, ref: "約翰福音 11:47-48", verse: true },
-          { name: "該亞法", text: VERSES.caiaphas, ref: "約翰福音 11:49-50", verse: true },
-          { name: "", text: VERSES.fromThatDay, ref: "約翰福音 11:53", verse: true },
+          { name: "pharisee", text: VERSES.whatDo, ref: "ref_john_11_47_48", verse: true },
+          { name: "caiaphas", text: VERSES.caiaphas, ref: "ref_john_11_49_50", verse: true },
+          { name: "", text: VERSES.fromThatDay, ref: "ref_john_11_53", verse: true },
         ],
         () => completeChapter()
       );
@@ -3165,14 +3165,14 @@ const MORE = [
   },
   {
     key: "sycamore",
-    title: "失喪的人",
-    ref: "路加福音 19:1–10",
-    who: "撒該",
+    title: "the_lost",
+    ref: "ref_luke_19_1_10",
+    who: "zacchaeus",
     guided: true,
     intro:
-      "從那日起，他們商議要殺他。他仍往耶路撒冷去，經過耶利哥。你是稅吏長撒該，身材矮小，想看看他是誰。你跑到前頭，爬上桑樹。他在樹下叫你，說今天必住在你家裡。人子來，為要尋找、拯救失喪的人。這一程自己往前走。",
-    closing: "人子來，為要尋找、拯救失喪的人。",
-    closingRef: "路加福音 19:10",
+      "from_that_day_they_plot_to_kill_him_he_still_goe",
+    closing: "verse.seekLost",
+    closingRef: "ref_luke_19_10",
     music: "peace",
     build() {
       const m = createMap(28, 16, ".");
@@ -3181,14 +3181,14 @@ const MORE = [
       state.map = m;
       state.player = asRole(8, 8, "up", "servant");
       state.player.look = Object.assign({}, LOOKS.tax, { scale: 0.82 });
-      state.player.name = "撒該";
-      state.roleName = "撒該";
+      state.player.name = "zacchaeus";
+      state.roleName = "zacchaeus";
       state.entities = [
         prop({ kind: "house", tx: 24, ty: 5, solid: true, box: { x: -16, y: -18, w: 32, h: 18 } }),
         prop({ kind: "tree", id: "tree", tx: 16, ty: 4, solid: true, radius: 4 }),
-        person({ id: "jesus", name: "耶穌", tx: 4, ty: 7, look: "jesus", dir: "right", talk: false }),
-        person({ id: "peter", name: "彼得", tx: 3, ty: 8, look: "simon", dir: "right", talk: false }),
-        person({ id: "john", name: "約翰", tx: 5, ty: 8, look: "john", dir: "right", talk: false }),
+        person({ id: "jesus", name: "jesus", tx: 4, ty: 7, look: "jesus", dir: "right", talk: false }),
+        person({ id: "peter", name: "peter", tx: 3, ty: 8, look: "simon", dir: "right", talk: false }),
+        person({ id: "john", name: "john", tx: 5, ty: 8, look: "john", dir: "right", talk: false }),
       ];
       [
         ["c0", "worker", 9, 7],
@@ -3197,20 +3197,20 @@ const MORE = [
         ["c3", "youth", 10, 6],
         ["c4", "elder", 12, 8],
       ].forEach(([id, look, tx, ty]) => {
-        state.entities.push(person({ id, name: "眾人", tx, ty, look, dir: "left", role: "town", talk: false }));
+        state.entities.push(person({ id, name: "the_crowd", tx, ty, look, dir: "left", role: "town", talk: false }));
       });
       this.guided = true;
-      state.objective = "你要看看耶穌是怎樣的人。";
+      state.objective = "you_want_to_see_what_sort_of_man_jesus_is";
     },
     onEnter() {
       this.guided = true;
       say(
         [
-          { name: "", text: "耶穌進了耶利哥，正經過的時候。", ref: "路加福音 19:1", verse: true },
-          { name: "撒該", text: "我要看看耶穌是怎樣的人。只是人多，我又身材矮小。" },
+          { name: "", text: "jesus_entered_jericho_and_was_passing_through", ref: "ref_luke_19_1", verse: true },
+          { name: "zacchaeus", text: "i_want_to_see_what_sort_of_man_jesus_is_but_the_" },
         ],
         () => {
-          state.objective = "跑到前頭，爬上桑樹。";
+          state.objective = "run_ahead_and_climb_the_sycamore";
           walkPlayer(18, 5, 56, () => this.climbed());
         }
       );
@@ -3218,9 +3218,9 @@ const MORE = [
     climbed() {
       state.player.dir = "down";
       state.camDy = 40;
-      say([{ name: "", text: "他就跑到前頭，爬上桑樹，要看耶穌，因為耶穌必從那裡經過。", ref: "路加福音 19:4", verse: true }], () => {
+      say([{ name: "", text: "he_ran_on_ahead_and_climbed_a_sycamore_tree_to_s", ref: "ref_luke_19_4", verse: true }], () => {
         state.flags.pass = true;
-        state.objective = "他走到樹下。";
+        state.objective = "he_has_come_to_the_tree";
       });
     },
     called() {
@@ -3229,10 +3229,10 @@ const MORE = [
       state.player.dir = "down";
       say(
         [
-          { name: "耶穌", text: VERSES.comeDown, ref: "路加福音 19:5", verse: true },
+          { name: "jesus", text: VERSES.comeDown, ref: "ref_luke_19_5", verse: true },
         ],
         () => {
-          state.objective = "他就急忙下來。";
+          state.objective = "he_hurried_down";
           walkPlayer(16, 7, 48, () => this.house());
         }
       );
@@ -3243,10 +3243,10 @@ const MORE = [
       if (jesus) jesus.dir = "left";
       say(
         [
-          { name: "眾人", text: VERSES.grumble, ref: "路加福音 19:7", verse: true },
-          { name: "撒該", text: VERSES.halfGoods, ref: "路加福音 19:8", verse: true },
-          { name: "耶穌", text: VERSES.salvationHouse, ref: "路加福音 19:9", verse: true },
-          { name: "耶穌", text: VERSES.seekLost, ref: "路加福音 19:10", verse: true },
+          { name: "the_crowd", text: VERSES.grumble, ref: "ref_luke_19_7", verse: true },
+          { name: "zacchaeus", text: VERSES.halfGoods, ref: "ref_luke_19_8", verse: true },
+          { name: "jesus", text: VERSES.salvationHouse, ref: "ref_luke_19_9", verse: true },
+          { name: "jesus", text: VERSES.seekLost, ref: "ref_luke_19_10", verse: true },
         ],
         () => completeChapter()
       );
@@ -3275,11 +3275,11 @@ const MORE = [
   },
   {
     key: "city",
-    title: "聖城",
-    ref: "馬太福音 21:1–13",
-    intro: "他在耶利哥說，人子來是要尋找、拯救失喪的人。如今你騎著驢駒進耶路撒冷。眾人鋪衣服，喊和散那。然後你進入聖殿，推倒兌換銀錢之人的桌子。祭司長聽見，就想法子要除滅他。",
-    closing: "祭司長和文士聽見這話，就想法子要除滅耶穌。",
-    closingRef: "馬可福音 11:18",
+    title: "the_holy_city",
+    ref: "ref_matthew_21_1_13",
+    intro: "in_jericho_he_said_the_son_of_man_came_to_seek_a",
+    closing: "when_the_chief_priests_and_the_scribes_heard_thi",
+    closingRef: "ref_mark_11_18",
     music: "peace",
     build() {
       const m = createMap(30, 28, ".");
@@ -3303,7 +3303,7 @@ const MORE = [
         prop({ kind: "house", tx: 5, ty: 16, solid: true, box: { x: -16, y: -18, w: 32, h: 18 } }),
         prop({ kind: "tree", tx: 26, ty: 23, solid: true, radius: 4 }),
         prop({ kind: "tree", tx: 3, ty: 24, solid: true, radius: 4 }),
-        prop({ kind: "colt", id: "colt", name: "驢駒", tx: 15, ty: 21, dir: "up", talk: false }),
+        prop({ kind: "colt", id: "colt", name: "colt", tx: 15, ty: 21, dir: "up", talk: false }),
       ];
       [
         [15, 19, "#7a342c", "#c46a4a"],
@@ -3326,7 +3326,7 @@ const MORE = [
         state.entities.push(
           person({
             id: "crowd" + i,
-            name: "眾人",
+            name: "the_crowd",
             tx,
             ty,
             look: faces[i % faces.length],
@@ -3337,11 +3337,11 @@ const MORE = [
         );
       });
       const stalls = [
-        { id: "stall0", name: "銀錢桌", tx: 11, ty: 5, vx: 11, vy: 4, look: "elder", away: [9, 6] },
-        { id: "stall1", name: "銀錢桌", tx: 15, ty: 5, vx: 15, vy: 4, look: "worker", away: [17, 3] },
-        { id: "stall2", name: "賣鴿子的", tx: 19, ty: 5, vx: 19, vy: 4, look: "traveler", away: [20, 4], doves: [[20, 6], [18, 6]] },
-        { id: "stall3", name: "賣鴿子的", tx: 11, ty: 8, vx: 10, vy: 7, look: "farmer", away: [9, 9], doves: [[12, 9]] },
-        { id: "stall4", name: "銀錢桌", tx: 19, ty: 8, vx: 20, vy: 7, look: "tax", away: [21, 9] },
+        { id: "stall0", name: "money_table", tx: 11, ty: 5, vx: 11, vy: 4, look: "elder", away: [9, 6] },
+        { id: "stall1", name: "money_table", tx: 15, ty: 5, vx: 15, vy: 4, look: "worker", away: [17, 3] },
+        { id: "stall2", name: "dove_sellers", tx: 19, ty: 5, vx: 19, vy: 4, look: "traveler", away: [20, 4], doves: [[20, 6], [18, 6]] },
+        { id: "stall3", name: "dove_sellers", tx: 11, ty: 8, vx: 10, vy: 7, look: "farmer", away: [9, 9], doves: [[12, 9]] },
+        { id: "stall4", name: "money_table", tx: 19, ty: 8, vx: 20, vy: 7, look: "tax", away: [21, 9] },
       ];
       this.stalls = stalls.length;
       stalls.forEach((s) => {
@@ -3349,7 +3349,7 @@ const MORE = [
         state.entities.push(
           person({
             id: "vendor-" + s.id,
-            name: s.name === "賣鴿子的" ? "賣鴿子的" : "兌換銀錢的",
+            name: s.name === "dove_sellers" ? "dove_sellers" : "money_changers",
             tx: s.vx,
             ty: s.vy,
             look: s.look,
@@ -3373,7 +3373,7 @@ const MORE = [
         state.entities.push(
           person({
             id: "buyer" + i,
-            name: "來買的人",
+            name: "shoppers",
             tx,
             ty,
             look,
@@ -3390,13 +3390,13 @@ const MORE = [
       });
       this.guided = true;
       state.flags.tipped = {};
-      state.objective = "驢駒牽來了。";
+      state.objective = "the_colt_is_here";
     },
     onEnter() {
       this.guided = true;
-      state.objective = "驢駒牽來了。";
-      say([{ name: "", text: VERSES.colt, ref: "馬太福音 21:5", verse: true }], () => {
-        state.objective = "騎上驢駒，進聖城。";
+      state.objective = "the_colt_is_here";
+      say([{ name: "", text: VERSES.colt, ref: "ref_matthew_21_5", verse: true }], () => {
+        state.objective = "mount_the_colt_and_enter_the_holy_city";
         walkPlayer(15, 21, 52, () => this.mount());
       });
     },
@@ -3405,14 +3405,14 @@ const MORE = [
       state.player.dir = "up";
       const colt = findEnt("colt");
       if (colt) colt.alpha = 0;
-      state.objective = "騎著驢駒進聖城。";
+      state.objective = "ride_the_colt_into_the_holy_city";
       walkPlayer(15, 17, 46, () => this.cheer());
     },
     cheer() {
       say(
         [
-          { name: "", text: "眾人把衣服和樹枝鋪在路上，喊著說：" },
-          { name: "眾人", text: VERSES.hosanna, ref: "馬太福音 21:9", verse: true },
+          { name: "", text: "the_crowd_spreads_cloaks_and_branches_on_the_roa" },
+          { name: "the_crowd", text: VERSES.hosanna, ref: "ref_matthew_21_9", verse: true },
         ],
         () => walkPlayer(15, 12, 46, () => this.dismount())
       );
@@ -3430,21 +3430,21 @@ const MORE = [
         colt.alpha = 1;
         colt.dir = "up";
       }
-      state.objective = "下了驢，走進聖殿。";
+      state.objective = "dismount_and_go_into_the_temple";
       walkPlayer(15, 8, 48, () => this.seeMarket());
     },
     seeMarket() {
       state.player.dir = "up";
       state.player.mark = "anger";
-      say([{ name: "", text: "殿裡滿了兌換銀錢的人，和賣鴿子的。" }], () => {
+      say([{ name: "", text: "the_temple_is_full_of_money_changers_and_people_" }], () => {
         this.guided = false;
         state.flags.seen = true;
-        state.objective = "你看了這些買賣。去推倒那些桌子。";
+        state.objective = "you_have_seen_this_trade_go_and_overturn_the_tab";
         this.refresh();
       });
     },
     refresh() {
-      if (state.flags.seen) state.progress = `桌子 ${Object.keys(state.flags.tipped).length}／${this.stalls}`;
+      if (state.flags.seen) state.progress = "progress.tables." + Object.keys(state.flags.tipped).length;
     },
     goal() {
       if (!state.flags.seen) return null;
@@ -3489,21 +3489,21 @@ const MORE = [
       if (Object.keys(f.tipped).length >= this.stalls) {
         say(
           [
-            { name: "耶穌", text: VERSES.housePrayer, ref: "馬太福音 21:13", verse: true },
-            { name: "", text: "祭司長和文士聽見這話，就想法子要除滅耶穌。", ref: "馬可福音 11:18", verse: true },
+            { name: "jesus", text: VERSES.housePrayer, ref: "ref_matthew_21_13", verse: true },
+            { name: "", text: "when_the_chief_priests_and_the_scribes_heard_thi", ref: "ref_mark_11_18", verse: true },
           ],
           () => completeChapter()
         );
-      } else spawnFloat(e.x, e.y - 16, "推倒了");
+      } else spawnFloat(e.x, e.y - 16, "tipped_over");
     },
   },
   {
     key: "gethsemane",
-    title: "客西馬尼",
-    ref: "馬太福音 26:36–56；約翰福音 18",
-    intro: "他們唱了詩，就出來往橄欖山去。你把彼得、雅各、約翰留下，自己走到前頭禱告。三次。然後走回他們那裡。收了三十塊錢的猶大，帶著火把、兵丁和祭司長來，與你親嘴。彼得拔刀。門徒都逃走了，只有彼得遠遠地跟著。",
-    closing: "彼得遠遠地跟著耶穌，一直到大祭司的院子裡。",
-    closingRef: "馬太福音 26:58",
+    title: "gethsemane",
+    ref: "ref_matthew_26_36_56_john_18",
+    intro: "they_sing_a_hymn_and_go_out_to_the_mount_of_oliv",
+    closing: "peter_followed_jesus_at_a_distance_right_into_th",
+    closingRef: "ref_matthew_26_58",
     music: "solemn",
     night: true,
     walkDuringTalk: true,
@@ -3517,26 +3517,26 @@ const MORE = [
         prop({ kind: "tree", tx: 6, ty: 6, variant: "cypress", solid: true, radius: 3 }),
         prop({ kind: "tree", tx: 24, ty: 5, variant: "cypress", solid: true, radius: 3 }),
         prop({ kind: "tree", tx: 8, ty: 15, variant: "cypress", solid: true, radius: 3 }),
-        prop({ kind: "rock", id: "rock", name: "磐石", tx: 15, ty: 6, talk: true }),
-        person({ id: "peter", name: "彼得", tx: 13, ty: 12, look: "simon", dir: "up" }),
-        person({ id: "james", name: "雅各", tx: 16, ty: 13, look: "james", dir: "up" }),
-        person({ id: "john", name: "約翰", tx: 18, ty: 12, look: "john", dir: "up" }),
-        person({ id: "andrew", name: "安得烈", tx: 12, ty: 15, look: "andrew", dir: "up", talk: false }),
-        person({ id: "philip", name: "腓力", tx: 16, ty: 15, look: "philip", dir: "up", talk: false }),
-        person({ id: "matthew", name: "馬太", tx: 20, ty: 14, look: "tax", dir: "up", talk: false }),
-        person({ id: "judas", name: "加略人猶大", tx: 15, ty: 17, look: "judas", dir: "up", alpha: 0, talk: false }),
-        person({ id: "malchus", name: "馬勒古", tx: 11, ty: 17, look: "soldier", dir: "up", alpha: 0, talk: false, torch: true }),
-        person({ id: "soldier", name: "兵丁", tx: 19, ty: 17, look: "soldier", dir: "up", alpha: 0, talk: false, torch: true }),
-        person({ id: "soldier2", name: "兵丁", tx: 15, ty: 18, look: "soldier", dir: "up", alpha: 0, talk: false, torch: true }),
-        person({ id: "priest", name: "祭司長", tx: 22, ty: 17, look: "priest", dir: "up", alpha: 0, talk: false }),
+        prop({ kind: "rock", id: "rock", name: "rock", tx: 15, ty: 6, talk: true }),
+        person({ id: "peter", name: "peter", tx: 13, ty: 12, look: "simon", dir: "up" }),
+        person({ id: "james", name: "james", tx: 16, ty: 13, look: "james", dir: "up" }),
+        person({ id: "john", name: "john", tx: 18, ty: 12, look: "john", dir: "up" }),
+        person({ id: "andrew", name: "andrew", tx: 12, ty: 15, look: "andrew", dir: "up", talk: false }),
+        person({ id: "philip", name: "philip", tx: 16, ty: 15, look: "philip", dir: "up", talk: false }),
+        person({ id: "matthew", name: "matthew", tx: 20, ty: 14, look: "tax", dir: "up", talk: false }),
+        person({ id: "judas", name: "judas_iscariot", tx: 15, ty: 17, look: "judas", dir: "up", alpha: 0, talk: false }),
+        person({ id: "malchus", name: "malchus", tx: 11, ty: 17, look: "soldier", dir: "up", alpha: 0, talk: false, torch: true }),
+        person({ id: "soldier", name: "soldiers", tx: 19, ty: 17, look: "soldier", dir: "up", alpha: 0, talk: false, torch: true }),
+        person({ id: "soldier2", name: "soldiers", tx: 15, ty: 18, look: "soldier", dir: "up", alpha: 0, talk: false, torch: true }),
+        person({ id: "priest", name: "chief_priest", tx: 22, ty: 17, look: "priest", dir: "up", alpha: 0, talk: false }),
       ];
       state.flags.prayed = 0;
       this.guided = false;
-      state.objective = "走到前頭的磐石那裡禱告。";
+      state.objective = "walk_ahead_to_the_rock_and_pray";
     },
     onEnter() {
       this.guided = false;
-      state.objective = "走到前頭的磐石那裡禱告。他們會睡著。";
+      state.objective = "walk_ahead_to_the_rock_and_pray_they_will_fall_a";
     },
     goal() {
       const f = state.flags;
@@ -3600,8 +3600,8 @@ const MORE = [
           if (peter) peter.dir = "up";
           say(
             [
-              { name: "", text: "當下，門徒都離開他，逃走了。", ref: "馬太福音 26:56", verse: true },
-              { name: "", text: "他們把耶穌帶到大祭司那裡去。彼得遠遠地跟著，進了大祭司的院子。", ref: "馬太福音 26:57-58", verse: true },
+              { name: "", text: "then_all_the_disciples_left_him_and_fled", ref: "ref_matthew_26_56", verse: true },
+              { name: "", text: "they_led_jesus_to_the_high_priest_peter_followed", ref: "ref_matthew_26_57_58", verse: true },
             ],
             () => completeChapter()
           );
@@ -3616,8 +3616,8 @@ const MORE = [
       });
       if (state.flags.prayed >= 3) {
         state.flags.ready = true;
-        state.objective = "走回門徒那裡。";
-      } else state.objective = "他們睡著了。再去禱告。";
+        state.objective = "walk_back_to_the_disciples";
+      } else state.objective = "they_have_fallen_asleep_go_and_pray_again";
     },
     betrayal() {
       const f = state.flags;
@@ -3642,7 +3642,7 @@ const MORE = [
         if (p) p.mark = null;
       });
       tone(146, 0.28, "triangle", 0.04);
-      state.objective = "火把來了。猶大帶著兵丁和祭司長走來。";
+      state.objective = "the_torches_are_here_judas_comes_with_soldiers_a";
     },
     kiss() {
       const judas = findEnt("judas");
@@ -3652,19 +3652,19 @@ const MORE = [
         const e = findEnt(id);
         if (e) e.dir = "up";
       });
-      state.objective = "猶大與你親嘴。";
+      state.objective = "judas_kisses_you";
       say(
         [
           {
             name: "",
-            text: "猶大領了一隊兵，和祭司長並法利賽人的差役，拿著燈籠、火把、兵器，來到園裡。",
-            ref: "約翰福音 18:3",
+            text: "judas_having_procured_a_band_of_soldiers_and_off",
+            ref: "ref_john_18_3",
             verse: true,
           },
-          { name: "加略人猶大", text: VERSES.hail, ref: "馬太福音 26:49", verse: true },
-          { name: "", text: "就與他親嘴。" },
-          { name: "耶穌", text: "朋友，你來要做的事，就做吧。" },
-          { name: "耶穌", text: VERSES.iAm, ref: "約翰福音 18:5", verse: true },
+          { name: "judas_iscariot", text: VERSES.hail, ref: "ref_matthew_26_49", verse: true },
+          { name: "", text: "and_he_kissed_him" },
+          { name: "jesus", text: "friend_do_what_you_came_to_do" },
+          { name: "jesus", text: VERSES.iAm, ref: "ref_john_18_5", verse: true },
         ],
         () => this.closeIn()
       );
@@ -3685,7 +3685,7 @@ const MORE = [
       if (malchus) malchus.chain = true;
       if (soldier) soldier.chain = true;
       state.flags.seize = true;
-      state.objective = "他們圍上來，要拿住你。";
+      state.objective = "they_close_in_to_seize_you";
     },
     arrest() {
       const malchus = findEnt("malchus");
@@ -3700,15 +3700,15 @@ const MORE = [
       const judas = findEnt("judas");
       if (judas) judas.dir = "left";
       if (malchus) puff(malchus.x, malchus.y - 8, "#8c2f2f", 6, 10);
-      state.objective = "他們要拿住你。";
+      state.objective = "they_are_coming_to_seize_you";
       say(
         [
-          { name: "", text: "他們就上手拿住耶穌。" },
-          { name: "彼得", text: "他拔出刀來，將大祭司的僕人砍了一刀，削掉他的右耳。" },
-          { name: "耶穌", text: VERSES.sheath, ref: "約翰福音 18:11", verse: true },
-          { name: "耶穌", text: VERSES.letThem, ref: "路加福音 22:51", verse: true },
-          { name: "", text: "耶穌就摸那人的耳朵，把他治好了。" },
-          { name: "耶穌", text: "你們帶著刀棒出來拿我，如同拿強盜嗎？但這是你們的時候，黑暗掌權了。" },
+          { name: "", text: "then_they_seized_jesus" },
+          { name: "peter", text: "he_drew_his_sword_struck_the_high_priest_s_serva" },
+          { name: "jesus", text: VERSES.sheath, ref: "ref_john_18_11", verse: true },
+          { name: "jesus", text: VERSES.letThem, ref: "ref_luke_22_51", verse: true },
+          { name: "", text: "jesus_touched_the_man_s_ear_and_healed_him" },
+          { name: "jesus", text: "have_you_come_out_with_swords_and_clubs_to_arres" },
         ],
         () => {
           state.flags.healed = true;
@@ -3731,38 +3731,38 @@ const MORE = [
       put("matthew", tx + 8, ty + 2);
       put("peter", tx - 1, ty + 2);
       state.flags.flee = true;
-      state.objective = "門徒都逃走了。彼得遠遠地跟著。";
+      state.objective = "the_disciples_have_all_fled_peter_follows_at_a_d";
     },
     talk(e) {
       const f = state.flags;
       if (e.id === "rock") {
         if (f.prayed >= 3) {
-          say([{ name: "", text: "禱告已經三次。走回門徒那裡。" }]);
+          say([{ name: "", text: "you_have_prayed_three_times_walk_back_to_the_dis" }]);
           return;
         }
         const lines = [
-          { name: "耶穌", text: VERSES.thisCup, ref: "馬太福音 26:39", verse: true },
+          { name: "jesus", text: VERSES.thisCup, ref: "ref_matthew_26_39", verse: true },
         ];
-        if (f.prayed > 0) lines.push({ name: "耶穌", text: VERSES.watch, ref: "馬太福音 26:40-41", verse: true });
+        if (f.prayed > 0) lines.push({ name: "jesus", text: VERSES.watch, ref: "ref_matthew_26_40_41", verse: true });
         say(lines, () => this.wake());
         return;
       }
       if (e.id === "peter" || e.id === "james" || e.id === "john") {
-        say([{ name: e.name, text: f.prayed ? "……我們的眼睛困倦。" : "主，我們在這裡坐著。" }]);
+        say([{ name: e.name, text: f.prayed ? "our_eyes_are_heavy" : "lord_we_are_sitting_here" }]);
       }
     },
   },
   {
     key: "deny",
-    title: "雞叫以先",
-    ref: "約翰福音 18:15–27；路加福音 22:54–62",
-    who: "彼得",
+    title: "before_the_rooster_crows",
+    ref: "ref_john_18_15_27_luke_22_54_62",
+    who: "peter",
     guided: true,
     night: true,
     intro:
-      "他們把耶穌帶到大祭司的院子。你遠遠跟著進去，在火邊烤火。有人三次問你是不是他的門徒。你都說不是。雞叫了，主轉過身來看你。你想起他的話，出去痛哭。這一程自己往前走。",
-    closing: "他就出去痛哭。",
-    closingRef: "路加福音 22:62",
+      "they_bring_jesus_into_the_high_priest_s_courtyar",
+    closing: "he_went_out_and_wept",
+    closingRef: "ref_luke_22_62",
     music: "solemn",
     build() {
       const m = createMap(22, 16, "f");
@@ -3774,20 +3774,20 @@ const MORE = [
         prop({ kind: "lamp", tx: 7, ty: 6 }),
         prop({ kind: "lamp", tx: 15, ty: 6 }),
         prop({ kind: "lamp", tx: 8, ty: 10 }),
-        person({ id: "priest", name: "大祭司", tx: 11, ty: 5, look: "priest", dir: "down", seated: true, chair: true, talk: false }),
-        person({ id: "jesus", name: "耶穌", tx: 11, ty: 6, look: "jesus", dir: "up", talk: false }),
-        person({ id: "girl", name: "使女", tx: 9, ty: 12, look: "woman", dir: "right", talk: false }),
-        person({ id: "servant", name: "差役", tx: 13, ty: 9, look: "worker", dir: "left", talk: false }),
-        person({ id: "kin", name: "大祭司的僕人", tx: 16, ty: 8, look: "soldier", dir: "left", talk: false }),
+        person({ id: "priest", name: "high_priest", tx: 11, ty: 5, look: "priest", dir: "down", seated: true, chair: true, talk: false }),
+        person({ id: "jesus", name: "jesus", tx: 11, ty: 6, look: "jesus", dir: "up", talk: false }),
+        person({ id: "girl", name: "servant_girl", tx: 9, ty: 12, look: "woman", dir: "right", talk: false }),
+        person({ id: "servant", name: "an_officer", tx: 13, ty: 9, look: "worker", dir: "left", talk: false }),
+        person({ id: "kin", name: "servant_of_the_high_priest", tx: 16, ty: 8, look: "soldier", dir: "left", talk: false }),
       ];
       this.guided = true;
-      state.objective = "遠遠跟著，進大祭司的院子。";
+      state.objective = "follow_at_a_distance_into_the_high_priest_s_cour";
     },
     onEnter() {
       this.guided = true;
-      state.objective = "遠遠跟著，進大祭司的院子。";
+      state.objective = "follow_at_a_distance_into_the_high_priest_s_cour";
       say(
-        [{ name: "", text: "他們把耶穌帶到大祭司那裡。彼得遠遠地跟著，進了院子，和差役一同坐著烤火。" }],
+        [{ name: "", text: "they_led_jesus_to_the_high_priest_peter__2" }],
         () => walkPlayer(11, 11, 46, () => this.first())
       );
     },
@@ -3797,11 +3797,11 @@ const MORE = [
       if (girl) girl.dir = "right";
       say(
         [
-          { name: "使女", text: VERSES.notDisciple, ref: "約翰福音 18:17", verse: true },
-          { name: "彼得", text: VERSES.notI },
+          { name: "servant_girl", text: VERSES.notDisciple, ref: "ref_john_18_17", verse: true },
+          { name: "peter", text: VERSES.notI },
         ],
         () => {
-          state.objective = "他又在火邊。";
+          state.objective = "he_is_by_the_fire_again";
           walkPlayer(11, 9, 42, () => this.second());
         }
       );
@@ -3812,12 +3812,12 @@ const MORE = [
       if (servant) servant.dir = "left";
       say(
         [
-          { name: "差役", text: VERSES.alsoOne, ref: "路加福音 22:58", verse: true },
-          { name: "彼得", text: VERSES.notI, ref: "約翰福音 18:25", verse: true },
+          { name: "an_officer", text: VERSES.alsoOne, ref: "ref_luke_22_58", verse: true },
+          { name: "peter", text: VERSES.notI, ref: "ref_john_18_25", verse: true },
         ],
         () => {
           state.flags.approach = true;
-          state.objective = "又有一個人走過來。";
+          state.objective = "another_person_comes_over";
         }
       );
     },
@@ -3827,8 +3827,8 @@ const MORE = [
       if (kin) kin.dir = "left";
       say(
         [
-          { name: "大祭司的僕人", text: VERSES.inGarden, ref: "約翰福音 18:26", verse: true },
-          { name: "彼得", text: VERSES.knowNot, ref: "馬可福音 14:71", verse: true },
+          { name: "servant_of_the_high_priest", text: VERSES.inGarden, ref: "ref_john_18_26", verse: true },
+          { name: "peter", text: VERSES.knowNot, ref: "ref_mark_14_71", verse: true },
         ],
         () => this.crow()
       );
@@ -3842,14 +3842,14 @@ const MORE = [
       state.flash = 0.25;
       say(
         [
-          { name: "", text: "立時雞就叫了。主轉過身來，看彼得。", ref: "路加福音 22:60-61", verse: true },
-          { name: "", text: "彼得想起耶穌所說的話：" + VERSES.remembered, ref: "路加福音 22:61", verse: true },
+          { name: "", text: "immediately_the_rooster_crowed_the_lord_turned_a", ref: "ref_luke_22_60_61", verse: true },
+          { name: "", text: "peter_remembered_what_jesus_had_said" + VERSES.remembered, ref: "ref_luke_22_61", verse: true },
         ],
         () => {
           state.player.mark = "worry";
-          state.objective = "他就出去痛哭。";
+          state.objective = "he_went_out_and_wept";
           walkPlayer(11, 14, 40, () => {
-            say([{ name: "", text: "他就出去痛哭。", ref: "路加福音 22:62", verse: true }], () => completeChapter());
+            say([{ name: "", text: "he_went_out_and_wept", ref: "ref_luke_22_62", verse: true }], () => completeChapter());
           });
         }
       );
@@ -3869,12 +3869,12 @@ const MORE = [
   },
   {
     key: "pilate",
-    title: "彼拉多",
-    ref: "馬太福音 27；約翰福音 18–19",
+    title: "pilate",
+    ref: "ref_matthew_27_john_18_19",
     guided: true,
-    intro: "彼得出去痛哭了。他們卻把你從大祭司那裡押到總督府。羅馬兵圍在你身旁。彼拉多問：你是猶太人的王嗎？他查不出罪。祭司長和眾人卻喊著要釘十字架。兵丁用荊棘編冠冕，戴在你頭上，又鞭打你。這一程自己往前走。",
-    closing: "於是彼拉多將耶穌鞭打了，交給人釘十字架。",
-    closingRef: "馬太福音 27:26",
+    intro: "peter_has_gone_out_and_wept_they_bring_you_from_",
+    closing: "then_pilate_had_jesus_flogged_and_handed_him_ove",
+    closingRef: "ref_matthew_27_26",
     music: "solemn",
     build() {
       const m = createMap(28, 16, "f");
@@ -3883,10 +3883,10 @@ const MORE = [
       state.map = m;
       state.player = asJesus(14, 12, "up");
       state.entities = [
-        person({ id: "pilate", name: "彼拉多", tx: 14, ty: 5, look: "pilate", dir: "down", seated: true, throne: true }),
-        person({ id: "priest", name: "祭司長", tx: 16, ty: 5, look: "priest", dir: "down" }),
-        person({ id: "john", name: "約翰", tx: 24, ty: 13, look: "john", dir: "left", talk: false }),
-        person({ id: "peter", name: "彼得", tx: 4, ty: 13, look: "simon", dir: "right", talk: false, mark: "worry" }),
+        person({ id: "pilate", name: "pilate", tx: 14, ty: 5, look: "pilate", dir: "down", seated: true, throne: true }),
+        person({ id: "priest", name: "chief_priest", tx: 16, ty: 5, look: "priest", dir: "down" }),
+        person({ id: "john", name: "john", tx: 24, ty: 13, look: "john", dir: "left", talk: false }),
+        person({ id: "peter", name: "peter", tx: 4, ty: 13, look: "simon", dir: "right", talk: false, mark: "worry" }),
       ];
       [
         ["crowd0", "worker", 8, 6, "right"],
@@ -3900,15 +3900,15 @@ const MORE = [
         ["crowd8", "poor", 12, 13, "up"],
         ["crowd9", "steward", 16, 13, "up"],
       ].forEach(([id, look, tx, ty, dir]) => {
-        state.entities.push(person({ id, name: "眾人", tx, ty, look, dir, role: "mob", talk: false }));
+        state.entities.push(person({ id, name: "the_crowd", tx, ty, look, dir, role: "mob", talk: false }));
       });
       addRomans(14, 12);
       this.guided = true;
-      state.objective = "羅馬兵押你到彼拉多面前。";
+      state.objective = "the_romans_bring_you_before_pilate";
     },
     onEnter() {
       this.guided = true;
-      state.objective = "羅馬兵押你到彼拉多面前。";
+      state.objective = "the_romans_bring_you_before_pilate";
       walkPlayer(14, 8, 46, () => this.beforePilate());
     },
     beforePilate() {
@@ -3917,12 +3917,12 @@ const MORE = [
       if (pilate) pilate.dir = "down";
       say(
         [
-          { name: "彼拉多", text: VERSES.king, ref: "馬太福音 27:11", verse: true },
-          { name: "耶穌", text: VERSES.youSay, ref: "馬太福音 27:11" },
-          { name: "彼拉多", text: VERSES.noFault, ref: "約翰福音 18:38", verse: true },
+          { name: "pilate", text: VERSES.king, ref: "ref_matthew_27_11", verse: true },
+          { name: "jesus", text: VERSES.youSay, ref: "ref_matthew_27_11" },
+          { name: "pilate", text: VERSES.noFault, ref: "ref_john_18_38", verse: true },
         ],
         () => {
-          state.objective = "眾人在外圍喊著。";
+          state.objective = "the_crowd_is_shouting_outside";
           this.shout();
         }
       );
@@ -3935,9 +3935,9 @@ const MORE = [
         else if (e.x > state.player.x + 8) e.dir = "left";
         else e.dir = "up";
       }
-      say([{ name: "眾人", text: "把他釘十字架！把他釘十字架！" }], () => {
+      say([{ name: "the_crowd", text: "crucify_him_crucify_him" }], () => {
         state.flags.mock = true;
-        state.objective = "羅馬兵上來戲弄你。";
+        state.objective = "the_roman_soldiers_come_up_to_mock_you";
       });
     },
     scourge() {
@@ -3948,9 +3948,9 @@ const MORE = [
       if (s) s.dir = "right";
       say(
         [
-          { name: "", text: VERSES.thorns, ref: "約翰福音 19:2", verse: true },
-          { name: "羅馬兵丁", text: "恭喜，猶太人的王啊！" },
-          { name: "", text: "他們用鞭子打他的背。" },
+          { name: "", text: VERSES.thorns, ref: "ref_john_19_2", verse: true },
+          { name: "roman_soldiers", text: "hail_king_of_the_jews" },
+          { name: "", text: "they_strike_his_back_with_whips" },
         ],
         () => {
           if (s) s.hold = false;
@@ -3960,7 +3960,7 @@ const MORE = [
           state.flash = 0.35;
           puff(state.player.x, state.player.y - 8, "#7a2030", 14, 20);
           noise(0.4, 0.12, 180);
-          state.objective = "他們把你帶到彼拉多面前。";
+          state.objective = "they_bring_you_before_pilate";
           walkPlayer(14, 7, 40, () => this.handOver());
         }
       );
@@ -3971,9 +3971,9 @@ const MORE = [
       if (pilate) pilate.dir = "down";
       say(
         [
-          { name: "彼拉多", text: VERSES.behold, ref: "約翰福音 19:5", verse: true },
-          { name: "彼拉多", text: VERSES.innocent, ref: "馬太福音 27:24", verse: true },
-          { name: "", text: "於是彼拉多將耶穌鞭打了，交給人釘十字架。", ref: "馬太福音 27:26" },
+          { name: "pilate", text: VERSES.behold, ref: "ref_john_19_5", verse: true },
+          { name: "pilate", text: VERSES.innocent, ref: "ref_matthew_27_24", verse: true },
+          { name: "", text: "then_pilate_had_jesus_flogged_and_handed_him_ove", ref: "ref_matthew_27_26" },
         ],
         () => completeChapter()
       );
@@ -3998,49 +3998,49 @@ const MORE = [
   },
   {
     key: "cross",
-    title: "各各他",
-    ref: "路加福音 23；約翰福音 19；馬太福音 27",
+    title: "golgotha",
+    ref: "ref_luke_23_john_19_matthew_27",
     guided: true,
-    intro: "彼拉多查不出罪，仍把你鞭打了，交給人釘十字架。他們把十字架放在你肩上。羅馬兵圍著你，走向城外的各各他。有一次你跌倒，古利奈人西門把十字架接過去。到了那裡，他們釘你。天暗了。你把話說完。這一程自己往前走。",
-    closing: "父啊，我將我的靈魂交在你手裡。",
-    closingRef: "路加福音 23:46",
+    intro: "pilate_finds_no_guilt_yet_he_has_you_flogged_and",
+    closing: "father_into_your_hands_i_commit_my_spirit",
+    closingRef: "ref_luke_23_46",
     music: "solemn",
     words: [
-      { lines: [{ name: "耶穌", text: VERSES.forgive, ref: "路加福音 23:34", verse: true }] },
+      { lines: [{ name: "jesus", text: VERSES.forgive, ref: "ref_luke_23_34", verse: true }] },
       {
         lines: [
-          { name: "強盜", text: "你不懼怕神嗎？我們是應該的。這個人沒有做過一件不好的事。" },
-          { name: "耶穌", text: VERSES.paradise, ref: "路加福音 23:43", verse: true },
+          { name: "robber", text: "do_you_not_fear_god_we_are_receiving_what_we_des" },
+          { name: "jesus", text: VERSES.paradise, ref: "ref_luke_23_43", verse: true },
         ],
       },
       {
         lines: [
-          { name: "耶穌", text: VERSES.beholdSon, ref: "約翰福音 19:26", verse: true },
-          { name: "耶穌", text: VERSES.beholdMother, ref: "約翰福音 19:27", verse: true },
+          { name: "jesus", text: VERSES.beholdSon, ref: "ref_john_19_26", verse: true },
+          { name: "jesus", text: VERSES.beholdMother, ref: "ref_john_19_27", verse: true },
         ],
       },
       {
         dark: true,
         lines: [
-          { name: "", text: "從午正到申初，遍地都黑暗了。" },
-          { name: "耶穌", text: VERSES.eli, ref: "馬太福音 27:46", verse: true },
-          { name: "耶穌", text: VERSES.forsaken, ref: "馬太福音 27:46" },
+          { name: "", text: "from_noon_until_three_darkness_came_over_the_who" },
+          { name: "jesus", text: VERSES.eli, ref: "ref_matthew_27_46", verse: true },
+          { name: "jesus", text: VERSES.forsaken, ref: "ref_matthew_27_46" },
         ],
       },
-      { lines: [{ name: "耶穌", text: VERSES.thirst, ref: "約翰福音 19:28", verse: true }] },
+      { lines: [{ name: "jesus", text: VERSES.thirst, ref: "ref_john_19_28", verse: true }] },
       {
         bow: true,
         lines: [
-          { name: "耶穌", text: "成了！", ref: "約翰福音 19:30", verse: VERSES.finished },
-          { name: "", text: "耶穌嘗了那醋，就低下頭，將靈魂交付神了。" },
-          { name: "耶穌", text: VERSES.intoHands, ref: "路加福音 23:46", verse: true },
+          { name: "jesus", text: "it_is_finished", ref: "ref_john_19_30", verse: VERSES.finished },
+          { name: "", text: "jesus_tasted_the_sour_wine_bowed_his_head_and_ga" },
+          { name: "jesus", text: VERSES.intoHands, ref: "ref_luke_23_46", verse: true },
         ],
       },
       {
         spear: true,
         lines: [
-          { name: "", text: VERSES.spear, ref: "約翰福音 19:34", verse: true },
-          { name: "", text: VERSES.buried, ref: "馬太福音 27:59-60", verse: true },
+          { name: "", text: VERSES.spear, ref: "ref_john_19_34", verse: true },
+          { name: "", text: VERSES.buried, ref: "ref_matthew_27_59_60", verse: true },
         ],
         done: true,
       },
@@ -4056,19 +4056,19 @@ const MORE = [
       state.player.crown = true;
       state.player.carry = true;
       state.entities = [
-        person({ id: "women", name: "耶路撒冷的女子", tx: 8, ty: 20, look: "woman", dir: "right", talk: false }),
-        person({ id: "simon", name: "古利奈人西門", tx: 15, ty: 12, look: "traveler", dir: "down", talk: false }),
-        person({ id: "mary", name: "耶穌的母親", tx: 8, ty: 6, look: "mother", dir: "right", talk: false }),
-        person({ id: "john", name: "約翰", tx: 14, ty: 6, look: "john", dir: "left", talk: false }),
+        person({ id: "women", name: "daughters_of_jerusalem", tx: 8, ty: 20, look: "woman", dir: "right", talk: false }),
+        person({ id: "simon", name: "simon_of_cyrene", tx: 15, ty: 12, look: "traveler", dir: "down", talk: false }),
+        person({ id: "mary", name: "the_mother_of_jesus", tx: 8, ty: 6, look: "mother", dir: "right", talk: false }),
+        person({ id: "john", name: "john", tx: 14, ty: 6, look: "john", dir: "left", talk: false }),
       ];
       addRomans(11, 24);
       this.guided = true;
-      state.objective = "羅馬兵押你往各各他走。";
+      state.objective = "the_romans_lead_you_toward_golgotha";
     },
     onEnter() {
       this.guided = true;
-      state.objective = "羅馬兵押你往各各他走。";
-      say([{ name: "", text: "他們把十字架放在他肩上。" }], () => {
+      state.objective = "the_romans_lead_you_toward_golgotha";
+      say([{ name: "", text: "they_lay_the_cross_on_his_shoulder" }], () => {
         walkPlayer(11, 20, 46, () => this.women());
       });
     },
@@ -4078,11 +4078,11 @@ const MORE = [
       if (women) women.dir = "right";
       say(
         [
-          { name: "耶路撒冷的女子", text: "她們為他號咷痛哭。" },
-          { name: "耶穌", text: VERSES.women, ref: "路加福音 23:28", verse: true },
+          { name: "daughters_of_jerusalem", text: "they_weep_and_wail_for_him" },
+          { name: "jesus", text: VERSES.women, ref: "ref_luke_23_28", verse: true },
         ],
         () => {
-          state.objective = "繼續往前。";
+          state.objective = "keep_going";
           walkPlayer(11, 16, 44, () => this.fall());
         }
       );
@@ -4093,12 +4093,12 @@ const MORE = [
       state.player.carry = true;
       say(
         [
-          { name: "", text: "十字架壓下來。你倒在路上。" },
-          { name: "", text: "他們就抓住那從鄉下來的西門，把十字架擱在他身上，叫他背著跟隨耶穌。" },
+          { name: "", text: "the_cross_bears_down_you_fall_on_the_road" },
+          { name: "", text: "they_seized_simon_who_was_coming_in_from_the_cou" },
         ],
         () => {
           state.flags.fetchSimon = true;
-          state.objective = "古利奈人西門來接十字架。";
+          state.objective = "simon_of_cyrene_comes_to_take_the_cross";
         }
       );
     },
@@ -4112,8 +4112,8 @@ const MORE = [
         simon.carry = true;
         simon.dir = "up";
       }
-      say([{ name: "古利奈人西門", text: "把十字架給我。你走在前頭。" }], () => {
-        state.objective = "羅馬兵押你上山。";
+      say([{ name: "simon_of_cyrene", text: "give_me_the_cross_you_walk_ahead" }], () => {
+        state.objective = "the_romans_lead_you_up_the_hill";
         walkPlayer(11, 8, 42, () => this.atHill());
       });
     },
@@ -4123,14 +4123,14 @@ const MORE = [
       findEnt("john").dir = "left";
       say(
         [
-          { name: "", text: "他們到了一個地方，名叫各各他，意思就是髑髏地。" },
-          { name: "", text: "於是將他釘在十字架上，又拿苦膽調和的酒給他喝。他嘗了，就不肯喝。" },
-          { name: "", text: "在他頭以上安一個牌子，寫著：這是猶太人的王耶穌。" },
+          { name: "", text: "they_came_to_a_place_called_golgotha_which_means" },
+          { name: "", text: "they_crucified_him_and_offered_him_wine_mixed_wi" },
+          { name: "", text: "above_his_head_they_placed_a_sign_this_is_jesus_" },
         ],
         () => {
           this.plantCrosses();
           state.pose = "cross";
-          state.objective = "把話說完。";
+          state.objective = "speak_the_words_through";
           this.onCross();
         }
       );
@@ -4151,7 +4151,7 @@ const MORE = [
         ["watch6", "poor", 17, 5, "up"],
         ["watch7", "tax", 19, 6, "left"],
       ].forEach(([id, look, tx, ty, dir]) => {
-        state.entities.push(person({ id, name: "眾人", tx, ty, look, dir, talk: false }));
+        state.entities.push(person({ id, name: "the_crowd", tx, ty, look, dir, talk: false }));
       });
       const simon = findEnt("simon");
       if (simon) simon.carry = false;
@@ -4230,15 +4230,15 @@ const MORE = [
   },
   {
     key: "loves",
-    title: "你愛我嗎",
-    ref: "約翰福音 21:1–19",
-    who: "彼得",
+    title: "do_you_love_me",
+    ref: "ref_john_21_1_19",
+    who: "peter",
     guided: true,
     waterSolid: false,
     intro:
-      "婦女們在路上遇見他，他叫她們往加利利去告訴弟兄。這些事以後，提比哩亞海邊，天將亮。你說我打魚去，他們也一同去。那一夜沒有打著什麼。岸上有一個人，你們卻不認得。他把網指到船的右邊。約翰說：是主。你跳進海裡，到了炭火旁。他三次問你愛不愛他。這一程自己往前走。",
-    closing: "你跟從我吧！",
-    closingRef: "約翰福音 21:19",
+      "the_women_meet_him_on_the_road_and_he_tells_them",
+    closing: "verse.followAfter",
+    closingRef: "ref_john_21_19",
     music: "dawn",
     build() {
       const m = createMap(28, 16, ".");
@@ -4252,23 +4252,23 @@ const MORE = [
         prop({ kind: "boat", id: "boat", tx: 14, ty: 4 }),
         prop({ kind: "net", id: "net", tx: 17, ty: 4, alpha: 0 }),
         prop({ kind: "lamp", tx: 14, ty: 9 }),
-        person({ id: "jesus", name: "耶穌", tx: 14, ty: 9, look: "jesus", dir: "up", talk: false }),
-        person({ id: "john", name: "約翰", tx: 12, ty: 4, look: "john", dir: "down", talk: false }),
-        person({ id: "james", name: "雅各", tx: 16, ty: 4, look: "james", dir: "down", talk: false }),
-        person({ id: "thomas", name: "多馬", tx: 15, ty: 3, look: "thomas", dir: "down", talk: false }),
-        person({ id: "bart", name: "拿但業", tx: 13, ty: 3, look: "bart", dir: "down", talk: false }),
+        person({ id: "jesus", name: "jesus", tx: 14, ty: 9, look: "jesus", dir: "up", talk: false }),
+        person({ id: "john", name: "john", tx: 12, ty: 4, look: "john", dir: "down", talk: false }),
+        person({ id: "james", name: "james", tx: 16, ty: 4, look: "james", dir: "down", talk: false }),
+        person({ id: "thomas", name: "thomas", tx: 15, ty: 3, look: "thomas", dir: "down", talk: false }),
+        person({ id: "bart", name: "nathanael", tx: 13, ty: 3, look: "bart", dir: "down", talk: false }),
       ];
       this.guided = true;
-      state.objective = "那一夜，沒有打著什麼。";
+      state.objective = "that_night_they_caught_nothing";
     },
     onEnter() {
       this.guided = true;
       say(
         [
-          { name: "", text: "這些事以後，耶穌在提比哩亞海邊又向門徒顯現。", ref: "約翰福音 21:1", verse: true },
-          { name: "彼得", text: VERSES.goFish },
-          { name: "門徒", text: "我們也和你同去。" },
-          { name: "", text: "他們上了船。那一夜並沒有打著什麼。" },
+          { name: "", text: "after_these_things_jesus_showed_himself_again_to", ref: "ref_john_21_1", verse: true },
+          { name: "peter", text: VERSES.goFish },
+          { name: "disciples", text: "we_will_go_with_you_too" },
+          { name: "", text: "they_got_into_the_boat_that_night_they_caught_no" },
         ],
         () => this.dawn()
       );
@@ -4279,10 +4279,10 @@ const MORE = [
       if (jesus) jesus.dir = "up";
       say(
         [
-          { name: "", text: "天將亮的時候，耶穌站在岸上，門徒卻不知道是耶穌。" },
-          { name: "耶穌", text: VERSES.childrenEat, ref: "約翰福音 21:5", verse: true },
-          { name: "門徒", text: "沒有。" },
-          { name: "耶穌", text: VERSES.castRight, ref: "約翰福音 21:6", verse: true },
+          { name: "", text: "just_as_day_was_breaking_jesus_stood_on_the_shor" },
+          { name: "jesus", text: VERSES.childrenEat, ref: "ref_john_21_5", verse: true },
+          { name: "disciples", text: "no" },
+          { name: "jesus", text: VERSES.castRight, ref: "ref_john_21_6", verse: true },
         ],
         () => this.cast()
       );
@@ -4294,11 +4294,11 @@ const MORE = [
       chime();
       say(
         [
-          { name: "", text: "他們便撒下網去，竟拉不上來了，因為魚甚多。" },
-          { name: "約翰", text: VERSES.itIsLord, ref: "約翰福音 21:7", verse: true },
+          { name: "", text: "they_cast_the_net_and_then_they_could_not_haul_i" },
+          { name: "john", text: VERSES.itIsLord, ref: "ref_john_21_7", verse: true },
         ],
         () => {
-          state.objective = "你跳進海裡，往岸上去。";
+          state.objective = "you_jump_into_the_sea_and_head_for_shore";
           state.flags.ashore = true;
           walkPlayer(14, 8, 54, () => this.breakfast());
         }
@@ -4310,9 +4310,9 @@ const MORE = [
       if (jesus) jesus.dir = "up";
       say(
         [
-          { name: "", text: "他們上了岸，就看見那裡有炭火，上面有魚，又有餅。" },
-          { name: "耶穌", text: VERSES.comeEat, ref: "約翰福音 21:12", verse: true },
-          { name: "", text: "門徒中沒有一個敢問他「你是誰」，因為知道是主。" },
+          { name: "", text: "when_they_came_ashore_they_saw_a_charcoal_fire_t" },
+          { name: "jesus", text: VERSES.comeEat, ref: "ref_john_21_12", verse: true },
+          { name: "", text: "none_of_the_disciples_dared_ask_him_who_are_you_" },
         ],
         () => this.ask()
       );
@@ -4320,22 +4320,22 @@ const MORE = [
     ask() {
       say(
         [
-          { name: "耶穌", text: VERSES.loveMore, ref: "約翰福音 21:15", verse: true },
-          { name: "彼得", text: VERSES.loveYes },
-          { name: "耶穌", text: VERSES.feedLambs },
-          { name: "耶穌", text: VERSES.loveSecond, ref: "約翰福音 21:16", verse: true },
-          { name: "彼得", text: VERSES.loveYes },
-          { name: "耶穌", text: VERSES.tendSheep },
+          { name: "jesus", text: VERSES.loveMore, ref: "ref_john_21_15", verse: true },
+          { name: "peter", text: VERSES.loveYes },
+          { name: "jesus", text: VERSES.feedLambs },
+          { name: "jesus", text: VERSES.loveSecond, ref: "ref_john_21_16", verse: true },
+          { name: "peter", text: VERSES.loveYes },
+          { name: "jesus", text: VERSES.tendSheep },
         ],
         () => {
           state.player.mark = "worry";
           say(
             [
-              { name: "耶穌", text: VERSES.loveSecond, ref: "約翰福音 21:17", verse: true },
-              { name: "", text: "彼得因為耶穌第三次對他說「你愛我嗎」，就憂愁。" },
-              { name: "彼得", text: VERSES.loveKnows, ref: "約翰福音 21:17", verse: true },
-              { name: "耶穌", text: VERSES.feedSheep },
-              { name: "耶穌", text: VERSES.followAfter, ref: "約翰福音 21:19", verse: true },
+              { name: "jesus", text: VERSES.loveSecond, ref: "ref_john_21_17", verse: true },
+              { name: "", text: "peter_was_grieved_because_jesus_said_to_him_the_" },
+              { name: "peter", text: VERSES.loveKnows, ref: "ref_john_21_17", verse: true },
+              { name: "jesus", text: VERSES.feedSheep },
+              { name: "jesus", text: VERSES.followAfter, ref: "ref_john_21_19", verse: true },
             ],
             () => completeChapter()
           );
@@ -4359,14 +4359,14 @@ const MORE = [
   },
   {
     key: "galilee",
-    title: "加利利的山",
-    ref: "馬太福音 28:16–20",
-    who: "彼得",
+    title: "the_mountain_in_galilee",
+    ref: "ref_matthew_28_16_20",
+    who: "peter",
     guided: true,
     intro:
-      "他在海邊說：你跟從我吧。十一個門徒往加利利去，到了耶穌約定的山上。你與他們同行。他們見了耶穌就拜他，然而還有人疑惑。他進前來，把天上地下的權柄、去使萬民作門徒的吩咐，和常與你們同在的應許說完。這一程自己往前走。",
-    closing: "我就常與你們同在，直到世界的末了。",
-    closingRef: "馬太福音 28:20",
+      "by_the_sea_he_said_follow_me_the_eleven_disciple",
+    closing: "i_am_with_you_always_to_the_end_of_the_age",
+    closingRef: "ref_matthew_28_20",
     music: "peace",
     after() {
       openEnding();
@@ -4382,19 +4382,19 @@ const MORE = [
         prop({ kind: "rock", tx: 8, ty: 8 }),
         prop({ kind: "rock", tx: 22, ty: 7 }),
         prop({ kind: "rock", tx: 11, ty: 4 }),
-        person({ id: "jesus", name: "耶穌", tx: 15, ty: 5, look: "jesus", dir: "down", talk: false }),
+        person({ id: "jesus", name: "jesus", tx: 15, ty: 5, look: "jesus", dir: "down", talk: false }),
       ];
       [
-        ["andrew", "安得烈", "andrew", -24, 14],
-        ["james", "雅各", "james", 26, 12],
-        ["john", "約翰", "john", -8, 28],
-        ["philip", "腓力", "philip", 10, 30],
-        ["thomas", "多馬", "thomas", -40, 32, "worry"],
-        ["matthew", "馬太", "tax", 40, 30],
-        ["bart", "巴多羅買", "bart", -22, 46],
-        ["james2", "小雅各", "james2", 22, 48],
-        ["thad", "達太", "thad", 0, 52],
-        ["zealot", "奮銳黨的西門", "zealot", 48, 50, "worry"],
+        ["andrew", "andrew", "andrew", -24, 14],
+        ["james", "james", "james", 26, 12],
+        ["john", "john", "john", -8, 28],
+        ["philip", "philip", "philip", 10, 30],
+        ["thomas", "thomas", "thomas", -40, 32, "worry"],
+        ["matthew", "matthew", "tax", 40, 30],
+        ["bart", "bartholomew", "bart", -22, 46],
+        ["james2", "james_the_younger", "james2", 22, 48],
+        ["thad", "thaddaeus", "thad", 0, 52],
+        ["zealot", "simon_the_zealot", "zealot", 48, 50, "worry"],
       ].forEach(([id, name, look, ox, oy, mark]) => {
         const ent = person({
           id,
@@ -4414,12 +4414,12 @@ const MORE = [
         state.entities.push(ent);
       });
       this.guided = true;
-      state.objective = "十一個門徒往加利利去。";
+      state.objective = "the_eleven_disciples_go_to_galilee";
     },
     onEnter() {
       this.guided = true;
-      state.objective = "上到他約定的山上。";
-      say([{ name: "", text: "十一個門徒往加利利去，到了耶穌約定的山上。" }], () => {
+      state.objective = "go_up_to_the_mountain_he_appointed";
+      say([{ name: "", text: "the_eleven_disciples_went_to_galilee_to_the_moun" }], () => {
         walkPlayer(15, 12, 46, () => this.worship());
       });
     },
@@ -4427,11 +4427,11 @@ const MORE = [
       state.player.dir = "up";
       say(
         [
-          { name: "", text: "他們見了耶穌就拜他，然而還有人疑惑。" },
+          { name: "", text: "when_they_saw_jesus_they_worshiped_him_but_some_" },
         ],
         () => {
           state.flags.come = true;
-          state.objective = "他進前來。";
+          state.objective = "he_came_near";
         }
       );
     },
@@ -4441,9 +4441,9 @@ const MORE = [
       state.player.dir = "up";
       say(
         [
-          { name: "耶穌", text: VERSES.allAuthority, ref: "馬太福音 28:18", verse: true },
-          { name: "耶穌", text: VERSES.makeDisciples, ref: "馬太福音 28:19", verse: true },
-          { name: "耶穌", text: VERSES.withYou, ref: "馬太福音 28:20", verse: true },
+          { name: "jesus", text: VERSES.allAuthority, ref: "ref_matthew_28_18", verse: true },
+          { name: "jesus", text: VERSES.makeDisciples, ref: "ref_matthew_28_19", verse: true },
+          { name: "jesus", text: VERSES.withYou, ref: "ref_matthew_28_20", verse: true },
         ],
         () => completeChapter()
       );
@@ -4469,19 +4469,19 @@ const MORE = [
 MORE.forEach((ch) => CHAPTERS.push(ch));
 
 const EARLY = [
-  ["simon", "西門", "simon"],
-  ["andrew", "安得烈", "andrew"],
-  ["james", "雅各", "james"],
-  ["john", "約翰", "john"],
+  ["simon", "simon", "simon"],
+  ["andrew", "andrew", "andrew"],
+  ["james", "james", "james"],
+  ["john", "john", "john"],
 ];
 const BAND = [
-  ["peter", "彼得", "simon"],
-  ["john", "約翰", "john"],
-  ["james", "雅各", "james"],
-  ["andrew", "安得烈", "andrew"],
-  ["matthew", "馬太", "tax"],
-  ["philip", "腓力", "philip"],
-  ["thomas", "多馬", "thomas"],
+  ["peter", "peter", "simon"],
+  ["john", "john", "john"],
+  ["james", "james", "james"],
+  ["andrew", "andrew", "andrew"],
+  ["matthew", "matthew", "tax"],
+  ["philip", "philip", "philip"],
+  ["thomas", "thomas", "thomas"],
 ];
 
 function addRomans(tx, ty) {
@@ -4494,7 +4494,7 @@ function addRomans(tx, ty) {
     state.entities.push(
       person({
         id: "roman" + i,
-        name: "羅馬兵丁",
+        name: "roman_soldiers",
         tx: tx + dx,
         ty: ty + dy,
         look: "roman",
@@ -4650,16 +4650,7 @@ const LIFE_ORDER = [
 ];
 
 function kickerOf(i) {
-  const n = i + 1;
-  const d = "一二三四五六七八九";
-  if (n === 10) return "第十章";
-  if (n < 10) return "第" + d[n - 1] + "章";
-  if (n === 20) return "第二十章";
-  const tens = Math.floor(n / 10);
-  const ones = n % 10;
-  const tenWord = tens === 2 ? "二十" : "十";
-  if (ones === 0) return "第" + tenWord + "章";
-  return "第" + tenWord + d[ones - 1] + "章";
+  return "chapter." + (i + 1);
 }
 
 {

@@ -1,4 +1,5 @@
 import { mountGame, pen, startLoop } from "./render/pixi.js";
+import { getLanguage, onLanguageChange, text, toggleLanguage } from "./lang.js";
 
 const TILE = 16;
 const VIEW_W = 320;
@@ -320,16 +321,16 @@ export const LOOKS = {
 
 export function asRole(tx, ty, dir, role) {
   const roles = {
-    jesus: { look: LOOKS.jesus, name: "耶穌" },
-    child: { look: LOOKS.child, name: "少年耶穌" },
-    joseph: { look: LOOKS.elder, name: "約瑟" },
-    servant: { look: LOOKS.worker, name: "用人" },
-    peter: { look: LOOKS.simon, name: "彼得" },
-    simon: { look: LOOKS.simon, name: "西門" },
-    john: { look: LOOKS.john, name: "約翰" },
-    mary: { look: LOOKS.mary, name: "抹大拉的馬利亞" },
-    mother: { look: LOOKS.mother, name: "馬利亞" },
-    angel: { look: LOOKS.angel, name: "天使" },
+    jesus: { look: LOOKS.jesus, name: "jesus" },
+    child: { look: LOOKS.child, name: "the_boy_jesus" },
+    joseph: { look: LOOKS.elder, name: "joseph" },
+    servant: { look: LOOKS.worker, name: "servant" },
+    peter: { look: LOOKS.simon, name: "peter" },
+    simon: { look: LOOKS.simon, name: "simon" },
+    john: { look: LOOKS.john, name: "john" },
+    mary: { look: LOOKS.mary, name: "mary_magdalene" },
+    mother: { look: LOOKS.mother, name: "mary" },
+    angel: { look: LOOKS.angel, name: "angel" },
   };
   const r = roles[role] || roles.jesus;
   state.roleName = r.name;
@@ -423,7 +424,7 @@ function ensureAudio() {
 function setMuted(muted) {
   music.muted = muted;
   if (music.master) music.master.gain.value = muted ? 0 : 0.16;
-  $("btn-mute").textContent = muted ? "開聲" : "靜音";
+  $("btn-mute").textContent = muted ? text("unmute") : text("mute");
   try {
     localStorage.setItem("follow-mute", muted ? "1" : "0");
   } catch (err) {
@@ -538,11 +539,15 @@ function lineVerse(line) {
   return typeof line.verse === "string" ? line.verse : line.text;
 }
 
-function recordVerse(ref, text) {
-  if (!ref || !text || state.journal.some((v) => v.ref === ref)) return;
-  state.journal.push({ ref, text });
+function lineBody(line) {
+  return line ? text(line.text) : "";
+}
+
+function recordVerse(ref, line) {
+  if (!ref || !line || state.journal.some((v) => v.ref === ref)) return;
+  state.journal.push({ ref, text: line });
   const btn = $("btn-journal");
-  btn.textContent = "經文 " + state.journal.length;
+  btn.textContent = text("journal") + " " + state.journal.length;
   btn.classList.remove("pulse");
   void btn.offsetWidth;
   btn.classList.add("pulse");
@@ -570,8 +575,8 @@ function advanceDialogue() {
     d.open = false;
     return;
   }
-  if (d.prog < line.text.length) {
-    d.prog = line.text.length;
+  if (d.prog < lineBody(line).length) {
+    d.prog = lineBody(line).length;
     return;
   }
   if (line.ref) recordVerse(line.ref, lineVerse(line));
@@ -592,9 +597,9 @@ function updateDialogue(dt) {
   if (!d.open) return;
   const line = currentLine();
   if (!line) return;
-  const speed = reduceMotion ? 400 : 18;
+  const speed = reduceMotion ? 400 : getLanguage() === "en" ? 36 : 18;
   d.prog += dt * speed;
-  if (d.prog > line.text.length && line.ref) recordVerse(line.ref, lineVerse(line));
+  if (d.prog > lineBody(line).length && line.ref) recordVerse(line.ref, lineVerse(line));
 }
 
 /* ------------------------------ particles / floats ------------------------------ */
@@ -617,12 +622,12 @@ export function puff(x, y, color, n, speed) {
   }
 }
 
-export function spawnFloat(x, y, text) {
+export function spawnFloat(x, y, raw) {
   const el = document.createElement("div");
   el.className = "float";
-  el.textContent = text;
+  el.textContent = text(raw);
   floatsEl.appendChild(el);
-  state.floats.push({ el, x, y, life: 1.5, max: 1.5 });
+  state.floats.push({ el, x, y, life: 1.5, max: 1.5, raw });
 }
 
 function updateParticles(dt) {
@@ -2061,20 +2066,20 @@ function drawHeaven(camX, camY) {
   }
   if (t > 3.15) {
     const shown = clamp((t - 3.15) / 1.5, 0, 1);
-    const words = "這是我的愛子，我所喜悅的。";
+    const words = text("verse.beloved");
     const n = Math.max(1, Math.ceil(words.length * shown));
-    const text = words.slice(0, n);
+    const shownLine = words.slice(0, n);
     pen.globalAlpha = 0.35 + 0.65 * shown;
     pen.font = "12px 'Songti TC', 'PMingLiU', 'Noto Serif TC', serif";
     pen.textAlign = "center";
     pen.textBaseline = "middle";
     pen.fillStyle = "rgba(42, 28, 16, 0.45)";
-    pen.fillText(text, VIEW_W / 2 + 1, 23);
+    pen.fillText(shownLine, VIEW_W / 2 + 1, 23);
     pen.fillStyle = "#fff6d0";
-    pen.fillText(text, VIEW_W / 2, 22);
+    pen.fillText(shownLine, VIEW_W / 2, 22);
     pen.font = "9px 'Songti TC', 'PMingLiU', serif";
     pen.fillStyle = "#f0d48a";
-    pen.fillText("天父", VIEW_W / 2, 10);
+    pen.fillText(text("father"), VIEW_W / 2, 10);
   }
   pen.restore();
 }
@@ -2230,13 +2235,13 @@ function syncUI() {
   hudEl.classList.toggle("hidden", !showHud);
   if (showHud) {
     const ch = CHAPTERS[state.chapter];
-    $("ch-name").textContent = `${ch.kicker}　${ch.title}`;
-    $("role").textContent = state.roleName ? "你是" + state.roleName : "";
+    $("ch-name").textContent = text(ch.kicker) + " " + text(ch.title);
+    $("role").textContent = state.roleName ? text("role." + String(state.roleName).replace(/^name\./, "")) : "";
     $("role").classList.toggle("hidden", !state.roleName);
-    $("objective").textContent = state.dialogue.open ? "" : state.objective;
-    $("progress").textContent = state.progress;
+    $("objective").textContent = state.dialogue.open ? "" : text(state.objective);
+    $("progress").textContent = text(state.progress);
     $("progress").classList.toggle("hidden", !state.progress);
-    $("held").textContent = state.held;
+    $("held").textContent = text(state.held);
     $("held").classList.toggle("hidden", !state.held);
     const sea = chapterKey() === "sea";
     $("faith").classList.toggle("hidden", !sea);
@@ -2244,7 +2249,7 @@ function syncUI() {
     if (sea) {
       $("faith-fill").style.width = clamp(state.faith, 0, 100) + "%";
       const label = $("faith").querySelector("span");
-      if (label) label.textContent = "信心";
+      if (label) label.textContent = text("faith");
     }
     const showHint = !ch.guided && state.time < state.hintUntil && !state.dialogue.open && !state.screen;
     $("hint").classList.toggle("hidden", !showHint);
@@ -2255,13 +2260,14 @@ function syncUI() {
   dialogueEl.classList.toggle("hidden", !showD);
   if (showD) {
     const line = currentLine();
-    const shown = line ? line.text.slice(0, Math.floor(d.prog)) : "";
-    const done = line && d.prog >= line.text.length;
-    $("d-name").textContent = line && line.name ? line.name : "";
+    const full = lineBody(line);
+    const shown = full.slice(0, Math.floor(d.prog));
+    const done = line && d.prog >= full.length;
+    $("d-name").textContent = line && line.name ? text(line.name) : "";
     const who =
-      line && line.name === "耶穌"
+      line && line.name === "jesus"
         ? "jesus"
-        : line && (line.name === "你" || line.name === state.roleName)
+        : line && (line.name === "you" || line.name === state.roleName)
           ? "you"
           : line && line.name
             ? "npc"
@@ -2269,8 +2275,8 @@ function syncUI() {
     $("d-name").className = "who-" + who;
     $("d-text").textContent = shown;
     $("d-text").classList.toggle("verse", !!(line && (line.verse || line.ref)));
-    $("d-ref").textContent = done && line && line.ref ? line.ref : "";
-    $("d-next").textContent = done ? "空白鍵繼續" : "";
+    $("d-ref").textContent = done && line && line.ref ? text(line.ref) : "";
+    $("d-next").textContent = done ? text("cont") : "";
   }
 
   const near = showHud && !state.screen && !d.open ? nearestTalkable() : null;
@@ -2278,7 +2284,7 @@ function syncUI() {
   const act = !near && showHud && !state.screen && !d.open && chNow && chNow.actLabel ? chNow.actLabel() : "";
   if (near || act) {
     tagEl.classList.remove("hidden");
-    tagEl.textContent = near ? near.name + " · 交談" : act;
+    tagEl.textContent = near ? text(near.name) + " · " + text("talk") : text(act);
     const anchor = near || state.player;
     const x = (anchor.x - state.cam.x) * state.scale;
     const y = (anchor.y - 36 - state.cam.y) * state.scale;
@@ -2288,6 +2294,7 @@ function syncUI() {
   for (const f of state.floats) {
     const x = (f.x - state.cam.x) * state.scale;
     const y = (f.y - (1 - f.life / f.max) * 14 - state.cam.y) * state.scale;
+    if (f.raw) f.el.textContent = text(f.raw);
     f.el.style.transform = `translate(${x}px, ${y}px) translate(-50%, -100%)`;
     f.el.style.opacity = String(clamp(f.life, 0, 1));
   }
@@ -2306,43 +2313,49 @@ function card(html) {
   screenEl.classList.remove("hidden");
 }
 
+function langButton() {
+  return `<button class="btn" data-act="lang">${text("langSwitch")}</button>`;
+}
+
 function renderTitle() {
   state.screen = "title";
   card(`
-    <div class="sub">四福音書裡的一生</div>
-    <h1>跟隨</h1>
-    <p class="verse" style="text-align:center">耶穌說：「${VERSES.way}」</p>
-    <p class="ref">約翰福音 14:6</p>
+    <div class="sub">${text("subtitle")}</div>
+    <h1>${text("gameTitle")}</h1>
+    <p class="verse" style="text-align:center">${text("titleLead")}${text(VERSES.way)}${text("titleTail")}</p>
+    <p class="ref">${text("ref_john_14_6")}</p>
     <div class="rule"></div>
-    <p style="text-align:center">每一章，你扮演這段記載裡該走的那個人。<br/>方向鍵或 WASD 移動。空白鍵、E 或 Enter 說話。</p>
+    <p style="text-align:center">${text("titleHelp")}<br/>${text("titleKeys")}</p>
     <div class="row">
-      <button class="btn primary" data-act="start" data-primary>開始行走</button>
-      <button class="btn" data-act="select">選擇篇章</button>
+      <button class="btn primary" data-act="start" data-primary>${text("start")}</button>
+      <button class="btn" data-act="select">${text("select")}</button>
+      ${langButton()}
     </div>
-    <p class="note">本遊戲依據四福音書的記載而作，經文引自和合本。<br/>從伯利恆到各各他，再到加利利的山。它並不取代聖經本身。</p>
+    <p class="note">${text("titleNote")}<br/>${text("titleSpan")}</p>
   `);
 }
 
 function renderSelect() {
   state.screen = "select";
   const buttons = CHAPTERS.map(
-    (ch, i) => `<button class="btn" data-act="chapter" data-arg="${i}">${ch.kicker}　${ch.title}<br/><span class="ref">${ch.ref}　·　你是${ch.who || "耶穌"}</span></button>`
+    (ch, i) => `<button class="btn" data-act="chapter" data-arg="${i}">${text(ch.kicker)} ${text(ch.title)}<br/><span class="ref">${text(ch.ref)} · ${text("role." + String(ch.who || "jesus").replace(/^name\./, ""))}</span></button>`
   ).join("");
-  card(`<h2>選擇篇章</h2><div class="chapters">${buttons}</div><div class="row"><button class="btn ghost" data-act="title">回標題</button></div>`);
+  card(`<h2>${text("choose")}</h2><div class="chapters">${buttons}</div><div class="row"><button class="btn ghost" data-act="title">${text("back")}</button>${langButton()}</div>`);
 }
 
 function renderCard() {
   const ch = CHAPTERS[state.chapter];
   state.screen = "card";
   card(`
-    <div class="sub">${ch.kicker}</div>
-    <h2>${ch.title}</h2>
-    <p class="ref">${ch.ref}</p>
+    <div class="sub">${text(ch.kicker)}</div>
+    <h2>${text(ch.title)}</h2>
+    <p class="ref">${text(ch.ref)}</p>
     <div class="rule"></div>
-    <p>${ch.intro}</p>
+    <p>${text(ch.intro)}</p>
     <div class="row">
-      <button class="btn primary" data-act="begin" data-primary>進入這一程</button>
-      <button class="btn ghost" data-act="title">回標題</button>
+      <button class="btn primary" data-act="begin" data-primary>${text("enter")}</button>
+      <button class="btn ghost" data-act="title">${text("back")}</button>
+      ${langButton()}
     </div>
   `);
 }
@@ -2353,14 +2366,15 @@ function openClear() {
   state.screen = "clear";
   const last = state.chapter >= CHAPTERS.length - 1;
   card(`
-    <div class="sub">${ch.kicker}</div>
-    <h2>${ch.title}</h2>
+    <div class="sub">${text(ch.kicker)}</div>
+    <h2>${text(ch.title)}</h2>
     <div class="rule"></div>
-    <p class="verse" style="text-align:center">${ch.closing}</p>
-    <p class="ref">${ch.closingRef || ""}</p>
+    <p class="verse" style="text-align:center">${text(ch.closing)}</p>
+    <p class="ref">${text(ch.closingRef || "")}</p>
     <div class="row">
-      ${last ? "" : '<button class="btn primary" data-act="next" data-primary>下一程</button>'}
-      <button class="btn ${last ? "primary" : ""}" data-act="title" ${last ? "data-primary" : ""}>回標題</button>
+      ${last ? "" : `<button class="btn primary" data-act="next" data-primary>${text("next")}</button>`}
+      <button class="btn ${last ? "primary" : ""}" data-act="title" ${last ? "data-primary" : ""}>${text("back")}</button>
+      ${langButton()}
     </div>
   `);
 }
@@ -2369,20 +2383,21 @@ function renderInterlude() {
   state.screen = "interlude";
   state.mode = "interlude";
   const lines = INTERLUDE.slice(0, state.interludeStep + 1)
-    .map((line) => `<p class="${line.verse ? "verse" : ""}">${line.text}</p>${line.ref ? `<p class="ref">${line.ref}</p>` : ""}`)
+    .map((line) => `<p class="${line.verse ? "verse" : ""}">${text(line.text)}</p>${line.ref ? `<p class="ref">${text(line.ref)}</p>` : ""}`)
     .join("");
   const done = state.interludeStep >= INTERLUDE.length - 1;
   card(`
-    <div class="sub">各各他之後</div>
-    <h2>第三日</h2>
+    <div class="sub">${text("interludeKicker")}</div>
+    <h2>${text("interludeTitle")}</h2>
     <div class="rule"></div>
     ${lines}
     <div class="row">
       ${
         done
-          ? '<button class="btn primary" data-act="garden" data-primary>前往墳墓</button>'
-          : '<button class="btn primary" data-act="interlude-next" data-primary>繼續</button>'
+          ? `<button class="btn primary" data-act="garden" data-primary>${text("toTomb")}</button>`
+          : `<button class="btn primary" data-act="interlude-next" data-primary>${text("goOn")}</button>`
       }
+      ${langButton()}
     </div>
   `);
   if (done) {
@@ -2392,55 +2407,76 @@ function renderInterlude() {
   }
 }
 
-export function openEnding() {
-  state.mode = "ending";
+function paintEnding() {
   state.screen = "ending";
-  setMusic("end");
-  recordVerse("約翰福音 14:6", VERSES.way);
   const items = state.journal
-    .map((v) => `<div class="journal-item"><div class="ref">${v.ref}</div><div class="verse">${v.text}</div></div>`)
+    .map((v) => `<div class="journal-item"><div class="ref">${text(v.ref)}</div><div class="verse">${text(v.text)}</div></div>`)
     .join("");
   card(`
-    <div class="sub">直到世界的末了</div>
-    <h2>我就常與你們同在</h2>
-    <p class="verse" style="text-align:center">「${VERSES.withYou}」</p>
-    <p class="ref">馬太福音 28:20</p>
+    <div class="sub">${text("endingKicker")}</div>
+    <h2>${text("endingTitle")}</h2>
+    <p class="verse" style="text-align:center">${text("titleLead")}${text(VERSES.withYou)}${text("titleTail")}</p>
+    <p class="ref">${text("ref_matthew_28_20")}</p>
     <div class="rule"></div>
-    <p>從馬槽到聖殿，從約旦河到曠野，從海上到席間。夜間他說神愛世人，在耶利哥他說人子來是要尋找、拯救失喪的人。文士與祭司商議要除滅他，猶大收了三十塊錢。然後是各各他、空墳墓與加利利的山。每一章，你走進這段記載裡該在場的那個人。</p>
-    <p class="verse" style="text-align:center">「${VERSES.way}」</p>
-    <p class="ref">約翰福音 14:6</p>
+    <p>${text("endingBody")}</p>
+    <p class="verse" style="text-align:center">${text("titleLead")}${text(VERSES.way)}${text("titleTail")}</p>
+    <p class="ref">${text("ref_john_14_6")}</p>
     <div class="rule"></div>
-    <p class="ref" style="text-align:left">這一程收下的話</p>
-    ${items || "<p>這一程的話，還在風裡。</p>"}
+    <p class="ref" style="text-align:left">${text("gathered")}</p>
+    ${items || `<p>${text("endingEmpty")}</p>`}
     <div class="row">
-      <button class="btn primary" data-act="title" data-primary>從伯利恆再走一次</button>
+      <button class="btn primary" data-act="title" data-primary>${text("endingAgain")}</button>
+      ${langButton()}
     </div>
   `);
+}
+
+export function openEnding() {
+  state.mode = "ending";
+  setMusic("end");
+  recordVerse("ref_john_14_6", VERSES.way);
+  paintEnding();
+}
+
+function refreshLanguage() {
+  $("btn-mute").textContent = music.muted ? text("unmute") : text("mute");
+  $("btn-journal").textContent = text("journal") + (state.journal.length ? " " + state.journal.length : "");
+  const line = currentLine();
+  if (state.dialogue.open && line && state.dialogue.prog > 0) state.dialogue.prog = lineBody(line).length;
+  if (state.screen === "title") renderTitle();
+  else if (state.screen === "select") renderSelect();
+  else if (state.screen === "card") renderCard();
+  else if (state.screen === "clear") openClear();
+  else if (state.screen === "interlude") renderInterlude();
+  else if (state.screen === "ending") paintEnding();
+  else if (state.screen === "journal") openJournal();
+  else if (state.screen === "pause") openPause();
+  syncUI();
 }
 
 function openJournal() {
   if (state.mode !== "play") return;
   state.screen = "journal";
   const items = state.journal
-    .map((v) => `<div class="journal-item"><div class="ref">${v.ref}</div><div class="verse">${v.text}</div></div>`)
+    .map((v) => `<div class="journal-item"><div class="ref">${text(v.ref)}</div><div class="verse">${text(v.text)}</div></div>`)
     .join("");
   card(`
-    <h2>收下的經文</h2>
+    <h2>${text("journalTitle")}</h2>
     <div class="rule"></div>
-    ${items || "<p>這一程還沒有收下經文。話會留在你開口的地方。</p>"}
-    <div class="row"><button class="btn primary" data-act="close-screen" data-primary>關閉</button></div>
+    ${items || `<p>${text("journalEmpty")}</p>`}
+    <div class="row"><button class="btn primary" data-act="close-screen" data-primary>${text("close")}</button></div>
   `);
 }
 
 function openPause() {
   state.screen = "pause";
   card(`
-    <h2>暫停</h2>
-    <p style="text-align:center">路還在。你可以留在這裡。</p>
+    <h2>${text("pause")}</h2>
+    <p style="text-align:center">${text("pauseBody")}</p>
     <div class="row">
-      <button class="btn primary" data-act="close-screen" data-primary>繼續行走</button>
-      <button class="btn" data-act="journal">經文</button>
-      <button class="btn ghost" data-act="title">回標題</button>
+      <button class="btn primary" data-act="close-screen" data-primary>${text("resume")}</button>
+      <button class="btn" data-act="journal">${text("journal")}</button>
+      <button class="btn ghost" data-act="title">${text("back")}</button>
     </div>
   `);
 }
@@ -2474,7 +2510,8 @@ screenEl.addEventListener("click", (e) => {
   ensureAudio();
   const act = btn.dataset.act;
   const arg = btn.dataset.arg;
-  if (act === "start") openChapter(0);
+  if (act === "lang") toggleLanguage();
+  else if (act === "start") openChapter(0);
   else if (act === "select") renderSelect();
   else if (act === "title") showTitle();
   else if (act === "chapter") openChapter(Number(arg));
@@ -2512,6 +2549,13 @@ $("btn-mute").addEventListener("click", () => {
   ensureAudio();
   setMuted(!music.muted);
 });
+
+$("btn-lang").addEventListener("click", () => {
+  ensureAudio();
+  toggleLanguage();
+});
+
+onLanguageChange(refreshLanguage);
 
 window.addEventListener("keydown", (e) => {
   if (e.repeat) return;
@@ -2623,9 +2667,11 @@ function loop() {
 export function boot() {
   try {
     if (localStorage.getItem("follow-mute") === "1") setMuted(true);
+    else $("btn-mute").textContent = text("mute");
   } catch (err) {
     /* ignore */
   }
+  $("btn-journal").textContent = text("journal");
   resize();
   showTitle();
   startLoop(loop);

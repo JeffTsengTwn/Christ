@@ -139,6 +139,22 @@
 
     #hud-btns button { font-size: 0.72em; pointer-events: auto; }
 
+    body.lang-en {
+      font-family: Palatino, "Palatino Linotype", "Iowan Old Style", "Songti TC", serif;
+    }
+
+    body.lang-en .card h1,
+    body.lang-en .card h2,
+    body.lang-en #ch-name,
+    body.lang-en #d-name {
+      letter-spacing: 0.04em;
+    }
+
+    body.lang-en #ch-name {
+      max-width: 15em;
+      line-height: 1.25;
+    }
+
     #hud-btns button.pulse {
       animation: pulse 0.8s ease 2;
       border-color: #f0c84b;
@@ -394,6 +410,7 @@
         </div>
         <div id="top-right">
           <div id="hud-btns">
+            <button type="button" id="btn-lang" tabindex="-1">EN</button>
             <button type="button" id="btn-journal" tabindex="-1">經文</button>
             <button type="button" id="btn-mute" tabindex="-1">靜音</button>
           </div>
