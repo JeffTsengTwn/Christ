@@ -220,21 +220,51 @@ export const LOOKS = {
     scale: 1.08,
   }),
   soldier: look({
-    robe: "#6a3030",
-    robeS: "#4e2222",
-    robeD: "#321616",
-    headband: "#c4a574",
+    robe: "#d7e2bc",
+    robeS: "#b7c896",
+    robeD: "#8aaa78",
+    skin: "#e8b88a",
+    skinS: "#d79a68",
+    hair: "#3a2414",
+    hairD: "#24160c",
     beard: true,
-    hair: "#2a2118",
+    armor: true,
+    helmet: true,
+  }),
+  roman: look({
+    robe: "#a67c52",
+    robeS: "#8a6844",
+    robeD: "#6b4224",
+    skin: "#e8b88a",
+    skinS: "#d79a68",
+    hair: "#3a2414",
+    hairD: "#24160c",
+    beard: true,
+    armor: true,
+    helmet: true,
+    crest: true,
+    cloak: "#a33b34",
+  }),
+  priest: look({
+    robe: "#c5ced8",
+    robeS: "#a8b4c2",
+    robeD: "#6e7c8c",
+    veil: "#f7f4ee",
+    hair: "#d9d3c8",
+    hairD: "#8a847a",
+    beard: true,
+    stripes: "#243044",
   }),
   pilate: look({
-    robe: "#f4f0e8",
-    robeS: "#d4cfc4",
-    robeD: "#a8a298",
-    sash: "#8c2f2f",
-    hair: "#c8c2b4",
-    hairD: "#8a8478",
-    headband: "#e6d3a4",
+    robe: "#f7f4ee",
+    robeS: "#e7e0d4",
+    robeD: "#cfc6b8",
+    skin: "#e8c4a0",
+    skinS: "#d7a878",
+    hair: "#6a5038",
+    hairD: "#3a2818",
+    laurel: true,
+    scale: 1.12,
   }),
   lazarus: look({
     robe: "#d7d0c4",
@@ -626,7 +656,31 @@ function drawShadow(yOff) {
   px(-3, 0 + (yOff || 0), 6, 1, "rgba(24,18,12,0.22)");
 }
 
+function drawFallen(e) {
+  const L = e.look;
+  pen.save();
+  pen.globalAlpha = e.alpha == null ? 1 : e.alpha;
+  pen.translate(Math.round(e.x), Math.round(e.y));
+  px(-10, -1, 14, 5, L.robeD);
+  px(-9, 0, 11, 3, L.robe);
+  if (L.cloak) px(-10, -2, 6, 3, L.cloak);
+  if (L.armor) px(-6, 0, 6, 3, "#c4844a");
+  px(4, -3, 6, 5, L.skin);
+  px(4, -4, 6, 2, L.hair);
+  px(-3, 3, 3, 2, L.robeD);
+  px(1, 3, 3, 2, L.skinS || L.skin);
+  if (L.helmet) {
+    px(3, -5, 7, 3, "#c4a574");
+    px(5, -8, 2, 3, L.crest ? "#c43232" : "#8c2f2f");
+  }
+  pen.restore();
+}
+
 function drawPerson(e, time) {
+  if (e.fallen) {
+    drawFallen(e);
+    return;
+  }
   const L = e.look;
   const sc = L.scale || 1;
   const step = e.moving ? Math.floor(time * 8) % 2 : 0;
@@ -635,7 +689,8 @@ function drawPerson(e, time) {
   pen.globalAlpha = e.alpha == null ? 1 : e.alpha;
   pen.translate(Math.round(e.x), Math.round(e.y + bob));
   pen.scale((e.dir === "left" ? -1 : 1) * sc, sc);
-  if (e.chair) drawChair(e.dir === "left" ? "right" : e.dir);
+  if (e.throne) drawThrone();
+  else if (e.chair) drawChair(e.dir === "left" ? "right" : e.dir);
   if (!e.noShadow) drawShadow(0);
   if (L.wings) {
     px(-14, -18, 7, 10, "#f7f4ee");
@@ -661,6 +716,18 @@ function drawPerson(e, time) {
   px(-5, -15, 10, 8, L.robe);
   px(-5, -12, 10, 3, L.robeS);
   if (L.sash) px(-5, -11, 10, 2, L.sash);
+  if (e.throne) {
+    px(-7, -16, 14, 10, "#a33b34");
+    px(-5, -15, 6, 6, "#f7f4ee");
+    px(-4, -14, 4, 4, "#fffdf8");
+    px(-1, -15, 2, 2, "#e6c86a");
+    px(-8, -8, 16, 5, "#8c2f2f");
+    px(-6, -7, 12, 2, "#c45050");
+    px(-11, -13, 3, 7, "#5a3820");
+    px(8, -13, 3, 7, "#5a3820");
+    px(-11, -14, 3, 2, "#e6c86a");
+    px(8, -14, 3, 2, "#e6c86a");
+  }
   if (e.dir === "up") {
     px(-6, -15, 2, 5, L.robeS);
     px(4, -15, 2, 5, L.robeS);
@@ -684,6 +751,13 @@ function drawPerson(e, time) {
     px(4, hy + 2, 2, 6, L.veil);
   }
   if (L.headband) px(-4, hy + 2, 8, 2, L.headband);
+  if (L.laurel) {
+    px(-5, hy - 2, 10, 2, "#c4a84a");
+    px(-5, hy - 1, 2, 3, "#e6c86a");
+    px(3, hy - 1, 2, 3, "#e6c86a");
+    px(-3, hy - 3, 2, 2, "#d4b85a");
+    px(1, hy - 3, 2, 2, "#e6c86a");
+  }
 
   if (e.dir === "up") {
     px(-3, hy + 1, 6, 5, L.hair);
@@ -756,7 +830,100 @@ function drawPerson(e, time) {
     px(1, hy2 + 3, 1, 1, "#ffe7a0");
   }
 
+  if (L.cloak) {
+    px(-8, -17, 3, 16, L.cloak);
+    px(-7, -6, 2, 7, "#7a2428");
+    px(-6, -17, 4, 3, L.cloak);
+    px(3, -17, 4, 3, "#8c2f2f");
+  }
+  if (L.armor) {
+    px(-5, -16, 10, 6, "#7a4e2c");
+    px(-4, -15, 8, 4, "#c4844a");
+    px(-2, -14, 4, 2, L.cloak ? "#e6c2a0" : "#e6d3a4");
+    px(-6, -16, 2, 3, "#5a3820");
+    px(4, -16, 2, 3, "#5a3820");
+    px(-5, -11, 10, 4, "#6b4224");
+    px(-5, -11, 1, 4, "#c4a574");
+    px(-2, -11, 1, 4, "#e6d3a4");
+    px(1, -11, 1, 4, "#c4a574");
+    px(4, -11, 1, 4, "#e6d3a4");
+    if (L.cloak) {
+      px(-5, -8, 2, 2, "#a33b34");
+      px(-1, -8, 2, 2, "#a33b34");
+      px(3, -8, 2, 2, "#a33b34");
+    }
+    px(-4, -7, 3, 5, L.skin);
+    px(1, -7, 3, 5, L.skinS);
+    px(-4, -2, 3, 2, "#5a4030");
+    px(1, -2, 3, 2, "#3a2818");
+  }
+  if (L.helmet) {
+    px(-5, hy - 3, 10, 5, "#c4a574");
+    px(-4, hy - 4, 8, 2, "#e6d3a4");
+    px(-5, hy + 1, 10, 2, "#8a6840");
+    if (L.crest) {
+      px(-1, hy - 9, 2, 6, "#c43232");
+      px(-2, hy - 8, 4, 3, "#8c2f2f");
+    } else px(-1, hy - 5, 2, 2, "#8c2f2f");
+    if (e.dir !== "up") {
+      px(-5, hy + 3, 2, 2, "#a67c52");
+      px(3, hy + 3, 2, 2, "#a67c52");
+    }
+  }
+  if (L.stripes) {
+    px(-6, -16, 12, 9, "#f7f4ee");
+    px(-7, -15, 2, 8, "#f3efe6");
+    px(5, -15, 2, 8, "#e4ddd0");
+    px(-6, -15, 12, 1, L.stripes);
+    px(-6, -13, 12, 1, L.stripes);
+    px(-6, -11, 12, 1, L.stripes);
+    px(-6, -9, 12, 1, "#6a7c92");
+  }
+  if (e.torch) {
+    const flick = Math.floor(time * 7) % 2;
+    px(5, -20, 1, 14, "#5a3820");
+    px(4, -21, 1, 3, "#6b4224");
+    px(3, -28 - flick, 5, 4, "#e07020");
+    px(4, -30 - flick, 3, 3, "#f0c14a");
+    px(5, -31 - flick, 1, 2, "#fff4d2");
+  }
+  if (e.spear && e.dir === "up") {
+    px(-1, -36, 2, 20, "#d5dde2");
+    px(-3, -38, 6, 2, "#f4f7f8");
+  }
+  if (e.sword && e.dir !== "up") {
+    px(3, -14, 5, 1, "#2a2118");
+    px(4, -13, 2, 2, "#5a4030");
+    px(5, -25, 2, 12, "#f4f1ea");
+    px(5, -26, 2, 2, "#fffdf8");
+    px(4, -16, 1, 3, "#c4c8cc");
+  }
+  if (e.chain && e.dir !== "up") {
+    px(3, -12, 2, 1, "#d7dbe0");
+    px(5, -11, 2, 1, "#8a9098");
+    px(6, -10, 2, 1, "#d7dbe0");
+    px(7, -9, 2, 1, "#5c646c");
+  }
+
   pen.restore();
+
+  if (e.spear && e.dir === "left") {
+    const x = Math.round(e.x);
+    const y = Math.round(e.y);
+    const shaft = [
+      [0, -12],
+      [-2, -16],
+      [-4, -20],
+      [-6, -24],
+      [-8, -28],
+      [-10, -32],
+      [-12, -36],
+      [-14, -40],
+    ];
+    for (const [ox, oy] of shaft) px(x + ox, y + oy, 3, 3, "#e7eef2");
+    px(x - 16, y - 42, 5, 3, "#f7fbfc");
+    px(x - 2, y - 14, 3, 3, "#c4a574");
+  }
 
   if (L.halo && (e.alpha == null || e.alpha > 0.4)) {
     const a = 0.18 + 0.08 * Math.sin(time * 2);
@@ -856,17 +1023,19 @@ function drawMast(x, y) {
   px(x + 2, y - 18, 7, 1, "#d9cbb6");
 }
 
-function drawStone(x, y) {
+function drawStone(x, y, big) {
   x = Math.round(x);
-  y = Math.round(y - 6);
-  for (let j = -7; j <= 7; j++) {
-    for (let i = -7; i <= 7; i++) {
+  y = Math.round(y - (big ? 10 : 6));
+  const r = big ? 11 : 7;
+  const rim = big ? 78 : 30;
+  for (let j = -r; j <= r; j++) {
+    for (let i = -r; i <= r; i++) {
       const d = i * i + j * j;
-      if (d <= 49 && d >= 30) px(x + i, y + j, 1, 1, "#8a8378");
-      else if (d < 30) px(x + i, y + j, 1, 1, "#b7b1a6");
+      if (d <= r * r && d >= rim) px(x + i, y + j, 1, 1, big ? "#6e675e" : "#8a8378");
+      else if (d < rim) px(x + i, y + j, 1, 1, big ? "#a39e94" : "#b7b1a6");
     }
   }
-  px(x - 2, y, 4, 1, "#6e675e");
+  px(x - 3, y - 1, 6, 2, "#6e675e");
 }
 
 function drawLinen(x, y) {
@@ -1014,6 +1183,23 @@ function drawJar(e) {
   px(x - 6, y - 4, 12, 3, "#5e584e");
 }
 
+function drawThrone() {
+  px(-18, 4, 36, 3, "#4a3018");
+  px(-15, 1, 30, 4, "#6b4224");
+  px(-12, -2, 24, 4, "#8a5a32");
+  px(-9, -1, 18, 2, "#a33b34");
+  px(-6, -1, 6, 1, "#c45050");
+  px(-10, -28, 3, 18, "#4a3018");
+  px(7, -28, 3, 18, "#4a3018");
+  px(-10, -28, 20, 3, "#6b4224");
+  px(-7, -25, 14, 12, "#3a2414");
+  px(-11, -30, 3, 3, "#e6c86a");
+  px(8, -30, 3, 3, "#e6c86a");
+  px(-9, -20, 1, 1, "#e6c86a");
+  px(8, -20, 1, 1, "#e6c86a");
+  px(-8, -11, 16, 3, "#8c2f2f");
+}
+
 function drawChair(dir) {
   const wood = "#6b4224";
   const seat = "#8a5a32";
@@ -1136,7 +1322,7 @@ function drawEntity(e, time) {
   else if (e.kind === "well") drawWell(e.x, e.y);
   else if (e.kind === "net") drawNet(e.x, e.y, time);
   else if (e.kind === "mast") drawMast(e.x, e.y);
-  else if (e.kind === "stone") drawStone(e.x, e.y);
+  else if (e.kind === "stone") drawStone(e.x, e.y, e.big);
   else if (e.kind === "linen") drawLinen(e.x, e.y);
   else if (e.kind === "jar") drawJar(e);
   else if (e.kind === "table") drawTable(e);
@@ -1157,6 +1343,7 @@ function drawEntity(e, time) {
   else if (e.kind === "scroll") drawScroll(e);
   else if (e.kind === "boat") drawBoat(e);
   else if (e.kind === "fish") drawFish(e);
+  else if (e.kind === "cross") drawCross(e);
 }
 
 function drawBoat(e) {
@@ -1593,6 +1780,9 @@ function updateCamera(dt) {
   if (state.mode === "title") {
     tx = clamp(tp(16, 7).x - VIEW_W / 2, 0, maxX);
     ty = 0;
+  } else if (state.pose === "cross") {
+    tx = clamp(tp(11, 4).x - VIEW_W / 2, 0, maxX);
+    ty = 0;
   }
   const k = 1 - Math.pow(0.001, dt);
   state.cam.x += (tx - state.cam.x) * (state.mode === "title" ? 1 : k);
@@ -1628,7 +1818,9 @@ function update(dt) {
   updateParticles(dt);
   tickMusic();
   if (!state.map) return;
-  const playing = state.mode === "play" && !state.screen && !state.dialogue.open;
+  const chPlay = state.mode === "play" ? CHAPTERS[state.chapter] : null;
+  const canWalkWhileTalking = !!(chPlay && chPlay.walkDuringTalk && !chPlay.guided);
+  const playing = state.mode === "play" && !state.screen && (!state.dialogue.open || canWalkWhileTalking);
   if (state.mode === "title") updateTitle(dt);
   else if (playing) {
     updatePlayer(dt);
@@ -1747,18 +1939,19 @@ function render() {
     g2.addColorStop(1, "rgba(0,0,0,0)");
     lightCtx.fillStyle = g2;
     lightCtx.fillRect(px0 - 30, py0 - 30, 60, 60);
-    if (room) {
-      for (const lamp of state.entities) {
-        if (lamp.kind !== "lamp") continue;
-        const lx = lamp.x - camX;
-        const ly = lamp.y - camY - 10;
-        const lg = lightCtx.createRadialGradient(lx, ly, 3, lx, ly, 52);
-        lg.addColorStop(0, "rgba(0,0,0,0.92)");
-        lg.addColorStop(0.6, "rgba(0,0,0,0.4)");
-        lg.addColorStop(1, "rgba(0,0,0,0)");
-        lightCtx.fillStyle = lg;
-        lightCtx.fillRect(lx - 56, ly - 56, 112, 112);
-      }
+    for (const lamp of state.entities) {
+      const carried = !!lamp.torch && lamp.alpha !== 0;
+      if ((lamp.kind !== "lamp" || !lamp.alpha) && !carried) continue;
+      const side = carried ? (lamp.dir === "left" ? -6 : 6) : 0;
+      const lx = lamp.x - camX + side;
+      const ly = lamp.y - camY - (carried ? 26 : 10);
+      const reach = room ? 52 : carried ? 42 : 36;
+      const lg = lightCtx.createRadialGradient(lx, ly, 3, lx, ly, reach);
+      lg.addColorStop(0, "rgba(0,0,0,0.92)");
+      lg.addColorStop(0.6, "rgba(0,0,0,0.4)");
+      lg.addColorStop(1, "rgba(0,0,0,0)");
+      lightCtx.fillStyle = lg;
+      lightCtx.fillRect(lx - reach - 4, ly - reach - 4, (reach + 4) * 2, (reach + 4) * 2);
     }
     const lx0 = Math.max(0, Math.floor(camX / TILE) - 1);
     const ly0 = Math.max(0, Math.floor(camY / TILE) - 1);
@@ -1822,7 +2015,10 @@ function render() {
     pen.fillStyle = `rgba(255,255,255,${state.flash})`;
     pen.fillRect(0, 0, VIEW_W, VIEW_H);
   }
-  if (state.pose === "cross") drawCrucifixion(state.time);
+  if (state.pose === "cross" && state.flags.dark) {
+    pen.fillStyle = "rgba(8, 10, 18, 0.58)";
+    pen.fillRect(0, 0, VIEW_W, VIEW_H);
+  }
   pen.restore();
 }
 
@@ -1873,103 +2069,72 @@ function drawHeaven(camX, camY) {
   pen.restore();
 }
 
-function drawCrucifixion(time) {
-  const dark = state.flags.dark ? 1 : 0;
-  pen.fillStyle = dark ? "#100e14" : "#6a5348";
-  pen.fillRect(0, 0, VIEW_W, VIEW_H);
-  if (!dark) {
-    const sky = pen.createLinearGradient(0, 0, 0, 90);
-    sky.addColorStop(0, "#8a6a62");
-    sky.addColorStop(1, "#c4a090");
-    pen.fillStyle = sky;
-    pen.fillRect(0, 0, VIEW_W, 78);
+function drawCross(e) {
+  const x = Math.round(e.x);
+  const y = Math.round(e.y);
+  const jesus = e.who === "jesus";
+  const bow = jesus && state.flags.bow ? 2 : 0;
+  const post = jesus ? 50 : 44;
+  const wood = "#6b4224";
+  const woodD = "#4a2e18";
+  const skin = "#e8b88a";
+  const robe = jesus ? "#f7f3ea" : e.shade ? "#5c564e" : "#6a5038";
+  const robeD = jesus ? "#b7aa96" : e.shade ? "#3e3a36" : "#4a3824";
+  const hair = jesus ? "#5a3820" : "#2a2118";
+  const beamY = y - post + 18;
+  const shoulder = beamY;
+
+  px(x - 6, y - 1, 12, 2, "rgba(24,18,12,0.28)");
+  px(x - 2, y - post, 4, post + 2, woodD);
+  px(x - 1, y - post + 1, 2, post, wood);
+  px(x - 14, beamY, 28, 3, woodD);
+  px(x - 13, beamY + 1, 26, 1, wood);
+
+  px(x - 4, shoulder, 8, 12, robeD);
+  px(x - 3, shoulder + 1, 6, 10, robe);
+  if (jesus) px(x - 3, shoulder + 4, 6, 2, "#a33b34");
+
+  px(x - 13, shoulder + 3, 9, 2, skin);
+  px(x + 4, shoulder + 3, 9, 2, skin);
+  px(x - 13, shoulder + 2, 2, 2, jesus ? "#7a2030" : "#2a2118");
+  px(x + 11, shoulder + 2, 2, 2, jesus ? "#7a2030" : "#2a2118");
+
+  const hy = shoulder - 4 + bow;
+  px(x - 3, hy, 6, 8, skin);
+  px(x - 4, hy - 1, 8, 3, hair);
+  px(x - 4, hy + 1, 1, 5, hair);
+  px(x + 3, hy + 1, 1, 5, hair);
+  if (bow) {
+    px(x - 3, hy + 2, 6, 4, hair);
   } else {
-    pen.fillStyle = "#1a1420";
-    pen.fillRect(0, 0, VIEW_W, 78);
-  }
-  pen.fillStyle = dark ? "#1c1614" : "#5a4638";
-  pen.beginPath();
-  pen.moveTo(0, 150);
-  pen.lineTo(70, 118);
-  pen.lineTo(160, 132);
-  pen.lineTo(250, 110);
-  pen.lineTo(320, 128);
-  pen.lineTo(320, 192);
-  pen.lineTo(0, 192);
-  pen.fill();
-
-  function crossAt(x, y, h, him) {
-    pen.fillStyle = "#4a3424";
-    pen.fillRect(x, y - h, 4, h + 18);
-    pen.fillRect(x - 16, y - h + 18, 36, 4);
-    if (!him) {
-      pen.fillStyle = "#6a5344";
-      pen.fillRect(x - 3, y - h + 22, 10, 16);
-      pen.fillRect(x - 8, y - h + 26, 5, 3);
-      pen.fillRect(x + 7, y - h + 26, 5, 3);
-      return;
-    }
-    const bow = state.flags.bow ? 6 : 0;
-    pen.fillStyle = "#f2c396";
-    pen.fillRect(x - 3, y - h + 20 + bow, 10, 8);
-    pen.fillStyle = "#5a3820";
-    pen.fillRect(x - 4, y - h + 18 + bow, 12, 4);
-    pen.fillStyle = "#5a3a22";
-    pen.fillRect(x - 5, y - h + 17 + bow, 14, 2);
-    pen.fillStyle = "#8c2f2f";
-    pen.fillRect(x - 3, y - h + 18 + bow, 2, 2);
-    pen.fillRect(x + 4, y - h + 19 + bow, 2, 2);
-    pen.fillStyle = "#f7f3ea";
-    pen.fillRect(x - 4, y - h + 36, 12, 10);
-    pen.fillStyle = "#e4d9c6";
-    pen.fillRect(x - 3, y - h + 44, 10, 18);
-    pen.fillStyle = "#c4a574";
-    pen.fillRect(x - 4, y - h + 58, 12, 6);
-    pen.fillStyle = "#f2c396";
-    pen.fillRect(x - 18, y - h + 20, 14, 3);
-    pen.fillRect(x + 8, y - h + 20, 14, 3);
-    pen.fillRect(x - 2, y - h + 62, 3, 12);
-    pen.fillRect(x + 3, y - h + 62, 3, 12);
-    pen.fillStyle = "#6a1824";
-    pen.fillRect(x - 17, y - h + 19, 3, 3);
-    pen.fillRect(x + 18, y - h + 19, 3, 3);
-    pen.fillRect(x, y - h + 72, 4, 3);
-    if (state.flags.spear) {
-      pen.fillStyle = "#6a1824";
-      pen.fillRect(x + 6, y - h + 40, 4, 3);
-      pen.fillRect(x + 8, y - h + 43, 2, 8);
-      pen.fillStyle = "#d8e4ea";
-      pen.fillRect(x + 10, y - h + 44, 2, 6);
-      pen.fillStyle = "#c0c6cc";
-      pen.fillRect(x + 28, y - h + 8, 2, 70);
-      pen.fillRect(x + 24, y - h + 8, 8, 3);
-    }
+    px(x - 2, hy + 3, 1, 1, "#3a2416");
+    px(x + 1, hy + 3, 1, 1, "#3a2416");
+    if (jesus) {
+      px(x - 4, hy - 2, 8, 2, "#5a3a22");
+      px(x - 3, hy - 3, 2, 1, "#8c2f2f");
+      px(x + 1, hy - 3, 2, 1, "#8c2f2f");
+      px(x - 2, hy + 6, 4, 2, hair);
+      px(x - 3, hy - 7, 1, 1, "#f0c84b");
+      px(x - 1, hy - 8, 2, 1, "#ffe7a0");
+      px(x + 1, hy - 7, 1, 1, "#f0c84b");
+    } else px(x - 2, hy + 6, 4, 2, hair);
   }
 
-  crossAt(78, 128, 78, false);
-  crossAt(228, 124, 74, false);
-  crossAt(152, 136, 96, true);
-
-  pen.fillStyle = "#e6d3a4";
-  pen.fillRect(138, 28, 32, 12);
-  pen.fillStyle = "#241910";
-  pen.fillRect(141, 31, 26, 2);
-  pen.fillRect(141, 35, 20, 2);
-
-  pen.fillStyle = "#3f5278";
-  pen.fillRect(96, 142, 8, 14);
-  pen.fillStyle = "#4e8a78";
-  pen.fillRect(108, 144, 8, 14);
-  pen.fillStyle = "#6a3030";
-  pen.fillRect(214, 146, 8, 14);
-  pen.fillStyle = "#4e2222";
-  pen.fillRect(226, 148, 8, 12);
-
-  if (dark) {
-    pen.fillStyle = "rgba(0,0,0,0.28)";
-    pen.fillRect(0, 0, VIEW_W, VIEW_H);
+  const hip = shoulder + 12;
+  px(x - 3, hip, 3, 7, robeD);
+  px(x, hip, 3, 7, robe);
+  px(x - 2, hip + 7, 4, 2, skin);
+  px(x - 1, hip + 7, 2, 2, "#2a2118");
+  if (jesus) {
+    px(x - 1, shoulder + 6, 2, 2, "#7a2030");
+    px(x - 1, hip + 7, 2, 2, "#7a2030");
+    if (state.flags.pierced) px(x + 3, shoulder + 5, 2, 2, "#7a2030");
+    px(x - 7, y - post - 8, 14, 6, "#e6d3a4");
+    px(x - 7, y - post - 8, 14, 1, "#8a6840");
+    px(x - 7, y - post - 3, 14, 1, "#8a6840");
+    px(x - 5, y - post - 6, 8, 1, "#241910");
+    px(x - 5, y - post - 4, 6, 1, "#241910");
   }
-  void time;
 }
 
 function renderInterludeWorld() {
@@ -2144,7 +2309,7 @@ function renderTitle() {
       <button class="btn primary" data-act="start" data-primary>開始行走</button>
       <button class="btn" data-act="select">選擇篇章</button>
     </div>
-    <p class="note">本遊戲依據四福音書的記載而作，經文引自和合本。<br/>從伯利恆到各各他，再到清晨。它並不取代聖經本身。</p>
+    <p class="note">本遊戲依據四福音書的記載而作，經文引自和合本。<br/>從伯利恆到各各他，再到加利利的山。它並不取代聖經本身。</p>
   `);
 }
 
@@ -2205,7 +2370,7 @@ function renderInterlude() {
     <div class="row">
       ${
         done
-          ? '<button class="btn primary" data-act="garden" data-primary>前往園子</button>'
+          ? '<button class="btn primary" data-act="garden" data-primary>前往墳墓</button>'
           : '<button class="btn primary" data-act="interlude-next" data-primary>繼續</button>'
       }
     </div>
@@ -2226,12 +2391,12 @@ export function openEnding() {
     .map((v) => `<div class="journal-item"><div class="ref">${v.ref}</div><div class="verse">${v.text}</div></div>`)
     .join("");
   card(`
-    <div class="sub">七日的第一日</div>
-    <h2>我就是</h2>
-    <p class="verse" style="text-align:center">「${VERSES.commission}」</p>
-    <p class="ref">馬太福音 28:18–19</p>
+    <div class="sub">直到世界的末了</div>
+    <h2>我就常與你們同在</h2>
+    <p class="verse" style="text-align:center">「${VERSES.withYou}」</p>
+    <p class="ref">馬太福音 28:20</p>
     <div class="rule"></div>
-    <p>從馬槽到聖殿，從約旦河到曠野，從海上到席間，再到各各他與清晨的園子。每一章，你走進這段記載裡該在場的那個人。</p>
+    <p>從馬槽到聖殿，從約旦河到曠野，從海上到席間，再到各各他、空墳墓與加利利的山。每一章，你走進這段記載裡該在場的那個人。</p>
     <p class="verse" style="text-align:center">「${VERSES.way}」</p>
     <p class="ref">約翰福音 14:6</p>
     <div class="rule"></div>

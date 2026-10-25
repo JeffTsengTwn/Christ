@@ -164,13 +164,42 @@ export const VERSES = {
   touch: "伸過你的指頭來，摸我的手；伸出你的手來，探入我的肋旁。不要疑惑，總要信！",
   myLord: "我的主！我的神！",
   commission: "天上地下所有的權柄都賜給我了。所以，你們要去，使萬民作我的門徒。",
+  fearNot: "不要害怕！我知道你們是尋找那釘十字架的耶穌。",
+  notHere: "他不在這裡，照他所說的，已經復活了。你們來看安放主的地方。",
+  goTell: "快去告訴他的門徒，說他從死裡復活了，並且在你們以先往加利利去，在那裡你們要見他。看哪，我已經告訴你們了。",
+  peaceWomen: "願你們平安！",
+  tellBrothers: "不要害怕！你們去告訴我的弟兄，叫他們往加利利去，在那裡必見我。",
+  allAuthority: "天上地下所有的權柄都賜給我了。",
+  makeDisciples: "所以，你們要去，使萬民作我的門徒，奉父、子、聖靈的名給他們施洗。",
+  withYou: "凡我所吩咐你們的，都教訓他們遵守，我就常與你們同在，直到世界的末了。",
+  cannotFollow: "我所去的地方，你現在不能跟我去，後來卻要跟我去。",
+  denyThrice: "你願意為我捨命嗎？我實實在在地告訴你，雞叫以先，你要三次不認我。",
+  notDisciple: "你不也是這人的門徒嗎？",
+  notI: "我不是。",
+  alsoOne: "你也是他們一黨的。",
+  inGarden: "我不是看見你同他在園子裡嗎？",
+  knowNot: "你這個人，我不曉得你說的是甚麼！",
+  remembered: "今日雞叫以先，你要三次不認我。",
+  goFish: "我打魚去。",
+  childrenEat: "小子！你們有吃的沒有？",
+  castRight: "你們把網撒在船的右邊，就必得著。",
+  itIsLord: "是主！",
+  comeEat: "你們來吃早飯。",
+  loveMore: "約翰的兒子西門，你愛我比這些更深嗎？",
+  loveYes: "主啊，是的，你知道我愛你。",
+  feedLambs: "你餵養我的小羊。",
+  loveSecond: "約翰的兒子西門，你愛我嗎？",
+  tendSheep: "你牧養我的羊。",
+  loveKnows: "主啊，你是無所不知的，你知道我愛你。",
+  feedSheep: "你餵養我的羊。",
+  followAfter: "你跟從我吧！",
 };
 
 export const INTERLUDE = [
   { text: "此後，他被交在人手裡。", ref: "" },
   { text: "他們把他帶到各各他。園子外的天亮了，又暗了。", ref: "" },
   { text: VERSES.finished, ref: "約翰福音 19:30", verse: true },
-  { text: "第三日，天還黑的時候。", ref: "" },
+  { text: "七日的頭一日，天快亮的時候。", ref: "" },
 ];
 
 export const CHAPTERS = [
@@ -1370,10 +1399,10 @@ export const CHAPTERS = [
   {
     key: "supper",
     title: "最後的晚餐",
-    ref: "約翰福音 13；馬太福音 26:20–29",
+    ref: "約翰福音 13；馬太福音 26:20–35",
     kicker: "第七章",
     intro:
-      "逾越節的晚上，樓房已經預備好。你起來洗他們的腳，又把餅和杯遞給他們。這一夜的話很重。",
+      "逾越節的晚上，樓房已經預備好。你起來洗他們的腳，又把餅和杯遞給他們。猶大出去以後，你告訴彼得：雞叫以先，他要三次不認你。這一夜的話很重。",
     closing: "他們唱了詩，就出來，往橄欖山去。",
     closingRef: "馬太福音 26:30",
     music: "solemn",
@@ -1533,6 +1562,20 @@ export const CHAPTERS = [
             ref: "約翰福音 13:35",
             verse: true,
           },
+        ],
+        () => this.foretell()
+      );
+    },
+    foretell() {
+      state.player.dir = "left";
+      const peter = findEnt("peter");
+      if (peter) peter.dir = "right";
+      say(
+        [
+          { name: "彼得", text: "主往哪裡去？" },
+          { name: "耶穌", text: VERSES.cannotFollow, ref: "約翰福音 13:36", verse: true },
+          { name: "彼得", text: "主啊，我為什麼現在不能跟你去？我願意為你捨命！" },
+          { name: "耶穌", text: VERSES.denyThrice, ref: "約翰福音 13:38", verse: true },
           { name: "", text: "他們唱了詩，就出來，往橄欖山去。", ref: "馬太福音 26:30", verse: true },
         ],
         () => completeChapter()
@@ -1561,118 +1604,150 @@ export const CHAPTERS = [
   },
   {
     key: "garden",
-    title: "清晨的園子",
-    ref: "約翰福音 20",
+    title: "天快亮",
+    ref: "馬太福音 28:1–10",
     who: "抹大拉的馬利亞",
-    kicker: "第八章",
-    intro: "七日的第一日，天還黑的時候。你來到墳墓那裡。進去看。園子裡會遇見他，只是你還不認得。然後，多馬要親眼看見。",
-    closing: "我的主，我的神。",
-    closingRef: "約翰福音 20:28",
+    guided: true,
+    intro:
+      "安息日將盡，七日的頭一日，天快亮的時候。你和那個馬利亞來看墳墓。地大震動，主的使者把石頭滾開，坐在上面。看守的人嚇得如死人一樣。你們又害怕又歡喜，跑去報信，路上遇見耶穌。這一程自己往前走。",
+    closing: "不要害怕！你們去告訴我的弟兄，叫他們往加利利去，在那裡必見我。",
+    closingRef: "馬太福音 28:10",
     music: "dawn",
-    after() {
-      openEnding();
-    },
     build() {
-      const m = createMap(30, 20, ".");
-      scatter(m, ",", 0.22, (ch) => ch === ".");
-      stroke(m, [
-        [15, 17],
-        [15, 8],
-      ], "p", 0);
-      m.rect(10, 2, 10, 6, "T");
-      m.rect(12, 3, 6, 4, "o");
-      m.set(14, 7, "p");
-      m.set(15, 7, "p");
+      const m = createMap(26, 18, ".");
+      scatter(m, ",", 0.12, (ch) => ch === ".");
+      m.rect(8, 2, 10, 5, "T");
+      m.rect(10, 3, 6, 3, "o");
+      m.set(12, 6, "p");
+      m.set(13, 6, "p");
+      stroke(m, [[12, 16], [12, 7]], "p", 0);
       m.frame("#");
       state.map = m;
-      state.player = asRole(15, 16, "up", "mary");
+      state.player = asRole(12, 15, "up", "mary");
       state.entities = [
         prop({ kind: "tree", tx: 4, ty: 8, variant: "cypress", solid: true, radius: 3 }),
-        prop({ kind: "tree", tx: 7, ty: 15, variant: "cypress", solid: true, radius: 3 }),
-        prop({ kind: "tree", tx: 24, ty: 6, variant: "cypress", solid: true, radius: 3 }),
-        prop({ kind: "tree", tx: 26, ty: 14, variant: "cypress", solid: true, radius: 3 }),
-        prop({ kind: "tree", tx: 8, ty: 5, variant: "cypress", solid: true, radius: 3 }),
-        prop({ kind: "linen", id: "linen", name: "細麻布", tx: 13, ty: 4, talk: true }),
-        prop({ kind: "beacon", id: "out", tx: 15, ty: 12 }),
-        person({ id: "jesus", name: "耶穌", tx: 22, ty: 12, look: "jesus", dir: "left", alpha: 0, talk: false, wounds: true }),
-        person({ id: "thomas", name: "多馬", tx: 24, ty: 16, look: "thomas", dir: "left" }),
-        person({ id: "peter", name: "彼得", tx: 8, ty: 13, look: "simon", dir: "right", talk: false }),
-        person({ id: "john", name: "約翰", tx: 10, ty: 12, look: "john", dir: "right", talk: false }),
+        prop({ kind: "tree", tx: 5, ty: 14, variant: "cypress", solid: true, radius: 3 }),
+        prop({ kind: "tree", tx: 21, ty: 6, variant: "cypress", solid: true, radius: 3 }),
+        prop({ kind: "tree", tx: 22, ty: 13, variant: "cypress", solid: true, radius: 3 }),
+        prop({ kind: "linen", id: "linen", tx: 12, ty: 4 }),
+        prop({ kind: "stone", id: "stone", tx: 13, ty: 7, big: true }),
+        person({ id: "mary2", name: "那個馬利亞", tx: 14, ty: 15, look: "mother", dir: "up", talk: false }),
+        person({ id: "guard0", name: "看守的人", tx: 10, ty: 8, look: "roman", dir: "down", talk: false }),
+        person({ id: "guard1", name: "看守的人", tx: 16, ty: 8, look: "roman", dir: "down", talk: false }),
+        person({ id: "angel", name: "天使", tx: 18, ty: 7, look: "angel", dir: "down", alpha: 0, talk: false }),
+        person({ id: "jesus", name: "耶穌", tx: 12, ty: 11, look: "jesus", dir: "down", alpha: 0, talk: false }),
       ];
-      state.objective = "天還黑。進墳墓看看。";
+      this.guided = true;
+      state.objective = "天快亮了。你們來看墳墓。";
     },
     onEnter() {
-      state.objective = "天還黑。進墳墓看看。";
+      this.guided = true;
+      state.objective = "天快亮了。你們來看墳墓。";
+      say(
+        [{ name: "", text: "安息日將盡，七日的頭一日，天快亮的時候，抹大拉的馬利亞和那個馬利亞來看墳墓。" }],
+        () => this.walkWith(12, 10, 46, () => this.atTomb())
+      );
     },
-    goal() {
-      const flags = state.flags;
-      if (!flags.seenTomb) return findEnt("linen");
-      if (!flags.appeared) return findEnt("out");
-      if (!flags.named) return jesus();
-      return findEnt("thomas");
+    walkWith(tx, ty, speed, onArrive) {
+      const other = findEnt("mary2");
+      if (other) other.dest = tp(tx + 2, ty);
+      walkPlayer(tx, ty, speed, onArrive);
+    },
+    atTomb() {
+      state.player.dir = "up";
+      const other = findEnt("mary2");
+      if (other) other.dir = "up";
+      state.shake = 0.75;
+      state.flash = 0.4;
+      noise(0.4, 0.1, 90);
+      state.flags.quake = true;
+      const angel = findEnt("angel");
+      if (angel) angel.alpha = 0.05;
+      state.objective = "地大震動。使者把石頭滾開。";
+    },
+    angelSits() {
+      const stone = findEnt("stone");
+      const angel = findEnt("angel");
+      if (angel && stone) {
+        angel.x = stone.x;
+        angel.y = stone.y + 6;
+        angel.seated = true;
+        angel.dir = "down";
+        angel.alpha = 1;
+      }
+      for (const id of ["guard0", "guard1"]) {
+        const g = findEnt(id);
+        if (g) g.fallen = true;
+      }
+      appearSound();
+      state.flash = 0.55;
+      say(
+        [
+          { name: "", text: "忽然，地大震動。有主的使者從天上下來，把石頭滾開，坐在上面。他的相貌如同閃電，衣服潔白如雪。" },
+          { name: "", text: "看守的人就因他嚇得渾身亂戰，甚至和死人一樣。" },
+          { name: "天使", text: VERSES.fearNot, ref: "馬太福音 28:5", verse: true },
+          { name: "天使", text: VERSES.notHere, ref: "馬太福音 28:6", verse: true },
+          { name: "天使", text: VERSES.goTell, ref: "馬太福音 28:7", verse: true },
+        ],
+        () => {
+          state.objective = "又害怕，又大大地歡喜。跑去報信。";
+          this.walkWith(12, 13, 70, () => this.meet());
+        }
+      );
+    },
+    meet() {
+      const jesus = findEnt("jesus");
+      if (jesus) {
+        jesus.alpha = 1;
+        jesus.dir = "down";
+      }
+      state.player.dir = "up";
+      const other = findEnt("mary2");
+      if (other) {
+        other.dest = tp(15, 12);
+        other.dir = "left";
+      }
+      state.flash = 0.45;
+      appearSound();
+      say(
+        [
+          { name: "", text: "婦女們就急忙離開墳墓，又害怕，又大大地歡喜，跑去要報給他的門徒。忽然，耶穌遇見她們。" },
+          { name: "耶穌", text: VERSES.peaceWomen, ref: "馬太福音 28:9", verse: true },
+        ],
+        () => this.walkWith(12, 12, 40, () => this.worship())
+      );
+    },
+    worship() {
+      state.player.dir = "up";
+      const other = findEnt("mary2");
+      if (other) other.dir = "up";
+      say(
+        [
+          { name: "", text: "她們就上前抱住他的腳拜他。" },
+          { name: "耶穌", text: VERSES.tellBrothers, ref: "馬太福音 28:10", verse: true },
+        ],
+        () => completeChapter()
+      );
     },
     update(dt) {
-      const flags = state.flags;
-      const j = jesus();
-      const inTomb = tileAt(state.player.x, state.player.y) === "o";
-      if (flags.seenTomb && !inTomb && j && !flags.appeared && !state.dialogue.open) {
-        flags.appeared = true;
-        j.talk = true;
-        j.alpha = 0;
-        state.flash = 0.6;
-        appearSound();
-        state.objective = "園子裡有人。你還不認得他。";
+      const other = findEnt("mary2");
+      if (other && other.dest) {
+        if (stepToward(other, other.dest, dt, 48)) other.dir = state.player.dir;
       }
-      if (j && flags.appeared && j.alpha < 1) j.alpha = Math.min(1, j.alpha + dt * 0.8);
-    },
-    talk(e) {
-      const flags = state.flags;
-      if (e.id === "linen") {
-        say([{ name: "", text: "細麻布還在，人卻不在了。" }], () => {
-          flags.seenTomb = true;
-          state.objective = "離開墳墓，回到園子裡。";
-        });
-        return;
+      const angel = findEnt("angel");
+      const stone = findEnt("stone");
+      const f = state.flags;
+      if (!f.quake || f.sat) return;
+      if (angel && angel.alpha < 1) angel.alpha = Math.min(1, angel.alpha + dt * 0.8);
+      if (stone && !f.rolled) {
+        if (stepToward(stone, tp(18, 7), dt, 34)) f.rolled = true;
       }
-      if (e.id === "jesus") {
-        if (!flags.appeared) return;
-        if (flags.named) {
-          say([{ name: "抹大拉的馬利亞", text: "拉波尼！我已經看見了主。" }]);
-          return;
-        }
-        say(
-          [
-            { name: "耶穌", text: VERSES.whyWeep, ref: "約翰福音 20:15", verse: true },
-            { name: "抹大拉的馬利亞", text: VERSES.gardener, ref: "約翰福音 20:15" },
-            { name: "耶穌", text: VERSES.maryName, ref: "約翰福音 20:16" },
-            { name: "抹大拉的馬利亞", text: "拉波尼！" },
-            { name: "耶穌", text: VERSES.notYetUp, ref: "約翰福音 20:17", verse: true },
-          ],
-          () => {
-            flags.named = true;
-            e.dir = "right";
-            puff(state.player.x, state.player.y - 14, "#fff4d0", 12, 18);
-            state.objective = "到多馬那裡去。他要親眼看見。";
-          }
-        );
-        return;
-      }
-      if (e.id === "thomas") {
-        if (!flags.named) {
-          say([{ name: "多馬", text: "我非看見他手上的釘痕，總不信。" }]);
-          return;
-        }
-        say(
-          [
-            { name: "耶穌", text: VERSES.peace, ref: "約翰福音 20:21", verse: true },
-            { name: "耶穌", text: VERSES.touch, ref: "約翰福音 20:27", verse: true },
-            { name: "多馬", text: VERSES.myLord, ref: "約翰福音 20:28", verse: true },
-            { name: "耶穌", text: VERSES.commission, ref: "馬太福音 28:18-19", verse: true },
-          ],
-          () => completeChapter()
-        );
+      if (f.rolled && angel && angel.alpha >= 1) {
+        f.sat = true;
+        this.angelSits();
       }
     },
+    talk() {},
   },
 ];
 
@@ -3027,45 +3102,113 @@ const MORE = [
     key: "gethsemane",
     title: "客西馬尼",
     ref: "馬太福音 26:36–56；約翰福音 18",
-    intro: "你們唱了詩，往橄欖山去。你把彼得、雅各、約翰留下，自己走到前頭禱告。三次。然後火把來了。猶大與你親嘴。你說：我就是。",
-    closing: "你們拿我如同拿強盜。",
-    closingRef: "馬太福音 26:55",
+    intro: "你們唱了詩，往橄欖山去。你把彼得、雅各、約翰留下，自己走到前頭禱告。三次。然後走回他們那裡。火把來了。猶大帶著兵丁和祭司長走到你面前，與你親嘴。彼得拔刀。門徒都逃走了，只有彼得遠遠地跟著。",
+    closing: "彼得遠遠地跟著耶穌，一直到大祭司的院子裡。",
+    closingRef: "馬太福音 26:58",
     music: "solemn",
     night: true,
+    walkDuringTalk: true,
     build() {
       const m = createMap(30, 20, ".");
       scatter(m, ",", 0.15, (ch) => ch === ".");
       m.frame("#");
       state.map = m;
-      state.player = asJesus(15, 12, "up");
+      state.player = asJesus(15, 10, "up");
       state.entities = [
         prop({ kind: "tree", tx: 6, ty: 6, variant: "cypress", solid: true, radius: 3 }),
         prop({ kind: "tree", tx: 24, ty: 5, variant: "cypress", solid: true, radius: 3 }),
         prop({ kind: "tree", tx: 8, ty: 15, variant: "cypress", solid: true, radius: 3 }),
-        prop({ kind: "stone", id: "rock", name: "磐石", tx: 15, ty: 6, talk: true }),
-        person({ id: "peter", name: "彼得", tx: 13, ty: 14, look: "simon", dir: "up" }),
-        person({ id: "james", name: "雅各", tx: 16, ty: 15, look: "james", dir: "up" }),
-        person({ id: "john", name: "約翰", tx: 18, ty: 14, look: "john", dir: "up" }),
-        person({ id: "andrew", name: "安得烈", tx: 12, ty: 18, look: "andrew", dir: "up", talk: false }),
-        person({ id: "philip", name: "腓力", tx: 16, ty: 18, look: "philip", dir: "up", talk: false }),
-        person({ id: "matthew", name: "馬太", tx: 20, ty: 18, look: "tax", dir: "up", talk: false }),
-        person({ id: "judas", name: "加略人猶大", tx: 8, ty: 17, look: "judas", dir: "right", alpha: 0, talk: false }),
-        person({ id: "malchus", name: "馬勒古", tx: 22, ty: 17, look: "soldier", dir: "left", alpha: 0, talk: false }),
+        prop({ kind: "rock", id: "rock", name: "磐石", tx: 15, ty: 6, talk: true }),
+        person({ id: "peter", name: "彼得", tx: 13, ty: 12, look: "simon", dir: "up" }),
+        person({ id: "james", name: "雅各", tx: 16, ty: 13, look: "james", dir: "up" }),
+        person({ id: "john", name: "約翰", tx: 18, ty: 12, look: "john", dir: "up" }),
+        person({ id: "andrew", name: "安得烈", tx: 12, ty: 15, look: "andrew", dir: "up", talk: false }),
+        person({ id: "philip", name: "腓力", tx: 16, ty: 15, look: "philip", dir: "up", talk: false }),
+        person({ id: "matthew", name: "馬太", tx: 20, ty: 14, look: "tax", dir: "up", talk: false }),
+        person({ id: "judas", name: "加略人猶大", tx: 15, ty: 17, look: "judas", dir: "up", alpha: 0, talk: false }),
+        person({ id: "malchus", name: "馬勒古", tx: 11, ty: 17, look: "soldier", dir: "up", alpha: 0, talk: false, torch: true }),
+        person({ id: "soldier", name: "兵丁", tx: 19, ty: 17, look: "soldier", dir: "up", alpha: 0, talk: false, torch: true }),
+        person({ id: "soldier2", name: "兵丁", tx: 15, ty: 18, look: "soldier", dir: "up", alpha: 0, talk: false, torch: true }),
+        person({ id: "priest", name: "祭司長", tx: 22, ty: 17, look: "priest", dir: "up", alpha: 0, talk: false }),
       ];
       state.flags.prayed = 0;
+      this.guided = false;
       state.objective = "走到前頭的磐石那裡禱告。";
     },
     onEnter() {
+      this.guided = false;
       state.objective = "走到前頭的磐石那裡禱告。他們會睡著。";
     },
     goal() {
       const f = state.flags;
       if (f.prayed < 3) return findEnt("rock");
-      if (!f.kiss) return findEnt("judas");
-      if (!f.healed) return findEnt("malchus");
+      if (!f.coming) return findEnt("peter");
       return null;
     },
-    update() {},
+    spot(id, x, y) {
+      const e = findEnt(id);
+      if (e) e.dest = { x, y };
+      return e;
+    },
+    stepIds(ids, dt, speed) {
+      let all = true;
+      for (const id of ids) {
+        const e = findEnt(id);
+        if (!e || !e.dest || !stepToward(e, e.dest, dt, speed)) all = false;
+      }
+      return all;
+    },
+    faceMob(skip) {
+      const judas = findEnt("judas");
+      for (const id of ["peter", "james", "john", "andrew", "philip", "matthew"]) {
+        if (id === skip) continue;
+        const e = findEnt(id);
+        if (!e || e.moving || e.alpha === 0) continue;
+        e.dir = judas && e.y > judas.y ? "up" : "down";
+      }
+    },
+    update(dt) {
+      const f = state.flags;
+      if (f.ready && !f.coming && !state.dialogue.open) {
+        const back = ["peter", "james", "john"].some((id) => {
+          const e = findEnt(id);
+          return e && dist(state.player, e) < 40;
+        });
+        if (back) this.betrayal();
+      }
+      const band = ["judas", "malchus", "soldier", "soldier2", "priest"];
+      if (f.coming && !f.kiss) {
+        const arrived = this.stepIds(band, dt, 44);
+        this.faceMob();
+        if (arrived) {
+          f.kiss = true;
+          this.kiss();
+        }
+      }
+      if (f.seize && !f.seized) {
+        const ready = this.stepIds(band, dt, 40) && this.stepIds(["peter"], dt, 68);
+        this.faceMob("peter");
+        if (ready) {
+          f.seized = true;
+          this.arrest();
+        }
+      }
+      if (f.flee && !f.fled) {
+        const gone = this.stepIds(["james", "john", "andrew", "philip", "matthew", "peter"], dt, 56);
+        if (gone) {
+          f.fled = true;
+          const peter = findEnt("peter");
+          if (peter) peter.dir = "up";
+          say(
+            [
+              { name: "", text: "當下，門徒都離開他，逃走了。", ref: "馬太福音 26:56", verse: true },
+              { name: "", text: "他們把耶穌帶到大祭司那裡去。彼得遠遠地跟著，進了大祭司的院子。", ref: "馬太福音 26:57-58", verse: true },
+            ],
+            () => completeChapter()
+          );
+        }
+      }
+    },
     wake() {
       state.flags.prayed += 1;
       ["peter", "james", "john"].forEach((id) => {
@@ -3073,19 +3216,129 @@ const MORE = [
         if (p) p.mark = "worry";
       });
       if (state.flags.prayed >= 3) {
-        ["judas", "malchus"].forEach((id) => {
-          const p = findEnt(id);
-          p.alpha = 1;
-          p.talk = true;
-        });
-        state.objective = "火把來了。走到他們面前。";
+        state.flags.ready = true;
+        state.objective = "走回門徒那裡。";
       } else state.objective = "他們睡著了。再去禱告。";
+    },
+    betrayal() {
+      const f = state.flags;
+      f.coming = true;
+      this.guided = true;
+      state.player.dir = "down";
+      const px = state.player.x;
+      const py = state.player.y;
+      ["judas", "malchus", "soldier", "soldier2", "priest"].forEach((id) => {
+        const e = findEnt(id);
+        e.alpha = 1;
+        e.talk = false;
+        e.dir = "up";
+      });
+      this.spot("judas", px, py + 14);
+      this.spot("malchus", px - 22, py + 30);
+      this.spot("soldier", px + 22, py + 30);
+      this.spot("soldier2", px - 4, py + 44);
+      this.spot("priest", px + 34, py + 40);
+      ["peter", "james", "john"].forEach((id) => {
+        const p = findEnt(id);
+        if (p) p.mark = null;
+      });
+      tone(146, 0.28, "triangle", 0.04);
+      state.objective = "火把來了。猶大帶著兵丁和祭司長走來。";
+    },
+    kiss() {
+      const judas = findEnt("judas");
+      state.player.dir = "down";
+      if (judas) judas.dir = "up";
+      ["malchus", "soldier", "soldier2", "priest"].forEach((id) => {
+        const e = findEnt(id);
+        if (e) e.dir = "up";
+      });
+      state.objective = "猶大與你親嘴。";
+      say(
+        [
+          {
+            name: "",
+            text: "猶大領了一隊兵，和祭司長並法利賽人的差役，拿著燈籠、火把、兵器，來到園裡。",
+            ref: "約翰福音 18:3",
+            verse: true,
+          },
+          { name: "加略人猶大", text: VERSES.hail, ref: "馬太福音 26:49", verse: true },
+          { name: "", text: "就與他親嘴。" },
+          { name: "耶穌", text: "朋友，你來要做的事，就做吧。" },
+          { name: "耶穌", text: VERSES.iAm, ref: "約翰福音 18:5", verse: true },
+        ],
+        () => this.closeIn()
+      );
+    },
+    closeIn() {
+      const px = state.player.x;
+      const py = state.player.y;
+      this.spot("judas", px + 10, py + 24);
+      this.spot("malchus", px - 18, py + 2);
+      this.spot("soldier", px + 18, py + 2);
+      this.spot("soldier2", px - 6, py + 28);
+      this.spot("priest", px + 34, py + 16);
+      this.spot("peter", px - 36, py + 14);
+      const peter = findEnt("peter");
+      if (peter) peter.sword = true;
+      const malchus = findEnt("malchus");
+      const soldier = findEnt("soldier");
+      if (malchus) malchus.chain = true;
+      if (soldier) soldier.chain = true;
+      state.flags.seize = true;
+      state.objective = "他們圍上來，要拿住你。";
+    },
+    arrest() {
+      const malchus = findEnt("malchus");
+      const peter = findEnt("peter");
+      state.player.dir = "down";
+      if (malchus) malchus.dir = "right";
+      if (peter) peter.dir = "right";
+      const soldier = findEnt("soldier");
+      if (soldier) soldier.dir = "left";
+      const priest = findEnt("priest");
+      if (priest) priest.dir = "left";
+      const judas = findEnt("judas");
+      if (judas) judas.dir = "left";
+      if (malchus) puff(malchus.x, malchus.y - 8, "#8c2f2f", 6, 10);
+      state.objective = "他們要拿住你。";
+      say(
+        [
+          { name: "", text: "他們就上手拿住耶穌。" },
+          { name: "彼得", text: "他拔出刀來，將大祭司的僕人砍了一刀，削掉他的右耳。" },
+          { name: "耶穌", text: VERSES.sheath, ref: "約翰福音 18:11", verse: true },
+          { name: "耶穌", text: VERSES.letThem, ref: "路加福音 22:51", verse: true },
+          { name: "", text: "耶穌就摸那人的耳朵，把他治好了。" },
+          { name: "耶穌", text: "你們帶著刀棒出來拿我，如同拿強盜嗎？但這是你們的時候，黑暗掌權了。" },
+        ],
+        () => {
+          state.flags.healed = true;
+          if (malchus) puff(malchus.x, malchus.y - 10, "#f2c396", 8, 14);
+          this.scatter();
+        }
+      );
+    },
+    scatter() {
+      const tx = Math.round(state.player.x / 16);
+      const ty = Math.round(state.player.y / 16);
+      const put = (id, x, y) => {
+        const p = tp(clamp(x, 2, 27), clamp(y, 2, 17));
+        this.spot(id, p.x, p.y);
+      };
+      put("james", tx - 7, ty + 4);
+      put("john", tx + 7, ty + 4);
+      put("andrew", tx - 5, ty + 5);
+      put("philip", tx + 5, ty + 5);
+      put("matthew", tx + 8, ty + 2);
+      put("peter", tx - 1, ty + 2);
+      state.flags.flee = true;
+      state.objective = "門徒都逃走了。彼得遠遠地跟著。";
     },
     talk(e) {
       const f = state.flags;
       if (e.id === "rock") {
         if (f.prayed >= 3) {
-          say([{ name: "", text: "禱告已經三次。時候到了。" }]);
+          say([{ name: "", text: "禱告已經三次。走回門徒那裡。" }]);
           return;
         }
         const lines = [
@@ -3097,51 +3350,130 @@ const MORE = [
       }
       if (e.id === "peter" || e.id === "james" || e.id === "john") {
         say([{ name: e.name, text: f.prayed ? "……我們的眼睛困倦。" : "主，我們在這裡坐著。" }]);
-        return;
-      }
-      if (e.id === "judas") {
-        if (f.prayed < 3) return;
-        say(
-          [
-            { name: "加略人猶大", text: VERSES.hail, ref: "馬太福音 26:49", verse: true },
-            { name: "", text: "就與他親嘴。" },
-            { name: "耶穌", text: VERSES.iAm, ref: "約翰福音 18:5", verse: true },
-            { name: "耶穌", text: "朋友，你來要做的事，就做吧。" },
-          ],
-          () => {
-            f.kiss = true;
-            state.objective = "彼得動了刀。去治好那隻耳朵。";
-          }
-        );
-        return;
-      }
-      if (e.id === "malchus") {
-        if (!f.kiss) {
-          say([{ name: "馬勒古", text: "火把還沒有靠近。" }]);
-          return;
-        }
-        say(
-          [
-            { name: "彼得", text: "他砍了大祭司僕人的右耳。" },
-            { name: "耶穌", text: VERSES.sheath, ref: "約翰福音 18:11", verse: true },
-            { name: "耶穌", text: VERSES.letThem, ref: "路加福音 22:51", verse: true },
-            { name: "", text: "耶穌就摸那人的耳朵，把他治好了。" },
-            { name: "耶穌", text: "你們帶著刀棒出來拿我，如同拿強盜嗎？但這是你們的時候，黑暗掌權了。" },
-          ],
-          () => {
-            f.healed = true;
-            puff(e.x, e.y - 10, "#f2c396", 8, 14);
-            completeChapter();
-          }
-        );
       }
     },
+  },
+  {
+    key: "deny",
+    title: "雞叫以先",
+    ref: "約翰福音 18:15–27；路加福音 22:54–62",
+    who: "彼得",
+    guided: true,
+    night: true,
+    intro:
+      "他們把耶穌帶到大祭司的院子。你遠遠跟著進去，在火邊烤火。有人三次問你是不是他的門徒。你都說不是。雞叫了，主轉過身來看你。你想起他的話，出去痛哭。這一程自己往前走。",
+    closing: "他就出去痛哭。",
+    closingRef: "路加福音 22:62",
+    music: "solemn",
+    build() {
+      const m = createMap(22, 16, "f");
+      m.frame("#");
+      m.rect(1, 1, 20, 2, "#");
+      state.map = m;
+      state.player = asRole(11, 13, "up", "peter");
+      state.entities = [
+        prop({ kind: "lamp", tx: 7, ty: 6 }),
+        prop({ kind: "lamp", tx: 15, ty: 6 }),
+        prop({ kind: "lamp", tx: 8, ty: 10 }),
+        person({ id: "priest", name: "大祭司", tx: 11, ty: 5, look: "priest", dir: "down", seated: true, chair: true, talk: false }),
+        person({ id: "jesus", name: "耶穌", tx: 11, ty: 6, look: "jesus", dir: "up", talk: false }),
+        person({ id: "girl", name: "使女", tx: 9, ty: 12, look: "woman", dir: "right", talk: false }),
+        person({ id: "servant", name: "差役", tx: 13, ty: 9, look: "worker", dir: "left", talk: false }),
+        person({ id: "kin", name: "大祭司的僕人", tx: 16, ty: 8, look: "soldier", dir: "left", talk: false }),
+      ];
+      this.guided = true;
+      state.objective = "遠遠跟著，進大祭司的院子。";
+    },
+    onEnter() {
+      this.guided = true;
+      state.objective = "遠遠跟著，進大祭司的院子。";
+      say(
+        [{ name: "", text: "他們把耶穌帶到大祭司那裡。彼得遠遠地跟著，進了院子，和差役一同坐著烤火。" }],
+        () => walkPlayer(11, 11, 46, () => this.first())
+      );
+    },
+    first() {
+      state.player.dir = "left";
+      const girl = findEnt("girl");
+      if (girl) girl.dir = "right";
+      say(
+        [
+          { name: "使女", text: VERSES.notDisciple, ref: "約翰福音 18:17", verse: true },
+          { name: "彼得", text: VERSES.notI },
+        ],
+        () => {
+          state.objective = "他又在火邊。";
+          walkPlayer(11, 9, 42, () => this.second());
+        }
+      );
+    },
+    second() {
+      state.player.dir = "right";
+      const servant = findEnt("servant");
+      if (servant) servant.dir = "left";
+      say(
+        [
+          { name: "差役", text: VERSES.alsoOne, ref: "路加福音 22:58", verse: true },
+          { name: "彼得", text: VERSES.notI, ref: "約翰福音 18:25", verse: true },
+        ],
+        () => {
+          state.flags.approach = true;
+          state.objective = "又有一個人走過來。";
+        }
+      );
+    },
+    third() {
+      state.player.dir = "right";
+      const kin = findEnt("kin");
+      if (kin) kin.dir = "left";
+      say(
+        [
+          { name: "大祭司的僕人", text: VERSES.inGarden, ref: "約翰福音 18:26", verse: true },
+          { name: "彼得", text: VERSES.knowNot, ref: "馬可福音 14:71", verse: true },
+        ],
+        () => this.crow()
+      );
+    },
+    crow() {
+      tone(740, 0.18, "square", 0.05);
+      tone(980, 0.22, "square", 0.04);
+      const jesus = findEnt("jesus");
+      if (jesus) jesus.dir = "down";
+      state.player.dir = "up";
+      state.flash = 0.25;
+      say(
+        [
+          { name: "", text: "立時雞就叫了。主轉過身來，看彼得。", ref: "路加福音 22:60-61", verse: true },
+          { name: "", text: "彼得想起耶穌所說的話：" + VERSES.remembered, ref: "路加福音 22:61", verse: true },
+        ],
+        () => {
+          state.player.mark = "worry";
+          state.objective = "他就出去痛哭。";
+          walkPlayer(11, 14, 40, () => {
+            say([{ name: "", text: "他就出去痛哭。", ref: "路加福音 22:62", verse: true }], () => completeChapter());
+          });
+        }
+      );
+    },
+    update(dt) {
+      if (!state.flags.approach || state.flags.asked) return;
+      const kin = findEnt("kin");
+      if (!kin) return;
+      const dest = { x: state.player.x + 18, y: state.player.y };
+      if (stepToward(kin, dest, dt, 40)) {
+        state.flags.asked = true;
+        kin.dir = "left";
+        this.third();
+      }
+    },
+    talk() {},
   },
   {
     key: "pilate",
     title: "彼拉多",
     ref: "馬太福音 27；約翰福音 18–19",
-    intro: "他們把你帶到總督府。彼拉多問：你是猶太人的王嗎？他查不出罪。眾人卻喊著要釘十字架。兵丁用荊棘編冠冕，戴在你頭上，又鞭打你。",
+    guided: true,
+    intro: "他們把你帶到總督府。羅馬兵圍在你身旁。彼拉多問：你是猶太人的王嗎？他查不出罪。眾人卻喊著要釘十字架。兵丁用荊棘編冠冕，戴在你頭上，又鞭打你。這一程自己往前走。",
     closing: "於是彼拉多將耶穌鞭打了，交給人釘十字架。",
     closingRef: "馬太福音 27:26",
     music: "solemn",
@@ -3150,95 +3482,118 @@ const MORE = [
       m.frame("#");
       m.rect(1, 1, 26, 2, "#");
       state.map = m;
-      state.player = asJesus(14, 10, "up");
+      state.player = asJesus(14, 12, "up");
       state.entities = [
-        person({ id: "pilate", name: "彼拉多", tx: 14, ty: 5, look: "pilate", dir: "down" }),
-        person({ id: "priest", name: "祭司長", tx: 8, ty: 8, look: "elder", dir: "right" }),
-        person({ id: "crowd", name: "眾人", tx: 20, ty: 11, look: "worker", dir: "left" }),
-        person({ id: "soldier", name: "兵丁", tx: 18, ty: 7, look: "soldier", dir: "left" }),
-        person({ id: "john", name: "約翰", tx: 23, ty: 12, look: "john", dir: "left", talk: false }),
-        person({ id: "peter", name: "彼得", tx: 5, ty: 12, look: "simon", dir: "right", talk: false, mark: "worry" }),
+        person({ id: "pilate", name: "彼拉多", tx: 14, ty: 5, look: "pilate", dir: "down", seated: true, throne: true }),
+        person({ id: "priest", name: "祭司長", tx: 16, ty: 5, look: "priest", dir: "down" }),
+        person({ id: "john", name: "約翰", tx: 24, ty: 13, look: "john", dir: "left", talk: false }),
+        person({ id: "peter", name: "彼得", tx: 4, ty: 13, look: "simon", dir: "right", talk: false, mark: "worry" }),
       ];
-      state.objective = "站到彼拉多面前。";
+      [
+        ["crowd0", "worker", 8, 6, "right"],
+        ["crowd1", "farmer", 8, 8, "right"],
+        ["crowd2", "woman", 8, 10, "right"],
+        ["crowd3", "elder", 11, 12, "up"],
+        ["crowd4", "traveler", 20, 6, "left"],
+        ["crowd5", "youth", 20, 8, "left"],
+        ["crowd6", "mother", 20, 10, "left"],
+        ["crowd7", "tax", 17, 12, "up"],
+        ["crowd8", "poor", 12, 13, "up"],
+        ["crowd9", "steward", 16, 13, "up"],
+      ].forEach(([id, look, tx, ty, dir]) => {
+        state.entities.push(person({ id, name: "眾人", tx, ty, look, dir, role: "mob", talk: false }));
+      });
+      addRomans(14, 12);
+      this.guided = true;
+      state.objective = "羅馬兵押你到彼拉多面前。";
     },
     onEnter() {
-      state.objective = "站到彼拉多面前。";
+      this.guided = true;
+      state.objective = "羅馬兵押你到彼拉多面前。";
+      walkPlayer(14, 8, 46, () => this.beforePilate());
     },
-    goal() {
-      const f = state.flags;
-      if (!f.asked) return findEnt("pilate");
-      if (!f.shouted) return findEnt("crowd");
-      if (!f.scourged) return findEnt("soldier");
-      return findEnt("pilate");
+    beforePilate() {
+      state.player.dir = "up";
+      const pilate = findEnt("pilate");
+      if (pilate) pilate.dir = "down";
+      say(
+        [
+          { name: "彼拉多", text: VERSES.king, ref: "馬太福音 27:11", verse: true },
+          { name: "耶穌", text: VERSES.youSay, ref: "馬太福音 27:11" },
+          { name: "彼拉多", text: VERSES.noFault, ref: "約翰福音 18:38", verse: true },
+        ],
+        () => {
+          state.objective = "眾人在外圍喊著。";
+          this.shout();
+        }
+      );
     },
-    update() {},
-    talk(e) {
+    shout() {
+      state.flags.shouted = true;
+      for (const e of state.entities) {
+        if (e.role !== "mob") continue;
+        if (e.x < state.player.x - 8) e.dir = "right";
+        else if (e.x > state.player.x + 8) e.dir = "left";
+        else e.dir = "up";
+      }
+      say([{ name: "眾人", text: "把他釘十字架！把他釘十字架！" }], () => {
+        state.flags.mock = true;
+        state.objective = "羅馬兵上來戲弄你。";
+      });
+    },
+    scourge() {
       const f = state.flags;
-      if (e.id === "pilate") {
-        if (!f.asked) {
-          say(
-            [
-              { name: "彼拉多", text: VERSES.king, ref: "馬太福音 27:11", verse: true },
-              { name: "耶穌", text: VERSES.youSay, ref: "馬太福音 27:11" },
-              { name: "彼拉多", text: VERSES.noFault, ref: "約翰福音 18:38", verse: true },
-            ],
-            () => {
-              f.asked = true;
-              state.objective = "聽眾人怎麼喊。";
-            }
-          );
-          return;
+      if (f.scourged) return;
+      f.scourged = true;
+      const s = findEnt("roman0");
+      if (s) s.dir = "right";
+      say(
+        [
+          { name: "", text: VERSES.thorns, ref: "約翰福音 19:2", verse: true },
+          { name: "羅馬兵丁", text: "恭喜，猶太人的王啊！" },
+          { name: "", text: "他們用鞭子打他的背。" },
+        ],
+        () => {
+          if (s) s.hold = false;
+          state.player.wounds = true;
+          state.player.crown = true;
+          state.shake = 0.7;
+          state.flash = 0.35;
+          puff(state.player.x, state.player.y - 8, "#7a2030", 14, 20);
+          noise(0.4, 0.12, 180);
+          state.objective = "他們把你帶到彼拉多面前。";
+          walkPlayer(14, 7, 40, () => this.handOver());
         }
-        if (!f.scourged) {
-          say([{ name: "彼拉多", text: "我仍然查不出他有甚麼罪。你們要我怎麼辦？" }]);
-          return;
+      );
+    },
+    handOver() {
+      state.player.dir = "up";
+      const pilate = findEnt("pilate");
+      if (pilate) pilate.dir = "down";
+      say(
+        [
+          { name: "彼拉多", text: VERSES.behold, ref: "約翰福音 19:5", verse: true },
+          { name: "彼拉多", text: VERSES.innocent, ref: "馬太福音 27:24", verse: true },
+          { name: "", text: "於是彼拉多將耶穌鞭打了，交給人釘十字架。", ref: "馬太福音 27:26" },
+        ],
+        () => completeChapter()
+      );
+    },
+    update(dt) {
+      escortRomans(dt, 50);
+      const f = state.flags;
+      const p = state.player;
+      if (f.mock && !f.mocking) {
+        f.mocking = true;
+        const s = findEnt("roman0");
+        if (s) {
+          s.hold = true;
+          s.dest = { x: p.x - 2, y: p.y - 14 };
         }
-        say(
-          [
-            { name: "彼拉多", text: VERSES.behold, ref: "約翰福音 19:5", verse: true },
-            { name: "彼拉多", text: VERSES.innocent, ref: "馬太福音 27:24", verse: true },
-            { name: "", text: "於是彼拉多將耶穌鞭打了，交給人釘十字架。", ref: "馬太福音 27:26" },
-          ],
-          () => completeChapter()
-        );
-        return;
       }
-      if (e.id === "priest" || e.id === "crowd") {
-        if (!f.asked) {
-          say([{ name: e.name, text: "把他釘十字架！總督還沒有問完。" }]);
-          return;
-        }
-        say(
-          [{ name: "眾人", text: "把他釘十字架！把他釘十字架！" }],
-          () => {
-            f.shouted = true;
-            state.objective = "兵丁要上來。";
-          }
-        );
-        return;
-      }
-      if (e.id === "soldier") {
-        if (!f.shouted) {
-          say([{ name: "兵丁", text: "總督還沒有把你交出來。" }]);
-          return;
-        }
-        say(
-          [
-            { name: "", text: VERSES.thorns, ref: "約翰福音 19:2", verse: true },
-            { name: "兵丁", text: "恭喜，猶太人的王啊！" },
-            { name: "", text: "他們用鞭子打他的背。" },
-          ],
-          () => {
-            f.scourged = true;
-            state.player.wounds = true;
-            state.player.crown = true;
-            state.shake = 0.7;
-            state.flash = 0.35;
-            puff(state.player.x, state.player.y - 8, "#7a2030", 14, 20);
-            noise(0.4, 0.12, 180);
-            state.objective = "回到彼拉多面前。他要把你交出去。";
-          }
-        );
+      if (f.mocking && !f.scourged) {
+        const s = findEnt("roman0");
+        if (s && stepToward(s, s.dest, dt, 36)) this.scourge();
       }
     },
   },
@@ -3246,7 +3601,8 @@ const MORE = [
     key: "cross",
     title: "各各他",
     ref: "路加福音 23；約翰福音 19；馬太福音 27",
-    intro: "他們把十字架放在你肩上。你走向城外的各各他。有一次你跌倒，古利奈人西門把十字架接過去。到了那裡，他們釘你。天暗了。你把話說完。",
+    guided: true,
+    intro: "他們把十字架放在你肩上。羅馬兵圍著你，走向城外的各各他。有一次你跌倒，古利奈人西門把十字架接過去。到了那裡，他們釘你。天暗了。你把話說完。這一程自己往前走。",
     closing: "父啊，我將我的靈魂交在你手裡。",
     closingRef: "路加福音 23:46",
     music: "solemn",
@@ -3301,40 +3657,163 @@ const MORE = [
       state.player.crown = true;
       state.player.carry = true;
       state.entities = [
-        person({ id: "women", name: "耶路撒冷的女子", tx: 8, ty: 20, look: "woman", dir: "right" }),
-        person({ id: "simon", name: "古利奈人西門", tx: 14, ty: 12, look: "traveler", dir: "left" }),
-        person({ id: "soldier", name: "兵丁", tx: 11, ty: 5, look: "soldier", dir: "down" }),
-        person({ id: "mary", name: "耶穌的母親", tx: 8, ty: 6, look: "mother", dir: "right" }),
-        person({ id: "john", name: "約翰", tx: 14, ty: 6, look: "john", dir: "left" }),
+        person({ id: "women", name: "耶路撒冷的女子", tx: 8, ty: 20, look: "woman", dir: "right", talk: false }),
+        person({ id: "simon", name: "古利奈人西門", tx: 15, ty: 12, look: "traveler", dir: "down", talk: false }),
+        person({ id: "mary", name: "耶穌的母親", tx: 8, ty: 6, look: "mother", dir: "right", talk: false }),
+        person({ id: "john", name: "約翰", tx: 14, ty: 6, look: "john", dir: "left", talk: false }),
       ];
-      state.objective = "背著十字架，往各各他走。";
+      addRomans(11, 24);
+      this.guided = true;
+      state.objective = "羅馬兵押你往各各他走。";
     },
     onEnter() {
-      state.objective = "背著十字架，往各各他走。";
+      this.guided = true;
+      state.objective = "羅馬兵押你往各各他走。";
+      say([{ name: "", text: "他們把十字架放在他肩上。" }], () => {
+        walkPlayer(11, 20, 46, () => this.women());
+      });
     },
-    goal() {
-      const f = state.flags;
-      if (state.pose === "cross") return null;
-      if (!f.wept) return findEnt("women");
-      if (!f.simon) return findEnt("simon");
-      return findEnt("soldier");
+    women() {
+      state.player.dir = "left";
+      const women = findEnt("women");
+      if (women) women.dir = "right";
+      say(
+        [
+          { name: "耶路撒冷的女子", text: "她們為他號咷痛哭。" },
+          { name: "耶穌", text: VERSES.women, ref: "路加福音 23:28", verse: true },
+        ],
+        () => {
+          state.objective = "繼續往前。";
+          walkPlayer(11, 16, 44, () => this.fall());
+        }
+      );
     },
-    update() {
+    fall() {
+      state.flags.fell = true;
+      state.shake = 0.45;
+      state.player.carry = true;
+      say(
+        [
+          { name: "", text: "十字架壓下來。你倒在路上。" },
+          { name: "", text: "他們就抓住那從鄉下來的西門，把十字架擱在他身上，叫他背著跟隨耶穌。" },
+        ],
+        () => {
+          state.flags.fetchSimon = true;
+          state.objective = "古利奈人西門來接十字架。";
+        }
+      );
+    },
+    takeCross() {
       const f = state.flags;
-      if (state.pose === "cross" || f.fell || state.dialogue.open) return;
-      if (state.player.y < tp(0, 15).y) {
-        f.fell = true;
-        state.shake = 0.45;
-        state.player.carry = true;
-        say(
-          [
-            { name: "", text: "十字架壓下來。你倒在路上。" },
-            { name: "", text: "他們就抓住那從鄉下來的西門，把十字架擱在他身上，叫他背著跟隨耶穌。" },
-          ],
-          () => {
-            state.objective = "讓古利奈人西門接過十字架。";
-          }
-        );
+      if (f.simon) return;
+      f.simon = true;
+      const simon = findEnt("simon");
+      state.player.carry = false;
+      if (simon) {
+        simon.carry = true;
+        simon.dir = "up";
+      }
+      say([{ name: "古利奈人西門", text: "把十字架給我。你走在前頭。" }], () => {
+        state.objective = "羅馬兵押你上山。";
+        walkPlayer(11, 8, 42, () => this.atHill());
+      });
+    },
+    atHill() {
+      state.player.dir = "up";
+      findEnt("mary").dir = "right";
+      findEnt("john").dir = "left";
+      say(
+        [
+          { name: "", text: "他們到了一個地方，名叫各各他，意思就是髑髏地。" },
+          { name: "", text: "於是將他釘在十字架上，又拿苦膽調和的酒給他喝。他嘗了，就不肯喝。" },
+          { name: "", text: "在他頭以上安一個牌子，寫著：這是猶太人的王耶穌。" },
+        ],
+        () => {
+          this.plantCrosses();
+          state.pose = "cross";
+          state.objective = "把話說完。";
+          this.onCross();
+        }
+      );
+    },
+    plantCrosses() {
+      state.entities.push(
+        prop({ id: "crossL", kind: "cross", tx: 7, ty: 4, who: "thief" }),
+        prop({ id: "crossJ", kind: "cross", tx: 11, ty: 4, who: "jesus" }),
+        prop({ id: "crossR", kind: "cross", tx: 15, ty: 4, who: "thief", shade: 1 })
+      );
+      [
+        ["watch0", "woman", 3, 5, "right"],
+        ["watch1", "elder", 4, 5, "right"],
+        ["watch2", "youth", 5, 5, "up"],
+        ["watch3", "farmer", 3, 6, "right"],
+        ["watch4", "worker", 19, 5, "left"],
+        ["watch5", "traveler", 18, 5, "left"],
+        ["watch6", "poor", 17, 5, "up"],
+        ["watch7", "tax", 19, 6, "left"],
+      ].forEach(([id, look, tx, ty, dir]) => {
+        state.entities.push(person({ id, name: "眾人", tx, ty, look, dir, talk: false }));
+      });
+      const simon = findEnt("simon");
+      if (simon) simon.carry = false;
+    },
+    animate(dt) {
+      if (state.pose !== "cross") return;
+      const step = state.crossStep;
+      const jesus = findEnt("crossJ");
+      const jx = jesus ? jesus.x : tp(11, 4).x;
+      const jy = jesus ? jesus.y : tp(11, 4).y;
+      const posts = {
+        roman0: tp(5, 6),
+        roman1: tp(17, 6),
+        roman2: tp(8, 6),
+        roman3: tp(14, 6),
+      };
+      if (step >= 3) {
+        posts.roman0 = tp(4, 6);
+        posts.roman1 = tp(18, 6);
+        posts.roman2 = tp(6, 6);
+        posts.roman3 = tp(16, 6);
+      }
+      if (step >= 4) {
+        posts.roman0 = tp(4, 7);
+        posts.roman1 = tp(18, 7);
+        posts.roman2 = tp(6, 7);
+        posts.roman3 = tp(16, 7);
+      }
+      if (step >= 7) posts.roman2 = { x: jx + 18, y: jy + 16 };
+      ["roman0", "roman1", "roman2", "roman3"].forEach((id) => {
+        const e = findEnt(id);
+        if (!e) return;
+        if (step >= 7 && id === "roman2") e.spear = true;
+        const there = stepToward(e, posts[id], dt, 40);
+        if (!there) return;
+        if (id === "roman2" && step >= 7) {
+          e.x = posts[id].x;
+          e.y = posts[id].y;
+          e.dir = "left";
+          state.flags.pierced = true;
+        } else e.dir = "up";
+      });
+      const near = step >= 3;
+      const mary = findEnt("mary");
+      const john = findEnt("john");
+      const simon = findEnt("simon");
+      if (mary && stepToward(mary, near ? tp(9, 5) : tp(9, 6), dt, 30)) mary.dir = "up";
+      if (john && stepToward(john, near ? tp(13, 5) : tp(13, 6), dt, 30)) john.dir = "up";
+      if (simon && stepToward(simon, tp(2, 6), dt, 36)) simon.dir = "right";
+    },
+    update(dt) {
+      if (state.pose === "cross") return;
+      escortRomans(dt, 48);
+      const f = state.flags;
+      const simon = findEnt("simon");
+      if (f.fetchSimon && !f.simon && simon) {
+        const arrived = stepToward(simon, { x: state.player.x + 16, y: state.player.y + 2 }, dt, 54);
+        if (arrived) this.takeCross();
+      }
+      if (f.simon && simon && !state.dialogue.open) {
+        stepToward(simon, { x: state.player.x + 14, y: state.player.y + 14 }, dt, 44);
       }
     },
     onCross() {
@@ -3349,61 +3828,242 @@ const MORE = [
         if (step.done) completeChapter();
       });
     },
-    talk(e) {
-      const f = state.flags;
-      if (state.pose === "cross") return;
-      if (e.id === "women") {
-        say(
-          [
-            { name: "耶路撒冷的女子", text: "她們為他號咷痛哭。" },
-            { name: "耶穌", text: VERSES.women, ref: "路加福音 23:28", verse: true },
-          ],
-          () => {
-            f.wept = true;
-            state.objective = "繼續往前。西門在路上。";
-          }
-        );
-        return;
-      }
-      if (e.id === "simon") {
-        if (!f.fell) {
-          say([{ name: "古利奈人西門", text: "我從鄉下來，正經過這裡。" }]);
-          return;
+  },
+  {
+    key: "loves",
+    title: "你愛我嗎",
+    ref: "約翰福音 21:1–19",
+    who: "彼得",
+    guided: true,
+    waterSolid: false,
+    intro:
+      "提比哩亞海邊，天將亮。你說我打魚去，他們也一同去。那一夜沒有打著什麼。岸上有一個人，你們卻不認得。他把網指到船的右邊。約翰說：是主。你跳進海裡，到了炭火旁。他三次問你愛不愛他。這一程自己往前走。",
+    closing: "你跟從我吧！",
+    closingRef: "約翰福音 21:19",
+    music: "dawn",
+    build() {
+      const m = createMap(28, 16, ".");
+      m.rect(0, 1, 28, 4, "d");
+      m.rect(0, 5, 28, 1, "w");
+      m.rect(0, 6, 28, 2, "s");
+      m.frame("#");
+      state.map = m;
+      state.player = asRole(14, 4, "down", "peter");
+      state.entities = [
+        prop({ kind: "boat", id: "boat", tx: 14, ty: 4 }),
+        prop({ kind: "net", id: "net", tx: 17, ty: 4, alpha: 0 }),
+        prop({ kind: "lamp", tx: 14, ty: 9 }),
+        person({ id: "jesus", name: "耶穌", tx: 14, ty: 9, look: "jesus", dir: "up", talk: false }),
+        person({ id: "john", name: "約翰", tx: 12, ty: 4, look: "john", dir: "down", talk: false }),
+        person({ id: "james", name: "雅各", tx: 16, ty: 4, look: "james", dir: "down", talk: false }),
+        person({ id: "thomas", name: "多馬", tx: 15, ty: 3, look: "thomas", dir: "down", talk: false }),
+        person({ id: "bart", name: "拿但業", tx: 13, ty: 3, look: "bart", dir: "down", talk: false }),
+      ];
+      this.guided = true;
+      state.objective = "那一夜，沒有打著什麼。";
+    },
+    onEnter() {
+      this.guided = true;
+      say(
+        [
+          { name: "", text: "這些事以後，耶穌在提比哩亞海邊又向門徒顯現。", ref: "約翰福音 21:1", verse: true },
+          { name: "彼得", text: VERSES.goFish },
+          { name: "門徒", text: "我們也和你同去。" },
+          { name: "", text: "他們上了船。那一夜並沒有打著什麼。" },
+        ],
+        () => this.dawn()
+      );
+    },
+    dawn() {
+      state.flash = 0.35;
+      const jesus = findEnt("jesus");
+      if (jesus) jesus.dir = "up";
+      say(
+        [
+          { name: "", text: "天將亮的時候，耶穌站在岸上，門徒卻不知道是耶穌。" },
+          { name: "耶穌", text: VERSES.childrenEat, ref: "約翰福音 21:5", verse: true },
+          { name: "門徒", text: "沒有。" },
+          { name: "耶穌", text: VERSES.castRight, ref: "約翰福音 21:6", verse: true },
+        ],
+        () => this.cast()
+      );
+    },
+    cast() {
+      const net = findEnt("net");
+      if (net) net.alpha = 1;
+      puff(tp(17, 4).x, tp(17, 4).y, "#9ad4ea", 16, 22);
+      chime();
+      say(
+        [
+          { name: "", text: "他們便撒下網去，竟拉不上來了，因為魚甚多。" },
+          { name: "約翰", text: VERSES.itIsLord, ref: "約翰福音 21:7", verse: true },
+        ],
+        () => {
+          state.objective = "你跳進海裡，往岸上去。";
+          state.flags.ashore = true;
+          walkPlayer(14, 8, 54, () => this.breakfast());
         }
-        say(
-          [{ name: "古利奈人西門", text: "把十字架給我。你走在前頭。" }],
-          () => {
-            f.simon = true;
-            state.player.carry = false;
-            e.carry = true;
-            state.objective = "走到山頂。兵丁在那裡。";
-          }
-        );
-        return;
-      }
-      if (e.id === "soldier") {
-        if (!f.simon) {
-          say([{ name: "兵丁", text: "十字架還沒有到。走過來。" }]);
-          return;
+      );
+    },
+    breakfast() {
+      state.player.dir = "down";
+      const jesus = findEnt("jesus");
+      if (jesus) jesus.dir = "up";
+      say(
+        [
+          { name: "", text: "他們上了岸，就看見那裡有炭火，上面有魚，又有餅。" },
+          { name: "耶穌", text: VERSES.comeEat, ref: "約翰福音 21:12", verse: true },
+          { name: "", text: "門徒中沒有一個敢問他「你是誰」，因為知道是主。" },
+        ],
+        () => this.ask()
+      );
+    },
+    ask() {
+      say(
+        [
+          { name: "耶穌", text: VERSES.loveMore, ref: "約翰福音 21:15", verse: true },
+          { name: "彼得", text: VERSES.loveYes },
+          { name: "耶穌", text: VERSES.feedLambs },
+          { name: "耶穌", text: VERSES.loveSecond, ref: "約翰福音 21:16", verse: true },
+          { name: "彼得", text: VERSES.loveYes },
+          { name: "耶穌", text: VERSES.tendSheep },
+        ],
+        () => {
+          state.player.mark = "worry";
+          say(
+            [
+              { name: "耶穌", text: VERSES.loveSecond, ref: "約翰福音 21:17", verse: true },
+              { name: "", text: "彼得因為耶穌第三次對他說「你愛我嗎」，就憂愁。" },
+              { name: "彼得", text: VERSES.loveKnows, ref: "約翰福音 21:17", verse: true },
+              { name: "耶穌", text: VERSES.feedSheep },
+              { name: "耶穌", text: VERSES.followAfter, ref: "約翰福音 21:19", verse: true },
+            ],
+            () => completeChapter()
+          );
         }
-        say(
-          [
-            { name: "", text: "他們到了一個地方，名叫各各他，意思就是髑髏地。" },
-            { name: "", text: "於是將他釘在十字架上，又拿苦膽調和的酒給他喝。他嘗了，就不肯喝。" },
-            { name: "", text: "在他頭以上安一個牌子，寫著：這是猶太人的王耶穌。" },
-          ],
-          () => {
-            state.pose = "cross";
-            state.objective = "把話說完。";
-            this.onCross();
-          }
-        );
-        return;
+      );
+    },
+    update(dt) {
+      if (!state.flags.ashore) return;
+      [
+        ["john", -22, -10],
+        ["james", 24, -8],
+        ["thomas", -12, -22],
+        ["bart", 14, -20],
+      ].forEach(([id, ox, oy]) => {
+        const e = findEnt(id);
+        if (!e) return;
+        if (stepToward(e, { x: state.player.x + ox, y: state.player.y + oy }, dt, 50)) e.dir = "down";
+      });
+    },
+    talk() {},
+  },
+  {
+    key: "galilee",
+    title: "加利利的山",
+    ref: "馬太福音 28:16–20",
+    who: "彼得",
+    guided: true,
+    intro:
+      "十一個門徒往加利利去，到了耶穌約定的山上。你與他們同行。他們見了耶穌就拜他，然而還有人疑惑。他進前來，把天上地下的權柄、去使萬民作門徒的吩咐，和常與你們同在的應許說完。這一程自己往前走。",
+    closing: "我就常與你們同在，直到世界的末了。",
+    closingRef: "馬太福音 28:20",
+    music: "peace",
+    after() {
+      openEnding();
+    },
+    build() {
+      const m = createMap(30, 28, "m");
+      m.rect(3, 2, 24, 23, ".");
+      stroke(m, [[15, 24], [15, 6]], "p", 0);
+      m.frame("#");
+      state.map = m;
+      state.player = asRole(15, 22, "up", "peter");
+      state.entities = [
+        prop({ kind: "rock", tx: 8, ty: 8 }),
+        prop({ kind: "rock", tx: 22, ty: 7 }),
+        prop({ kind: "rock", tx: 11, ty: 4 }),
+        person({ id: "jesus", name: "耶穌", tx: 15, ty: 5, look: "jesus", dir: "down", talk: false }),
+      ];
+      [
+        ["andrew", "安得烈", "andrew", -24, 14],
+        ["james", "雅各", "james", 26, 12],
+        ["john", "約翰", "john", -8, 28],
+        ["philip", "腓力", "philip", 10, 30],
+        ["thomas", "多馬", "thomas", -40, 32, "worry"],
+        ["matthew", "馬太", "tax", 40, 30],
+        ["bart", "巴多羅買", "bart", -22, 46],
+        ["james2", "小雅各", "james2", 22, 48],
+        ["thad", "達太", "thad", 0, 52],
+        ["zealot", "奮銳黨的西門", "zealot", 48, 50, "worry"],
+      ].forEach(([id, name, look, ox, oy, mark]) => {
+        const ent = person({
+          id,
+          name,
+          tx: 15,
+          ty: 22,
+          look,
+          dir: "up",
+          talk: false,
+          mark: mark || null,
+          ox,
+          oy,
+        });
+        const at = tp(15, 22);
+        ent.x = at.x + ox;
+        ent.y = at.y + oy;
+        state.entities.push(ent);
+      });
+      this.guided = true;
+      state.objective = "十一個門徒往加利利去。";
+    },
+    onEnter() {
+      this.guided = true;
+      state.objective = "上到他約定的山上。";
+      say([{ name: "", text: "十一個門徒往加利利去，到了耶穌約定的山上。" }], () => {
+        walkPlayer(15, 12, 46, () => this.worship());
+      });
+    },
+    worship() {
+      state.player.dir = "up";
+      say(
+        [
+          { name: "", text: "他們見了耶穌就拜他，然而還有人疑惑。" },
+        ],
+        () => {
+          state.flags.come = true;
+          state.objective = "他進前來。";
+        }
+      );
+    },
+    commission() {
+      const jesus = findEnt("jesus");
+      if (jesus) jesus.dir = "down";
+      state.player.dir = "up";
+      say(
+        [
+          { name: "耶穌", text: VERSES.allAuthority, ref: "馬太福音 28:18", verse: true },
+          { name: "耶穌", text: VERSES.makeDisciples, ref: "馬太福音 28:19", verse: true },
+          { name: "耶穌", text: VERSES.withYou, ref: "馬太福音 28:20", verse: true },
+        ],
+        () => completeChapter()
+      );
+    },
+    update(dt) {
+      for (const e of state.entities) {
+        if (e.ox == null) continue;
+        const arrived = stepToward(e, { x: state.player.x + e.ox, y: state.player.y + e.oy }, dt, 48);
+        if (arrived) e.dir = "up";
       }
-      if (e.id === "mary" || e.id === "john") {
-        say([{ name: e.name, text: "我們站在十字架旁邊。" }]);
+      if (!state.flags.come || state.flags.spoke) return;
+      const jesus = findEnt("jesus");
+      if (jesus && stepToward(jesus, tp(15, 9), dt, 34)) {
+        jesus.dir = "down";
+        state.flags.spoke = true;
+        this.commission();
       }
     },
+    talk() {},
   },
 ];
 
@@ -3424,6 +4084,41 @@ const BAND = [
   ["philip", "腓力", "philip"],
   ["thomas", "多馬", "thomas"],
 ];
+
+function addRomans(tx, ty) {
+  [
+    [-1, 1],
+    [1, 1],
+    [-1, 2],
+    [1, 2],
+  ].forEach(([dx, dy], i) => {
+    state.entities.push(
+      person({
+        id: "roman" + i,
+        name: "羅馬兵丁",
+        tx: tx + dx,
+        ty: ty + dy,
+        look: "roman",
+        dir: "up",
+        talk: false,
+      })
+    );
+  });
+}
+
+function escortRomans(dt, speed) {
+  const p = state.player;
+  [
+    [-22, 6],
+    [22, 6],
+    [-14, 24],
+    [16, 22],
+  ].forEach(([ox, oy], i) => {
+    const e = findEnt("roman" + i);
+    if (!e || e.hold || e.alpha === 0) return;
+    stepToward(e, { x: p.x + ox, y: p.y + oy }, dt, speed || 50);
+  });
+}
 
 function addCompany(members, tx, ty, opt = {}) {
   const slots = opt.slots || [
@@ -3542,9 +4237,12 @@ const LIFE_ORDER = [
   "city",
   "supper",
   "gethsemane",
+  "deny",
   "pilate",
   "cross",
   "garden",
+  "loves",
+  "galilee",
 ];
 
 function kickerOf(i) {
@@ -3553,7 +4251,11 @@ function kickerOf(i) {
   if (n === 10) return "第十章";
   if (n < 10) return "第" + d[n - 1] + "章";
   if (n === 20) return "第二十章";
-  return "第十" + d[n - 11] + "章";
+  const tens = Math.floor(n / 10);
+  const ones = n % 10;
+  const tenWord = tens === 2 ? "二十" : "十";
+  if (ones === 0) return "第" + tenWord + "章";
+  return "第" + tenWord + d[ones - 1] + "章";
 }
 
 {
