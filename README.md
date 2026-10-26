@@ -20,7 +20,10 @@ npm run dev
 ```bash
 npm run build    # 輸出到 dist/
 npm run preview  # 預覽建置結果
+npm run deploy   # 推上 main，並等候 GitHub Pages 部署完成
 ```
+
+部署前，到倉庫 **Settings → Pages**，將 Source 設為 **GitHub Actions**。完成後的網址是 [https://jefftsengtwn.github.io/Christ/](https://jefftsengtwn.github.io/Christ/)。`npm run deploy` 需要已安裝並登入的 [GitHub CLI](https://cli.github.com/)。
 
 ## 操作
 

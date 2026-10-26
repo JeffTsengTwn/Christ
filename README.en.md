@@ -20,7 +20,10 @@ The dev server opens at [http://localhost:5173](http://localhost:5173). If that 
 ```bash
 npm run build    # writes to dist/
 npm run preview  # previews the build
+npm run deploy   # pushes main and waits until GitHub Pages finishes
 ```
+
+Before the first deploy, open the repository **Settings → Pages** and set Source to **GitHub Actions**. The site is then at [https://jefftsengtwn.github.io/Christ/](https://jefftsengtwn.github.io/Christ/). `npm run deploy` needs the [GitHub CLI](https://cli.github.com/) installed and signed in.
 
 ## Controls
 
