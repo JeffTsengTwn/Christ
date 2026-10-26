@@ -1705,10 +1705,13 @@ export function completeChapter() {
 function aimCamera(focusX, focusY) {
   const mapW = state.map.w * TILE;
   const mapH = state.map.h * TILE;
-  return {
-    x: mapW <= viewW ? (mapW - viewW) / 2 : clamp(focusX - viewW / 2, 0, mapW - viewW),
-    y: mapH <= viewH ? (mapH - viewH) / 2 : clamp(focusY - viewH / 2, 0, mapH - viewH),
-  };
+  // Keep the person above the dialogue and the d-pad. Extra map space sits at the bottom.
+  const anchorY = viewH * 0.4;
+  const x = mapW <= viewW ? (mapW - viewW) / 2 : clamp(focusX - viewW / 2, 0, mapW - viewW);
+  let y = focusY - anchorY;
+  if (mapH <= viewH) y = clamp(y, mapH - viewH, 0);
+  else y = clamp(y, 0, mapH - viewH);
+  return { x, y };
 }
 
 function snapCamera() {
@@ -2243,8 +2246,8 @@ function drawGoal() {
 const PLAY_KEY = "follow-play";
 let stageKey = "";
 let chromeSettled = false;
-let allowScroll = false;
 let blockTitleUntil = 0;
+let titlePress = null;
 
 function readResume() {
   try {
@@ -2291,40 +2294,16 @@ function updateChrome() {
   root.style.setProperty("--bar-right", right + "px");
   root.style.setProperty("--bar-bottom", bottom + "px");
   root.style.setProperty("--bar-left", left + "px");
-  const coarse = matchMedia("(pointer: coarse)").matches;
-  const open = coarse && (top > 20 || bottom > 40 || left > 20 || right > 20);
-  if (!open) allowScroll = false;
-  root.classList.toggle("bars-open", open);
-  root.classList.toggle("scroll-chrome", open && allowScroll);
-  root.classList.toggle("chrome-locked", !(open && allowScroll));
-}
-
-function nudgeBars() {
-  const root = document.documentElement;
-  if (!root.classList.contains("scroll-chrome")) return;
-  const go = () => {
-    const y = Math.max(80, root.scrollHeight - window.innerHeight);
-    window.scrollTo(0, y);
-  };
-  go();
-  requestAnimationFrame(go);
 }
 
 function settleChrome() {
-  if (!matchMedia("(pointer: coarse)").matches) return;
+  if (chromeSettled || !matchMedia("(pointer: coarse)").matches) return;
+  chromeSettled = true;
   const root = document.documentElement;
-  if (!chromeSettled) {
-    chromeSettled = true;
-    const req = root.requestFullscreen || root.webkitRequestFullscreen;
-    if (req && !document.fullscreenElement && !document.webkitFullscreenElement) {
-      Promise.resolve(req.call(root)).catch(() => {});
-    }
+  const req = root.requestFullscreen || root.webkitRequestFullscreen;
+  if (req && !document.fullscreenElement && !document.webkitFullscreenElement) {
+    Promise.resolve(req.call(root)).catch(() => {});
   }
-  if (!root.classList.contains("bars-open")) return;
-  allowScroll = true;
-  root.classList.add("scroll-chrome");
-  root.classList.remove("chrome-locked");
-  nudgeBars();
 }
 
 function armScreenInput() {
@@ -2688,10 +2667,17 @@ function beginPlay() {
   CHAPTERS[state.chapter].onEnter();
 }
 
+screenEl.addEventListener("pointerdown", (e) => {
+  titlePress = e.target.closest("[data-act='title']");
+});
+
 screenEl.addEventListener("click", (e) => {
   if (screenEl.classList.contains("hidden")) return;
   const btn = e.target.closest("[data-act]");
-  if (btn && btn.dataset.act === "title" && performance.now() < blockTitleUntil) return;
+  if (btn && btn.dataset.act === "title") {
+    if (performance.now() < blockTitleUntil) return;
+    if (matchMedia("(pointer: coarse)").matches && titlePress !== btn) return;
+  }
   if (state.screen === "splash" && (!btn || btn.dataset.act !== "lang")) {
     ensureAudio();
     showTitle();
@@ -2842,8 +2828,7 @@ document.addEventListener("touchstart", (e) => {
   if (x < 28 || x > window.innerWidth - 28) e.preventDefault();
 }, { passive: false });
 document.addEventListener("touchmove", (e) => {
-  if (document.documentElement.classList.contains("scroll-chrome")) return;
-  const scroller = e.target.closest("#dialogue, #screen");
+  const scroller = e.target.closest("#dialogue, #screen .card, #screen .chapters");
   if (scroller && scroller.scrollHeight > scroller.clientHeight + 8) return;
   e.preventDefault();
 }, { passive: false });
@@ -2878,7 +2863,18 @@ function loop() {
   syncUI();
 }
 
+function resumeLostPage() {
+  const resume = readResume();
+  if (!resume) return;
+  if (state.mode === "play" && state.chapter === resume.chapter && !state.screen) return;
+  if (resume.mode === "play" && (state.mode === "splash" || state.mode === "title")) {
+    loadChapter(resume.chapter);
+    beginPlay();
+  }
+}
+
 export function boot() {
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
   try {
     if (localStorage.getItem("follow-mute") === "1") setMuted(true);
     else $("btn-mute").textContent = text("mute");
@@ -2895,4 +2891,5 @@ export function boot() {
   } else if (resume) openChapter(resume.chapter);
   else showSplash();
   startLoop(loop);
+  window.addEventListener("pageshow", resumeLostPage);
 }
