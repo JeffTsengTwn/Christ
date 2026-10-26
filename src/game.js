@@ -1,16 +1,18 @@
-import { mountGame, pen, startLoop } from "./render/pixi.js";
+import { mountGame, pen, resizeView, startLoop } from "./render/pixi.js";
 import { getLanguage, onLanguageChange, text, toggleLanguage } from "./lang.js";
 import splashUrl from "../assets/hagia-sophia-christ.jpg";
 
 const TILE = 16;
-const VIEW_W = 320;
-const VIEW_H = 192;
+const DESIGN_W = 320;
+const DESIGN_H = 192;
+let viewW = DESIGN_W;
+let viewH = DESIGN_H;
 
 let canvas = null;
 
 const lightCanvas = document.createElement("canvas");
-lightCanvas.width = VIEW_W;
-lightCanvas.height = VIEW_H;
+lightCanvas.width = viewW;
+lightCanvas.height = viewH;
 const lightCtx = lightCanvas.getContext("2d");
 
 let CHAPTERS = [];
@@ -1700,11 +1702,19 @@ export function completeChapter() {
   else openClear();
 }
 
+function aimCamera(focusX, focusY) {
+  const mapW = state.map.w * TILE;
+  const mapH = state.map.h * TILE;
+  return {
+    x: mapW <= viewW ? (mapW - viewW) / 2 : clamp(focusX - viewW / 2, 0, mapW - viewW),
+    y: mapH <= viewH ? (mapH - viewH) / 2 : clamp(focusY - viewH / 2, 0, mapH - viewH),
+  };
+}
+
 function snapCamera() {
-  const maxX = Math.max(0, state.map.w * TILE - VIEW_W);
-  const maxY = Math.max(0, state.map.h * TILE - VIEW_H);
-  state.cam.x = clamp(state.player.x - VIEW_W / 2, 0, maxX);
-  state.cam.y = clamp(state.player.y - VIEW_H / 2, 0, maxY);
+  const cam = aimCamera(state.player.x, state.player.y);
+  state.cam.x = cam.x;
+  state.cam.y = cam.y;
 }
 
 function baseReset(musicMode) {
@@ -1795,20 +1805,19 @@ function updatePlayer(dt) {
 }
 
 function updateCamera(dt) {
-  const maxX = Math.max(0, state.map.w * TILE - VIEW_W);
-  const maxY = Math.max(0, state.map.h * TILE - VIEW_H);
-  let tx = clamp(state.player.x - VIEW_W / 2, 0, maxX);
-  let ty = clamp(state.player.y - VIEW_H / 2 + (state.camDy || 0), 0, maxY);
+  let focusX = state.player.x;
+  let focusY = state.player.y + (state.camDy || 0);
   if (state.mode === "title") {
-    tx = clamp(tp(16, 7).x - VIEW_W / 2, 0, maxX);
-    ty = 0;
+    focusX = tp(16, 7).x;
+    focusY = viewH / 2;
   } else if (state.pose === "cross") {
-    tx = clamp(tp(11, 4).x - VIEW_W / 2, 0, maxX);
-    ty = 0;
+    focusX = tp(11, 4).x;
+    focusY = viewH / 2;
   }
+  const target = aimCamera(focusX, focusY);
   const k = 1 - Math.pow(0.001, dt);
-  state.cam.x += (tx - state.cam.x) * (state.mode === "title" ? 1 : k);
-  state.cam.y += (ty - state.cam.y) * (state.mode === "title" ? 1 : k);
+  state.cam.x += (target.x - state.cam.x) * (state.mode === "title" ? 1 : k);
+  state.cam.y += (target.y - state.cam.y) * (state.mode === "title" ? 1 : k);
 }
 
 function updateStorm(dt) {
@@ -1857,7 +1866,7 @@ function update(dt) {
   updateCamera(dt);
   for (const g of state.gulls) {
     g.x += g.s * dt;
-    if (g.x > VIEW_W + 20) g.x = -20;
+    if (g.x > viewW + 20) g.x = -20;
   }
 }
 
@@ -1870,7 +1879,7 @@ function render() {
     pen.translate((Math.random() - 0.5) * state.shake * 6, (Math.random() - 0.5) * state.shake * 6);
   }
   pen.fillStyle = "#120e0c";
-  pen.fillRect(0, 0, VIEW_W, VIEW_H);
+  pen.fillRect(0, 0, viewW, viewH);
 
   if (state.mode === "splash") {
     drawSplash();
@@ -1891,8 +1900,8 @@ function render() {
   pen.translate(-camX, -camY);
   const x0 = Math.max(0, Math.floor(camX / TILE) - 1);
   const y0 = Math.max(0, Math.floor(camY / TILE) - 1);
-  const x1 = Math.min(state.map.w - 1, Math.floor((camX + VIEW_W) / TILE) + 1);
-  const y1 = Math.min(state.map.h - 1, Math.floor((camY + VIEW_H) / TILE) + 1);
+  const x1 = Math.min(state.map.w - 1, Math.floor((camX + viewW) / TILE) + 1);
+  const y1 = Math.min(state.map.h - 1, Math.floor((camY + viewH) / TILE) + 1);
   for (let y = y0; y <= y1; y++) {
     for (let x = x0; x <= x1; x++) drawTile(state.map.rows[y][x], x, y, state.time);
   }
@@ -1951,10 +1960,10 @@ function render() {
     const sy = state.player.y - camY - 10;
     const px0 = state.player.x - camX;
     const py0 = state.player.y - camY;
-    lightCtx.clearRect(0, 0, VIEW_W, VIEW_H);
+    lightCtx.clearRect(0, 0, viewW, viewH);
     const stormNight = chapterKey() === "sea" || chapterKey() === "storm";
     lightCtx.fillStyle = room ? "rgba(42, 22, 12, 0.84)" : stormNight ? "rgba(5, 8, 18, 0.78)" : "rgba(10, 14, 24, 0.5)";
-    lightCtx.fillRect(0, 0, VIEW_W, VIEW_H);
+    lightCtx.fillRect(0, 0, viewW, viewH);
     lightCtx.globalCompositeOperation = "destination-out";
     const grad = lightCtx.createRadialGradient(sx, sy, 8, sx, sy, 86);
     grad.addColorStop(0, "rgba(0,0,0,1)");
@@ -1983,8 +1992,8 @@ function render() {
     }
     const lx0 = Math.max(0, Math.floor(camX / TILE) - 1);
     const ly0 = Math.max(0, Math.floor(camY / TILE) - 1);
-    const lx1 = Math.min(state.map.w - 1, Math.floor((camX + VIEW_W) / TILE) + 1);
-    const ly1 = Math.min(state.map.h - 1, Math.floor((camY + VIEW_H) / TILE) + 1);
+    const lx1 = Math.min(state.map.w - 1, Math.floor((camX + viewW) / TILE) + 1);
+    const ly1 = Math.min(state.map.h - 1, Math.floor((camY + viewH) / TILE) + 1);
     lightCtx.fillStyle = "rgba(0,0,0,0.95)";
     for (let y = ly0; y <= ly1; y++) {
       for (let x = lx0; x <= lx1; x++) {
@@ -1998,8 +2007,8 @@ function render() {
     if (!room && stormNight && !state.flags.calm) {
     pen.strokeStyle = "rgba(210,225,235,0.35)";
     for (let i = 0; i < 36; i++) {
-      const rx = ((i * 97 + state.time * 140) % (VIEW_W + 20)) - 10;
-      const ry = (i * 53) % VIEW_H;
+      const rx = ((i * 97 + state.time * 140) % (viewW + 20)) - 10;
+      const ry = (i * 53) % viewH;
       pen.beginPath();
       pen.moveTo(rx, ry);
       pen.lineTo(rx - 3, ry + 7);
@@ -2008,11 +2017,11 @@ function render() {
     }
   } else if (chapterKey() === "garden" && state.mode !== "title") {
     pen.fillStyle = "rgba(255, 228, 200, 0.08)";
-    pen.fillRect(0, 0, VIEW_W, VIEW_H);
+    pen.fillRect(0, 0, viewW, viewH);
     if (!reduceMotion) {
       for (let i = 0; i < 18; i++) {
-        const mx = (i * 47 + state.time * 8) % VIEW_W;
-        const my = (i * 29 + Math.sin(state.time + i) * 6) % VIEW_H;
+        const mx = (i * 47 + state.time * 8) % viewW;
+        const my = (i * 29 + Math.sin(state.time + i) * 6) % viewH;
         pen.fillStyle = "rgba(255,255,255,0.18)";
         pen.fillRect(mx, my, 2, 1);
       }
@@ -2041,11 +2050,11 @@ function render() {
   if (state.flags.rite) drawHeaven(camX, camY);
   if (state.flash > 0) {
     pen.fillStyle = `rgba(255,255,255,${state.flash})`;
-    pen.fillRect(0, 0, VIEW_W, VIEW_H);
+    pen.fillRect(0, 0, viewW, viewH);
   }
   if (state.pose === "cross" && state.flags.dark) {
     pen.fillStyle = "rgba(8, 10, 18, 0.58)";
-    pen.fillRect(0, 0, VIEW_W, VIEW_H);
+    pen.fillRect(0, 0, viewW, viewH);
   }
   pen.restore();
 }
@@ -2060,7 +2069,7 @@ function drawHeaven(camX, camY) {
   const riftH = 6 + open * 28;
   pen.save();
   pen.fillStyle = `rgba(186, 214, 232, ${0.18 * open})`;
-  pen.fillRect(0, 0, VIEW_W, top + riftH + 8);
+  pen.fillRect(0, 0, viewW, top + riftH + 8);
   pen.fillStyle = `rgba(255, 248, 220, ${0.25 + 0.55 * open})`;
   pen.beginPath();
   pen.ellipse(px0, top, riftW, riftH, 0, 0, Math.PI * 2);
@@ -2087,12 +2096,12 @@ function drawHeaven(camX, camY) {
     pen.textAlign = "center";
     pen.textBaseline = "middle";
     pen.fillStyle = "rgba(42, 28, 16, 0.45)";
-    pen.fillText(shownLine, VIEW_W / 2 + 1, 23);
+    pen.fillText(shownLine, viewW / 2 + 1, 23);
     pen.fillStyle = "#fff6d0";
-    pen.fillText(shownLine, VIEW_W / 2, 22);
+    pen.fillText(shownLine, viewW / 2, 22);
     pen.font = "9px 'Songti TC', 'PMingLiU', serif";
     pen.fillStyle = "#f0d48a";
-    pen.fillText(text("father"), VIEW_W / 2, 10);
+    pen.fillText(text("father"), viewW / 2, 10);
   }
   pen.restore();
 }
@@ -2167,16 +2176,16 @@ function drawCross(e) {
 
 function renderInterludeWorld() {
   const t = state.time;
-  const sky = pen.createLinearGradient(0, 0, 0, VIEW_H);
+  const sky = pen.createLinearGradient(0, 0, 0, viewH);
   sky.addColorStop(0, "#141822");
   sky.addColorStop(0.55, "#3a2a38");
   sky.addColorStop(1, "#c47a55");
   pen.fillStyle = sky;
-  pen.fillRect(0, 0, VIEW_W, VIEW_H);
+  pen.fillRect(0, 0, viewW, viewH);
   for (let i = 0; i < 28; i++) {
     const alpha = 0.3 + (i % 5) * 0.1;
     pen.fillStyle = `rgba(255,255,255,${alpha})`;
-    pen.fillRect((i * 53) % VIEW_W, (i * 37) % 90, 1, 1);
+    pen.fillRect((i * 53) % viewW, (i * 37) % 90, 1, 1);
   }
   pen.fillStyle = "#1a1418";
   pen.beginPath();
@@ -2212,7 +2221,7 @@ function drawGoal() {
   let sx = g.x - camX;
   let sy = g.y - camY - 34;
   const margin = 10;
-  const on = sx > margin && sy > margin && sx < VIEW_W - margin && sy < VIEW_H - margin;
+  const on = sx > margin && sy > margin && sx < viewW - margin && sy < viewH - margin;
   if (on && dist(state.player, g) < 32) return;
   const bob = Math.sin(state.time * 4) * 2;
   pen.fillStyle = "#f0c84b";
@@ -2224,29 +2233,48 @@ function drawGoal() {
     pen.fillRect(x + 2, y + 2, 2, 2);
     return;
   }
-  sx = clamp(sx, margin, VIEW_W - margin);
-  sy = clamp(sy, margin, VIEW_H - margin);
+  sx = clamp(sx, margin, viewW - margin);
+  sy = clamp(sy, margin, viewH - margin);
   pen.fillRect(sx - 2, sy - 2, 4, 4);
 }
 
 /* ------------------------------ UI ------------------------------ */
 
+function viewportSize() {
+  const view = window.visualViewport;
+  return {
+    w: view ? view.width : window.innerWidth,
+    h: view ? view.height : window.innerHeight,
+  };
+}
+
 function resize() {
   if (!canvas) return;
-  const margin = 28;
-  const scale = Math.max(1, Math.floor(Math.min((window.innerWidth - margin) / VIEW_W, (window.innerHeight - margin) / VIEW_H)));
-  state.scale = scale;
-  canvas.style.width = VIEW_W * scale + "px";
-  canvas.style.height = VIEW_H * scale + "px";
-  splashArt.style.width = canvas.style.width;
-  splashArt.style.height = canvas.style.height;
-  frame.style.width = VIEW_W * scale + "px";
-  frame.style.height = VIEW_H * scale + "px";
-  frame.style.fontSize = Math.max(13, Math.round(scale * 4.6)) + "px";
+  const { w: vw, h: vh } = viewportSize();
+  if (vw < 2 || vh < 2) return;
+  const fit = Math.min(vw / DESIGN_W, vh / DESIGN_H);
+  viewW = Math.max(1, Math.round(vw / fit));
+  viewH = Math.max(1, Math.round(vh / fit));
+  resizeView(viewW, viewH);
+  lightCanvas.width = viewW;
+  lightCanvas.height = viewH;
+  pen.bindLight();
+  state.scale = vw / viewW;
+  canvas.style.width = vw + "px";
+  canvas.style.height = vh + "px";
+  splashArt.width = Math.round(vw);
+  splashArt.height = Math.round(vh);
+  splashArt.style.width = vw + "px";
+  splashArt.style.height = vh + "px";
+  frame.style.width = vw + "px";
+  frame.style.height = vh + "px";
+  frame.style.fontSize = Math.max(15, Math.round(fit * 5.2)) + "px";
+  document.body.classList.add("controls-over");
 }
 
 function syncUI() {
   splashArt.classList.toggle("hidden", state.mode !== "splash");
+  $("touch").classList.toggle("hidden", state.mode !== "play" || !!state.screen);
   const showHud = state.mode === "play";
   hudEl.classList.toggle("hidden", !showHud);
   if (showHud) {
@@ -2702,6 +2730,7 @@ bindHold(
 
 window.addEventListener("pointerdown", () => ensureAudio());
 window.addEventListener("resize", resize);
+if (window.visualViewport) window.visualViewport.addEventListener("resize", resize);
 
 function loop() {
   const now = performance.now();

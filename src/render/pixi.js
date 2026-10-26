@@ -100,7 +100,13 @@ class Pen {
 
   attachLight(canvas) {
     this.lightCanvas = canvas;
-    this.lightTexture = Texture.from(canvas);
+    this.bindLight();
+  }
+
+  bindLight() {
+    if (!this.lightCanvas || !this.lightSprite) return;
+    if (this.lightTexture) this.lightTexture.destroy(true);
+    this.lightTexture = Texture.from(this.lightCanvas);
     this.lightTexture.source.scaleMode = "nearest";
     this.lightSprite.texture = this.lightTexture;
   }
@@ -399,6 +405,10 @@ export async function mountGame(placeholder) {
   app.canvas.id = "game";
   placeholder.replaceWith(app.canvas);
   return app.canvas;
+}
+
+export function resizeView(w, h) {
+  app.renderer.resize(w, h);
 }
 
 export function startLoop(fn) {

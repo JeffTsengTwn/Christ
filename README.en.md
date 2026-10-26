@@ -36,7 +36,7 @@ Before the first deploy, open the repository **Settings → Pages** and set Sour
 | Pause | Esc | — |
 | Language | — | “EN” or “中文” at the upper right; the title screen has the same button |
 
-A coarse pointer (phone or tablet) shows the d-pad and the Talk button. Mute is stored in the browser’s `localStorage` under the key `follow-mute`, and the language under `follow-lang`. If the system has “reduce motion” turned on, particles and screen shake are skipped.
+The picture fills the window. A wider or taller window shows more of the place, and the people stay the same size. On a phone or tablet, while you are walking, the d-pad and the Talk button float over the picture, half transparent, instead of taking a separate control bar. Mute is stored in the browser’s `localStorage` under the key `follow-mute`, and the language under `follow-lang`. If the system has “reduce motion” turned on, particles and screen shake are skipped.
 
 Some chapters walk forward on their own, and you mainly finish the words. In the others you walk up to someone and talk, or follow the goal at the bottom of the screen. Verses you pass through are kept in the journal, and you can read them again at the end of a chapter and in the ending.
 
