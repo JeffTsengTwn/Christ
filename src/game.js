@@ -2240,18 +2240,70 @@ function drawGoal() {
 
 /* ------------------------------ UI ------------------------------ */
 
-function viewportSize() {
-  const view = window.visualViewport;
-  return {
-    w: view ? view.width : window.innerWidth,
-    h: view ? view.height : window.innerHeight,
-  };
+let stageKey = "";
+let chromeSettled = false;
+let blockTitleUntil = 0;
+
+function updateChrome() {
+  const vv = window.visualViewport;
+  const w = window.innerWidth;
+  const h = window.innerHeight;
+  let top = 0;
+  let right = 0;
+  let bottom = 0;
+  let left = 0;
+  if (vv) {
+    top = Math.max(0, Math.round(vv.offsetTop));
+    left = Math.max(0, Math.round(vv.offsetLeft));
+    bottom = Math.max(0, Math.round(h - vv.height - vv.offsetTop));
+    right = Math.max(0, Math.round(w - vv.width - vv.offsetLeft));
+  }
+  const root = document.documentElement;
+  root.style.setProperty("--bar-top", top + "px");
+  root.style.setProperty("--bar-right", right + "px");
+  root.style.setProperty("--bar-bottom", bottom + "px");
+  root.style.setProperty("--bar-left", left + "px");
+  const coarse = matchMedia("(pointer: coarse)").matches;
+  root.classList.toggle("bars-open", coarse && top + bottom + left + right > 28);
+}
+
+function settleChrome() {
+  if (chromeSettled) return;
+  chromeSettled = true;
+  const root = document.documentElement;
+  if (matchMedia("(pointer: coarse)").matches) {
+    const req = root.requestFullscreen || root.webkitRequestFullscreen;
+    if (req && !document.fullscreenElement && !document.webkitFullscreenElement) {
+      Promise.resolve(req.call(root)).catch(() => {});
+    }
+    const extra = Math.max(0, root.scrollHeight - window.innerHeight);
+    if (extra > 0) window.scrollTo(0, extra);
+  }
+  root.classList.remove("can-nudge");
+  root.classList.add("chrome-lock");
+  resize();
+}
+
+function holdPage() {
+  if (history.state && history.state.christ) return;
+  history.pushState({ christ: 1 }, "");
+}
+
+function armScreenInput() {
+  blockTitleUntil = performance.now() + 500;
 }
 
 function resize() {
   if (!canvas) return;
-  const { w: vw, h: vh } = viewportSize();
+  updateChrome();
+  const vw = window.innerWidth;
+  const vh = window.innerHeight;
   if (vw < 2 || vh < 2) return;
+  frame.style.width = vw + "px";
+  frame.style.height = vh + "px";
+  const key = vw + "x" + vh;
+  if (key === stageKey) return;
+  stageKey = key;
   const fit = Math.min(vw / DESIGN_W, vh / DESIGN_H);
   viewW = Math.max(1, Math.round(vw / fit));
   viewH = Math.max(1, Math.round(vh / fit));
@@ -2266,8 +2318,6 @@ function resize() {
   splashArt.height = Math.round(vh);
   splashArt.style.width = vw + "px";
   splashArt.style.height = vh + "px";
-  frame.style.width = vw + "px";
-  frame.style.height = vh + "px";
   frame.style.fontSize = Math.max(15, Math.round(fit * 5.2)) + "px";
   document.body.classList.add("controls-over");
 }
@@ -2353,6 +2403,7 @@ function setScreen(html) {
 }
 
 function card(html) {
+  armScreenInput();
   screenEl.innerHTML = `<div class="card">${html}</div>`;
   screenEl.classList.remove("hidden");
 }
@@ -2394,8 +2445,10 @@ function renderSplash() {
       <div class="splash-foot">
         <button type="button" class="splash-go" data-act="enter" data-primary>${text("splashEnter")}</button>
         <div class="splash-credit">${text("splashCredit")}</div>
+        <p class="splash-bars">${text("hideBars")}</p>
       </div>
     </div>`;
+  armScreenInput();
   screenEl.classList.remove("hidden");
 }
 
@@ -2591,11 +2644,13 @@ function beginPlay() {
   screenEl.classList.add("hidden");
   state.mode = "play";
   state.hintUntil = state.time + 10;
+  holdPage();
   CHAPTERS[state.chapter].onEnter();
 }
 
 screenEl.addEventListener("click", (e) => {
   const btn = e.target.closest("[data-act]");
+  if (btn && btn.dataset.act === "title" && performance.now() < blockTitleUntil) return;
   if (state.screen === "splash" && (!btn || btn.dataset.act !== "lang")) {
     ensureAudio();
     showTitle();
@@ -2722,15 +2777,28 @@ bindHold(
   $("btn-talk"),
   () => {
     ensureAudio();
-    if (state.screen) document.querySelector("#screen [data-primary]")?.click();
-    else input.confirmEdge = true;
+    if (state.screen) {
+      const primary = document.querySelector("#screen [data-primary]");
+      if (primary && primary.dataset.act !== "title") primary.click();
+    } else input.confirmEdge = true;
   },
   () => {}
 );
 
-window.addEventListener("pointerdown", () => ensureAudio());
+window.addEventListener("pointerdown", () => {
+  ensureAudio();
+  settleChrome();
+});
 window.addEventListener("resize", resize);
-if (window.visualViewport) window.visualViewport.addEventListener("resize", resize);
+window.addEventListener("orientationchange", () => setTimeout(resize, 60));
+if (window.visualViewport) {
+  window.visualViewport.addEventListener("resize", resize);
+  window.visualViewport.addEventListener("scroll", resize);
+}
+window.addEventListener("popstate", () => {
+  const stay = state.mode === "play" || state.mode === "card" || state.mode === "clear" || state.mode === "interlude" || state.screen === "journal" || state.screen === "pause";
+  if (stay) history.pushState({ christ: 1 }, "");
+});
 
 function loop() {
   const now = performance.now();
@@ -2761,6 +2829,8 @@ function loop() {
 }
 
 export function boot() {
+  if (matchMedia("(pointer: coarse)").matches) document.documentElement.classList.add("can-nudge");
+  else document.documentElement.classList.add("chrome-lock");
   try {
     if (localStorage.getItem("follow-mute") === "1") setMuted(true);
     else $("btn-mute").textContent = text("mute");

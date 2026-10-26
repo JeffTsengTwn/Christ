@@ -24,6 +24,8 @@ wind,風向 ↓,Wind ↓
 hint,方向鍵或 WASD 移動 · 空白鍵或 E 交談,Arrow keys or WASD to move · Space or E to talk
 cont,空白鍵繼續,Space to continue
 talk,交談,Talk
+spaceBtn,空白,Space
+hideBars,向上滑一下，收起地址列,Swipe up to hide the address bar
 up,上,Up
 down,下,Down
 left,左,Left

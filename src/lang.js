@@ -31,8 +31,8 @@ export function applyChrome() {
   if (hint) hint.textContent = text("hint");
   const talk = document.getElementById("btn-talk");
   if (talk) {
-    talk.textContent = text("talk");
-    talk.setAttribute("aria-label", text("talk"));
+    talk.textContent = text("spaceBtn");
+    talk.setAttribute("aria-label", text("spaceBtn"));
   }
   for (const dir of ["up", "down", "left", "right"]) {
     const pad = document.querySelector(`.pad button.${dir}`);

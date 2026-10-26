@@ -30,13 +30,13 @@ Before the first deploy, open the repository **Settings → Pages** and set Sour
 | Action | Keyboard | Touch |
 | --- | --- | --- |
 | Move | Arrow keys or WASD | D-pad at the lower left |
-| Talk, continue, confirm | Space, E, or Enter | “Talk”, or tap the dialogue box |
+| Talk, continue, confirm | Space, E, or Enter | “Space”, or tap the dialogue box |
 | Scripture journal | J, or “Scripture” at the upper right | Same |
 | Mute | M, or “Mute” at the upper right | Same |
 | Pause | Esc | — |
 | Language | — | “EN” or “中文” at the upper right; the title screen has the same button |
 
-The picture fills the window. A wider or taller window shows more of the place, and the people stay the same size. On a phone or tablet, while you are walking, the d-pad and the Talk button float over the picture, half transparent, instead of taking a separate control bar. Mute is stored in the browser’s `localStorage` under the key `follow-mute`, and the language under `follow-lang`. If the system has “reduce motion” turned on, particles and screen shake are skipped.
+The picture fills the window. A wider or taller window shows more of the place, and the people stay the same size. On a phone or tablet, while you are walking, the d-pad and the Space button float over the picture, half transparent. The picture runs to the edges of the screen; the notch and the browser bar only push the buttons and the words inward. If the address bar is still showing, swipe up once on the opening screen to hide it. Mute is stored in the browser’s `localStorage` under the key `follow-mute`, and the language under `follow-lang`. If the system has “reduce motion” turned on, particles and screen shake are skipped.
 
 Some chapters walk forward on their own, and you mainly finish the words. In the others you walk up to someone and talk, or follow the goal at the bottom of the screen. Verses you pass through are kept in the journal, and you can read them again at the end of a chapter and in the ending.
 
