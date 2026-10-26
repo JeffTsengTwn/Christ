@@ -3,7 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>跟隨 — 四福音書裡的一生</title>
+  <title>基督傳之人子</title>
+  <meta name="description" content="四福音書裡的一生。像素風格的網頁小遊戲。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:title" content="基督傳之人子" />
+  <meta property="og:description" content="四福音書裡的一生。像素風格的網頁小遊戲。" />
+  <meta property="og:url" content="https://jefftsengtwn.github.io/Christ/" />
+  <meta property="og:image" content="https://jefftsengtwn.github.io/Christ/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="基督傳之人子" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="基督傳之人子" />
+  <meta name="twitter:description" content="四福音書裡的一生。像素風格的網頁小遊戲。" />
+  <meta name="twitter:image" content="https://jefftsengtwn.github.io/Christ/og.png" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect fill='%231a140f' width='16' height='16'/%3E%3Cpath fill='%23f0c84b' d='M7 2h2v4h4v2H9v6H7V8H3V6h4z'/%3E%3C/svg%3E" />
   <style>
     :root {
@@ -51,6 +65,16 @@
       image-rendering: pixelated;
       image-rendering: crisp-edges;
       background: #87b6d8;
+    }
+
+    #splash-art {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      pointer-events: none;
+      background: transparent;
+      image-rendering: auto;
     }
 
     #tag, #floats, #hud, #dialogue, #screen {
@@ -262,6 +286,122 @@
       pointer-events: auto;
     }
 
+    #screen .splash {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0.35em 0.55em 0.28em;
+      background: none;
+      color: #f4ead4;
+      text-shadow: 1px 1px 0 #120e0c, 2px 2px 0 #120e0c;
+      cursor: pointer;
+    }
+
+    #screen .splash h1 {
+      margin: 0;
+      color: #fff8ee;
+      font-family: "Songti TC", "PMingLiU", "Noto Serif TC", serif;
+      font-size: 2.05em;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      line-height: 1.15;
+      text-align: left;
+      text-shadow: 0 2px 0 #120e0c, 0 0 10px rgba(12, 8, 6, 0.95);
+    }
+
+    body.lang-en #screen .splash h1 {
+      letter-spacing: 0.02em;
+      font-size: 1.7em;
+      font-family: Palatino, "Palatino Linotype", "Iowan Old Style", serif;
+    }
+
+    #screen .splash .sub {
+      margin-top: 0.28em;
+      color: #fff8ee;
+      letter-spacing: 0.16em;
+      font-size: 0.92em;
+      text-shadow: 0 1px 0 #120e0c, 0 0 8px rgba(12, 8, 6, 0.95);
+    }
+
+    .splash-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.6em;
+      margin: -0.35em -0.55em 0;
+      padding: 0.45em 0.55em 1.35em;
+      background: linear-gradient(rgba(12, 8, 6, 0.88), rgba(12, 8, 6, 0.62) 62%, rgba(12, 8, 6, 0));
+    }
+
+    .splash-foot {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.35em;
+      margin: 0 -0.55em -0.28em;
+      padding: 1.4em 0.55em 0.4em;
+      background: linear-gradient(rgba(12, 8, 6, 0), rgba(12, 8, 6, 0.9) 42%, rgba(12, 8, 6, 0.94));
+    }
+
+    .splash-credit {
+      font-size: 0.55em;
+      letter-spacing: 0.03em;
+      line-height: 1.35;
+      color: #f6edd8;
+      text-shadow: 0 1px 2px #120e0c;
+    }
+
+    .splash-lang {
+      pointer-events: auto;
+      border: 2px solid #f0c84b;
+      background: rgba(18, 14, 12, 0.72);
+      color: #f0c84b;
+      font: inherit;
+      font-size: 0.72em;
+      letter-spacing: 0.08em;
+      padding: 0.2em 0.45em;
+      cursor: pointer;
+    }
+
+    .splash-go {
+      align-self: flex-start;
+      border: 2px solid #fff8ee;
+      background: #120e0c;
+      color: #fff8ee;
+      font: inherit;
+      font-size: 1.45em;
+      letter-spacing: 0.16em;
+      line-height: 1.2;
+      padding: 0.18em 0.45em;
+      cursor: pointer;
+      text-shadow: none;
+      animation: splashblink 1.2s step-end infinite;
+    }
+
+    body.lang-en .splash-go {
+      font-size: 1.2em;
+      letter-spacing: 0.04em;
+    }
+
+    @keyframes splashblink {
+      0%, 49% {
+        background: #120e0c;
+        color: #fff8ee;
+        border-color: #fff8ee;
+      }
+      50%, 100% {
+        background: #fff8ee;
+        color: #120e0c;
+        border-color: #120e0c;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .splash-go { animation: none; }
+    }
+
     #screen .card {
       width: min(100%, 28em);
       max-height: 100%;
@@ -399,6 +539,7 @@
 <body>
   <div id="frame">
     <canvas id="game" width="320" height="192"></canvas>
+    <canvas id="splash-art" class="hidden" width="640" height="384"></canvas>
     <div id="tag" class="hidden"></div>
     <div id="floats"></div>
     <div id="hud" class="hidden">

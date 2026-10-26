@@ -1,6 +1,6 @@
 [中文](README.md) | English
 
-# Follow
+# Christ: Son of God
 
 A life from the four Gospels. A small pixel game for the web: from Bethlehem to Golgotha, on to the empty tomb on the first day of the week, and to the mountain in Galilee. In each chapter you play the person who was there, and walk the words through to the end.
 
@@ -23,7 +23,7 @@ npm run preview  # previews the build
 npm run deploy   # pushes main and waits until GitHub Pages finishes
 ```
 
-Before the first deploy, open the repository **Settings → Pages** and set Source to **GitHub Actions**. The site is then at [https://jefftsengtwn.github.io/Christ/](https://jefftsengtwn.github.io/Christ/). `npm run deploy` needs the [GitHub CLI](https://cli.github.com/) installed and signed in.
+Before the first deploy, open the repository **Settings → Pages** and set Source to **GitHub Actions**. The site is then at [https://jefftsengtwn.github.io/Christ/](https://jefftsengtwn.github.io/Christ/).
 
 ## Controls
 
@@ -87,12 +87,17 @@ python3 scripts/gen_dict.py
 
 The script writes `src/dict.js`. At runtime, `text(key)` in `src/lang.js` reads the line for the current language.
 
+## Opening image
+
+The opening screen uses a photograph of the Christ mosaic in Hagia Sophia, Istanbul, stored as `assets/hagia-sophia-christ.jpg`. The photograph comes from [Pixabay](https://pixabay.com/) and was uploaded before July 2017, when Pixabay released uploads under the [CC0 1.0 Universal Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/). Picryl’s record: [Christ icon, Hagia Sophia](https://picryl.com/media/christ-icon-hagia-sophia-religion-6925c3). CC0 does not require credit; the source is named here anyway.
+
 ## Project layout
 
 ```
 index.html          page shell, interface styles, touch controls
 vite.config.js      dev server (port 5173)
 assets/dict.csv     Chinese and English dictionary (key, Chinese, English)
+assets/hagia-sophia-christ.jpg  opening photograph (CC0 1.0)
 scripts/gen_dict.py builds src/dict.js from dict.csv
 src/main.js         loads the chapters and starts the game
 src/lang.js         language switch, and text(key) for each line

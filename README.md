@@ -1,6 +1,6 @@
 中文 | [English](README.en.md)
 
-# 跟隨
+# 基督傳之人子
 
 四福音書裡的一生。像素風格的網頁小遊戲：從伯利恆走到各各他，再到七日頭一日的空墳墓，與加利利的山。每一章你扮演這段記載裡該在場的那個人，把經上的話走完。
 
@@ -23,7 +23,7 @@ npm run preview  # 預覽建置結果
 npm run deploy   # 推上 main，並等候 GitHub Pages 部署完成
 ```
 
-部署前，到倉庫 **Settings → Pages**，將 Source 設為 **GitHub Actions**。完成後的網址是 [https://jefftsengtwn.github.io/Christ/](https://jefftsengtwn.github.io/Christ/)。`npm run deploy` 需要已安裝並登入的 [GitHub CLI](https://cli.github.com/)。
+部署前，到倉庫 **Settings → Pages**，將 Source 設為 **GitHub Actions**。完成後的網址是 [https://jefftsengtwn.github.io/Christ/](https://jefftsengtwn.github.io/Christ/)。
 
 ## 操作
 
@@ -87,12 +87,17 @@ python3 scripts/gen_dict.py
 
 腳本寫出 `src/dict.js`。執行時由 `src/lang.js` 的 `text(key)` 依目前語言取值。
 
+## 開始畫面影像
+
+開始畫面使用聖索菲亞大教堂（伊斯坦堡）基督鑲嵌畫的照片，檔案是 `assets/hagia-sophia-christ.jpg`。這張照片來自 [Pixabay](https://pixabay.com/)，在 2017 年 7 月前上傳，依當時條款以 [CC0 1.0 公眾領域貢獻](https://creativecommons.org/publicdomain/zero/1.0/deed.zh-hant) 釋出。Picryl 的著錄頁：[Christ icon, Hagia Sophia](https://picryl.com/media/christ-icon-hagia-sophia-religion-6925c3)。CC0 不要求署名；此處仍標明出處。
+
 ## 專案結構
 
 ```
 index.html          畫面骨架、介面樣式、觸控區
 vite.config.js      開發伺服器（埠 5173）
 assets/dict.csv     中英文字典（鍵、中文、英文）
+assets/hagia-sophia-christ.jpg  開始畫面照片（CC0 1.0）
 scripts/gen_dict.py 由 dict.csv 產生 src/dict.js
 src/main.js         載入篇章並啟動
 src/lang.js         語言切換，並以 text(key) 取字

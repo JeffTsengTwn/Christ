@@ -1,5 +1,6 @@
 import { mountGame, pen, startLoop } from "./render/pixi.js";
 import { getLanguage, onLanguageChange, text, toggleLanguage } from "./lang.js";
+import splashUrl from "../assets/hagia-sophia-christ.jpg";
 
 const TILE = 16;
 const VIEW_W = 320;
@@ -34,6 +35,12 @@ const floatsEl = $("floats");
 const hudEl = $("hud");
 const dialogueEl = $("dialogue");
 const screenEl = $("screen");
+const splashArt = $("splash-art");
+const splashCtx = splashArt.getContext("2d");
+const splashImage = new Image();
+splashImage.onload = () => {
+  if (state.mode === "splash") drawSplash();
+};
 
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -1832,6 +1839,7 @@ function update(dt) {
   if (state.flash > 0) state.flash = Math.max(0, state.flash - dt * 0.8);
   updateParticles(dt);
   tickMusic();
+  if (state.mode === "splash") return;
   if (!state.map) return;
   const chPlay = state.mode === "play" ? CHAPTERS[state.chapter] : null;
   const canWalkWhileTalking = !!(chPlay && chPlay.walkDuringTalk && !chPlay.guided);
@@ -1864,6 +1872,11 @@ function render() {
   pen.fillStyle = "#120e0c";
   pen.fillRect(0, 0, VIEW_W, VIEW_H);
 
+  if (state.mode === "splash") {
+    drawSplash();
+    pen.restore();
+    return;
+  }
   if (state.mode === "interlude") {
     renderInterludeWorld();
     pen.restore();
@@ -2225,12 +2238,15 @@ function resize() {
   state.scale = scale;
   canvas.style.width = VIEW_W * scale + "px";
   canvas.style.height = VIEW_H * scale + "px";
+  splashArt.style.width = canvas.style.width;
+  splashArt.style.height = canvas.style.height;
   frame.style.width = VIEW_W * scale + "px";
   frame.style.height = VIEW_H * scale + "px";
   frame.style.fontSize = Math.max(13, Math.round(scale * 4.6)) + "px";
 }
 
 function syncUI() {
+  splashArt.classList.toggle("hidden", state.mode !== "splash");
   const showHud = state.mode === "play";
   hudEl.classList.toggle("hidden", !showHud);
   if (showHud) {
@@ -2315,6 +2331,51 @@ function card(html) {
 
 function langButton() {
   return `<button class="btn" data-act="lang">${text("langSwitch")}</button>`;
+}
+
+function drawSplash() {
+  splashArt.classList.remove("hidden");
+  const cw = splashArt.width;
+  const ch = splashArt.height;
+  splashCtx.imageSmoothingEnabled = true;
+  splashCtx.clearRect(0, 0, cw, ch);
+  splashCtx.fillStyle = "#1a140f";
+  splashCtx.fillRect(0, 0, cw, ch);
+  if (!splashImage.complete || !splashImage.naturalWidth) return;
+  const iw = splashImage.naturalWidth;
+  const ih = splashImage.naturalHeight;
+  const scale = Math.max(cw / iw, ch / ih);
+  const dw = iw * scale;
+  const dh = ih * scale;
+  const dx = (cw - dw) / 2;
+  const dy = (ch - dh) * 0.22;
+  splashCtx.drawImage(splashImage, dx, dy, dw, dh);
+}
+
+function renderSplash() {
+  state.screen = "splash";
+  screenEl.innerHTML = `
+    <div class="splash">
+      <div class="splash-top">
+        <div>
+          <h1>${text("gameTitle")}</h1>
+          <div class="sub">${text("subtitle")}</div>
+        </div>
+        <button type="button" class="splash-lang" data-act="lang">${text("langSwitch")}</button>
+      </div>
+      <div class="splash-foot">
+        <button type="button" class="splash-go" data-act="enter" data-primary>${text("splashEnter")}</button>
+        <div class="splash-credit">${text("splashCredit")}</div>
+      </div>
+    </div>`;
+  screenEl.classList.remove("hidden");
+}
+
+function showSplash() {
+  state.mode = "splash";
+  state.screen = "splash";
+  setMusic("solemn");
+  renderSplash();
 }
 
 function renderTitle() {
@@ -2443,7 +2504,8 @@ function refreshLanguage() {
   $("btn-journal").textContent = text("journal") + (state.journal.length ? " " + state.journal.length : "");
   const line = currentLine();
   if (state.dialogue.open && line && state.dialogue.prog > 0) state.dialogue.prog = lineBody(line).length;
-  if (state.screen === "title") renderTitle();
+  if (state.screen === "splash") renderSplash();
+  else if (state.screen === "title") renderTitle();
   else if (state.screen === "select") renderSelect();
   else if (state.screen === "card") renderCard();
   else if (state.screen === "clear") openClear();
@@ -2506,6 +2568,11 @@ function beginPlay() {
 
 screenEl.addEventListener("click", (e) => {
   const btn = e.target.closest("[data-act]");
+  if (state.screen === "splash" && (!btn || btn.dataset.act !== "lang")) {
+    ensureAudio();
+    showTitle();
+    return;
+  }
   if (!btn) return;
   ensureAudio();
   const act = btn.dataset.act;
@@ -2673,6 +2740,7 @@ export function boot() {
   }
   $("btn-journal").textContent = text("journal");
   resize();
-  showTitle();
+  if (!splashImage.src) splashImage.src = splashUrl;
+  showSplash();
   startLoop(loop);
 }

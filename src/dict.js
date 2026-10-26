@@ -1,9 +1,11 @@
 // Generated from assets/dict.csv by scripts/gen_dict.py.
 export const dict = {
   "zh": {
-    "docTitle": "跟隨 — 四福音書裡的一生",
+    "docTitle": "基督傳之人子",
     "subtitle": "四福音書裡的一生",
-    "gameTitle": "跟隨",
+    "gameTitle": "基督傳之人子",
+    "splashEnter": "按一下進入",
+    "splashCredit": "聖索菲亞大教堂基督鑲嵌畫。照片來自 Pixabay（2017 年 7 月前），CC0 1.0 公眾領域。",
     "titleLead": "耶穌說：「",
     "titleTail": "」",
     "titleHelp": "每一章，你扮演這段記載裡該走的那個人。",
@@ -1099,9 +1101,11 @@ export const dict = {
     "role.the_boy_jesus": "你是少年耶穌"
   },
   "en": {
-    "docTitle": "Follow — a life in the four Gospels",
+    "docTitle": "Christ: Son of God",
     "subtitle": "A life in the four Gospels",
-    "gameTitle": "Follow",
+    "gameTitle": "Christ: Son of God",
+    "splashEnter": "Press to enter",
+    "splashCredit": "Christ mosaic, Hagia Sophia. Photograph from Pixabay (before July 2017), CC0 1.0 public domain.",
     "titleLead": "Jesus said, “",
     "titleTail": "”",
     "titleHelp": "In each chapter you play the person who was there to walk.",
