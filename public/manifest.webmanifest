@@ -1,8 +1,10 @@
 {
   "name": "基督傳之人子",
   "short_name": "基督傳",
+  "id": "./",
   "start_url": "./",
-  "display": "fullscreen",
+  "scope": "./",
+  "display": "standalone",
   "background_color": "#0b0908",
   "theme_color": "#0b0908"
 }

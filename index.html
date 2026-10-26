@@ -2,7 +2,8 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover, interactive-widget=resizes-content" />
+  <meta name="format-detection" content="telephone=no, date=no, email=no, address=no" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -56,16 +57,6 @@
       background: #0b0908;
     }
 
-    html.scroll-chrome,
-    html.scroll-chrome body {
-      position: static;
-      inset: auto;
-      height: auto;
-      min-height: calc(100lvh + 160px);
-      overflow: visible;
-      touch-action: pan-y;
-    }
-
     body {
       color: var(--paper);
       font-family: "PingFang TC", "Heiti TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
@@ -81,6 +72,17 @@
       background: #1a140f;
       overflow: hidden;
     }
+
+    #edge-left, #edge-right {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: 2;
+      touch-action: none;
+    }
+
+    #edge-left { left: 0; width: max(40px, env(safe-area-inset-left, 0px)); }
+    #edge-right { right: 0; width: max(32px, env(safe-area-inset-right, 0px)); }
 
     canvas {
       display: block;
@@ -140,7 +142,7 @@
       position: absolute;
       top: calc(0.35em + var(--safe-top));
       left: calc(0.4em + var(--safe-left));
-      right: calc(0.4em + var(--safe-right));
+      right: calc(8px + max(32px, var(--safe-right)));
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
@@ -264,7 +266,7 @@
       padding: 0.45em 0.6em 0.5em;
       max-height: 48%;
       overflow: auto;
-      overscroll-behavior: contain;
+      overscroll-behavior: none;
       pointer-events: auto;
       user-select: text;
       touch-action: pan-y;
@@ -456,7 +458,7 @@
       width: min(100%, 28em);
       max-height: 100%;
       overflow: auto;
-      overscroll-behavior: contain;
+      overscroll-behavior: none;
       background: linear-gradient(180deg, var(--paper), var(--paper-2));
       color: var(--ink);
       border: 3px solid var(--ink);
@@ -523,7 +525,7 @@
       background: var(--paper-2);
     }
 
-    .chapters { overscroll-behavior: contain; }
+    .chapters { overscroll-behavior: none; }
 
     @media (pointer: coarse) {
       #screen .card .row {
@@ -584,7 +586,7 @@
 
     .pad {
       position: absolute;
-      left: max(36px, var(--safe-left));
+      left: calc(12px + max(40px, var(--safe-left)));
       bottom: max(12px, var(--safe-bottom));
       display: grid;
       grid-template-columns: 52px 52px 52px;
@@ -616,7 +618,7 @@
 
     #btn-talk {
       position: absolute;
-      right: max(16px, var(--safe-right));
+      right: calc(12px + max(32px, var(--safe-right)));
       bottom: max(22px, var(--safe-bottom));
       width: 74px;
       height: 74px;
@@ -644,22 +646,22 @@
       }
 
       body.controls-over #dialogue {
-        left: calc(184px + var(--safe-left));
-        right: calc(92px + var(--safe-right));
+        left: calc(200px + var(--safe-left));
+        right: calc(120px + var(--safe-right));
         bottom: calc(8px + var(--safe-bottom));
         max-height: 46%;
       }
 
       body.controls-over #objective {
-        left: calc(184px + var(--safe-left));
-        right: calc(92px + var(--safe-right));
+        left: calc(200px + var(--safe-left));
+        right: calc(120px + var(--safe-right));
         bottom: calc(8px + var(--safe-bottom));
         max-width: none;
       }
 
       body.controls-over #hint {
-        left: calc(184px + var(--safe-left));
-        right: calc(92px + var(--safe-right));
+        left: calc(200px + var(--safe-left));
+        right: calc(120px + var(--safe-right));
         bottom: calc(52px + var(--safe-bottom));
       }
     }
@@ -704,6 +706,8 @@
       <div id="d-next">空白鍵繼續</div>
     </div>
     <div id="screen" class="hidden"></div>
+    <div id="edge-left"></div>
+    <div id="edge-right"></div>
   </div>
 
   <div id="touch">

@@ -2245,7 +2245,6 @@ function drawGoal() {
 
 const PLAY_KEY = "follow-play";
 let stageKey = "";
-let chromeSettled = false;
 let blockTitleUntil = 0;
 let screenReadyAt = 0;
 let screenPress = null;
@@ -2295,16 +2294,6 @@ function updateChrome() {
   root.style.setProperty("--bar-right", right + "px");
   root.style.setProperty("--bar-bottom", bottom + "px");
   root.style.setProperty("--bar-left", left + "px");
-}
-
-function settleChrome() {
-  if (chromeSettled || !matchMedia("(pointer: coarse)").matches) return;
-  chromeSettled = true;
-  const root = document.documentElement;
-  const req = root.requestFullscreen || root.webkitRequestFullscreen;
-  if (req && !document.fullscreenElement && !document.webkitFullscreenElement) {
-    Promise.resolve(req.call(root)).catch(() => {});
-  }
 }
 
 function armScreenInput() {
@@ -2839,7 +2828,6 @@ bindHold(
 
 window.addEventListener("pointerdown", () => {
   ensureAudio();
-  settleChrome();
 });
 window.addEventListener("resize", resize);
 window.addEventListener("orientationchange", () => setTimeout(resize, 60));
@@ -2848,24 +2836,53 @@ if (window.visualViewport) {
   window.visualViewport.addEventListener("scroll", resize);
 }
 let pullY = 0;
+let gestureLock = false;
+
+function edgeBand(id, fallback) {
+  const el = document.getElementById(id);
+  if (!el) return fallback;
+  return Math.max(fallback, el.getBoundingClientRect().width);
+}
+
 document.addEventListener("touchstart", (e) => {
-  if (e.touches.length !== 1) return;
-  pullY = e.touches[0].clientY;
-  const x = e.touches[0].clientX;
-  if (x < 28 || x > window.innerWidth - 28) e.preventDefault();
+  if (e.touches.length !== 1) {
+    gestureLock = true;
+    e.preventDefault();
+    return;
+  }
+  const touch = e.touches[0];
+  pullY = touch.clientY;
+  const onControl = e.target.closest("button, #screen, #hud-btns");
+  gestureLock = !onControl && (touch.clientX < edgeBand("edge-left", 40) || touch.clientX > window.innerWidth - edgeBand("edge-right", 32));
+  if (gestureLock) e.preventDefault();
 }, { passive: false });
 document.addEventListener("touchmove", (e) => {
-  if (e.touches.length !== 1) {
+  if (gestureLock || e.touches.length !== 1) {
     e.preventDefault();
     return;
   }
   const y = e.touches[0].clientY;
   const pullingDown = y > pullY + 1;
+  const pullingUp = y < pullY - 1;
   pullY = y;
   const scroller = e.target.closest("#dialogue, #screen .card, #screen .chapters");
-  if (scroller && scroller.scrollHeight > scroller.clientHeight + 8 && !(scroller.scrollTop <= 0 && pullingDown)) return;
+  const canScroll = scroller && scroller.scrollHeight > scroller.clientHeight + 8;
+  const atTop = scroller && scroller.scrollTop <= 0;
+  const atBottom = scroller && scroller.scrollTop + scroller.clientHeight >= scroller.scrollHeight - 1;
+  if (canScroll && !((atTop && pullingDown) || (atBottom && pullingUp))) return;
   e.preventDefault();
 }, { passive: false });
+document.addEventListener("touchend", () => {
+  gestureLock = false;
+});
+document.addEventListener("touchcancel", () => {
+  gestureLock = false;
+});
+document.addEventListener("gesturestart", (e) => e.preventDefault(), { passive: false });
+document.addEventListener("gesturechange", (e) => e.preventDefault(), { passive: false });
+document.addEventListener("click", (e) => {
+  if (e.target.closest("a")) e.preventDefault();
+}, true);
 document.addEventListener("fullscreenchange", resize);
 document.addEventListener("webkitfullscreenchange", resize);
 
@@ -2911,8 +2928,25 @@ function resumeLostPage() {
   } else openChapter(resume.chapter);
 }
 
+function keepThisPage() {
+  if (!window.navigation || !matchMedia("(pointer: coarse)").matches) return;
+  window.navigation.addEventListener("navigate", (event) => {
+    try {
+      if (!event.cancelable) return;
+      const next = new URL(event.destination.url);
+      const here = new URL(location.href);
+      const sameDocument = next.origin === here.origin && next.pathname === here.pathname && next.search === here.search;
+      if (sameDocument && event.navigationType !== "reload" && event.navigationType !== "traverse") return;
+      event.preventDefault();
+    } catch (err) {
+      /* ignore */
+    }
+  });
+}
+
 export function boot() {
   if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+  keepThisPage();
   try {
     if (localStorage.getItem("follow-mute") === "1") setMuted(true);
     else $("btn-mute").textContent = text("mute");
