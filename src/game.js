@@ -2247,7 +2247,8 @@ const PLAY_KEY = "follow-play";
 let stageKey = "";
 let chromeSettled = false;
 let blockTitleUntil = 0;
-let titlePress = null;
+let screenReadyAt = 0;
+let screenPress = null;
 
 function readResume() {
   try {
@@ -2421,7 +2422,11 @@ function setScreen(html) {
 
 function card(html) {
   armScreenInput();
+  screenReadyAt = performance.now() + 700;
   screenEl.innerHTML = `<div class="card">${html}</div>`;
+  screenEl.querySelectorAll("button").forEach((btn) => {
+    btn.type = "button";
+  });
   screenEl.classList.remove("hidden");
 }
 
@@ -2523,6 +2528,7 @@ function openClear() {
   const ch = CHAPTERS[state.chapter];
   state.mode = "clear";
   state.screen = "clear";
+  rememberPlay("clear");
   const last = state.chapter >= CHAPTERS.length - 1;
   card(`
     <div class="sub">${text(ch.kicker)}</div>
@@ -2667,23 +2673,14 @@ function beginPlay() {
   CHAPTERS[state.chapter].onEnter();
 }
 
-screenEl.addEventListener("pointerdown", (e) => {
-  titlePress = e.target.closest("[data-act='title']");
-});
-
-screenEl.addEventListener("click", (e) => {
-  if (screenEl.classList.contains("hidden")) return;
-  const btn = e.target.closest("[data-act]");
-  if (btn && btn.dataset.act === "title") {
-    if (performance.now() < blockTitleUntil) return;
-    if (matchMedia("(pointer: coarse)").matches && titlePress !== btn) return;
-  }
+function handleScreenAct(btn) {
   if (state.screen === "splash" && (!btn || btn.dataset.act !== "lang")) {
     ensureAudio();
     showTitle();
     return;
   }
   if (!btn) return;
+  if (btn.dataset.act === "title" && performance.now() < blockTitleUntil) return;
   ensureAudio();
   const act = btn.dataset.act;
   const arg = btn.dataset.arg;
@@ -2708,6 +2705,34 @@ screenEl.addEventListener("click", (e) => {
     state.screen = null;
     screenEl.classList.add("hidden");
   }
+}
+
+screenEl.addEventListener("pointerdown", (e) => {
+  screenPress = e.target.closest("[data-act]");
+});
+
+screenEl.addEventListener("pointercancel", () => {
+  screenPress = null;
+});
+
+screenEl.addEventListener("pointerup", (e) => {
+  if (!matchMedia("(pointer: coarse)").matches) return;
+  if (screenEl.classList.contains("hidden")) return;
+  if (performance.now() < screenReadyAt) return;
+  const btn = e.target.closest("[data-act]");
+  if (state.screen === "splash") {
+    if (btn && btn.dataset.act === "lang") {
+      if (btn !== screenPress) return;
+    } else if (screenPress && screenPress !== btn) return;
+  } else if (!btn || btn !== screenPress) return;
+  screenPress = null;
+  handleScreenAct(btn);
+});
+
+screenEl.addEventListener("click", (e) => {
+  if (screenEl.classList.contains("hidden")) return;
+  if (matchMedia("(pointer: coarse)").matches && e.isTrusted) return;
+  handleScreenAct(e.target.closest("[data-act]"));
 });
 
 dialogueEl.addEventListener("click", () => {
@@ -2822,14 +2847,23 @@ if (window.visualViewport) {
   window.visualViewport.addEventListener("resize", resize);
   window.visualViewport.addEventListener("scroll", resize);
 }
+let pullY = 0;
 document.addEventListener("touchstart", (e) => {
   if (e.touches.length !== 1) return;
+  pullY = e.touches[0].clientY;
   const x = e.touches[0].clientX;
   if (x < 28 || x > window.innerWidth - 28) e.preventDefault();
 }, { passive: false });
 document.addEventListener("touchmove", (e) => {
+  if (e.touches.length !== 1) {
+    e.preventDefault();
+    return;
+  }
+  const y = e.touches[0].clientY;
+  const pullingDown = y > pullY + 1;
+  pullY = y;
   const scroller = e.target.closest("#dialogue, #screen .card, #screen .chapters");
-  if (scroller && scroller.scrollHeight > scroller.clientHeight + 8) return;
+  if (scroller && scroller.scrollHeight > scroller.clientHeight + 8 && !(scroller.scrollTop <= 0 && pullingDown)) return;
   e.preventDefault();
 }, { passive: false });
 document.addEventListener("fullscreenchange", resize);
@@ -2866,11 +2900,15 @@ function loop() {
 function resumeLostPage() {
   const resume = readResume();
   if (!resume) return;
-  if (state.mode === "play" && state.chapter === resume.chapter && !state.screen) return;
-  if (resume.mode === "play" && (state.mode === "splash" || state.mode === "title")) {
+  if (resume.mode === "play" && state.mode === "play" && state.chapter === resume.chapter && !state.screen) return;
+  if (state.mode !== "splash" && state.mode !== "title") return;
+  if (resume.mode === "play") {
     loadChapter(resume.chapter);
     beginPlay();
-  }
+  } else if (resume.mode === "clear") {
+    loadChapter(resume.chapter);
+    openClear();
+  } else openChapter(resume.chapter);
 }
 
 export function boot() {
@@ -2888,6 +2926,9 @@ export function boot() {
   if (resume && resume.mode === "play") {
     loadChapter(resume.chapter);
     beginPlay();
+  } else if (resume && resume.mode === "clear") {
+    loadChapter(resume.chapter);
+    openClear();
   } else if (resume) openChapter(resume.chapter);
   else showSplash();
   startLoop(loop);

@@ -183,6 +183,7 @@
       color: var(--ink);
       padding: 0.18em 0.45em;
       box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.45);
+      touch-action: manipulation;
     }
 
     #hud-btns button { font-size: 0.72em; pointer-events: auto; }
@@ -314,6 +315,7 @@
         calc(0.6em + var(--safe-bottom))
         calc(0.6em + var(--safe-left));
       pointer-events: auto;
+      overscroll-behavior: none;
     }
 
     #screen .splash {
@@ -454,12 +456,14 @@
       width: min(100%, 28em);
       max-height: 100%;
       overflow: auto;
+      overscroll-behavior: contain;
       background: linear-gradient(180deg, var(--paper), var(--paper-2));
       color: var(--ink);
       border: 3px solid var(--ink);
       box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.5);
       padding: 0.85em 0.9em 0.75em;
       user-select: text;
+      touch-action: pan-y;
     }
 
     .card h1 {
@@ -508,6 +512,28 @@
       gap: 0.4em;
       justify-content: center;
       margin-top: 0.7em;
+    }
+
+    #screen .card .row {
+      position: sticky;
+      bottom: 0;
+      z-index: 1;
+      margin: 0.7em -0.9em -0.75em;
+      padding: 0.55em 0.9em 0.75em;
+      background: var(--paper-2);
+    }
+
+    .chapters { overscroll-behavior: contain; }
+
+    @media (pointer: coarse) {
+      #screen .card .row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      #screen .card .row .btn {
+        width: 100%;
+      }
     }
 
     .btn.primary {
