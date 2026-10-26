@@ -2240,9 +2240,37 @@ function drawGoal() {
 
 /* ------------------------------ UI ------------------------------ */
 
+const PLAY_KEY = "follow-play";
 let stageKey = "";
 let chromeSettled = false;
+let allowScroll = false;
 let blockTitleUntil = 0;
+
+function readResume() {
+  try {
+    const data = JSON.parse(sessionStorage.getItem(PLAY_KEY) || "null");
+    if (!data || !Number.isInteger(data.chapter) || !CHAPTERS[data.chapter]) return null;
+    return data;
+  } catch (err) {
+    return null;
+  }
+}
+
+function rememberPlay(mode) {
+  try {
+    sessionStorage.setItem(PLAY_KEY, JSON.stringify({ chapter: state.chapter, mode }));
+  } catch (err) {
+    /* ignore */
+  }
+}
+
+function forgetPlay() {
+  try {
+    sessionStorage.removeItem(PLAY_KEY);
+  } catch (err) {
+    /* ignore */
+  }
+}
 
 function updateChrome() {
   const vv = window.visualViewport;
@@ -2264,29 +2292,39 @@ function updateChrome() {
   root.style.setProperty("--bar-bottom", bottom + "px");
   root.style.setProperty("--bar-left", left + "px");
   const coarse = matchMedia("(pointer: coarse)").matches;
-  root.classList.toggle("bars-open", coarse && top + bottom + left + right > 28);
+  const open = coarse && (top > 20 || bottom > 40 || left > 20 || right > 20);
+  if (!open) allowScroll = false;
+  root.classList.toggle("bars-open", open);
+  root.classList.toggle("scroll-chrome", open && allowScroll);
+  root.classList.toggle("chrome-locked", !(open && allowScroll));
+}
+
+function nudgeBars() {
+  const root = document.documentElement;
+  if (!root.classList.contains("scroll-chrome")) return;
+  const go = () => {
+    const y = Math.max(80, root.scrollHeight - window.innerHeight);
+    window.scrollTo(0, y);
+  };
+  go();
+  requestAnimationFrame(go);
 }
 
 function settleChrome() {
-  if (chromeSettled) return;
-  chromeSettled = true;
+  if (!matchMedia("(pointer: coarse)").matches) return;
   const root = document.documentElement;
-  if (matchMedia("(pointer: coarse)").matches) {
+  if (!chromeSettled) {
+    chromeSettled = true;
     const req = root.requestFullscreen || root.webkitRequestFullscreen;
     if (req && !document.fullscreenElement && !document.webkitFullscreenElement) {
       Promise.resolve(req.call(root)).catch(() => {});
     }
-    const extra = Math.max(0, root.scrollHeight - window.innerHeight);
-    if (extra > 0) window.scrollTo(0, extra);
   }
-  root.classList.remove("can-nudge");
-  root.classList.add("chrome-lock");
-  resize();
-}
-
-function holdPage() {
-  if (history.state && history.state.christ) return;
-  history.pushState({ christ: 1 }, "");
+  if (!root.classList.contains("bars-open")) return;
+  allowScroll = true;
+  root.classList.add("scroll-chrome");
+  root.classList.remove("chrome-locked");
+  nudgeBars();
 }
 
 function armScreenInput() {
@@ -2625,6 +2663,7 @@ function openPause() {
 }
 
 function showTitle() {
+  forgetPlay();
   const shore = CHAPTERS.findIndex((c) => c.key === "shore");
   loadChapter(shore < 0 ? 0 : shore);
   state.mode = "title";
@@ -2636,6 +2675,7 @@ function showTitle() {
 function openChapter(index) {
   loadChapter(index);
   state.mode = "card";
+  rememberPlay("card");
   renderCard();
 }
 
@@ -2644,11 +2684,12 @@ function beginPlay() {
   screenEl.classList.add("hidden");
   state.mode = "play";
   state.hintUntil = state.time + 10;
-  holdPage();
+  rememberPlay("play");
   CHAPTERS[state.chapter].onEnter();
 }
 
 screenEl.addEventListener("click", (e) => {
+  if (screenEl.classList.contains("hidden")) return;
   const btn = e.target.closest("[data-act]");
   if (btn && btn.dataset.act === "title" && performance.now() < blockTitleUntil) return;
   if (state.screen === "splash" && (!btn || btn.dataset.act !== "lang")) {
@@ -2795,10 +2836,19 @@ if (window.visualViewport) {
   window.visualViewport.addEventListener("resize", resize);
   window.visualViewport.addEventListener("scroll", resize);
 }
-window.addEventListener("popstate", () => {
-  const stay = state.mode === "play" || state.mode === "card" || state.mode === "clear" || state.mode === "interlude" || state.screen === "journal" || state.screen === "pause";
-  if (stay) history.pushState({ christ: 1 }, "");
-});
+document.addEventListener("touchstart", (e) => {
+  if (e.touches.length !== 1) return;
+  const x = e.touches[0].clientX;
+  if (x < 28 || x > window.innerWidth - 28) e.preventDefault();
+}, { passive: false });
+document.addEventListener("touchmove", (e) => {
+  if (document.documentElement.classList.contains("scroll-chrome")) return;
+  const scroller = e.target.closest("#dialogue, #screen");
+  if (scroller && scroller.scrollHeight > scroller.clientHeight + 8) return;
+  e.preventDefault();
+}, { passive: false });
+document.addEventListener("fullscreenchange", resize);
+document.addEventListener("webkitfullscreenchange", resize);
 
 function loop() {
   const now = performance.now();
@@ -2829,8 +2879,6 @@ function loop() {
 }
 
 export function boot() {
-  if (matchMedia("(pointer: coarse)").matches) document.documentElement.classList.add("can-nudge");
-  else document.documentElement.classList.add("chrome-lock");
   try {
     if (localStorage.getItem("follow-mute") === "1") setMuted(true);
     else $("btn-mute").textContent = text("mute");
@@ -2840,6 +2888,11 @@ export function boot() {
   $("btn-journal").textContent = text("journal");
   resize();
   if (!splashImage.src) splashImage.src = splashUrl;
-  showSplash();
+  const resume = readResume();
+  if (resume && resume.mode === "play") {
+    loadChapter(resume.chapter);
+    beginPlay();
+  } else if (resume) openChapter(resume.chapter);
+  else showSplash();
   startLoop(loop);
 }
