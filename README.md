@@ -104,7 +104,7 @@ src/lang.js         語言切換，並以 text(key) 取字
 src/dict.js         由字典產生的中英對照
 src/chapters.js     經文、二十八章劇情與地圖
 src/game.js         移動、對話、音樂、介面與繪製
-src/render/pixi.js  以 PixiJS 承接像素繪製
+src/render/phaser.js  以 Phaser 承接像素繪製
 ```
 
 地圖以字元格子組成（草地、路、水、牆、地板等），人物與道具以像素方塊畫出。背景音樂用 Web Audio 依篇章切換（平安、清晨、暴風、莊嚴、結局），沒有外部音檔。
@@ -112,5 +112,5 @@ src/render/pixi.js  以 PixiJS 承接像素繪製
 ## 技術
 
 - [Vite](https://vite.dev/) 8
-- [PixiJS](https://pixijs.com/) 8
+- [Phaser](https://phaser.io/) 3（預設 Canvas 繪製；網址加 `?renderer=webgl` 可改用 WebGL）
 - 原生 ES modules，沒有前端框架

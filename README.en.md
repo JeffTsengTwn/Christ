@@ -104,7 +104,7 @@ src/lang.js         language switch, and text(key) for each line
 src/dict.js         generated Chinese and English lines
 src/chapters.js     scripture, the twenty-eight chapters, and their maps
 src/game.js         movement, dialogue, music, interface, and drawing
-src/render/pixi.js  pixel drawing through PixiJS
+src/render/phaser.js  pixel drawing through Phaser
 ```
 
 Maps are grids of characters (grass, path, water, wall, floor, and so on). People and props are drawn as pixel blocks. Background music is Web Audio and changes with the chapter (peace, morning, storm, solemn, ending). There are no external audio files.
@@ -112,5 +112,5 @@ Maps are grids of characters (grass, path, water, wall, floor, and so on). Peopl
 ## Stack
 
 - [Vite](https://vite.dev/) 8
-- [PixiJS](https://pixijs.com/) 8
+- [Phaser](https://phaser.io/) 3 (Canvas rendering by default; add `?renderer=webgl` to the URL for WebGL)
 - Plain ES modules, with no front-end framework

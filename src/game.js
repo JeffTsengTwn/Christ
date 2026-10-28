@@ -1,4 +1,4 @@
-import { mountGame, pen, resizeView, startLoop } from "./render/pixi.js";
+import { mountGame, pen, resizeView, startLoop } from "./render/phaser.js";
 import { getLanguage, onLanguageChange, text, toggleLanguage } from "./lang.js";
 import splashUrl from "../assets/hagia-sophia-christ.jpg";
 
